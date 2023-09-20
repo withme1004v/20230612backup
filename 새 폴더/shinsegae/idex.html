@@ -1,0 +1,1757 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>신세계 백화점</title>
+    <style>
+      .slogan .s_inner {
+        position: relative;
+      }
+      .txt p {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(50px, 0);
+        opacity: 0;
+        transition: all 0.5s;
+        z-index: 10;
+      }
+
+      .txt p.active {
+        transform: translate(0, 0);
+        opacity: 1;
+        transition: all 1s;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="top">
+        <ul>
+          <li><a href="#">KR</a></li>
+          <li><a href="#">EN</a></li>
+          <li><a href="#">CN</a></li>
+        </ul>
+        <p><a href="#">SSG.COM</a></p>
+      </div>
+      <header>
+        <div class="logo">
+          <a href="#"><img src="images/gnb_logo.png" alt="SHINSEGAE logo" /></a>
+        </div>
+        <nav class="gnb">
+          <ul>
+            <li><a href="sub.html">신세계 브랜드</a></li>
+            <li><a href="#">쇼핑 정보</a></li>
+            <li><a href="#">아트&컬처</a></li>
+            <li><a href="#">매거진</a></li>
+            <li><a href="#">고객 서비스</a></li>
+            <li><a href="#">점포 안내</a></li>
+            <li><a href="#">ESG 경영</a></li>
+          </ul>
+        </nav>
+        <div class="login">
+          <ul>
+            <li><a href="#">로그인</a></li>
+            <li>
+              <a href="#"
+                ><img src="images/gnb_ico_search.png" alt="ico_search"
+              /></a>
+            </li>
+          </ul>
+        </div>
+        <nav class="submenu">
+          <div class="menu">
+            <div class="lnb">
+              <ul>
+                <li><a href="#">ALL</a></li>
+                <li>
+                  <a href="#">WOMEN</a>
+                  <ul class="three_dept">
+                    <li><a href="#">분더샵</a></li>
+                    <li><a href="#">엑시츠</a></li>
+                    <li><a href="#">트리니티</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">MEN</a>
+                  <ul class="three_dept">
+                    <li><a href="#">분더샵 남성</a></li>
+                    <li><a href="#">분더샵 카미치에</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">KIDS</a>
+                  <ul class="three_dept">
+                    <li><a href="#">분 주니어</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">ACC</a>
+                  <ul class="three_dept">
+                    <li><a href="#">케이스스터디</a></li>
+                    <li><a href="#">아디르</a></li>
+                    <li><a href="#">분더샵 슈</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">BEAUTY</a>
+                  <ul class="three_dept">
+                    <li><a href="#">오노마</a></li>
+                    <li><a href="#">시코르</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">LIVING</a>
+                  <ul class="three_dept">
+                    <li><a href="#">포트넘앤메이슨</a></li>
+                    <li><a href="#">생루이</a></li>
+                    <li><a href="#">피숀</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <nav class="submenu">
+          <div class="menu">
+            <div class="lnb">
+              <ul>
+                <li>
+                  <a href="#"></a>
+                  <ul class="three_dept">
+                    <li><a href="#">강남점</a></li>
+                    <li><a href="#">경기점</a></li>
+                    <li><a href="#">광주신세계</a></li>
+                    <li><a href="#">김해점</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#"></a>
+                  <ul class="three_dept">
+                    <li><a href="#">대구신세계</a></li>
+                    <li><a href="#">대전신세계 Art & Science</a></li>
+                    <li><a href="#">마산점</a></li>
+                    <li><a href="#">본점</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#"></a>
+                  <ul class="three_dept">
+                    <li><a href="#">센텀시티</a></li>
+                    <li><a href="#">스타필드 하남점</a></li>
+                    <li><a href="#">의정부점</a></li>
+                    <li><a href="#">천안아산점</a></li>
+                    <li><a href="#">타임스퀘어점</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#"></a>
+                  <ul class="three_dept">
+                    <li><a href="#">뉴스&이벤트</a></li>
+                    <li><a href="#">계절과 식탁</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <nav class="submenu">
+          <div class="menu">
+            <div class="lnb">
+              <ul>
+                <li>
+                  <a href="#">신세계 아카데미</a>
+                  <ul class="three_dept">
+                    <li><a href="#">수강신청</a></li>
+                    <li><a href="#">카탈로그</a></li>
+                    <li><a href="#">강사 지원</a></li>
+                    <li><a href="#">MY 아카데미</a></li>
+                    <li><a href="#">아카데미 소개</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">신세계 온 아카데미</a>
+                  <ul class="three_dept">
+                    <li><a href="#">수강신청</a></li>
+                    <li><a href="#">카탈로그</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">신세계 문화홀</a>
+                  <ul class="three_dept">
+                    <li><a href="#">공연</a></li>
+                    <li><a href="#">문화홀 안내</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">신세계갤러리</a>
+                  <ul class="three_dept">
+                    <li><a href="#">전시</a></li>
+                    <li><a href="#">아트 컬렉션</a></li>
+                    <li><a href="#">갤러리 안내</a></li>
+                    <li><a href="#">광주신세계미술제</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">신세계 넥스페리움</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <nav class="submenu">
+          <div class="menu">
+            <div class="lnb"></div>
+          </div>
+        </nav>
+        <nav class="submenu">
+          <div class="menu">
+            <div class="lnb">
+              <ul>
+                <li>
+                  <a href="#">신세계 VIP 클럽</a>
+                  <ul class="three_dept">
+                    <li><a href="#">선정 기준 안내</a></li>
+                    <li><a href="#">혜택 안내</a></li>
+                    <li><a href="#">VIP 카드</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">신세계 멤버십</a>
+                  <ul class="three_dept">
+                    <li><a href="#">신백멤버스</a></li>
+                    <li><a href="#">신세계 포인트</a></li>
+                    <li><a href="#">신세계 카드</a></li>
+                    <li><a href="#">신세계 상품권</a></li>
+                    <li><a href="#">SSG PAY</a></li>
+                    <li><a href="#">신세계 프라임</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">고객 의견</a>
+                  <ul class="three_dept">
+                    <li><a href="#">자주하는 질문</a></li>
+                    <li><a href="#">상담실 안내</a></li>
+                    <li><a href="#">고객 의견 작성</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">서비스 안내</a>
+                  <ul class="three_dept">
+                    <li><a href="#">서비스 제도</a></li>
+                    <li><a href="#">대외수상내역</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">공지사항</a>
+                </li>
+                <li>
+                  <a href="#">분실문 조회</a>
+                </li>
+                <li>
+                  <a href="#">배송 조회</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <nav class="submenu">
+          <div class="menu">
+            <div class="lnb">
+              <ul>
+                <li>
+                  <a href="#">신세계백화점</a>
+                  <ul class="three_dept">
+                    <li><a href="#">강남점</a></li>
+                    <li><a href="#">경기점</a></li>
+                    <li><a href="#">광주신세계</a></li>
+                    <li><a href="#">김해점</a></li>
+                    <li><a href="#">대구신세계</a></li>
+                    <li><a href="#">대전신세계 Art & Science</a></li>
+                    <li><a href="#">마산점</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#"></a>
+                  <ul class="three_dept">
+                    <li class="indent">-</li>
+                    <li><a href="#">본점</a></li>
+                    <li><a href="#">센텀시티</a></li>
+                    <li><a href="#">스타필드 하남점</a></li>
+                    <li><a href="#">의정부점</a></li>
+                    <li><a href="#">천안아산점</a></li>
+                    <li><a href="#">타임스퀘어점</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">신세계 팩토리스토어</a>
+                  <ul class="three_dept">
+                    <li><a href="#">가산점</a></li>
+                    <li><a href="#">강남점</a></li>
+                    <li><a href="#">고양점</a></li>
+                    <li><a href="#">기장점</a></li>
+                    <li><a href="#">광양점</a></li>
+                    <li><a href="#">대구점</a></li>
+                    <li><a href="#">대전점</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#"></a>
+                  <ul class="three_dept">
+                    <li class="indent">-</li>
+                    <li><a href="#">센턴점</a></li>
+                    <li><a href="#">시흥점</a></li>
+                    <li><a href="#">안성점</a></li>
+                    <li><a href="#">양주점</a></li>
+                    <li><a href="#">여주점</a></li>
+                    <li><a href="#">천안아산점</a></li>
+                    <li><a href="#">타임스퀘어점</a></li>
+                    <li><a href="#">파주점</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">신세계 스타일마켓</a>
+                  <ul class="three_dept">
+                    <li><a href="#">대전 스타일마켓</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <nav class="submenu">
+          <div class="menu">
+            <div class="lnb"></div>
+          </div>
+        </nav>
+      </header>
+      <nav class="submenu">
+        <div class="menu">
+          <div class="lnb">
+            <ul>
+              <li><a href="#">ALL</a></li>
+              <li>
+                <a href="#">WOMEN</a>
+                <ul class="three_dept">
+                  <li><a href="#">분더샵</a></li>
+                  <li><a href="#">엑시츠</a></li>
+                  <li><a href="#">트리니티</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">MEN</a>
+                <ul class="three_dept">
+                  <li><a href="#">분더샵 남성</a></li>
+                  <li><a href="#">분더샵 카미치에</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">KIDS</a>
+                <ul class="three_dept">
+                  <li><a href="#">분 주니어</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">ACC</a>
+                <ul class="three_dept">
+                  <li><a href="#">케이스스터디</a></li>
+                  <li><a href="#">아디르</a></li>
+                  <li><a href="#">분더샵 슈</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">BEAUTY</a>
+                <ul class="three_dept">
+                  <li><a href="#">오노마</a></li>
+                  <li><a href="#">시코르</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">LIVING</a>
+                <ul class="three_dept">
+                  <li><a href="#">포트넘앤메이슨</a></li>
+                  <li><a href="#">생루이</a></li>
+                  <li><a href="#">피숀</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <nav class="submenu">
+        <div class="menu">
+          <div class="lnb">
+            <ul>
+              <li>
+                <a href="#"></a>
+                <ul class="three_dept">
+                  <li><a href="#">강남점</a></li>
+                  <li><a href="#">경기점</a></li>
+                  <li><a href="#">광주신세계</a></li>
+                  <li><a href="#">김해점</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#"></a>
+                <ul class="three_dept">
+                  <li><a href="#">대구신세계</a></li>
+                  <li><a href="#">대전신세계 Art & Science</a></li>
+                  <li><a href="#">마산점</a></li>
+                  <li><a href="#">본점</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#"></a>
+                <ul class="three_dept">
+                  <li><a href="#">센텀시티</a></li>
+                  <li><a href="#">스타필드 하남점</a></li>
+                  <li><a href="#">의정부점</a></li>
+                  <li><a href="#">천안아산점</a></li>
+                  <li><a href="#">타임스퀘어점</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#"></a>
+                <ul class="three_dept">
+                  <li><a href="#">뉴스&이벤트</a></li>
+                  <li><a href="#">계절과 식탁</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <nav class="submenu">
+        <div class="menu">
+          <div class="lnb">
+            <ul>
+              <li>
+                <a href="#">신세계 아카데미</a>
+                <ul class="three_dept">
+                  <li><a href="#">수강신청</a></li>
+                  <li><a href="#">카탈로그</a></li>
+                  <li><a href="#">강사 지원</a></li>
+                  <li><a href="#">MY 아카데미</a></li>
+                  <li><a href="#">아카데미 소개</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">신세계 온 아카데미</a>
+                <ul class="three_dept">
+                  <li><a href="#">수강신청</a></li>
+                  <li><a href="#">카탈로그</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">신세계 문화홀</a>
+                <ul class="three_dept">
+                  <li><a href="#">공연</a></li>
+                  <li><a href="#">문화홀 안내</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">신세계갤러리</a>
+                <ul class="three_dept">
+                  <li><a href="#">전시</a></li>
+                  <li><a href="#">아트 컬렉션</a></li>
+                  <li><a href="#">갤러리 안내</a></li>
+                  <li><a href="#">광주신세계미술제</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">신세계 넥스페리움</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <nav class="submenu">
+        <div class="menu">
+          <div class="lnb"></div>
+        </div>
+      </nav>
+      <nav class="submenu">
+        <div class="menu">
+          <div class="lnb">
+            <ul>
+              <li>
+                <a href="#">신세계 VIP 클럽</a>
+                <ul class="three_dept">
+                  <li><a href="#">선정 기준 안내</a></li>
+                  <li><a href="#">혜택 안내</a></li>
+                  <li><a href="#">VIP 카드</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">신세계 멤버십</a>
+                <ul class="three_dept">
+                  <li><a href="#">신백멤버스</a></li>
+                  <li><a href="#">신세계 포인트</a></li>
+                  <li><a href="#">신세계 카드</a></li>
+                  <li><a href="#">신세계 상품권</a></li>
+                  <li><a href="#">SSG PAY</a></li>
+                  <li><a href="#">신세계 프라임</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">고객 의견</a>
+                <ul class="three_dept">
+                  <li><a href="#">자주하는 질문</a></li>
+                  <li><a href="#">상담실 안내</a></li>
+                  <li><a href="#">고객 의견 작성</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">서비스 안내</a>
+                <ul class="three_dept">
+                  <li><a href="#">서비스 제도</a></li>
+                  <li><a href="#">대외수상내역</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">공지사항</a>
+              </li>
+              <li>
+                <a href="#">분실문 조회</a>
+              </li>
+              <li>
+                <a href="#">배송 조회</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <nav class="submenu">
+        <div class="menu">
+          <div class="lnb">
+            <ul>
+              <li>
+                <a href="#">신세계백화점</a>
+                <ul class="three_dept">
+                  <li><a href="#">강남점</a></li>
+                  <li><a href="#">경기점</a></li>
+                  <li><a href="#">광주신세계</a></li>
+                  <li><a href="#">김해점</a></li>
+                  <li><a href="#">대구신세계</a></li>
+                  <li><a href="#">대전신세계 Art & Science</a></li>
+                  <li><a href="#">마산점</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#"></a>
+                <ul class="three_dept">
+                  <li class="indent">-</li>
+                  <li><a href="#">본점</a></li>
+                  <li><a href="#">센텀시티</a></li>
+                  <li><a href="#">스타필드 하남점</a></li>
+                  <li><a href="#">의정부점</a></li>
+                  <li><a href="#">천안아산점</a></li>
+                  <li><a href="#">타임스퀘어점</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">신세계 팩토리스토어</a>
+                <ul class="three_dept">
+                  <li><a href="#">가산점</a></li>
+                  <li><a href="#">강남점</a></li>
+                  <li><a href="#">고양점</a></li>
+                  <li><a href="#">기장점</a></li>
+                  <li><a href="#">광양점</a></li>
+                  <li><a href="#">대구점</a></li>
+                  <li><a href="#">대전점</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#"></a>
+                <ul class="three_dept">
+                  <li class="indent">-</li>
+                  <li><a href="#">센턴점</a></li>
+                  <li><a href="#">시흥점</a></li>
+                  <li><a href="#">안성점</a></li>
+                  <li><a href="#">양주점</a></li>
+                  <li><a href="#">여주점</a></li>
+                  <li><a href="#">천안아산점</a></li>
+                  <li><a href="#">타임스퀘어점</a></li>
+                  <li><a href="#">파주점</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">신세계 스타일마켓</a>
+                <ul class="three_dept">
+                  <li><a href="#">대전 스타일마켓</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <nav class="submenu">
+        <div class="menu">
+          <div class="lnb"></div>
+        </div>
+      </nav>
+      <div class="visual swiper mySwiper1">
+        <ul class="pics swiper-wrapper">
+          <li class="swiper-slide"></li>
+          <li class="swiper-slide"></li>
+          <li class="swiper-slide"></li>
+        </ul>
+        <div class="slogan">
+          <div class="s_inner">
+            <div class="control_w">
+              <ul>
+                <li><a href="#" class="swiper-pagination">01</a></li>
+                <li><a href="#" class="swiper-pagination">02</a></li>
+                <li><a href="#" class="swiper-pagination">03</a></li>
+                <li><a href="#" class="play">재생/정지</a></li>
+              </ul>
+            </div>
+            <div class="swiper-scrollbar"></div>
+
+            <div class="txt">
+              <p>MAGAZINE<br />SHINSEGAE</p>
+            </div>
+            <div class="txt">
+              <p>신세계백화점이 ‘프리즈 서울 2023’ 공식 파트너로 참여합니다.</p>
+            </div>
+            <div class="txt">
+              <p>신세계 × 안드레 사라이바의 핫한 컬래버레이션</p>
+            </div>
+
+            <div class="btn_more_w">
+              <p><a href="#">VIEW MORE</a></p>
+              <span class="line line-bottom"></span>
+              <span class="line line-right"></span>
+              <span class="line line-top"></span>
+              <span class="line line-left"></span>
+            </div>
+            <div class="scroll_info">
+              <p>SHOPPING NEWS & EVENT</p>
+              <span class="line"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section>
+        <div class="news">
+          <div class="title title_same">
+            <h2>Shopping News & Event</h2>
+            <p class="login_icon">
+              <img src="images/news_ico_login.gif" alt="news_ico_login" />
+              <span class="txt underline"
+                ><span class="point_b">잠깐!</span> 지금 <a href="#">로그인</a
+                ><span class="line"></span>하시고 고객님의 구매 패턴, 취향에
+                기반한 쇼핑 정보를 만나보세요.</span
+              >
+            </p>
+          </div>
+          <div class="content">
+            <ul>
+              <li>
+                <div class="col">
+                  <a href="#">
+                    <p class="pics">
+                      <img src="images/news01.jpg" alt="news01" />
+                    </p>
+                    <div class="txt">
+                      <p>팝업 스토어 | Art & Science</p>
+                      <p>트렌디한 브랜드 소식<br />팝업 스토어</p>
+                      <p>2023.07.28(금) - 2023.08.03(목) | 각 층 본매장</p>
+                    </div>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div class="col">
+                  <a href="#">
+                    <p class="pics">
+                      <img src="images/news02.jpg" alt="news02" />
+                    </p>
+                    <div class="txt">
+                      <p>힐링 푸드 | Art & Science</p>
+                      <p>신세계 핫플 카페로!<br />힐링 타임</p>
+                      <p>2023.08.04(금) - 2023.08.10(목) | 각 층 본매장</p>
+                    </div>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div class="col">
+                  <a href="#">
+                    <p class="pics">
+                      <img src="images/news03.jpg" alt="news03" />
+                    </p>
+                    <div class="txt">
+                      <p>서머 트래블 | Art & Science</p>
+                      <p>영감을 찾아 떠난 여행<br />서머 인스피레이션 트래블</p>
+                      <p>2023.08.03(목)까지 | 각 층 본매장</p>
+                    </div>
+                  </a>
+                </div>
+              </li>
+            </ul>
+            <div class="btn_more">
+              <p><a href="#">VIEW MORE</a></p>
+              <span class="line line-bottom"></span>
+              <span class="line line-right"></span>
+              <span class="line line-top"></span>
+              <span class="line line-left"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="now">
+          <div class="title_same">
+            <h2>Shinsegae Now</h2>
+          </div>
+          <div class="content">
+            <ul>
+              <li>
+                <div class="col">
+                  <a href="#">
+                    <p class="pics">
+                      <img src="images/now01.jpg" alt="now01" />
+                    </p>
+                    <div class="txt">
+                      <p>INSTAGRAM</p>
+                      <p>
+                        다채로운 맛이 가득한 경기점<br />테이스티가든을<br />
+                        만나보세요.
+                      </p>
+                      <p>more</p>
+                    </div>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div class="col">
+                  <a href="#">
+                    <p class="pics">
+                      <img src="images/now02.jpg" alt="now02" />
+                    </p>
+                    <div class="txt">
+                      <p>YOUTUBE</p>
+                      <p>
+                        신세계 친환경 쇼핑백<br />패키지가 만들어지는<br />과정을
+                        함께하세요!
+                      </p>
+                      <p>more</p>
+                    </div>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div class="col">
+                  <a href="#">
+                    <p class="pics">
+                      <img src="images/now03.jpg" alt="now03" />
+                    </p>
+                    <div class="txt">
+                      <p>YOUTUBE</p>
+                      <p>지금<br />신세계 유니버스클럽을<br />만나보세요!</p>
+                      <p>more</p>
+                    </div>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div class="col">
+                  <a href="#">
+                    <p class="pics">
+                      <img src="images/now04.jpg" alt="now04" />
+                    </p>
+                    <div class="txt">
+                      <p>MAGAZINE</p>
+                      <p>
+                        한여름의 대표 보양<br />식재료로 풍성한 서머<br />테이블을
+                        완성해보세요.
+                      </p>
+                      <p>more</p>
+                    </div>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="channer">
+            <h4><a href="#">SHINSEGAE CHANNEL</a></h4>
+            <p>신세계백화점의 쇼핑 소식을 가장 빠르게 만나보세요!</p>
+            <ul>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="art">
+          <div class="title_same">
+            <h2>Art & Culture</h2>
+          </div>
+          <div class="content">
+            <ul class="text">
+              <li>
+                <div class="box">
+                  <div class="txt">
+                    <p>SHINSEGAE GALLERY</p>
+                    <p>
+                      대구신세계<br />아트바캉스 :
+                      <span>my little summer<br />paradise</span><br />
+                    </p>
+                  </div>
+                  <div class="btn_more_w more">
+                    <p><a href="#">VIEW MORE</a></p>
+                    <span class="line line-bottom"></span>
+                    <span class="line line-right"></span>
+                    <span class="line line-top"></span>
+                    <span class="line line-left"></span>
+                  </div>
+                  <div class="control">
+                    <ul>
+                      <li>
+                        <a href="#"
+                          ><svg>
+                            <circle
+                              cx="25"
+                              cy="25"
+                              r="20"
+                              fill="none"
+                              stroke="rgba(255,255,255,0.6)"
+                            ></circle>
+                          </svg>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><svg>
+                            <circle
+                              cx="25"
+                              cy="25"
+                              r="20"
+                              fill="none"
+                              stroke="rgba(255,255,255,0.6)"
+                            ></circle>
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="box">
+                  <div class="txt">
+                    <p>SHINSEGAE ACADEMY</p>
+                    <p>신세계 아카데미<br />가을학기 수강회원 모집</p>
+                  </div>
+                  <div class="btn_more_w more">
+                    <p><a href="#">VIEW MORE</a></p>
+                    <span class="line line-bottom"></span>
+                    <span class="line line-right"></span>
+                    <span class="line line-top"></span>
+                    <span class="line line-left"></span>
+                  </div>
+                  <div class="control">
+                    <ul>
+                      <li>
+                        <a href="#"
+                          ><svg>
+                            <circle
+                              cx="25"
+                              cy="25"
+                              r="20"
+                              fill="none"
+                              stroke="rgba(255,255,255,0.6)"
+                            ></circle>
+                          </svg>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><svg>
+                            <circle
+                              cx="25"
+                              cy="25"
+                              r="20"
+                              fill="none"
+                              stroke="rgba(255,255,255,0.6)"
+                            ></circle>
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="box">
+                  <div class="txt">
+                    <p>SHINSEGAE GALLERY</p>
+                    <p>본점<br />오세열: 세월의 흔적</p>
+                  </div>
+                  <div class="btn_more_w more">
+                    <p><a href="#">VIEW MORE</a></p>
+                    <span class="line line-bottom"></span>
+                    <span class="line line-right"></span>
+                    <span class="line line-top"></span>
+                    <span class="line line-left"></span>
+                  </div>
+                  <div class="control">
+                    <ul>
+                      <li>
+                        <a href="#"
+                          ><svg>
+                            <circle
+                              cx="25"
+                              cy="25"
+                              r="20"
+                              fill="none"
+                              stroke="rgba(255,255,255,0.6)"
+                            ></circle>
+                          </svg>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><svg>
+                            <circle
+                              cx="25"
+                              cy="25"
+                              r="20"
+                              fill="none"
+                              stroke="rgba(255,255,255,0.6)"
+                            ></circle>
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="box">
+                  <div class="txt">
+                    <p>SHINSEGAE GALLERY</p>
+                    <p>본점<br />최영욱: 인. 연(因. 緣)</p>
+                  </div>
+                  <div class="btn_more_w more">
+                    <p><a href="#">VIEW MORE</a></p>
+                    <span class="line line-bottom"></span>
+                    <span class="line line-right"></span>
+                    <span class="line line-top"></span>
+                    <span class="line line-left"></span>
+                  </div>
+                  <div class="control">
+                    <ul>
+                      <li>
+                        <a href="#"
+                          ><svg>
+                            <circle
+                              cx="25"
+                              cy="25"
+                              r="20"
+                              fill="none"
+                              stroke="rgba(255,255,255,0.6)"
+                            ></circle>
+                          </svg>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><svg>
+                            <circle
+                              cx="25"
+                              cy="25"
+                              r="20"
+                              fill="none"
+                              stroke="rgba(255,255,255,0.6)"
+                            ></circle>
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="box">
+                  <div class="txt">
+                    <p>SHINSEGAE GALLERY</p>
+                    <p>제24회 광주신세계미술제<br />최영욱: 인. 연(因. 緣)</p>
+                  </div>
+                  <div class="btn_more_w more">
+                    <p><a href="#">VIEW MORE</a></p>
+                    <span class="line line-bottom"></span>
+                    <span class="line line-right"></span>
+                    <span class="line line-top"></span>
+                    <span class="line line-left"></span>
+                  </div>
+                  <div class="control">
+                    <ul>
+                      <li>
+                        <a href="#"
+                          ><svg>
+                            <circle
+                              cx="25"
+                              cy="25"
+                              r="20"
+                              fill="none"
+                              stroke="rgba(255,255,255,0.6)"
+                            ></circle>
+                          </svg>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><svg>
+                            <circle
+                              cx="25"
+                              cy="25"
+                              r="20"
+                              fill="none"
+                              stroke="rgba(255,255,255,0.6)"
+                            ></circle>
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="art_pics_bg">
+              <div class="art_pics" id="swiper1">
+                <div class="pics swiper mySwiper2">
+                  <ul class="inner swiper-wrapper">
+                    <li class="swiper-slide">
+                      <img src="images/art01.jpg" alt="art01" />
+                    </li>
+                    <li class="swiper-slide">
+                      <img src="images/art02.png" alt="art02" />
+                    </li>
+                    <li class="swiper-slide">
+                      <img src="images/art03.jpg" alt="art03" />
+                    </li>
+                    <li class="swiper-slide">
+                      <img src="images/art04.jpg" alt="art04" />
+                    </li>
+                    <li class="swiper-slide">
+                      <img src="images/art05.jpg" alt="art05" />
+                    </li>
+                  </ul>
+                  <div class="swiper-button-next" id="btn_next"></div>
+                  <div class="swiper-button-prev" id="btn_prev"></div>
+                  <div class="swiper-pagination" id="page"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="brand">
+          <div class="title_same">
+            <h2>#Shinsegae Brand</h2>
+          </div>
+          <div class="brand_logo">
+            <ul class="pics">
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+            <div class="control control_2">
+              <ul>
+                <li>
+                  <a href="#"
+                    ><svg>
+                      <circle
+                        cx="25"
+                        cy="25"
+                        r="20"
+                        fill="none"
+                        stroke="rgba(0,0,0,0.6)"
+                      ></circle>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><svg>
+                      <circle
+                        cx="25"
+                        cy="25"
+                        r="20"
+                        fill="none"
+                        stroke="rgba(0,0,0,0.6)"
+                      ></circle>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="swiper mySwiper3">
+            <div class="swiper-wrapper">
+              <div class="content swiper-slide">
+                <ul>
+                  <li>
+                    <a href="#popup"
+                      ><img src="images/brand01_img01.jpg" alt="brand01_img01"
+                    /></a>
+                  </li>
+                  <li>
+                    <div class="txt">
+                      <p>
+                        MODERN LUXURY STORE<br />
+                        BOONTHESHOP
+                      </p>
+                      <p>
+                        패션, 문화, 예술, 음식 등에서<br />
+                        세련된 취향을 지닌 이들을 모두 만족시키는<br />
+                        모던 럭셔리 스페셜티 스토어
+                      </p>
+                      <p class="underline"><a href="#">detail</a></p>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="images/brand01_img02.jpg" alt="brand01_img02"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="images/brand01_img03.jpg" alt="brand01_img03"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="images/brand01_img04.jpg" alt="brand01_img04"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="images/brand01_img05.jpg" alt="brand01_img05"
+                    /></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="content swiper-slide">
+                <ul>
+                  <li>
+                    <a href="#"
+                      ><img src="images/brand02_img01.jpg" alt="brand02_img01"
+                    /></a>
+                  </li>
+                  <li>
+                    <div class="txt">
+                      <p>
+                        <span class="font_s"
+                          >시대를 초월한 아름다움을 추구하는</span
+                        ><br />Timeless Luxury Jewelry
+                      </p>
+                      <p>
+                        다이아몬드 본연의 아름다움을 강조한<br />
+                        클래식한 디자인부터, 독창적인 디자인까지.<br />
+                        우아하고 아름다운 세계를 만나보시기 바랍니다.
+                      </p>
+                      <p class="underline"><a href="#">detail</a></p>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="images/brand02_img02.jpg" alt="brand02_img01"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="images/brand02_img03.jpg" alt="brand02_img03"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="images/brand02_img04.jpg" alt="brand02_img04"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="images/brand02_img05.jpg" alt="brand02_img05"
+                    /></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="content swiper-slide">
+                <ul>
+                  <li>
+                    <a href="#"
+                      ><video autoplay muted loop>
+                        <source
+                          src="images/brand03_img01.mp4"
+                          type="video/mp4"
+                        /></video
+                    ></a>
+                  </li>
+                  <li>
+                    <div class="txt">
+                      <p>
+                        <span>
+                          개개인의 아름다움을 위한 약속<br />에센스 중심
+                          스킨케어 브랜드 오노마
+                        </span>
+                      </p>
+                      <p>
+                        오노마의 에센스는 레이어링 방식에 따라<br />
+                        개개인의 피부 컨디션을 케어하는데<br />
+                        도움을 주는 제품입니다.
+                      </p>
+                      <p class="underline"><a href="#">detail</a></p>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="images/brand03_img02.jpg" alt="brand03_img01"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="images/brand03_img03.jpg" alt="brand03_img03"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="images/brand03_img04.jpg" alt="brand03_img04"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><video autoplay muted loop>
+                        <source
+                          src="images/brand03_img05.mp4"
+                          type="video/mp4"
+                        /></video
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="swiper-button-next" id="btn_next2"></div>
+            <div class="swiper-button-prev" id="btn_prev2"></div>
+          </div>
+          <div class="btn_more">
+            <p><a href="sub.html">VIEW MORE</a></p>
+            <span class="line line-bottom"></span>
+            <span class="line line-right"></span>
+            <span class="line line-top"></span>
+            <span class="line line-left"></span>
+          </div>
+        </div>
+        <div id="popup">
+          <div class="pop">
+            <div class="pop_inner">
+              <div class="pics">
+                <ul>
+                  <li>
+                    <img src="images/brand01_img01.jpg" alt="brand01_img01" />
+                  </li>
+                </ul>
+              </div>
+              <div class="box">
+                <div class="txt">
+                  <ul>
+                    <li>분더샵</li>
+                    <li>2023-08-02 15:13:00</li>
+                    <li></li>
+                    <li>
+                      APOTHEKE FRAGRANCE @boontheshop_official 모든 공간을
+                      은은한 향기로 가득 채워주는 브랜드. 아포테케 프라그란스는
+                      일본 도쿄의 프라그란스로, 생활의 일부로서 향기를 즐기는
+                      방법을 제안합니다. 모든 공정이 핸드메이드로 이루이진다는
+                      사실도 매력적입니다. 향을 인테리어로 쓰는 방법, 아포테케
+                      프라그란스를 분더샵에서 체험해 보세요.
+                    </li>
+                    <li>
+                      <a href="#">#분더샵</a><a href="#">#boontheshop</a
+                      ><a href="#">#아포테케프라그란스</a
+                      ><a href="#">#apothekefragrance</a>
+                    </li>
+                  </ul>
+                  <p>
+                    <a href=""
+                      ><img src="images/popup_close.png" alt="popup_close"
+                    /></a>
+                  </p>
+                </div>
+              </div>
+              <div class="control control_3">
+                <ul>
+                  <li>
+                    <a href="#"
+                      ><img src="images/preview_w.png" alt="preview_w" /><svg>
+                        <circle
+                          cx="25"
+                          cy="25"
+                          r="20"
+                          fill="none"
+                          stroke="rgba(255,255,255,0.6)"
+                        ></circle>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="images/nextview_w.png" alt="nextview_w" /><svg>
+                        <circle
+                          cx="25"
+                          cy="25"
+                          r="20"
+                          fill="none"
+                          stroke="rgba(255,255,255,0.6)"
+                        ></circle>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="magazine">
+          <div class="title_same">
+            <h2>Magazine</h2>
+          </div>
+          <div class="content">
+            <div class="video_wrap">
+              <div class="video">
+                <ul>
+                  <li>
+                    <a href="#"
+                      ><img
+                        src="images/btn_magagin_pause.png"
+                        alt="btn_magagin_pause"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img
+                        src="images/btn_magagin_sound_off.png"
+                        alt="btn_magagin_sound_off"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="images/btn_pop_view.png" alt="btn_pop_view"
+                    /></a>
+                  </li>
+                </ul>
+                <video autoplay muted loop>
+                  <source src="images/video.mp4" type="video/mp4" />
+                </video>
+                <p>JULY 2023 - ISSUE 60</p>
+                <p>DESIGN YOUR LIFE</p>
+              </div>
+            </div>
+            <div class="pic_bg">
+              <div class="pics">
+                <ul>
+                  <li>
+                    <a href="#"
+                      ><p>
+                        <img src="images/magazine001.jpg" alt="magazine001" />
+                      </p>
+                      <p>SEASON IN THE SUN</p>
+                      <p>
+                        바캉스 계절에 즐기는 다채로운 무드의 비치 웨어 아이템.
+                      </p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><p>
+                        <img src="images/magazine004.jpg" alt="magazine004" />
+                      </p>
+                      <p>PLAYFUL COLOR PALETTE</p>
+                      <p>
+                        올해 트렌드 컬러로 이루어진 색조<br />메이크업 제품의
+                        유쾌한 컬러 플레이를 즐겨볼 것.
+                      </p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><p>
+                        <img src="images/magazine007.jpg" alt="magazine007" />
+                      </p>
+                      <p>세컨드 하우스의 꿈, 현실이 되다</p>
+                      <p>
+                        차가운 콘크리트가 아닌 안온한 자연이 있는 곳에서 이루는
+                        5도2촌의 삶.
+                      </p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><p>
+                        <img src="images/magazine03.png" alt="magazine03" />
+                      </p>
+                      <p>빈틈없는 서머 뷰티 케어</p>
+                      <p>
+                        장시간 바깥 활동을 할 때 피부를 위해 주의해야 할 팁을
+                        전문가에게 물었다.
+                      </p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><p>
+                        <img src="images/magazine06.jpg" alt="magazine06" />
+                      </p>
+                      <p>STYLISH BACK</p>
+                      <p>
+                        뒷모습을 한층 매력적으로 보이게 하는 스타일리시한 백팩
+                        컬렉션.
+                      </p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><p>
+                        <img src="images/magazine09.jpg" alt="magazine09" />
+                      </p>
+                      <p>냉면 예찬</p>
+                      <p>
+                        반죽을 눌러 제면기로 뽑아낸<br />압출면처럼, 냉면 한
+                        그릇에 농축된<br />미식의 기록.
+                      </p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><p>
+                        <img src="images/magazine12.jpg" alt="magazine09" />
+                      </p>
+                      <p>BLESSING of SERENDIPITY</p>
+                      <p>
+                        브라질 무용가에서 국민 배우로 거듭난 클라우디아 하이아.
+                      </p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><p>
+                        <img src="images/magazine15.jpg" alt="magazine15" />
+                      </p>
+                      <p>Y2K IS BACK</p>
+                      <p>Y2K IS BACK</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><p>
+                        <img src="images/magazine18.jpg" alt="magazine18" />
+                      </p>
+                      <p>WHAT WE LOVE</p>
+                      <p>
+                        글로벌 럭셔리 브랜드부터 가장 핫한<br />신상품까지,
+                        당신의 라이프스타일에<br />품격을 더해줄 7·8월의 리스트.
+                      </p>
+                    </a>
+                  </li>
+                </ul>
+                <div class="pics">
+                  <ul>
+                    <li>
+                      <a href="#"
+                        ><p>
+                          <img src="images/magazine002.jpg" alt="magazine002" />
+                        </p>
+                        <p>ULTIMATE ELEGANCE/DEEP<br />IN THE BLUE</p>
+                        <p>
+                          궁극의 아름다움을 자아내는<br />다이아몬드 워치
+                          컬렉션.
+                        </p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><p>
+                          <img src="images/magazine005.jpg" alt="magazine005" />
+                        </p>
+                        <p>ELEVATE YOUR HAIRSTYLE</p>
+                        <p>
+                          헤어 연출에 날개를 달아줄 헤어<br />액세서리와 헤어
+                          제품, 스타일링 팁을<br />소개한다.
+                        </p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><p>
+                          <img src="images/magazine01.jpg" alt="magazine01" />
+                        </p>
+                        <p>DAZZLING MOMENT</p>
+                        <p>
+                          고결함을 머금고 다시 태어난 주얼리의<br />아름다움.
+                        </p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><p>
+                          <img src="images/magazine04.jpg" alt="magazine04" />
+                        </p>
+                        <p>우리가 몰랐던 특별한 여름</p>
+                        <p>
+                          영혼을 채워줄 휴가를 계획한다면,<br />익숙하고도 낯선
+                          경험을 선사할 여행지<br />여섯 곳을 소개한다.
+                        </p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><p>
+                          <img src="images/magazine07.jpg" alt="magazine07" />
+                        </p>
+                        <p>발칸에서 만난 슈베르트</p>
+                        <p>슈베르트 &lt;아름다운 물방앗간 아가씨&gt;</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><p>
+                          <img src="images/magazine10.jpg" alt="magazine10" />
+                        </p>
+                        <p>SOPHISTICATED WRIST /<br />GLORIOUS TWIST</p>
+                        <p>
+                          얇을수록 쿨한 여름날의 브레이슬릿과<br />강렬함과
+                          우아함이 공존하는 뱅글<br />컬렉션.
+                        </p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><p>
+                          <img src="images/magazine13.jpg" alt="magazine13" />
+                        </p>
+                        <p>MEN’S ICON FROM MOVIES</p>
+                        <p>
+                          때론 강렬하고, 때론 낭만적인 영화 속<br />패션을
+                          들여다봤다.
+                        </p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><p>
+                          <img src="images/magazine16.jpg" alt="magazine16" />
+                        </p>
+                        <p>거울과 빛으로 영속되는 해방의<br />공간</p>
+                        <p>
+                          이반 나바로의 네온이 밝히는 눈부신<br />빛은 최초로
+                          인류의 밤을 밝힌 전구처럼<br />어둠으로부터의 자유와
+                          희망, 해방을<br />향한 열망으로 가득 차 있다.
+                        </p>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="pics">
+                  <ul>
+                    <li>
+                      <a href="#"
+                        ><p>
+                          <img src="images/magazine003.jpg" alt="magazine003" />
+                        </p>
+                        <p>MAKE A MOVE</p>
+                        <p>
+                          올여름, 더 감각적인 액티비티 활동을<br />위한 아이템
+                          리스트.
+                        </p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><p>
+                          <img src="images/magazine006.jpg" alt="magazine006" />
+                        </p>
+                        <p>맥주에서 역사를 읽다</p>
+                        <p>맥주 한잔에 얽힌 역사를 찾아서.</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><p>
+                          <img src="images/magazine02.jpg" alt="magazine02" />
+                        </p>
+                        <p>PLAY WITH LAYERS</p>
+                        <p>
+                          화이트 티셔츠와 패션 주얼리의 가볍고<br />스타일리시한
+                          매칭 플레이.
+                        </p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><p>
+                          <img src="images/magazine05.jpg" alt="magazine05" />
+                        </p>
+                        <p>비행하는 뷰티템</p>
+                        <p>
+                          사막보다 더 건조하다는 비행기 안,<br />장시간 비행에
+                          지칠 피부를 위한<br />아이템을 모았다. 여행에 앞서
+                          기내<br />반입 가능한 뷰티 아이템을 꼭 챙길 것.
+                        </p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><p>
+                          <img src="images/magazine08.jpg" alt="magazine08" />
+                        </p>
+                        <p>문학, 영화가 되다!</p>
+                        <p>
+                          소설은 영화가 되고, 두 장르 모두<br />인간의 삶을
+                          조명한다. 영화가 된<br />소설을 만나보자.
+                        </p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><p>
+                          <img src="images/magazine11.jpg" alt="magazine11" />
+                        </p>
+                        <p>DREAMED A DREAM</p>
+                        <p>DREAMED A DREAM</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><p>
+                          <img src="images/magazine14.jpg" alt="magazine14" />
+                        </p>
+                        <p>CLEANSING RITUAL</p>
+                        <p>
+                          하루의 시작과 끝을 완벽히 마무리할<br />욕실 속 타임별
+                          뷰티 신을 정리했다.
+                        </p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><p>
+                          <img src="images/magazine17.jpg" alt="magazine17" />
+                        </p>
+                        <p>여름을 이기는 스마트한 방법</p>
+                        <p>삶의 질을 높여줄 여름 조력자.</p>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="btn_more">
+            <p><a href="#">VIEW MORE</a></p>
+            <span class="line line-bottom"></span>
+            <span class="line line-right"></span>
+            <span class="line line-top"></span>
+            <span class="line line-left"></span>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div class="foot">
+          <div class="foot_top">
+            <div class="logo">
+              <img src="images/SHINSEGAE.png" alt="SHINSEGAE" />
+            </div>
+            <div class="menu_list">
+              <div>
+                <ul>
+                  <li><a href="#">회사소개</a></li>
+                  <li><a href="#">법인영업</a></li>
+                  <li><a href="#">백화점 신문고</a></li>
+                  <li><a href="#">사이트맵</a></li>
+                </ul>
+              </div>
+              <div>
+                <ul>
+                  <li><a href="#" class="point_r">개인정보처리방침</a></li>
+                  <li>
+                    <a href="#" class="point_r"
+                      >영상정보처리기기 운영·관리방침</a
+                    >
+                  </li>
+                  <li><a href="#">이용약관</a></li>
+                  <li><a href="#">신백멤버스 회원약관</a></li>
+                  <li><a href="#">신세계포인트 이용약관</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="site_list">
+              <div class="site">
+                <a href="#">패밀리 사이트</a>
+              </div>
+              <div class="sns">
+                <ul>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="foot_bottom">
+            <ul>
+              <li>
+                (주)신세계 대표이사 : 손영식 | 주소 : 서울특별시 중구 소공로
+                63(충무로 1가) | 개인정보보호책임자 : 김정환 상무
+              </li>
+              <li>
+                대표전화 : 1588-1234 (유료) | 사업자등록번호 : 201-81-32195 |
+                통신판매업신고번호 : 1996-서울중구-0291
+              </li>
+              <li>COPYRIGHT © SHINSEGAE. ALL RIGHTS RESERVED.</li>
+            </ul>
+            <p>
+              <a href="http://www.wa.or.kr/board/list.asp?BoardID=0006"
+                ><img src="images/wa.png" alt="wa"
+              /></a>
+            </p>
+          </div>
+        </div>
+      </footer>
+      <div class="s_bot"><a href="#"></a></div>
+      <div class="info">
+        <a href="#">
+          <p>대전신세계<br />Art & Science</p>
+          <p>STORE INFO</p>
+        </a>
+      </div>
+    </div>
+
+    <script src="js/swiper-bundle.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

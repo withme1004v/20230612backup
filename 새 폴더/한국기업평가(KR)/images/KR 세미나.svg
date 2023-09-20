@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+  <g id="ico-quick-seminar" transform="translate(-10 -10)">
+    <path id="패스_278" data-name="패스 278" d="M19,79V74.5a4.5,4.5,0,0,0-9,0V79Z" transform="translate(0 -33)" fill="#61637b"/>
+    <path id="패스_279" data-name="패스 279" d="M49,79V74.5a4.5,4.5,0,0,0-9,0V79Z" transform="translate(-16.5 -33)" fill="#61637b"/>
+    <path id="패스_280" data-name="패스 280" d="M79,79V74.5a4.5,4.5,0,0,0-9,0V79Z" transform="translate(-33 -33)" fill="#61637b"/>
+    <path id="패스_281" data-name="패스 281" d="M16.667,10v3h3V26.5h24V13h3V10Zm12.75,11.25v-6l6,3Z" transform="translate(-3.667)" fill="#61637b"/>
+    <path id="패스_282" data-name="패스 282" d="M29.5,64.417A6.739,6.739,0,0,1,34,58.081V56.167a4.5,4.5,0,0,0-9,0v1.914A6.739,6.739,0,0,1,29.5,64.417Z" transform="translate(-8.25 -22.917)" fill="#61637b"/>
+    <path id="패스_283" data-name="패스 283" d="M59.5,64.417A6.738,6.738,0,0,1,64,58.081V56.167a4.5,4.5,0,0,0-9,0v1.914A6.738,6.738,0,0,1,59.5,64.417Z" transform="translate(-24.75 -22.917)" fill="#61637b"/>
+  </g>
+</svg>

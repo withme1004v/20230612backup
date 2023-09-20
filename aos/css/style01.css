@@ -1,0 +1,24 @@
+body{
+  margin: 0;
+}
+section{
+  background-color: lightgray;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.test{
+  width: 200px;
+  height: 200px;
+  background: pink;
+  line-height: 200px;
+  text-align: center;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  margin: 5px;
+}
+img{width: 300px;}
+section:nth-child(1){background: lightcoral;}
+section:nth-child(2){background: rgb(29, 123, 216);}
+section:nth-child(3){background: rgb(146, 207, 72);}

@@ -1,0 +1,9 @@
+github회원가입
+1.비주얼스튜디오 -->폴더열기(폴더이름이 리포지토리이름으로 됨)
+2. 소스제어 선택(git설치 next-->install)
+3. 변경사항 옆에 +클릭(파일 많으면 커밋 버튼 활성될때까지 기다린다)
+4. 커밋 위에 입력란에 first commit입력 후 커밋클릭
+5. origin/master로 커밋 푸시 버튼 클릭
+6. 주소는 public으로 
+
+github 파일이름클릭하면 history로 first, second commit확인

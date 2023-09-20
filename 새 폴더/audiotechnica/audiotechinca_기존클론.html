@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>오디오테크니카 공식쇼핑몰클론</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      body {
+        font-family: "Nanum Square", "맑은 고딕", sans-serif;
+        font-weight: 400;
+      }
+      .main {
+        width: 100%;
+      }
+      header {
+        width: 100%;
+        height: 32px;
+        background: #303335;
+      }
+      header > div {
+        width: 1200px;
+        margin: 0 auto;
+        line-height: 32px;
+        color: #fff;
+      }
+      header > div > ul {
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+      }
+      .header_nav {
+        display: flex;
+        position: relative;
+      }
+      .header_nav > li:hover {
+        text-decoration: underline;
+      }
+      .header_nav > li a {
+        font-size: 12px;
+        color: #fff;
+        padding: 0 5px;
+      }
+      .header_nav > li > input:first-child {
+        padding: 3px;
+      }
+      .header_nav > li > input:first-child::placeholder {
+        font-size: 11px;
+        text-align: left;
+        padding-left: 3px;
+      }
+      .header_nav > li > input:last-child {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+      }
+      .mainlogo {
+        width: 1200px;
+        margin: 0 auto;
+      }
+      nav {
+        border: 1px solid #ddd;
+      }
+      nav .menuwrap {
+        width: 1200px;
+        margin: 0 auto;
+      }
+      nav .menuwrap > ul {
+        width: 100%;
+        height: 50px;
+        margin: 0 auto;
+        display: flex;
+      }
+      nav .menuwrap > ul > li:nth-child(2) {
+        padding: 12.5px 0;
+      }
+      nav .menu {
+        width: 1150px;
+        display: flex;
+        justify-content: space-around;
+      }
+      nav .menu > li {
+        text-align: center;
+        width: calc(100% / 8);
+        position: relative;
+      }
+      nav .menu > li > a {
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: -1px;
+      }
+      nav .menu .lnb {
+        width: 100%;
+        position: absolute;
+        background: #fff;
+        text-align: center;
+        z-index: 1;
+        top: 39px;
+        opacity: 0;
+      }
+      nav .menu .lnb li {
+        padding-top: 5px;
+      }
+      nav .menu .lnb li a {
+        color: #333;
+        font-size: 14px;
+        letter-spacing: -1px;
+      }
+      .bg {
+        position: absolute;
+        margin: 0 auto;
+        width: 1150px;
+        height: 190px;
+        background: #fff;
+        border: 1px solid #ddd;
+        margin-left: 50px;
+        opacity: 0;
+      }
+      .menuwrap:hover .lnb,
+      .menuwrap:hover .bg {
+        opacity: 1;
+      }
+      .slide1 {
+        width: 1920px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+      }
+      .box1 ul {
+        width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+      }
+      .box2 > ul {
+        width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+      }
+      .box2 > ul > li > ul {
+        width: calc(1200px - 480px);
+        height: 417px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: space-between;
+      }
+      .newitems {
+        width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .newitems > p {
+        font-size: 14px;
+        color: #ababab;
+      }
+      .newitems > h2 {
+        font-size: 20px;
+        margin-bottom: 50px;
+      }
+      .newitems ul {
+        width: 100%;
+        height: 570px;
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid #ddd;
+        margin-bottom: 50px;
+      }
+      .newitems ul li {
+        width: 20%;
+        height: 40px;
+        font-size: 12px;
+        line-height: 40px;
+        background: #ddd;
+      }
+      .newitems ul li:hover {
+        border: 1px solid green;
+        background: #fff;
+      }
+      .box3 ul {
+        width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+      }
+      .box3 ul li img {
+        border: 0.3px solid #eee;
+      }
+      .bottom {
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+      }
+      .bottom_up {
+        border-bottom: 1px solid #ddd;
+      }
+      .bottom_up ul {
+        width: 1200px;
+        height: 40px;
+        margin: 0 auto;
+        display: flex;
+        line-height: 40px;
+      }
+      .bottom_up ul li {
+        font-size: 11px;
+      }
+      .bottom_up ul li:hover {
+        text-decoration: underline;
+      }
+      .bottom_up ul li::after {
+        content: "|";
+        margin: 5px;
+        color: #ddd;
+      }
+      .bottom_up ul li:last-child::after {
+        display: none;
+      }
+      .bottom_down > ul {
+        width: 1200px;
+        margin: 0 auto;
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+      }
+      .bottom_down ul li h4 {
+        font-size: 14px;
+        letter-spacing: -1px;
+        color: #474747;
+        padding-bottom: 10px;
+      }
+      .bottom_down ul li ul li {
+        font-size: 11px;
+        letter-spacing: -1px;
+      }
+      .cs_center .phone {
+        font-size: 29px;
+        padding-bottom: 10px;
+      }
+      .cs_bank {
+        transform: translateX(-50px);
+      }
+      .cs_bank > ul > li:first-child {
+        padding-bottom: 10px;
+      }
+      .cs_dlvr_sns {
+        transform: translateX(-50px);
+      }
+      .cs_dlvr_sns ul li {
+        padding-bottom: 10px;
+      }
+      .cs_dlvr_sns ul:last-child {
+        display: flex;
+      }
+      .cs_dlvr_sns ul:last-child li {
+        padding-right: 10px;
+        opacity: 0.5;
+        transition: 0.5s;
+      }
+      .cs_dlvr_sns ul:last-child li:hover {
+        opacity: 1;
+      }
+      .cs_info ul {
+        display: flex;
+        flex-wrap: wrap;
+        width: 220px;
+      }
+      .cs_info li {
+        width: 100px;
+        height: 50px;
+        background: #ddd;
+        text-align: center;
+        margin: 3px;
+      }
+      .cs_info li:hover {
+        background: #000;
+      }
+      .cs_info li:hover a {
+        color: #fff;
+      }
+      .cs_info li a {
+        padding: 20px;
+        font-weight: bold;
+      }
+      footer {
+        width: 100%;
+        position: relative;
+      }
+      footer .footwrap {
+        width: 1200px;
+        margin: 0 auto;
+      }
+      footer .footdesc {
+        display: flex;
+        justify-content: space-between;
+      }
+      footer .footdesc > li {
+        padding: 30px 0;
+      }
+      footer .footdesc > li:first-child {
+        margin: auto 0;
+      }
+      footer .footdesc > li > ul > li {
+        float: left;
+        padding-bottom: 5px;
+        color: #ababab;
+      }
+      footer .footdesc > li > ul > li::after {
+        content: "|";
+        padding: 0 5px;
+        color: #ababab;
+      }
+      footer .footdesc li {
+        font-size: 12px;
+      }
+      footer .footdesc > li > img {
+        width: 80px;
+        height: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <header>
+        <div>
+          <ul>
+            <li>오디오테크니카 한국 공식 홈페이지 클론사이트</li>
+            <li>
+              <ul class="header_nav">
+                <li><a href="">로그인</a></li>
+                <li><a href="">회원가입</a></li>
+                <li><a href="">장바구니</a></li>
+                <li><a href="">주문/배송</a></li>
+                <li><a href="">마이페이지</a></li>
+                <li><a href="">고객지원</a></li>
+                <li>
+                  <input type="text" placeholder="상품검색" />
+                  <input type="image" src="images/search.png" value="검색" />
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <div class="mainlogo">
+        <img src="images/mainlogo.jpg" alt="mainlogo" />
+      </div>
+      <nav>
+        <div class="menuwrap">
+          <ul>
+            <li>
+              <a href=""
+                ><img src="images/menuicon.png" alt="menuicon" class="menuicon"
+              /></a>
+            </li>
+            <li>
+              <ul class="menu">
+                <li><a href="#">7월 할인행사</a></li>
+                <li><a href="#">60주년기념 한정판</a></li>
+                <li>
+                  <a href="#">이어폰</a>
+                  <ul class="lnb">
+                    <li><a href="#">인이어 이어폰</a></li>
+                    <li><a href="#">오픈형 이어폰</a></li>
+                    <li><a href="#">블루투스 이어폰</a></li>
+                    <li><a href="#">모니터링 이어폰</a></li>
+                    <li><a href="#">하이레졸루션</a></li>
+                    <li><a href="#">C-type / 8PIN</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">헤드폰</a>
+                  <ul class="lnb">
+                    <li><a href="#">오버이어 헤드폰 </a></li>
+                    <li><a href="#">온이어 헤드폰 </a></li>
+                    <li><a href="#">헤드셋 </a></li>
+                    <li><a href="#">블루투스 </a></li>
+                    <li><a href="#">모니터링 </a></li>
+                    <li><a href="#">프리미엄 </a></li>
+                    <li><a href="#">하이레졸루션</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">턴테이블</a></li>
+                <li><a href="#">스피커</a></li>
+                <li><a href="#">마이크</a></li>
+                <li>
+                  <a href="#">액세서리</a>
+                  <ul class="lnb">
+                    <li><a href="#">카트리지 </a></li>
+                    <li><a href="#">스타일러스(바늘) </a></li>
+                    <li><a href="#">헤드쉘 </a></li>
+                    <li><a href="#">클리너&브러쉬 </a></li>
+                    <li><a href="#">기타</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <div class="bg"></div>
+        </div>
+      </nav>
+      <div class="slide1">
+        <img src="images/slide1_1.jpg" alt="slide1_1" />
+      </div>
+      <div class="box1">
+        <ul>
+          <li>
+            <a href=""><img src="images/s_img01.jpg" alt="s_img01" /></a>
+          </li>
+          <li>
+            <a href=""><img src="images/s_img02.jpg" alt="s_img02" /></a>
+          </li>
+          <li>
+            <a href=""><img src="images/s_img03.jpg" alt="s_img03" /></a>
+          </li>
+        </ul>
+      </div>
+      <div class="box2">
+        <ul>
+          <li>
+            <a href=""><img src="images/images_3.jpg" alt="images_3" /></a>
+          </li>
+          <li>
+            <ul>
+              <li>
+                <a href=""><img src="images/ba04.jpg" alt="ba04" /></a>
+              </li>
+              <li>
+                <a href=""><img src="images/ba05.jpg" alt="ba05" /></a>
+              </li>
+              <li>
+                <a href=""><img src="images/ba09.jpg" alt="ba09" /></a>
+              </li>
+              <li>
+                <a href=""><img src="images/ba10.jpg" alt="ba10" /></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="newitems">
+        <p>새로나온 상품</p>
+        <h2>NEW ITEMS</h2>
+        <ul>
+          <li><p>이어폰</p></li>
+          <li><p>헤드폰</p></li>
+          <li><p>턴테이블</p></li>
+          <li><p>마이크</p></li>
+          <li><p>앰프/액세서리</p></li>
+        </ul>
+      </div>
+      <div class="box3">
+        <ul>
+          <li>
+            <a href=""><img src="images/s_img04.jpg" alt="s_img04" /></a>
+          </li>
+          <li>
+            <a href=""><img src="images/s_img05.jpg" alt="s_img05" /></a>
+          </li>
+          <li>
+            <a href=""><img src="images/s_img06.jpg" alt="s_img06" /></a>
+          </li>
+        </ul>
+      </div>
+      <div class="bottom">
+        <div class="bottom_up">
+          <ul>
+            <li><a href="">HOME</a></li>
+            <li><a href="">BRAND STORY</a></li>
+            <li><a href="">AGREEMENT</a></li>
+            <li><a href="">PRIVACY POLICY</a></li>
+            <li><a href="">GUIDE</a></li>
+          </ul>
+        </div>
+        <div class="bottom_down">
+          <ul>
+            <li class="cs_center">
+              <h4>고객센터</h4>
+              <ul>
+                <li>
+                  <div class="phone">02-3789-9803</div>
+                </li>
+                <li>(04629) 서울특별시 중구 소파로 127(남산동 2가 23)</li>
+                <li>세기빌딩 1층 오디오테크니카 서비스센터</li>
+                <li>
+                  월-금&nbsp; 오전 10시 ~ 오후 6시 / 점심시간&nbsp; 오후 12시
+                  30분 ~ 1시 30분
+                </li>
+                <li>토요일, 일요일, 공휴일 휴무</li>
+              </ul>
+            </li>
+            <li class="cs_bank">
+              <h4>무통장 입금</h4>
+              <ul>
+                <li>기업은행 148-086543-01-014</li>
+                <li>예금주 : (주)세기AT</li>
+              </ul>
+            </li>
+            <li class="cs_dlvr_sns">
+              <h4>배송조회</h4>
+              <ul>
+                <li>로젠택배 1588-9988</li>
+                <li>배송위치 조회하기</li>
+              </ul>
+              <h4>소셜미디어</h4>
+              <ul>
+                <li>
+                  <a href=""
+                    ><img src="images/ico_facebook.png" alt="ico_facebook"
+                  /></a>
+                </li>
+                <li>
+                  <a href=""
+                    ><img src="images/ico_instagram.png" alt="ico_instagram"
+                  /></a>
+                </li>
+                <li>
+                  <a href=""
+                    ><img src="images/ico_naverblog.png" alt="ico_naverblog"
+                  /></a>
+                </li>
+              </ul>
+            </li>
+            <li class="cs_info">
+              <h4>INFO</h4>
+              <ul>
+                <li>
+                  <a href="">
+                    <p>매장 안내</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <p>AS 안내</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <p>보증서비스</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <p>제휴ㆍ특판 문의</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <footer>
+        <div class="footwrap">
+          <ul class="footdesc">
+            <li>
+              <ul>
+                <li>회사명 : (주)세기에이티</li>
+                <li>대표자 : 김형준</li>
+                <li>
+                  주소 : 서울특별시 중구 소파로 127(남산동 2가 23) 세기빌딩
+                </li>
+                <li>전화 : 02-3789-9803</li>
+                <li>팩스 : 02-775-3335</li>
+                <br />
+                <li>사업자등록번호 : 201-86-32486</li>
+                <li>통신판매업신고번호 : 2013-서울중구-0733</li>
+                <li>개인정보 보호책임자 : 김형준</li>
+                <li>이메일 : qa@sekiat.co.kr</li>
+                <br />
+                <li>Copyright ⓒ <b>(주)세기AT.</b> All Rights Reserved.</li>
+              </ul>
+            </li>
+            <li><img src="images/kcp.png" alt="kcp" /></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

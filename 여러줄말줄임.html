@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .ellipsis_multi {
+        width: 200px;
+      }
+      .on {
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <p class="ellipsis_multi on">
+        여러줄 말줄임 테스트입니다.여러줄 말줄임 테스트입니다. 여러줄 말줄임
+        테스트입니다.여러줄 말줄임 테스트입니다.
+      </p>
+    </div>
+    <button>click</button>
+    <script>
+      document.getElementsByTagName("button")[0].onclick = function () {
+        document.querySelector(".ellipsis_multi").classList.toggle("on");
+      };
+    </script>
+  </body>
+</html>

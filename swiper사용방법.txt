@@ -1,0 +1,35 @@
+https://velog.io/@function_dh/JavaScript-Swiper-%EC%82%AC%EC%9A%A9%EB%B2%95-%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C-%EA%B5%AC%ED%98%84
+https://codepen.io/ylem76/pen/VwbRGEg
+https://suskind.tistory.com/33
+github에서 swiper검색-->파일에 따라 미리보기실행 안될수 있음(npm설치안해도 됨) 
+1.CDN을 사용하는 방법
+
+2. 실제 swiper js파일을 swiper github에서 다운받아서 삽입하는 방법
+
+3. npm으로 설치하여 사용하는 방법
+
+swiper
+https://nodejs.org/en
+node.js 설치가 완료되면 
+윈도우에서 window key + R 누른 후 cmd를 입력하여 console창을 띄웁니다. cmd입력
+mac에서는 터미널을 열어 주시면됩니다.
+npm -v를 입력하시면 위와 같이 npm의 버전이 나옵니다.
+
+우리는 npm을 이용하여 다음 포스트의 주제인 bower를 설치할 예정입니다.
+
+
+npm을 이용하여 패키지를 설치하고자 할때는 npm install이라는 명령어를 입력합니다
+
+npm install swiper입력
+npm init-->초기화
+npm install swiper
+npm install -g swiper
+npm run build
+윈도 탐색기에 C:\Users\Administrator--> node_modules폴더 swiper폴더 복사하여 html이 있는 경로에 붙여넣기한다.
+https://swiperjs.com/ -->get started-->제일밑에 Create issue on GitHub if you found a bug.
+압축푼폴더 domos폴더
+
+https://c0de-n0te.tistory.com/m/58--제이쿼리사용
+github에서 swiper검색후 가장 최근파일 다운로드
+
+

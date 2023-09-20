@@ -1,0 +1,13 @@
+body {
+  background: #fff;
+  margin: 0rem;
+  height: 3000px;
+}
+#canvas,
+#text {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}

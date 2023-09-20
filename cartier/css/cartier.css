@@ -1,0 +1,135 @@
+@charset "utf-8";
+@font-face {
+  font-family: "본명조";
+  src: url(webfonts/SourceHanSerifK-Regular.otf) format(otf);
+}
+@font-face {
+  font-family: "BASKVILL";
+  src: url(webfonts/BASKVILL.TTF.woff) format(woff);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-family: "BASKVILL", "본명조", sans-serif;
+  background: #ddd;
+}
+.head {
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+}
+.head .headwrap {
+  display: flex;
+  justify-content: space-between;
+  width: 1280px;
+  margin: 50px auto 0;
+}
+.head .headwrap .headwrap2 {
+  width: 664px;
+  display: flex;
+  justify-content: space-between;
+}
+.head .headwrap .headwrap2 .cartierlogo a img {
+  width: 48px;
+  height: 68px;
+}
+.head .headwrap .headwrap2 .topico ul {
+  display: flex;
+}
+.head .headwrap .headwrap2 .topico ul li {
+  width: 25px;
+  height: 21px;
+  margin-left: 10px;
+}
+.head .headwrap .headwrap2 .topico ul li a img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.bg1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  opacity: 0;
+}
+.bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  /* background-image: linear-gradient(45deg, #5e0100, #b30100); */
+}
+.firstpage {
+  width: 100%;
+  height: 100vh;
+  /* background-image: linear-gradient(45deg, #5e0100, #b30100); */
+  background: #fff;
+  mix-blend-mode: normal;
+}
+.firstpage .mv_inne .mainvisualwrap {
+  width: 100%;
+  height: 960px;
+  position: relative;
+  overflow: hidden;
+}
+.firstpage .mainvisualwrap .mv_inner > div {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 960px;
+  mix-blend-mode: multiply;
+}
+.firstpage .mainvisualwrap .mv_inner > div p,
+.firstpage .mainvisualwrap .mv_inner > div span {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.firstpage .mainvisualwrap .mv_inner p {
+  top: 800px;
+}
+.firstpage
+  .mainvisualwrap
+  .mv_inner
+  .topwrap
+  .mainvisual_one
+  p
+  span:last-child {
+  position: absolute;
+  left: 0;
+  top: -3px;
+}
+.firstpage .mainvisualwrap .mv_inner .topwrap span:first-of-type {
+  mix-blend-mode: multiply;
+}
+.firstpage .mainvisualwrap .mv_inner .topwrap span:last-of-type {
+  mix-blend-mode: screen;
+}
+.firstpage .mainvisualwrap .mv_inner .bottomwrap .mainvisual_five p {
+  /* top: -120px; */
+}
+.firstpage .mainvisualwrap .mv_inner .bottomwrap span:first-of-type {
+  mix-blend-mode: multiply;
+}
+.firstpage .mainvisualwrap .mv_inner .bottomwrap span:last-of-type {
+  mix-blend-mode: screen;
+}
+.secondpage {
+  height: 100vh;
+  background: transparent;
+}

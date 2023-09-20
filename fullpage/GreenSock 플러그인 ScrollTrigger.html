@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>AOS - Animate on scroll library</title>
+    <meta name="viewport" content="width=device-width" />
+    <style>
+      :root {
+        --sec2_Height: 199vh; /* 섹션 스크롤모션 범위기준 */
+      }
+
+      body {
+        color: #fff;
+        background: #000;
+      }
+      #wrap {
+        width: 100%;
+      }
+      #wrap section {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        border-bottom: 1px dotted #ddd;
+      }
+      #wrap section .inner {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #wrap section.sec2 {
+        height: var(--sec2_Height);
+      }
+      #wrap section.sec2 h2 {
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        top: 20%;
+        width: 100%;
+        font-size: 40px;
+        text-align: center;
+        transform: translateY(30px);
+        -webkit-transform: translateY(30px);
+        transition: all 0.2s ease;
+      }
+      #wrap section.sec2 h2.sec2_tit1 {
+        opacity: 1;
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"
+    ></script>
+
+    <div id="wrap">
+      <section class="sec1">
+        <div class="inner">
+          <h2>1번째 섹션의 타이틀입니다</h2>
+        </div>
+      </section>
+
+      <section class="sec2">
+        <div class="inner">
+          <h2 class="sec2_tit1">2번째 섹션의 타이틀입니다</h2>
+          <h2 class="sec2_tit2">
+            숨가쁘게 흘러가는 세상에<br />
+            빛을 잃어가는 모든것들
+          </h2>
+          <h2 class="sec2_tit3">놓치기 아쉬워</h2>
+        </div>
+      </section>
+
+      <section class="sec3">
+        <div class="inner">
+          <h2>3번째 섹션의 타이틀입니다</h2>
+        </div>
+      </section>
+    </div>
+
+    <!-- <script type="text/javascript" src="js/common.js"></script> -->
+    <script>
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: ".sec2", // 객체기준범위
+            pin: true, // 고정
+            start: "top top", // 시작점
+            end: "bottom bottom", // 끝점
+            scrub: 0.5, // 모션바운스
+            markers: true, // 개발가이드선
+            onLeave: function () {
+              console.log("end");
+            },
+          },
+        })
+        .to(".sec2_tit1", { duration: 0.3, opacity: 0, y: -30 })
+
+        .to(".sec2_tit2", {
+          duration: 0.3,
+          opacity: 1,
+          y: 0,
+          onComplete: function () {
+            console.log("두번째 문구등장!");
+          },
+        })
+        .to(".sec2_tit2", { duration: 0, delay: 1 })
+        .to(".sec2_tit2", { duration: 0.3, opacity: 0, y: -30 })
+
+        .to(".sec2_tit3", { duration: 0.3, opacity: 1, y: 0 })
+        .to(".sec2_tit3", { duration: 0, delay: 1 });
+    </script>
+  </body>
+</html>

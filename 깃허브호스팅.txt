@@ -1,0 +1,5 @@
+바탕화면에 포트폴리오 폴더 생성후
+비주얼스튜디오에서 소스제어클릭 후 레포지토리 초기화 커밋후 게시
+깃허브에서 게시된 레포지토리 선택후 셋팅 선택 레포지토리 이름에 본인 아이디.github.io입력후 rename-->약 1분후
+세팅화면에 pages메뉴 클릭하면 
+Your site is live at https://withme1004v.github.io/

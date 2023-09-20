@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Swiper with Mousewheel Scroll</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <style>
+      /* Custom styles for the swiper container and slides */
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        /* overflow: hidden; */
+      }
+      .swiper-container {
+        width: 100%;
+        height: 100vh;
+      }
+      .swiper-slide {
+        width: 100vw;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        color: #000;
+      }
+      .page1,
+      .page3 {
+        height: 100vh;
+        background-color: #333;
+      }
+      .page2 {
+        background-color: #666;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+      }
+      .additional-content {
+        height: 100vh;
+        overflow-y: scroll;
+        padding: 20px;
+        background-color: #999;
+        color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Page 1 -->
+    <div class="page1">
+      <h1>Page 1</h1>
+    </div>
+
+    <!-- Page 2 - Swiper Container -->
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+      </div>
+    </div>
+
+    <!-- Page 3 -->
+    <div class="page3">
+      <h1>Page 3</h1>
+    </div>
+
+    <!-- Additional content for Page 3 -->
+    <div class="additional-content">
+      <p>
+        Additional content here. You can scroll this content using the
+        mousewheel.
+      </p>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      // Initialize Swiper
+      var swiper = new Swiper(".swiper-container", {
+        direction: "horizontal",
+        // Add other Swiper options as needed
+      });
+
+      // Add mousewheel event listener to swiper container
+      var swiperContainer = document.querySelector(".swiper-container");
+      swiperContainer.addEventListener("wheel", function (event) {
+        event.preventDefault();
+        var delta = event.wheelDelta || -event.deltaY || -event.detail;
+        var scrollAmount = 100; // Adjust this value as needed
+
+        if (delta > 0) {
+          swiper.slidePrev();
+        } else {
+          swiper.slideNext();
+        }
+      });
+
+      // Add mousewheel event listener to additional content for Page 3
+      var additionalContent = document.querySelector(".additional-content");
+      additionalContent.addEventListener("wheel", function (event) {
+        event.stopPropagation();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  position: relative;
+  height: 994px;
+}
+.content img {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.content:hover img:last-child {
+  opacity: 0;
+}
+.swiper-button-prev {
+  color: #fff;
+  margin-top: -70px;
+  margin-left: 50px;
+}
+.swiper-button-next {
+  color: #fff;
+  margin-top: -70px;
+  margin-right: 50px;
+}

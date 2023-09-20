@@ -1,0 +1,13 @@
+수평가운데정렬: inline속성개체는
+                     text-align:center;
+                     block속성개체는 
+                     margin: 0 auto;
+수직정렬:inline속성개체는 vertical-aligin:middle
+block속성 하위요소가 한줄의 text line-height:높이값
+하위요소가 이미지인경우는 line-height:높이값
+해당img의 vertical-aligin:middle
+
+block속성 하위요소가 두줄이상일때의 text
+ line-height:높이값 X
+display: table-cell;
+vertical-align: middle;

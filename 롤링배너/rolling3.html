@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="jquery.simplyscroll.css" />
+    <style>
+      .wrap {
+        width: 1280px;
+        margin: 0 auto;
+      }
+      .slider-container {
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .slider {
+        display: flex;
+        width: 200%;
+        animation: scroll 5s linear infinite;
+      }
+
+      .slide {
+        flex: 1;
+        padding: 20px;
+        text-align: center;
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      @keyframes rollingleft1 {
+        0% {
+          transform: translateX(0);
+        }
+        50% {
+          transform: translateX(-100%);
+        }
+        50.01% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes rollingleft2 {
+        0% {
+          transition: translateX(0);
+        }
+        100% {
+          transform: translateX(-200%);
+        }
+      }
+    </style>
+    <script src="jquery-3.6.1.js"></script>
+    <script>
+      $(document).ready(function () {
+        var slider = $(".slider");
+        var slideWidth = $(".slide").width();
+        var isPaused = false; // 마우스 오버 상태를 나타내는 플래그
+        var interval; // 애니메이션 인터벌 ID
+
+        // 슬라이더의 마지막 슬라이드를 첫 번째 슬라이드 앞에 복사합니다.
+        slider.prepend($(".slide:last").clone());
+
+        // 슬라이더의 너비를 설정합니다.
+        var sliderWidth = slideWidth * $(".slide").length;
+        slider.css("width", sliderWidth);
+
+        // 슬라이딩 애니메이션을 실행하는 함수
+        function startSlider() {
+          interval = setInterval(function () {
+            if (!isPaused) {
+              slider.animate(
+                {
+                  left: -slideWidth,
+                },
+                2000, // 애니메이션 지속 시간 (2초)
+                function () {
+                  // 애니메이션 완료 후 첫 번째 슬라이드를 끝으로 이동시킵니다.
+                  slider.append($(".slide:first"));
+                  slider.css("left", 0);
+                }
+              );
+            }
+          }, 4000); // 4초 간격으로 슬라이딩 애니메이션 실행
+        }
+
+        // 슬라이더 애니메이션을 시작합니다.
+        startSlider();
+
+        // 마우스 오버 이벤트 핸들러
+        slider.on("mouseenter", function () {
+          isPaused = true; // 마우스 오버 시 애니메이션 일시 중지
+          clearInterval(interval); // 애니메이션 인터벌 정지
+        });
+
+        // 마우스 아웃 이벤트 핸들러
+        slider.on("mouseleave", function () {
+          isPaused = false; // 마우스 아웃 시 애니메이션 다시 시작
+          startSlider(); // 애니메이션 다시 시작
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- 배너표시영역 -->
+      <div class="slider-container">
+        <!-- 원본배너 -->
+        <ul class="slider">
+          <li class="slide">
+            <div class="image-wrap"><img src="photo1.jpg" alt="" /></div>
+            <div class="desc">
+              <strong>First Banner</strong>
+              <span
+                >Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br />
+                Neque cumque ratione provident nulla veniam nihil quaerat, illum
+                officiis hic.<br />
+                Laborum in eos possimus, quo ullam nobis nam nemo fuga
+                ipsam?</span
+              >
+            </div>
+          </li>
+          <li class="slide">
+            <div class="image-wrap"><img src="photo2.jpg" alt="" /></div>
+            <div class="desc">
+              <strong>Second Banner</strong>
+              <span
+                >Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br />
+                Neque cumque ratione provident nulla veniam nihil quaerat, illum
+                officiis hic.<br />
+                Laborum in eos possimus, quo ullam nobis nam nemo fuga
+                ipsam?</span
+              >
+            </div>
+          </li>
+          <li class="slide">
+            <div class="image-wrap"><img src="photo3.jpg" alt="" /></div>
+            <div class="desc">
+              <strong>Third Banner</strong>
+              <span
+                >Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br />
+                Neque cumque ratione provident nulla veniam nihil quaerat, illum
+                officiis hic.<br />
+                Laborum in eos possimus, quo ullam nobis nam nemo fuga
+                ipsam?</span
+              >
+            </div>
+          </li>
+          <li class="slide">
+            <div class="image-wrap">
+              <img src="photo4.jpg" alt="" />
+            </div>
+            <div class="desc">
+              <strong>Fourth Banner</strong>
+              <span
+                >Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br />
+                Neque cumque ratione provident nulla veniam nihil quaerat, illum
+                officiis hic.<br />
+                Laborum in eos possimus, quo ullam nobis nam nemo fuga
+                ipsam?</span
+              >
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

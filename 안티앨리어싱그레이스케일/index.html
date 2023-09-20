@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="base.css" /> -->
+    <!-- <link rel="stylesheet" href="contents.css" /> -->
+    <style>
+      @font-face {
+        font-family: "notokr";
+        src: url("notokr-light.woff2") format("woff2");
+        font-weight: 200;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "notokr";
+        src: url("notokr-demilight.woff2") format("woff2");
+        font-weight: 300;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "notokr";
+        src: url("notokr-regular.woff2") format("woff2");
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "notokr";
+        src: url("notokr-medium.woff2") format("woff2");
+        font-weight: 500;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "notokr";
+        src: url("notokr-bold.woff2") format("woff2");
+        font-weight: 600;
+        font-style: normal;
+      }
+      body {
+        font-family: notokr, "맑은 고딕", "Malgun Gothic", sans-serif;
+        font-weight: 400;
+        /* -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale; */
+        /* font-smoothing: antialiased; 텍스트를 부드럽게 렌더링 */
+        -webkit-font-smoothing: antialiased; /* Safari용 부드럽게 렌더링 */
+        -moz-osx-font-smoothing: grayscale; /* Firefox용 부드럽게 렌더링 */
+      }
+      .table-wrap.main.scroll table thead th {
+        font-family: notokr;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: -1.5px;
+        color: #8b8c94;
+        border-bottom: 1px solid #707070;
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="table-wrap main scroll mgt40 disclosureArea disclosureTab1">
+      <table>
+        <thead>
+          <tr>
+            <th>회사명</th>
+            <th>평가종류</th>
+            <th>종류</th>
+            <th>직전등급</th>
+            <th>현재등급</th>
+            <th>평가일</th>
+            <th>평가의견</th>
+            <th>재무요약</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+  </body>
+</html>

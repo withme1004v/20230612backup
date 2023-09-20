@@ -1,0 +1,427 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+#wrap {
+  min-width: 1280px;
+}
+.topnavbg {
+  width: 100%;
+  background: #191d24;
+}
+.topnav {
+  width: 1280px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 10;
+}
+.logo {
+  width: 80%;
+  height: 100%;
+}
+#logo > img {
+  width: 152px;
+  position: relative;
+}
+.game_series {
+  width: 545px;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 40px;
+  opacity: 0.9;
+  transition: 0.2s ease-in-out;
+}
+.box {
+  top: 40px;
+  height: 460px;
+}
+.gamelist {
+  display: flex;
+  width: 100%;
+  height: 460px;
+  position: relative;
+}
+.gamelist ul {
+  width: 480px;
+  background: #191d24;
+}
+.xbtn {
+  width: 65px;
+  height: 65px;
+  background: #191d24;
+  text-align: center;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+.xbtn > img {
+  width: 80%;
+  padding-top: 7px;
+}
+.gamelist ul > li {
+  width: 100%;
+  height: 150px;
+  border-top: 1px solid#aeaeb3;
+}
+
+.gamelist ul > li > a {
+  display: flex;
+  color: #aeaeb3;
+  font-size: 15px;
+  padding: 10px;
+}
+
+.gamelist ul > li > a img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  margin: 10px;
+}
+
+.game_info > h1 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #fff;
+  margin-top: 5px;
+}
+.game_info > p {
+  width: 120px;
+  height: 40px;
+  background: #ffd71e;
+  border-radius: 20px;
+  color: #191d24;
+  text-align: center;
+  font-weight: 800;
+}
+.topnav_right {
+  width: 28%;
+  color: #aeaeb3;
+  font-size: 14px;
+  display: flex;
+}
+.gamelist ul li span {
+  font-size: 15px;
+}
+.topnav_right > a {
+  width: 40%;
+  color: #aeaeb3;
+  text-align: center;
+}
+
+.language {
+  width: 40%;
+  text-align: center;
+  position: relative;
+  background: #191d24;
+  color: #aeaeb3;
+}
+.language p::after {
+  content: "▼";
+  position: absolute;
+  right: 15px;
+  top: 0;
+}
+.language p.active::after {
+  content: "▲";
+  opacity: 1;
+}
+.language_list {
+  width: 100%;
+  display: none;
+  background: #191d24;
+  overflow: hidden;
+}
+.languagepage li > a {
+  display: block;
+  color: #aeaeb3;
+  font-size: 14px;
+}
+.languagepage li:hover > a {
+  background: #ccc;
+  color: black;
+}
+
+.game_video {
+  height: 100vh;
+}
+.game_video video {
+  height: 100%;
+  object-fit: cover;
+}
+.main_top {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  position: absolute;
+  top: 40px;
+}
+
+.menubar_position {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.menubar {
+  width: 100%;
+  height: 77px;
+  position: fixed;
+  top: 40px;
+  background: #000000b3;
+  z-index: 1;
+}
+.menubar_align {
+  width: 1280px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.menubar_left {
+  width: 18%;
+}
+.menubar_right {
+  width: 75%;
+}
+.menubar_right ul {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.menubar_right ul li a {
+  display: inline-block;
+  line-height: 77px;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 800;
+}
+.main_geme {
+  width: 100%;
+  height: 966px;
+  overflow: hidden;
+  background: #191d24;
+}
+.main_logo {
+  width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+.main_logo img {
+  width: 370px;
+  object-fit: cover;
+  margin: 100px auto;
+}
+.main_centersvg {
+  width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+.main_centersvg img {
+  width: 148px;
+  margin: 40px auto;
+}
+.store {
+  width: 980px;
+  margin: 30px auto;
+  display: flex;
+}
+.store li {
+  width: 25%;
+}
+.scroll {
+  width: 100%;
+  margin: 70px auto;
+  text-align: center;
+  animation: bounce 1.5s infinite ease-in;
+}
+@keyframes bounce {
+  0%,
+  to {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+aside.navercafe {
+  position: fixed;
+  right: 150px;
+  top: 150px;
+  z-index: 1;
+}
+aside.navercafe img {
+  width: 83px;
+}
+.game_introduce {
+  width: 100%;
+  margin: 0 auto;
+}
+.information1 {
+  width: 100%;
+  background: #302a24;
+}
+.intro_top {
+  width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+.intro_top_img {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.intro_top_img > li:first-child img,
+.intro_top_img > li:last-child img {
+  width: 178px;
+  padding: 10px 0;
+}
+.intro_top_img > li:nth-child(2) img {
+  width: 70px;
+  height: 40px;
+}
+.intro_top_img > li:last-child img {
+  transform: scalex(-1);
+}
+.intro_top > span {
+  font-size: 30px;
+  color: #c59771;
+}
+.intro_top > h1 {
+  font-size: 60px;
+  color: #c59771;
+}
+
+.cookie_intro {
+  width: 960px;
+  height: 66px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-between;
+}
+.cookie_intro > span {
+  width: 136px;
+  height: 66px;
+  line-height: 66px;
+  margin: 0 auto;
+  cursor: pointer;
+  font-size: 18px;
+  color: #c18243;
+  background: url(../images/parentheses.svg) center/cover;
+}
+
+.cookie_intro span:hover,
+.cookie_intro span.cookieon {
+  color: #fff;
+  font-weight: 800;
+  background: url(../images/parentheses2.svg) center/cover;
+}
+.cookie_img {
+  width: 802px;
+  height: 514px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+#cookie_intro_frame {
+  width: 760px;
+  height: 475px;
+  margin: 0 auto;
+  position: relative;
+  top: 20px;
+  text-align: center;
+  overflow: hidden;
+}
+#cookie_intro_frame > ul {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: 0.5s ease-out;
+  display: flex;
+}
+#cookie_intro_frame > ul li img {
+  width: 760px;
+}
+.frame {
+  width: 802px;
+  height: 514px;
+  background: url(../images/frame.png) center / 802px 514px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#cookie_intro_frame .frame img {
+  width: 100%;
+}
+
+.prev {
+  position: absolute;
+  left: -100px;
+  top: 225px;
+  width: 52px;
+  cursor: pointer;
+}
+.prev > img {
+  width: 52px;
+  height: 80px;
+}
+.next {
+  position: absolute;
+  right: -100px;
+  top: 225px;
+  width: 52px;
+  cursor: pointer;
+  transform: scaleX(-1);
+}
+
+.next > img {
+  width: 52px;
+  height: 80px;
+}
+.stud {
+  width: 1280px;
+  height: 50px;
+  margin: 0 auto;
+}
+
+.stud ul {
+  width: 150px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.stud ul li.dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin: 20px auto;
+  background: #c08d55;
+  transition: width 500ms ease-in-out;
+  cursor: pointer;
+}
+.stud ul li.dotactive {
+  width: 38px;
+  height: 6px;
+  border-radius: 2px;
+  background: #e2ca99;
+}

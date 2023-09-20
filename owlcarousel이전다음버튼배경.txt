@@ -1,0 +1,38 @@
+owlcarousel
+이전다음버튼 수정
+내부방식일경우
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+  position: absolute;
+  width: 21px;
+  height: 39px;
+  top: 50%;
+  background-image: url(../images/btns.png);
+  text-indent: -9999px;
+}
+.owl-carousel .owl-nav button.owl-prev{
+  left: 50px;
+  background-position: -6px -4px;
+}
+.owl-carousel .owl-nav button.owl-next {
+  right: 50px;
+  background-position: -29px -4px;
+}
+외부방식일경우
+.owl-carousel .owl-nav button.owl-prev span,
+.owl-carousel .owl-nav button.owl-next span {
+  position: absolute;
+  width: 21px;
+  height: 39px;
+  top: 50%;
+  background-image: url(../images/btns.png);
+  text-indent: -9999px;
+}
+.owl-carousel .owl-nav button.owl-prev span {
+  left: 50px;
+  background-position: -6px -4px;
+}
+.owl-carousel .owl-nav button.owl-next span {
+  right: 50px;
+  background-position: -29px -4px;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rolling Banner Javascript Version</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .banner {
+        width: 500px;
+        border: 1px solid #000;
+        position: relative;
+        overflow: hidden;
+        margin: 0 auto;
+      }
+      .slider-container {
+        width: 200%;
+
+        display: flex;
+      }
+
+      .slider {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        white-space: nowrap;
+      }
+
+      .slide {
+        flex: 1;
+        min-width: 200px;
+        text-align: center;
+        padding: 20px;
+        white-space: nowrap;
+      }
+      .slide img {
+        width: 100%;
+      }
+    </style>
+    <script src="js/gsap.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <div class="banner">
+      <div class="slider-container">
+        <div class="slider" id="slider">
+          <div class="slide"><img src="images/img01.jpg" alt="" /></div>
+          <div class="slide"><img src="images/img02.jpg" alt="" /></div>
+          <div class="slide"><img src="images/img03.jpg" alt="" /></div>
+          <div class="slide"><img src="images/img04.jpg" alt="" /></div>
+        </div>
+        <div class="slider" id="slider">
+          <div class="slide"><img src="images/img01.jpg" alt="" /></div>
+          <div class="slide"><img src="images/img02.jpg" alt="" /></div>
+          <div class="slide"><img src="images/img03.jpg" alt="" /></div>
+          <div class="slide"><img src="images/img04.jpg" alt="" /></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(function () {
+        let animationSpeed = 10; // 기본 슬라이더 속도 (초당 이동 거리)
+        let sliderWidth = $(".slider").width() * $(".slider").length; //이미지 가로 값
+        $(".slider-container").append($(".slider").eq(0).clone());
+
+        const tl = gsap.timeline({ repeat: -1 });
+        tl.to(".slider-container", {
+          x: -sliderWidth,
+          duration: animationSpeed,
+          ease: "linear",
+        });
+        tl.play();
+        $(".slider-container").hover(
+          function () {
+            //tl.pause();
+            animationSpeed = 30; // 원하는 속도로 조절합니다.
+            tl.duration(animationSpeed);
+          },
+          function () {
+            animationSpeed = 20; // 마우스를 떠난 후 기존 속도로 복구합니다.
+            tl.duration(animationSpeed);
+            tl.play();
+          }
+        );
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/swiper-bundle.css" />
+    <script src="js/swiper-bundle.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+      .swiper-container-mainNav {
+        width: 200px;
+        margin: 0 auto;
+      }
+      .swiper-container-mainNav .swiper-wrapper {
+        /* width: 220px !important; */
+        overflow: hidden;
+        border: 1px solid #000;
+      }
+
+      .swiper-container-mainNav .swiper-wrapper .swiper-slide {
+        width: 190px !important;
+        background: #ccc;
+        height: 200px;
+      }
+
+      .swiper-container-mainNav .swiper-wrapper .swiper-slide:nth-child(3) {
+        width: 140px !important;
+      }
+    </style>
+    <script>
+      $(function () {
+        function swiperPositionSet(el, Xposition, index) {
+          $(el).attr(
+            "style",
+            "transform:translate3d(" +
+              Xposition[index] +
+              "px ,0px,0px); transition-duration: 300ms;"
+          );
+        }
+        function mainSlideChangeStart() {
+          var swiper_position_X = [0, -190, -380, -520];
+
+          swiperPositionSet(
+            ".swiper-container-mainNav .swiper-wrapper",
+            swiper_position_X,
+            mySwiperMainNav.realIndex
+          );
+        }
+        var mySwiperMainNav = new Swiper(".swiper-container-mainNav", {
+          //width: 190,
+          slidesPerView: 1,
+          spaceBetween: 30,
+          loop: true,
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+          },
+        });
+        mySwiperMainNav.on("slideChangeTransitionStart", mainSlideChangeStart);
+      });
+    </script>
+  </head>
+  <body>
+    <div class="swiper-container-mainNav">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div id="main1"></div>
+        </div>
+        <div class="swiper-slide">
+          <div id="main2"></div>
+        </div>
+        <div class="swiper-slide">
+          <div id="main3"></div>
+        </div>
+        <div class="swiper-slide">
+          <div id="main4"></div>
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </body>
+</html>

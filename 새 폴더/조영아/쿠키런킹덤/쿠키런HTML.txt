@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="images/logoicon.jpg" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>쿠키런: 킹덤</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+        <div class="topnavbg">
+          <div class="topnav">
+            <div class="logo">
+              <img src="images/devsisterslogo.svg" alt="logo" />
+              <div class="gamelist">
+                <ul>
+                  <li>
+                    <a href="#">
+                      <img src="images/cookierun.png" alt="cookierun" />
+                      <div class="game_info">
+                        <h1>쿠키런:오븐브레이크</h1>
+                        <span>최고의 런게임 쿠키런</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img
+                        src="images/hellobravecookies.png"
+                        alt="hellobravecookies"
+                      />
+
+                      <div class="game_info">
+                        <h1>쿠키런:퍼즐월드</h1>
+                        <span>쿠키들의 모험이 가득한 3Match 퍼즐 게임</span>
+                      </div></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="images/brixity.png" alt="brixity" />
+                      <div class="game_info">
+                        <h1>브릭시티</h1>
+                        <span>build your World, Brix by brix</span>
+                        <p>사전예약중 ▶</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+                <div class="xbtn"><img src="images/xbtn.png" alt="xbtn" /></div>
+              </div>
+            </div>
+            <div class="topnav_right">
+              <a href="#">고객센터</a>
+              <div class="language">
+                <p>한국어</p>
+                <div class="language_list">
+                  <ul class="languagepage">
+                    <li><a href="#">English</a></li>
+                    <li><a href="#">日本語</a></li>
+                    <li><a href="#">한국어</a></li>
+                    <li><a href="#">繁體中文</a></li>
+                    <li><a href="#">ภาษาไทย</a></li>
+                    <li><a href="#">Deutsch</a></li>
+                    <li><a href="#">Français</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="menubar">
+          <ul>
+            <li>
+              <a href="#">
+                <img src="images/flat_logo_ko.png" alt="logo_ko"
+              /></a>
+            </li>
+            <li><a href="#">게임소개</a></li>
+            <li><a href="#">캐릭터</a></li>
+            <li><a href="#">세계관</a></li>
+            <li><a href="#">미디어</a></li>
+            <li><a href="#">쿠폰입력</a></li>
+          </ul>
+        </div>
+      </header>
+      <section>
+        <div class="main_geme">
+          <div class="main_logo">
+            <img src="images/logo_ko.png" alt="logo" />
+          </div>
+          <div class="video">
+            <img src="images/centerimg.svg" alt="centerimg" />
+          </div>
+          <ul class="store">
+            <li>
+              <a href="#"
+                ><img src="images/appsrore_apple.svg" alt="apple"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="images/appsrore_google.svg" alt="google"
+              /></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/appsrore_one.svg" alt="one" /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="images/appsrore_galaxy.svg" alt="galaxy"
+              /></a>
+            </li>
+          </ul>
+          <div class="scroll">
+            <img src="images/scroll_center.svg" alt="scroll" />
+          </div>
+        </div>
+      </section>
+      <aside><img src="images/naverCafeLogo.png" alt="naverCafeLogo" /></aside>
+      <section class="game_introduce">
+        <div class="information">
+           <ul class="intro_top_img">
+              <li><img src="images/indication.svg" alt="indication" /></li>
+              <li><img src="images/centerDeco.png" alt="centerDeco" /></li>
+              <li><img src="images/indication.svg" alt="indication" /></li>
+            </ul>
+            <span>COOKIERUN: KINGDOM</span>
+            <h1>게임소개</h1>
+          </div>
+          <ul class="cookie_intro">
+            <li>쿠키</li>
+            <li>모험</li>
+            <li>전투</li>
+            <li>왕국</li>
+            <li>길드</li>
+          </ul>
+          <div class="cookie_img">
+            <img src="images/arrow2.png" alt="arrow2" />
+            <div>
+              <ul>
+                <li>
+                  <img
+                    src="images/gameContents_ko1.jpg"
+                    alt="gameContents_ko1"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="images/gameContents_ko2.jpg"
+                    alt="gameContents_ko1"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="images/gameContents_ko3.jpg"
+                    alt="gameContents_ko1"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="images/gameContents_ko4.jpg"
+                    alt="gameContents_ko1"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="images/gameContents_ko5.jpg"
+                    alt="gameContents_ko1"
+                  />
+                </li>
+              </ul>
+              <img src="images/arrow2.png" alt="arrow2" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="game_character">
+         <ul class="intro_top_img">
+              <li><img src="images/indication.svg" alt="indication" /></li>
+              <li><img src="images/centerDeco.png" alt="centerDeco" /></li>
+              <li><img src="images/indication.svg" alt="indication" /></li>
+            </ul>
+            <span>COOKIERUN: KINGDOM</span>
+            <h1>COOKIERUN: KINGDOM CHARACTERS</h1>
+            <p>※ 일부 캐릭터는 추후 업데이트 예정입니다.</p>
+          </div>
+          <ul class="cookie_kind">
+            <li>영웅쿠키</li>
+            <li>용감한 쿠키와 친구들</li>
+            <li>전설쿠키</li>
+            <li>악당쿠키</li>
+          </ul>
+          <div class="acter_info hero">
+            <ul class="game_character_img">
+              <li>
+                <img
+                  src="images/pure_vanilla_cookie.png"
+                  alt="pure_vanilla_cookie"
+                />
+              </li>
+              <li>
+                <img
+                  src="images/hollyberry_cookie.png"
+                  alt="hollyberry_cookie"
+                />
+              </li>
+              <li>
+                <img
+                  src="images/golden_cheese_cookie.png"
+                  alt="golden_cheese_cookie"
+                />
+              </li>
+              <li>
+                <img
+                  src="images/dark-cacao-cookie.png"
+                  alt="pure_vanilla_cookie"
+                />
+              </li>
+              <li>
+                <img
+                  src="images/white-lily-cookie.png"
+                  alt="white-lily-cookie"
+                />
+              </li>
+            </ul>
+            <ul class="cookie_move">
+              <li>
+                <img
+                  src="images/pure_vanilla_cookie1.png"
+                  alt="pure_vanilla_cookie"
+                />
+              </li>
+              <li>
+                <img
+                  src="images/hollyberry_cookie1.png"
+                  alt="hollyberry_cookie"
+                />
+              </li>
+              <li>
+                <img
+                  src="images/golden_cheese_cookie1.png"
+                  alt="golden_cheese_cookie"
+                />
+              </li>
+              <li>
+                <img
+                  src="images/dark_cacao_cookie_1.png"
+                  alt="dark_cacao_cookie"
+                />
+              </li>
+              <li>
+                <img
+                  src="images/white_lily_cookie1.png"
+                  alt="images/white_lily_cookie"
+                />
+              </li>
+            </ul>
+            <ul class="cookie_info">
+              <li>
+                <p class="cookie_style">영웅쿠키</p>
+                <h2 class="cookie_name">퓨어바닐라 쿠키</h2>
+                <p class="cookie_sound">성우. 김예림</p>
+                <img src="images/sound.svg" alt="sound" />
+                <p>
+                  자연의 축복을 듬뿍 받은 우유크림과 향긋한 바닐라 열매가 들어간
+                  아주 포근한 쿠키. 사르르 부드러워 어디에나 잘 어울리는
+                  바닐라처럼, 친절하고 상냥한 퓨어바닐라 쿠키와는 누구나 친구가
+                  될 수 있다.
+                </p>
+              </li>
+              <li>
+                <p class="cookie_style">영웅쿠키</p>
+                <h2 class="cookie_name">홀리베리 쿠키</h2>
+                <p class="cookie_sound">성우. 이새아</p>
+                <img src="images/sound.svg" alt="sound" />
+                <p>
+                  이 쿠키의 선명한 붉은 빛을 보라. 세상에서 가장 뜨거운 햇빛을
+                  받고 자란 베리나무, 그중에서도 유독 짙은 빛깔의 열매를 엄선해
+                  넣었다! 그 빛깔부터 어찌나 열정적이고 뜨거운지, 만나는
+                  쿠키마다 진한 우정을 나누지 않고서야 못 배기는 쿠키가
+                  되었다고.
+                </p>
+              </li>
+              <li>
+                <p class="cookie_style">영웅쿠키</p>
+                <h2 class="cookie_name">골드치즈 쿠키</h2>
+                <p class="cookie_sound">성우. 김연우</p>
+                <img src="images/sound.svg" alt="sound" />
+                <p>
+                  흘러넘칠 정도로 탐욕스런 황금 치즈를 잔뜩 넣어 만든 금색의
+                  쿠키. 풍미 가득한 치즈 기둥, 윤기 좔좔 황금 금고, 눈부신
+                  골드치즈 조각상까지… 온통 황금을 덧발라 번쩍거리는 골드치즈
+                  왕국에서도 가장 높고 반짝이는 곳을 독차지했다.
+                </p>
+              </li>
+              <li>
+                <p class="cookie_style">영웅쿠키</p>
+                <h2 class="cookie_name">다크카카오 쿠키</h2>
+                <p class="cookie_sound">성우. 정승욱</p>
+                <img src="images/sound.svg" alt="sound" />
+                <p>
+                  눈보라가 휘몰아치는 절벽 끝에서 자란 다크카카오 열매를 건조한
+                  겨울 바람에 한 번 더 말렸더니 쓰디쓴 카카오닙스가 되었다.
+                  반죽이 얼어버릴 정도로 추운 곳에서 자라나서인지 단맛이라고는
+                  전혀 없이 차갑고 고독해진 쿠키.
+                </p>
+              </li>
+              <li>
+                <p class="cookie_style">영웅쿠키</p>
+                <h2 class="cookie_name">세인트릴리 쿠키</h2>
+                <p class="cookie_sound">성우. 송하림</p>
+                <img src="images/sound.svg" alt="sound" />
+                <p>
+                  달빛만이 빛나던 어느 밤에, 비를 맞고 조용히 피어난 순백의
+                  백합꽃을 닮은 쿠키. 차분히 가라앉은 눈빛을 보고 있노라면
+                  조용하고도 침착하게 세상의 진리를 탐구하고자 하는 호기심이
+                  비친다.
+                </p>
+              </li>
+            </ul>
+            <div class="cooki_arrow">
+              <img src="images/arrow2.png" alt="arrow2" />
+              <img src="images/arrow2.png" alt="arrow2" />
+            </div>
+          </div>
+          <div class="acter_info bravery">
+            <ul class="game_character_img">
+              <li>
+                <img src="images/brave-cookie.png" alt="brave-cookie" />
+              </li>
+              <li>
+                <img
+                  src="images/strawberry-cookie.png"
+                  alt="strawberry-cookie"
+                />
+              </li>
+              <li>
+                <img src="images/wizard-cookie.png" alt="wizard-cookie" />
+              </li>
+              <li>
+                <img
+                  src="images/chili-pepper-cookie.png"
+                  alt="chili-pepper-cookie"
+                />
+              </li>
+              <li>
+                <img src="images/custard-cookie.png" alt="custard-cookie" />
+              </li>
+            </ul>
+            <ul class="cookie_move">
+              <li>
+                <img src="images/brave-cookie1.png" alt="brave-cookie" />
+              </li>
+              <li>
+                <img
+                  src="images/strawberry-cookie1.png"
+                  alt="strawberry-cookie"
+                />
+              </li>
+              <li>
+                <img src="images/wizard-cookie1.png" alt="wizard-cookie1" />
+              </li>
+              <li>
+                <img
+                  src="images/chili-pepper-cookie1.png"
+                  alt="chili-pepper-cookie"
+                />
+              </li>
+              <li>
+                <img
+                  src="images/custard-cookie1.png"
+                  alt="images/custard-cookie"
+                />
+              </li>
+            </ul>
+            <ul class="cookie_info">
+              <li>
+                <p class="cookie_style">용감한 쿠키와 친구들</p>
+                <h2 class="cookie_name">용감한 쿠키</h2>
+                <p class="cookie_sound">성우. 양정화</p>
+                <img src="images/sound.svg" alt="sound" />
+                <p>
+                  맨 처음 탈출을 감행한 용감한 쿠키. 마녀의 오븐 속에서 구워지고
+                  있던 쿠키가 어떻게 해서 생명을 얻게 되었는지 알려져 있지 않다.
+                  아마도 쿠키를 만들던 마녀가 생강가루와 생명을 주는 마법가루를
+                  혼동했던 것 아닐까?
+                </p>
+              </li>
+              <li>
+                <p class="cookie_style">용감한 쿠키와 친구들</p>
+                <h2 class="cookie_name">딸기맛 쿠키</h2>
+                <p class="cookie_sound">성우. 윤미나</p>
+                <img src="images/sound.svg" alt="sound" />
+                <p>
+                  부끄러움이 많아 좋은점이 있다면 달콤한 딸기향이 쉽게 날아가지
+                  않는다는 것. 다른 쿠키들처럼 활발하게 움직였다면, 사실 딸기가
+                  직접 들어있지는 않고 향만 첨가되어있다는 사실을 금방
+                  들켜버렸을지도 모른다. 하지만 젤리들을 녹여 딸기젤리로 만들
+                  정도로 달콤상큼한 향이니 자신감을 가지기를!
+                </p>
+              </li>
+              <li>
+                <p class="cookie_style">용감한 쿠키와 친구들</p>
+                <h2 class="cookie_name">마법사맛 쿠키</h2>
+                <p class="cookie_sound">성우. 이현진</p>
+                <img src="images/sound.svg" alt="sound" />
+                <p>
+                  정말 우연히 마녀의 마법사탕지팡이를 얻게된 이후로, 매우
+                  특별하고도 강력한 마법을 사용할 수 있게된 쿠키. 톡톡 터지는
+                  식감의 팝핑캔디 아이스크림을 멋스럽게 얹어, 마법사다운 맛을
+                  더했다.
+                </p>
+              </li>
+              <li>
+                <p class="cookie_style">용감한 쿠키와 친구들</p>
+                <h2 class="cookie_name">칠리맛 쿠키</h2>
+                <p class="cookie_sound">성우. 윤은서</p>
+                <img src="images/sound.svg" alt="sound" />
+                <p>
+                  혀에 닿기만 해도 불처럼 매운 칠리소스가 법적인 기준보다 훨씬
+                  많이 들어가는 바람에, 법 따위 신경쓰지 않는 독하디 독한 쿠키가
+                  탄생했다! 가는 곳마다 시끌벅적 요란한 소동을 일으키는 이
+                  쿠키는, 값비싸고 반짝이는 것만 보면 송두리째 훔쳐가고 먼지만
+                  남겨버린다.
+                </p>
+              </li>
+              <li>
+                <p class="cookie_style">용감한 쿠키와 친구들</p>
+                <h2 class="cookie_name">커스터드 3세맛 쿠키</h2>
+                <p class="cookie_sound">성우. 이자명</p>
+                <img src="images/sound.svg" alt="sound" />
+                <p>
+                  어느 옛날 있었던 멋지고 웅장한 왕국처럼 어엿한 자신만의 왕국을
+                  만드는 것이 꿈인 커스터드 3세맛 쿠키. 머리 위의 커스터드가
+                  모양이 잡히기도 전부터 왕국 이야기를 들으며 왕이 되기 위한
+                  수행을 해왔다고 주장한다.
+                </p>
+              </li>
+            </ul>
+            <div class="cooki_arrow">
+              <img src="images/arrow2.png" alt="arrow2" />
+              <img src="images/arrow2.png" alt="arrow2" />
+            </div>
+          </div>
+
+          <div class="acter_info legend">
+            <ul class="game_character_img">
+              <li>
+                <img src="images/moonlight-cookie.png" alt="moonlight-cookie" />
+              </li>
+              <li>
+                <img src="images/sea-fairy-cookie.png" alt="sea-fairy-cookie" />
+              </li>
+              <li>
+                <img
+                  src="images/fire-spirit-cookie.png"
+                  alt="fire-spirit-cookie"
+                />
+              </li>
+              <li>
+                <img
+                  src="images/wind-archer-cookie.png"
+                  alt="wind-archer-cookie"
+                />
+              </li>
+              <li>
+                <img
+                  src="images/millennial-tree-cookie.png"
+                  alt="millennial-tree-cookie"
+                />
+              </li>
+            </ul>
+            <ul class="cookie_move">
+              <li>
+                <img
+                  src="images/moonlight-cookie1.png"
+                  alt="moonlight-cookie"
+                />
+              </li>
+              <li>
+                <img
+                  src="images/sea-fairy-cookie1.png"
+                  alt="sea-fairy-cookie"
+                />
+              </li>
+              <li>
+                <img
+                  src="images/fire-spirit-cookie1.png"
+                  alt="fire-spirit-cookie"
+                />
+              </li>
+              <li>
+                <img
+                  src="images/wind-archer-cookie1.png"
+                  alt="wind-archer-cookie"
+                />
+              </li>
+              <li>
+                <img
+                  src="images/millennial-tree-cookie1.png"
+                  alt="images/millennial-tree-cookie"
+                />
+              </li>
+            </ul>
+            <ul class="cookie_info">
+              <li>
+                <p class="cookie_style">전설쿠키</p>
+                <h2 class="cookie_name">달빛술사 쿠키</h2>
+                <p class="cookie_sound">성우. 박선영</p>
+                <img src="images/sound.svg" alt="sound" />
+                <p>
+                  밤하늘을 담은 머리카락을 날리며 꿈꾸듯 달리는 달빛술사 쿠키.
+                  아주 오랜 옛날 마법사들의 도시에 있던 마법사들에 의해 만들어져
+                  마법의 비밀을 전수받았다. 지금은 마법사들이 모두 사라지고
+                  없지만, 꿈을 꾸고 있을 때 더욱 강해지는 마법 능력으로 홀로
+                  마법사들의 흔적을 지키고 있다.
+                </p>
+              </li>
+              <li>
+                <p class="cookie_style">전설쿠키</p>
+                <h2 class="cookie_name">바다요정 쿠키</h2>
+                <p class="cookie_sound">성우. 문선희</p>
+                <img src="images/sound.svg" alt="sound" />
+                <p>
+                  바다를 벗어나면 얼어버리는 차가운 저주에 걸려있던 바다요정
+                  쿠키. 운명을 거스르려다가 얼어붙어 버렸지만, 쿠키들이 따뜻한
+                  마음을 모아준 덕에 돌아올 수 있었다. 지금은 냉기와 물의 힘으로
+                  쿠키들의 든든한 지원군이 되는 바다요정 쿠키.
+                </p>
+              </li>
+              <li>
+                <p class="cookie_style">전설쿠키</p>
+                <h2 class="cookie_name">불꽃정령 쿠키</h2>
+                <p class="cookie_sound">성우. 박성태</p>
+                <img src="images/sound.svg" alt="sound" />
+                <p>
+                  뜨거운 용의 협곡에서 살아남으려 노력하는 쿠키들이 있는 반면,
+                  그곳의 영험한 불의 기운으로 탄생한 전설적인 쿠키가 여기에
+                  있다. 붉은 용의 구슬을 지니고 있는 것을 보면, 영원한 불속에
+                  갇혔던 쿠키가 붉은 용의 호의, 또는 어떤 거래로 인해 생명을
+                  되찾게 된 것임을 짐작할 수 있다.
+                </p>
+              </li>
+              <li>
+                <p class="cookie_style">전설쿠키</p>
+                <h2 class="cookie_name">바람궁수 쿠키</h2>
+                <p class="cookie_sound">성우. 손수호</p>
+                <img src="images/sound.svg" alt="sound" />
+                <p>
+                  원래는 초록을 사랑하던 바람이었다. 그의 일과는 숲과 비스킷
+                  동물들 사이를 누비며 싱그럽고 달콤한 향을 퍼뜨리는 일이었다.
+                  위험에 빠진 디저트 숲을 지키기 위해 신비로운 존재로부터 생명의
+                  힘을 받아 쿠키의 형상을 갖게 되었다고 한다.
+                </p>
+              </li>
+              <li>
+                <p class="cookie_style">전설쿠키</p>
+                <h2 class="cookie_name">천년나무 쿠키</h2>
+                <p class="cookie_sound">성우. 안효민</p>
+                <img src="images/sound.svg" alt="sound" />
+                <p>
+                  비밀스러운 숲 속에 천년의 영광을 누리던 고목이 있었다. 대지를
+                  돌보기 위해 땅 속 깊이 뿌리를 뻗어나가던 이 나무는, 새빨간
+                  저주가 숲을 침범하자 스스로를 봉인하며 잎을 떨구고 잠에
+                  들었다. 쿠키들의 정성으로 깨어난 이후, 다른 쿠키들과 함께 세상
+                  밖을 나선 천년나무 쿠키.
+                </p>
+              </li>
+            </ul>
+            <div class="cooki_arrow">
+              <img src="images/arrow2.png" alt="arrow2" />
+              <img src="images/arrow2.png" alt="arrow2" />
+            </div>
+          </div>
+
+          <div class="acter_info villain">
+            <ul class="game_character_img">
+              <li>
+                <img
+                  src="images/dark-enchantress-cookie.png"
+                  alt="dark-enchantress-cookie"
+                />
+              </li>
+              <li>
+                <img src="images/licorice-cookie.png" alt="licorice-cookie" />
+              </li>
+              <li>
+                <img
+                  src="images/poison-mushroom-cookie.png"
+                  alt="poison-mushroom-cookie"
+                />
+              </li>
+              <li>
+                <img
+                  src="images/pomegranate-cookie.png"
+                  alt="pomegranate-cookie"
+                />
+              </li>
+              <li>
+                <img
+                  src="images/dark-choco-cookie.png"
+                  alt="dark-choco-cookie"
+                />
+              </li>
+            </ul>
+            <ul class="cookie_move">
+              <li>
+                <img
+                  src="images/dark-enchantress-cookie1.png"
+                  alt="dark-enchantress-cookie"
+                />
+              </li>
+              <li>
+                <img src="images/licorice-cookie1.png" alt="licorice-cookie" />
+              </li>
+              <li>
+                <img
+                  src="images/poison-mushroom-cookie1.png"
+                  alt="poison-mushroom-cookie"
+                />
+              </li>
+              <li>
+                <img
+                  src="images/pomegranate-cookie1.png"
+                  alt="pomegranate-cookie"
+                />
+              </li>
+              <li>
+                <img
+                  src="images/dark-choco-cookie1.png"
+                  alt="images/dark-choco-cookie"
+                />
+              </li>
+            </ul>
+            <ul class="cookie_info">
+              <li>
+                <p class="cookie_style">악당쿠키</p>
+                <h2 class="cookie_name">어둠마녀 쿠키</h2>
+                <p class="cookie_sound">성우. 남유정</p>
+                <img src="images/sound.svg" alt="sound" />
+                <p>
+                  천 년에 한 번 온다고 하는 ‘마녀들의 밤'. 각지에서 모인
+                  마녀들이 연회를 벌이던 그곳에서 어둠마녀 쿠키가 만들어졌다고
+                  한다. 어둠의 힘을 응축시켜 만든 검고 붉은 반죽에 독을 머금은
+                  새빨간 석류 시럽을 뿌려 아찔하게 장식해 치명적인 매력을 품고
+                  있다.
+                </p>
+              </li>
+              <li>
+                <p class="cookie_style">악당쿠키</p>
+                <h2 class="cookie_name">감초맛 쿠키</h2>
+                <p class="cookie_sound">성우. 엄상현</p>
+                <img src="images/sound.svg" alt="sound" />
+                <p>
+                  씹으면 씹을수록 검게 물들어버리는 감초에 푹 절여 만든 쿠키.
+                  불길한 모양의 커다란 낫을 들고다니는 이 쿠키는 늘 어딘지
+                  모르게 비열한 웃음을 지으며 킥킥대기 일쑤다.
+                </p>
+              </li>
+              <li>
+                <p class="cookie_style">악당쿠키</p>
+                <h2 class="cookie_name">독버섯맛 쿠키</h2>
+                <p class="cookie_sound">성우. 김율</p>
+                <img src="images/sound.svg" alt="sound" />
+                <p>
+                  아무리 먹음직스러워도, 탐스럽고 통통해도 먹어서는 안 되는 것이
+                  있다. 어질어질 보라버섯이 바로 그것! 배가 너무도 고팠던 어느
+                  날 독버섯을 먹어버려, 그 영향으로 멍하고 굼뜬 쿠키가 되어버린
+                  독버섯맛 쿠키.
+                </p>
+              </li>
+              <li>
+                <p class="cookie_style">악당쿠키</p>
+                <h2 class="cookie_name">석류맛 쿠키</h2>
+                <p class="cookie_sound">성우. 배정미</p>
+                <img src="images/sound.svg" alt="sound" />
+                <p>
+                  강력한 주술의 땅에서 자란 석류 한 알을 통째로 얹어 영험한
+                  기운이 느껴지는 쿠키. 진하게 농축된 석류 시럽으로 맛을 더해
+                  유난히도 새빨갛다. 신비로운 석류 나무를 모시던 어느 날 어둠을
+                  따르리라는 운명을 계시받게 되는데…
+                </p>
+              </li>
+              <li>
+                <p class="cookie_style">악당쿠키</p>
+                <h2 class="cookie_name">다크초코 쿠키</h2>
+                <p class="cookie_sound">성우. 최원형</p>
+                <img src="images/sound.svg" alt="sound" />
+                <p>
+                  한때는 영웅이 되겠다는 일념 하에 겁없이 암흑의 세계로 모험을
+                  떠났다. 그러던 어느날 금지된 딸기잼 마법검을 손에 넣게 되었고
+                  그 순간 어둠의 기운에 사로잡혀 다시 예전의 삶으로 돌아갈 수
+                  없게 되어버렸다.
+                </p>
+              </li>
+            </ul>
+            <div class="cooki_arrow">
+              <img src="images/arrow2.png" alt="arrow2" />
+              <img src="images/arrow2.png" alt="arrow2" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="cookie_story">
+         <ul class="intro_top_img">
+              <li><img src="images/indication.svg" alt="indication" /></li>
+              <li><img src="images/centerDeco.png" alt="centerDeco" /></li>
+              <li><img src="images/indication.svg" alt="indication" /></li>
+            </ul>
+            <span>COOKIERUN: KINGDOM</span>
+            <h1>세계관 스토리</h1>
+          </div>
+          <article>
+            멀고 먼 옛날…<br />
+            철과 불과 혼돈의 시대의 열기가 가라앉고<br /><br />
+            마녀들이 구워낸 달콤하고 바삭한 피조물들이<br /><br />
+            세상에 가득하니<br /><br />
+            그 중에서도 가장 빛나고 고결한 ‘소울 잼’을 지닌<br /><br />
+            다섯 쿠키들의 등장은 마치 구원과도 같았다.<br /><br />
+            <br /><br />
+            고귀한 지혜와 강렬한 힘에<br /><br />
+            쿠키들이 모여들고<br /><br />
+            영웅들은 왕이 되어<br /><br />
+            쿠키 문명은 대 부흥의 시대를 맞는다.<br /><br />
+            <br />
+            하지만 찬란했던 시절도 잠시<br />
+            어둠을 자처하는 자의 등장으로<br />
+            땅엔 어둠이 스며들고 하늘엔 악이 창궐해<br />
+            온 땅에 혼돈의 그림자가 드리우기 시작하는데<br />
+            이에 평화를 수호하는<br />
+            다섯 쿠키들이 마침내 일어서고<br />
+            해질녘의 어느 날,<br />
+            드디어 쿠키들의 운명이 걸린<br />
+            최후의 전쟁이 시작된다.<br />
+          </article>
+          <div class="story_img">
+            <div class="story_bg"></div>
+            <img src="images/whiteCookie.png" alt="whiteCookie" />
+            <img src="images/purpleCookie.png" alt="purpleCookie" />
+            <img src="images/yellowCookie.png" alt="yellowCookie" />
+            <img src="images/pinkCookie.png" alt="pinkCookie" />
+            <img src="images/orangeCookie.png" alt="orangeCookie" />
+          </div>
+          <div class="story_bg2"></div>
+        </div>
+      </section>
+      <section>
+        <div class="cookie_video">
+          <ul class="intro_top_img">
+              <li><img src="images/indication.svg" alt="indication" /></li>
+              <li><img src="images/centerDeco.png" alt="centerDeco" /></li>
+              <li><img src="images/indication.svg" alt="indication" /></li>
+            </ul>
+            <span>COOKIERUN: KINGDOM</span>
+            <h1>미디어</h1>
+          </div>
+          <ul class="cookie_mv">
+            <li>
+              <div>
+                <img src="images/cookie_picture1.jpg" alt="cookie_picture1" />
+                <img src="images/arrow.svg" alt="arrow" />
+              </div>
+              <p>공식 OST '너를 찾을게' MV</p>
+            </li>
+            <li>
+              <div>
+                <img src="images/cookie_picture2.jpg" alt="cookie_picture1" />
+                <img src="images/arrow.svg" alt="arrow" />
+              </div>
+              <p>미리보기 시리즈 - 전투편</p>
+            </li>
+            <li>
+              <div>
+                <img src="images/cookie_picture3.jpg" alt="cookie_picture1" />
+                <img src="images/arrow.svg" alt="arrow" />
+              </div>
+              <p>미리보기 시리즈 - 캐릭터 편</p>
+            </li>
+            <li>
+              <div>
+                <img src="images/cookie_picture4.jpg" alt="cookie_picture1" />
+                <img src="images/arrow.svg" alt="arrow" />
+              </div>
+              <p>최후의 전투</p>
+            </li>
+            <li>
+              <div>
+                <img src="images/cookie_picture5.jpg" alt="cookie_picture1" />
+                <img src="images/arrow.svg" alt="arrow" />
+              </div>
+              <p>검은가루 전쟁</p>
+            </li>
+            <li>
+              <div>
+                <img src="images/cookie_picture6.jpg" alt="cookie_picture1" />
+                <img src="images/arrow.svg" alt="arrow" />
+              </div>
+              <p>영웅과 어둠의 시대</p>
+            </li>
+          </ul>
+          <div class="example">
+            <img src="images/green.svg" alt="green" />
+            <a href="#"><span>더보기</span></a>
+            <img src="images/blue.svg" alt="blue" />
+          </div>
+        </div>
+      </section>
+      <footer>
+        <ul>
+          <li>
+            <a href="#"><img src="images/sns_facebook.svg" alt="facebook" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/sns_twitter.svg" alt="twitter" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/sns_youtube.svg" alt="youtube" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/sns_naver.svg" alt="naver" /></a>
+          </li>
+        </ul>
+        <ul class="foot_center">
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">개인정보처리방침</a></li>
+          <li><a href="#">고객센터</a></li>
+        </ul>
+        <div class="foot_bottom">
+          <p>서울특별시 강남구 도산대로 327</p>
+          <p>
+            <span>전화: 02-2148-0750</span>
+            <span>팩스: 02-2148-0629</span>
+          </p>
+          <p>CookieRun® © 2023 Devsisters Corp. All Rights Reserved.</p>
+          <img src="images/logo.svg" alt="logo" />
+        </div>
+      </footer>
+    </div>
+    <script src="javascript/cookie.js"></script>
+  </body>
+</html>

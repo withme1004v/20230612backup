@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="jquery.simplyscroll.css" />
+    <style>
+      .wrap {
+        display: flex;
+        overflow: hidden;
+      }
+      .wrap .rolling-list ul {
+        display: flex;
+      }
+      .wrap .rolling-list ul li {
+        width: 589px;
+        height: 276px;
+        box-sizing: border-box;
+        border-radius: 20px;
+        margin: 0 16px;
+        padding: 46px 31px;
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+      }
+      .wrap .rolling-list ul li:nth-child(1) {
+        background-color: #f8e1e3;
+      }
+      .wrap .rolling-list ul li:nth-child(2) {
+        background-color: #ffeab5;
+      }
+      .wrap .rolling-list ul li:nth-child(3) {
+        background-color: #d3e7dc;
+      }
+      .wrap .rolling-list ul li:nth-child(4) {
+        background-color: #a6c1e8;
+      }
+      .wrap .rolling-list ul li:nth-child(even) {
+        margin-top: 80px;
+      }
+      .wrap .rolling-list ul li .image-wrap {
+        padding-right: 32px;
+        width: 156px;
+        flex-shrink: 0;
+      }
+      .wrap .rolling-list ul li .image-wrap > img {
+        width: 100%;
+      }
+      .wrap .rolling-list ul li .desc {
+        font-family: "BMJUA";
+      }
+      .wrap .rolling-list ul li .desc strong {
+        display: block;
+        font-size: 24px;
+        margin-bottom: 24px;
+      }
+      .wrap .rolling-list ul li .desc span {
+        font-size: 18px;
+        line-height: 1.2;
+      }
+      .rolling-list.original {
+        animation: rollingleft1 33s linear infinite;
+      }
+      .rolling-list.clone {
+        animation: rollingleft2 33s linear infinite;
+      }
+
+      @keyframes rollingleft1 {
+        0% {
+          transform: translateX(0);
+        }
+        50% {
+          transform: translateX(-100%);
+        }
+        50.01% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes rollingleft2 {
+        0% {
+          transition: translateX(0);
+        }
+        100% {
+          transform: translateX(-200%);
+        }
+      }
+    </style>
+    <script src="jquery-3.6.1.js"></script>
+    <script src="jquery.simplyscroll.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- 배너표시영역 -->
+      <div class="rolling-list">
+        <!-- 원본배너 -->
+        <ul>
+          <li>
+            <div class="image-wrap"><img src="photo1.jpg" alt="" /></div>
+            <div class="desc">
+              <strong>First Banner</strong>
+              <span
+                >Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br />
+                Neque cumque ratione provident nulla veniam nihil quaerat, illum
+                officiis hic.<br />
+                Laborum in eos possimus, quo ullam nobis nam nemo fuga
+                ipsam?</span
+              >
+            </div>
+          </li>
+          <li>
+            <div class="image-wrap"><img src="photo2.jpg" alt="" /></div>
+            <div class="desc">
+              <strong>Second Banner</strong>
+              <span
+                >Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br />
+                Neque cumque ratione provident nulla veniam nihil quaerat, illum
+                officiis hic.<br />
+                Laborum in eos possimus, quo ullam nobis nam nemo fuga
+                ipsam?</span
+              >
+            </div>
+          </li>
+          <li>
+            <div class="image-wrap"><img src="photo3.jpg" alt="" /></div>
+            <div class="desc">
+              <strong>Third Banner</strong>
+              <span
+                >Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br />
+                Neque cumque ratione provident nulla veniam nihil quaerat, illum
+                officiis hic.<br />
+                Laborum in eos possimus, quo ullam nobis nam nemo fuga
+                ipsam?</span
+              >
+            </div>
+          </li>
+          <li>
+            <div class="image-wrap">
+              <img src="photo4.jpg" alt="" />
+            </div>
+            <div class="desc">
+              <strong>Fourth Banner</strong>
+              <span
+                >Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br />
+                Neque cumque ratione provident nulla veniam nihil quaerat, illum
+                officiis hic.<br />
+                Laborum in eos possimus, quo ullam nobis nam nemo fuga
+                ipsam?</span
+              >
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script type="text/javascript">
+      let roller = document.querySelector(".rolling-list");
+      roller.id = "roller1"; // 아이디 부여
+
+      let clone = roller.cloneNode(true);
+      // cloneNode : 노드 복제. 기본값은 false. 자식 노드까지 복제를 원하면 true 사용
+      clone.id = "roller2";
+      document.querySelector(".wrap").appendChild(clone); // wrap 하위 자식으로 부착
+
+      document.querySelector("#roller1").style.left = "0px";
+      document.querySelector("#roller2").style.left =
+        document.querySelector(".rolling-list ul").offsetWidth + "px";
+      // offsetWidth : 요소의 크기 확인(margin을 제외한 padding값, border값까지 계산한 값)
+
+      roller.classList.add("original");
+      clone.classList.add("clone");
+    </script>
+  </body>
+</html>

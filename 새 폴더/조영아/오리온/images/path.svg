@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 145.41 144.14">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: url(#linear-gradient-2);
+      }
+
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-3 {
+        fill: #fec80e;
+      }
+
+      .cls-2 {
+        stroke: url(#linear-gradient);
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-5 {
+        fill: #ffee6a;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="11.72" y1="71.12" x2="112.72" y2="71.12" gradientTransform="translate(8.35 8.07) scale(.9)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffee6a"/>
+      <stop offset="1" stop-color="#fec80e"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="24.18" y1="83.58" x2="125.18" y2="83.58" gradientTransform="translate(13.85 -3.15) scale(.9)" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-3" x1="83.11" y1="48.58" x2="112.78" y2="48.58" gradientTransform="translate(124.54 -26.87) rotate(90)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffee51"/>
+      <stop offset="1" stop-color="#fec80e"/>
+    </linearGradient>
+  </defs>
+  <g>
+    <g>
+      <rect class="cls-2" x="19.35" y="27.07" width="90" height="90" transform="translate(-32.12 66.61) rotate(-45)"/>
+      <rect class="cls-1" x="36.07" y="27.07" width="90" height="90" transform="translate(-27.22 78.43) rotate(-45)"/>
+    </g>
+    <path class="cls-4" d="M87.72,68.89l-20.98-12.31c-1.68-.99-3.81,.23-3.81,2.18v24.61c0,1.95,2.12,3.17,3.81,2.18l20.98-12.31c1.66-.98,1.66-3.38,0-4.36Z"/>
+  </g>
+  <rect class="cls-5" x="67.71" y="2.07" width="10" height="10" transform="translate(16.3 53.48) rotate(-45)"/>
+  <rect class="cls-3" x="67.71" y="132.07" width="10" height="10" transform="translate(-75.63 91.56) rotate(-45)"/>
+</svg>

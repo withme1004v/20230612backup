@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrap {
+        width: 100%;
+        overflow: hidden;
+      }
+      .swiper-container {
+        width: 100%;
+        margin: 0 auto;
+        overflow: visible;
+        height: 400px;
+      }
+
+      .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        width: 300px;
+        transition: none;
+      }
+
+      .swiper-slide .cont {
+        text-align: center;
+      }
+
+      .swiper-slide img {
+        width: 100%;
+        display: block;
+      }
+      .swiper-slide span {
+        display: inline-block;
+        margin-top: 20px;
+      }
+
+      .changing,
+      .changed {
+        transform: translateX(-100px);
+        -ms-user-select: none;
+        -moz-user-select: -moz-none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        user-select: none;
+      }
+
+      .changing {
+        transition: transform 0.3s;
+        pointer-events: none;
+      }
+
+      .changed {
+        transition: none;
+      }
+
+      .changing.swiper-slide-active,
+      .changed.swiper-slide-active {
+        transform: translateX(0);
+      }
+
+      .swiper-slide-active ~ .changing,
+      .swiper-slide-active ~ .changed {
+        transform: translateX(100px);
+      }
+
+      .changing .img-wrap,
+      .changed .img-wrap {
+        transform-origin: center bottom;
+      }
+
+      .changing .img-wrap {
+        transition: transform 0.3s;
+      }
+
+      .changed .img-wrap {
+        transition: none;
+      }
+
+      .changing.swiper-slide-active .img-wrap,
+      .changed.swiper-slide-active .img-wrap {
+        transform: scale(1.66);
+      }
+    </style>
+    <link rel="stylesheet" href="css/swiper-bundle.css" />
+    <script src="js/swiper-bundle.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="swiper-container mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="cont">
+              <div class="img-wrap">
+                <img
+                  src="https://images.pexels.com/photos/386025/pexels-photo-386025.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                  alt=""
+                />
+              </div>
+              <span>1</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="cont">
+              <div class="img-wrap">
+                <img
+                  src="https://images.pexels.com/photos/8241135/pexels-photo-8241135.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                  alt=""
+                />
+              </div>
+              <span>2</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="cont">
+              <div class="img-wrap">
+                <img
+                  src="https://images.pexels.com/photos/7163689/pexels-photo-7163689.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                  alt=""
+                />
+              </div>
+              <span>3</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="cont">
+              <div class="img-wrap">
+                <img
+                  src="https://images.pexels.com/photos/386025/pexels-photo-386025.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                  alt=""
+                />
+              </div>
+              <span>4</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="cont">
+              <div class="img-wrap">
+                <img
+                  src="https://images.pexels.com/photos/8241135/pexels-photo-8241135.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                  alt=""
+                />
+              </div>
+              <span>5</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="cont">
+              <div class="img-wrap">
+                <img
+                  src="https://images.pexels.com/photos/7163689/pexels-photo-7163689.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                  alt=""
+                />
+              </div>
+              <span>6</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 0,
+        centeredSlides: true,
+        preventClicks: true,
+        loop: true,
+        on: {
+          init: function () {
+            $(".swiper-slide").addClass("changed");
+          },
+          slideChangeTransitionStart: function () {
+            $(".swiper-slide").addClass("changing");
+            $(".swiper-slide").removeClass("changed");
+          },
+          slideChangeTransitionEnd: function () {
+            $(".swiper-slide").removeClass("changing");
+            $(".swiper-slide").addClass("changed");
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

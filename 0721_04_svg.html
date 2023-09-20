@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      svg {
+        border: 1px solid #000;
+        width: 500px;
+        height: 500px;
+        stroke: transparent;
+        stroke-width: 10px;
+        stroke-linecap: square;
+        stroke-dasharray: 800;
+        stroke-dashoffset: 0;
+        animation: ani2 1s;
+        /* transform: rotate(-90deg); */
+      }
+      svg:hover {
+        stroke-dasharray: 800;
+        stroke-dashoffset: 0;
+        stroke: #000;
+        stroke-width: 10px;
+        animation: ani 1s forwards;
+      }
+      @keyframes ani {
+        0% {
+          stroke-dashoffset: 800;
+        }
+        100% {
+          stroke-dashoffset: 0;
+        }
+      }
+      @keyframes ani2 {
+        0% {
+          stroke-dashoffset: 0;
+          stroke: #000;
+        }
+        100% {
+          stroke-dashoffset: 800;
+          stroke: #000;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <svg>
+      <rect x="10" y="10" width="200" height="200" fill="none" />
+    </svg>
+  </body>
+</html>

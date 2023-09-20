@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <link rel="stylesheet" href="css/swiper-bundle.css" />
+
+    <!-- Demo styles -->
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      header,
+      footer {
+        height: 500px;
+        background: #000;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header></header>
+    <header></header>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <footer></footer>
+
+    <script src="js/swiper-bundle.js"></script>
+    <script>
+      // Initialize Swiper
+      var swiper = new Swiper(".mySwiper", {
+        direction: "horizontal",
+        mousewheel: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        // Add other Swiper options as needed
+      });
+
+      // Add mousewheel event listener to swiper container
+      var swiperContainer = document.querySelector(".mySwiper");
+      swiperContainer.addEventListener("wheel", function (event) {
+        event.preventDefault();
+        var delta = event.wheelDelta || -event.deltaY || -event.detail;
+        var scrollAmount = 100; // Adjust this value as needed
+
+        if (delta > 0) {
+          // 위로 스크롤하면(마우스휠이 위로 올라감)
+          if (swiper.isBeginning) {
+            // 스와이퍼가 첫 번째 슬라이드에 있는 경우 작업을 수행합니다
+            // Replace the following line with the desired action
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          } else {
+            swiper.slidePrev();
+            // window.scrollTo({ top: "100vh", behavior: "smooth" });
+          }
+        } else {
+          swiper.slideNext();
+        }
+      });
+    </script>
+  </body>
+</html>

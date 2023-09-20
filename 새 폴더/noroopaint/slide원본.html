@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .stage {
+        width: 100%;
+        height: 520px;
+        float: left;
+      }
+      .stage ul {
+        width: 1200px;
+        margin: 0 auto;
+        height: 520px;
+        position: relative;
+        width: cover;
+      }
+      .stage ul li {
+        float: left;
+        overflow: hidden;
+        cursor: pointer;
+      }
+      .item1 {
+        position: absolute;
+        height: 400px;
+        top: 58px;
+        left: -190px;
+        z-index: 1;
+        opacity: 0.5;
+        filter: alpha(opacity=50);
+      }
+      .item2 {
+        position: absolute;
+        height: 520px;
+        top: 0;
+        z-index: 3;
+        left: 124px;
+        opacity: 1;
+        filter: alpha(opacity=100);
+      }
+      .item3 {
+        position: absolute;
+        height: 400px;
+        top: 58px;
+        left: 450px;
+        z-index: 2;
+        opacity: 0.5;
+        filter: alpha(opacity=50);
+      }
+      .video_btn_wrap {
+        width: 1200px;
+        margin: 0 auto;
+        height: 45px;
+        position: relative;
+        width: cover;
+        top: -320px;
+        left: 124px;
+        z-index: 99;
+      }
+      .video_btn_wrap span {
+        position: absolute;
+        height: 45x;
+      }
+      button.prev {
+        background: url(images/bt_prev_big2.png) no-repeat;
+        width: 46px;
+        height: 85px;
+        margin-left: -80px;
+        border: none;
+        font-size: 0;
+      }
+      button.next {
+        background: url(images/bt_next_big2.png) no-repeat;
+        width: 46px;
+        height: 85px;
+        margin-left: 980px;
+        border: none;
+        font-size: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="stage">
+      <ul class="slider">
+        <li
+          class="item1"
+          style="
+            top: 58px;
+            height: 400px;
+            left: 450px;
+            z-index: 2;
+            opacity: 0.5;
+          "
+        >
+          <div class="playNo" style="display: block"></div>
+
+          <iframe
+            id="C"
+            loop="0"
+            src="https://player.vimeo.com/video/849336405?autoplay=1&amp;muted=1&amp;title=0&amp;background=0;h=50e58045fe&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+            tabindex="-1"
+            width="920"
+            height="518"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen=""
+            data-ready="true"
+          ></iframe>
+        </li>
+        <li
+          class="item2"
+          style="
+            top: 58px;
+            height: 400px;
+            left: -190px;
+            z-index: 1;
+            opacity: 0.5;
+          "
+        >
+          <div class="playNo" style="display: block"></div>
+
+          <iframe
+            id="R"
+            loop="0"
+            src="https://player.vimeo.com/video/844761683?title=0&amp;background=0;h=ff3113d37c&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+            tabindex="-1"
+            width="920"
+            height="518"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen=""
+            data-ready="true"
+          ></iframe>
+        </li>
+        <li
+          class="item3 click"
+          style="top: 0px; height: 520px; left: 124px; z-index: 3; opacity: 1"
+        >
+          <div class="playNo" style="display: none"></div>
+
+          <iframe
+            id="L"
+            loop="0"
+            src="https://player.vimeo.com/video/804174034?title=0&amp;background=0&amp;;h=497eff3529&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+            tabindex="-1"
+            width="920"
+            height="518"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen=""
+            data-ready="true"
+          ></iframe>
+        </li>
+      </ul>
+      <div class="video_btn_wrap">
+        <span>
+          <button type="button" class="prev">이전</button>
+          <button type="button" class="next">다음</button>
+        </span>
+      </div>
+    </div>
+    <script>
+      $(function () {
+        //비디오 특정시간 재생
+        //var video = document.getElementById('videoTime');
+        //video.addEventListener('loadedmetadata', function() {
+        // this.currentTime = 5;
+        // this.play();
+        //}, false);
+
+        // 유투브 스크립트
+        var $ids = $("iframe"),
+          tgs = [];
+        var $eles = $(".slider>li");
+        var eles = $eles.toArray();
+        var pt = [];
+        var center = Math.floor(eles.length / 2);
+        var total = eles.length;
+        var repeat = 1,
+          count = 0;
+        var playSlider = function () {
+          setCss();
+        };
+
+        function setCss() {
+          eles.forEach(function (e, i) {
+            pt[i] = $(e).css(["top", "height", "left", "z-index", "opacity"]);
+          });
+
+          for (var i = 0; i < center; i++) {
+            eles.unshift(eles.pop());
+            eles.forEach(function (e, i) {
+              count++;
+              $(e).css(pt[i]).removeClass("click");
+              $(e).find(".txt").hide();
+              $(e).find(".playNo").show();
+              if (count == Math.abs(repeat) * total) {
+                $(eles[center]).addClass("click");
+                $(eles[center]).find(".playNo").hide();
+                //$('.click iframe')[0].play();
+
+                //var iframe = $('iframe')[0];
+                //var player = new Vimeo.Player(iframe);
+                //player.play();
+
+                count = 0;
+              } else {
+                //$('iframe')[0].pause();
+                //var iframe = $('iframe')[0];
+                //var player = new Vimeo.Player(iframe);
+                //player.pause();
+              }
+            });
+          }
+        }
+
+        function movePanel() {
+          eles.forEach(function (e, i) {
+            $(e).removeClass("click");
+            $(e).find(".playNo").show();
+            $(e)
+              .stop(true, true)
+              .animate(pt[i], 200, function () {
+                count++;
+                if (count === Math.abs(repeat) * total) {
+                  $(eles[center]).addClass("click");
+                  $(eles[center]).find(".playNo").hide();
+                  //$('.click iframe')[0].play();
+
+                  var iframe = $(".click iframe")[0];
+                  var player = new Vimeo.Player(iframe);
+                  player.play();
+
+                  sliderAfter($(eles[center]));
+                  (count = 0), (isStop = false);
+                } else {
+                  ////$('video')[0].pause();
+                }
+              });
+            //$('video')[i].pause();
+
+            var iframe = $("iframe")[i];
+            var player = new Vimeo.Player(iframe);
+            player.pause();
+          });
+        }
+
+        $eles.on("click", function (e) {
+          if (!$(this).hasClass("click") && !$(this).is(":animated")) {
+            repeat = center - parseInt(eles.indexOf(this));
+            repeat < 0 ? repeatFn(nextFn) : repeatFn(prevFn);
+          }
+        });
+
+        function repeatFn(m) {
+          for (var i = 0; i < Math.abs(repeat); i++) {
+            m();
+          }
+        }
+        $(".prev").on("click", function (e) {
+          prevFn();
+        });
+        $(".next").on("click", function (e) {
+          nextFn();
+        });
+
+        function prevFn() {
+          eles.unshift(eles.pop());
+          //sliderBefore();
+          movePanel();
+        }
+
+        function nextFn() {
+          eles.push(eles.shift());
+          //sliderBefore();
+          movePanel();
+        }
+
+        function sliderBefore() {
+          tgs.forEach(function (e, i) {
+            //$('iframe')[0].pause();
+            var iframe = $("iframe")[0];
+            var player = new Vimeo.Player(iframe);
+            player.pause();
+          });
+        }
+
+        function sliderAfter(ele) {
+          if (ele.find("iframe").length) {
+            current = $.grep(tgs, function (i) {
+              return i.a == ele.find("iframe")[0];
+              //$('.click iframe')[0].play();
+              var iframe = $("iframe")[0];
+              var player = new Vimeo.Player(iframe);
+              player.play();
+            });
+          }
+        }
+
+        playSlider();
+      });
+    </script>
+  </body>
+</html>

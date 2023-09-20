@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/swiper-bundle.css" />
+    <!-- <link rel="stylesheet" href="css/contents.css" />
+    <link rel="stylesheet" href="css/impact.css" /> -->
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/simpleParallax.js"></script>
+    <script src="js/contents.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      img {
+        object-fit: cover;
+        vertical-align: middle;
+        border: 0 none;
+        max-width: 100%;
+      }
+      .lush_category {
+        margin-top: 176px;
+        position: relative;
+        overflow: hidden;
+        margin-left: calc(50% - 612px);
+      }
+      .lush_category .lush_category_swiper .swiper-wrapper > .swiper-slide {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+      }
+      .category_img {
+        position: relative;
+        width: 475px;
+        height: 560px;
+      }
+      .category_img .cate_explain {
+        z-index: 6;
+        position: absolute;
+        top: 0;
+        left: 0l;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: all ease-in-out 0.5s;
+      }
+      .category_img.is_active .cate_explain {
+        opacity: 1;
+        transition: all ease-in-out 0.5s;
+      }
+      .category_img.is_active::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.5);
+        transition: all ease-in-out 0.5s;
+      }
+
+      .cate_explain .tit {
+        margin-top: 48px;
+        font-weight: 700;
+        font-size: 18px;
+      }
+      .cate_explain .detail {
+        margin-top: 32px;
+        line-height: 24px;
+      }
+
+      .lush_pro {
+        overflow: hidden;
+        width: calc(100% - 475px); /* clip-path:inset(0 0 0 10px); */
+      }
+      .lush_pro .title_area {
+        padding-bottom: 64px;
+      }
+      .lush_pro .title_area,
+      .lush_pro_swiper {
+        padding-left: 64px;
+      }
+      .lush_pro_swiper .swiper-slide {
+        overflow: hidden;
+        margin-right: 66px;
+        width: 288px;
+        height: 288px;
+        border-radius: 50%;
+      }
+      .lush_pro_swiper .pro_img {
+        position: relative;
+      }
+      .lush_pro_swiper .pro_img .txt {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        width: 100%;
+        font-size: 18px;
+        color: #fff;
+        text-align: center;
+        line-height: 24px;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+        transition: all ease-in-out 0.5s;
+      }
+      .lush_pro_swiper .pro_img:hover .txt {
+        z-index: 5;
+        opacity: 1;
+        top: 50%;
+        transition: all ease-in-out 0.5s;
+        background: rgba(0, 0, 0, 0.5);
+      }
+
+      .lush_category_swiper {
+        padding-bottom: 40px;
+      }
+      .lush_category_swiper .swiper-slide {
+        background-color: #fff;
+      }
+
+      .lush_category_swiper .swiper-pagination {
+        bottom: 0;
+      }
+      .swiper-pagination-bullet {
+        width: 19px;
+        height: 2px;
+        font-size: 0;
+        border-radius: 0;
+        background-color: #757575;
+      }
+    </style>
+  </head>
+  <body>
+    <article class="lush_category">
+      <div class="swiper lush_category_swiper">
+        <div class="swiper-wrapper">
+          <!-- 1배쓰 -->
+          <div class="swiper-slide">
+            <div class="category_img">
+              <figure>
+                <img src="images/main_bath@3x.png" alt="" />
+              </figure>
+              <div class="cate_explain">
+                <img src="images/qr_bath.png" alt="qr code" />
+                <p class="tit">모바일에서 배쓰 제품을 구매해 보세요!</p>
+                <p class="detail">
+                  365일 챙겨드리는 스마트 샘플까지 <br />놓치지 마세요!
+                </p>
+              </div>
+            </div>
+            <!-- 상품이미지 -->
+            <div class="lush_pro">
+              <div class="title_area">
+                <h2 class="tit">배쓰</h2>
+                <p class="description">
+                  당신에게 향기로운 입욕을<br />선물합니다
+                </p>
+              </div>
+              <div class="swiper lush_pro_swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/bath_01@3x.png" alt="" />
+                      <figcaption class="txt">섹스 밤<br />배쓰 밤</figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/bath_02@3x.png" alt="" />
+                      <figcaption class="txt">
+                        인터갈락틱<br />배쓰 밤
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/bath_03@3x.png" alt="" />
+                      <figcaption class="txt">
+                        더 컴포터<br />버블 바
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/bath_04@3x.png" alt="" />
+                      <figcaption class="txt">슬리피<br />버블 바</figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/bath_06@3x.png" alt="" />
+                      <figcaption class="txt">가디스<br />배쓰 밤</figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/bath_05@3x.png" alt="" />
+                      <figcaption class="txt">사쿠라<br />배쓰 밤</figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/bath_07@3x.png" alt="" />
+                      <figcaption class="txt">
+                        써니사이드<br />버블 바
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/bath_08@3x.png" alt="" />
+                      <figcaption class="txt">
+                        트와일라잇<br />배쓰 밤
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/bath_09@3x.png" alt="" />
+                      <figcaption class="txt">딥 슬립<br />배쓰 밤</figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/bath_10@3x.png" alt="" />
+                      <figcaption class="txt">빅 블루<br />배쓰 밤</figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <span class="swiper-notification"></span>
+              </div>
+            </div>
+            <!-- // -->
+          </div>
+
+          <!-- 2샤워 -->
+          <div class="swiper-slide">
+            <div class="category_img">
+              <figure>
+                <img src="images/main_shower@3x.png" alt="" />
+              </figure>
+              <div class="cate_explain">
+                <img src="images/qr_shower.png" alt="샤워 qr code" />
+                <p class="tit">모바일에서 샤워 제품을 구매해 보세요!</p>
+                <p class="detail">
+                  365일 챙겨드리는 스마트 샘플까지 <br />놓치지 마세요!
+                </p>
+              </div>
+            </div>
+            <!-- 상품이미지 -->
+            <div class="lush_pro">
+              <div class="title_area">
+                <h2 class="tit">샤워</h2>
+                <p class="description">
+                  일렁이는 향기와 함께 피부를<br />건강하게 지켜주세요.
+                </p>
+              </div>
+              <div class="swiper lush_pro_swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/shower_01@3x.png" alt="" />
+                      <figcaption class="txt">슬리피<br />샤워 젤</figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/shower_02@3x.png" alt="" />
+                      <figcaption class="txt">
+                        더 올리브 브랜치<br />샤워 젤
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/shower_03@3x.png" alt="" />
+                      <figcaption class="txt">
+                        더티 스프링워시<br />샤워 젤
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/shower_04@3x.png" alt="" />
+                      <figcaption class="txt">
+                        럽럽럽<br />샤워 스크럽
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/shower_05@3x.png" alt="" />
+                      <figcaption class="txt">로즈 잼<br />샤워 젤</figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/shower_06@3x.png" alt="" />
+                      <figcaption class="txt">
+                        해피 히피<br />샤워 젤
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/shower_07@3x.png" alt="" />
+                      <figcaption class="txt">
+                        매직 크리스탈스<br />샤워 스크럽
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/shower_08@3x.png" alt="" />
+                      <figcaption class="txt">
+                        오렌지<br />샤워 스크럽
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/shower_09@3x.png" alt="" />
+                      <figcaption class="txt">
+                        팅글<br />보디 컨디셔너
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/shower_10@3x.png" alt="" />
+                      <figcaption class="txt">그래스<br />샤워 젤</figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <span class="swiper-notification"></span>
+              </div>
+            </div>
+            <!-- // -->
+          </div>
+
+          <!-- 3보디 -->
+          <div class="swiper-slide">
+            <div class="category_img">
+              <figure>
+                <img src="images/main_body@3x.png" alt="" />
+              </figure>
+              <div class="cate_explain">
+                <div><img src="images/qr_body.png" alt="qr code" /></div>
+                <p class="tit">모바일에서 보디 제품을 구매해 보세요!</p>
+                <p class="detail">
+                  365일 챙겨드리는 스마트 샘플까지 <br />놓치지 마세요!
+                </p>
+              </div>
+            </div>
+            <!-- 상품이미지 -->
+            <div class="lush_pro">
+              <div class="title_area">
+                <h2 class="tit">보디</h2>
+                <p class="description">
+                  늘 당신의 피부를 향긋하고<br />건강하게 빚내 줄거예요.
+                </p>
+              </div>
+              <div class="swiper lush_pro_swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/body_01@3x.png" alt="" />
+                      <figcaption class="txt">슬리피<br />보디 로션</figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/body_02@3x.png" alt="" />
+                      <figcaption class="txt">팬지<br />보디로션</figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/body_03@3x.png" alt="" />
+                      <figcaption class="txt">
+                        드림 크림<br />보디 로션
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/body_04@3x.png" alt="" />
+                      <figcaption class="txt">
+                        핼핑 핸즈<br />핸드 크림
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/body_05@3x.png" alt="" />
+                      <figcaption class="txt">
+                        라임 바운티<br />보디 버터
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/body_06@3x.png" alt="" />
+                      <figcaption class="txt">
+                        핑크 페퍼민트<br />풋 로션
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/body_07@3x.png" alt="" />
+                      <figcaption class="txt">
+                        코밍글 <br />보디 스크럽
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/body_08@3x.png" alt="" />
+                      <figcaption class="txt">리피트<br />풋 밤</figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/body_09@3x.png" alt="" />
+                      <figcaption class="txt">
+                        채러티 팟<br />보디 로션
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/body_10@3x.png" alt="" />
+                      <figcaption class="txt">
+                        이치피치 <br />마사지 바
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <span class="swiper-notification"></span>
+              </div>
+            </div>
+            <!-- // -->
+          </div>
+
+          <!-- 4헤어 -->
+          <div class="swiper-slide">
+            <div class="category_img">
+              <figure>
+                <img src="images/main_hair@3x.png" alt="" />
+              </figure>
+              <div class="cate_explain">
+                <div><img src="images/qr_hair.png" alt="qr code" /></div>
+                <p class="tit">모바일에서 헤어제품을 구매해 보세요!</p>
+                <p class="detail">
+                  365일 챙겨드리는 스마트 샘플까지 <br />놓치지 마세요!
+                </p>
+              </div>
+            </div>
+            <!-- 상품이미지 -->
+            <div class="lush_pro">
+              <div class="title_area">
+                <h2 class="tit">헤어</h2>
+                <p class="description">
+                  건강한 재료만 담아<br />매일 더 싱그러울 거에요.
+                </p>
+              </div>
+              <div class="swiper lush_pro_swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/hair_01@3x.png" alt="" />
+                      <figcaption class="txt">대디-오<br />샴푸</figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/hair_02@3x.png" alt="" />
+                      <figcaption class="txt">뉴<br />샴푸 바</figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/hair_03@3x.png" alt="" />
+                      <figcaption class="txt">
+                        와사비 산쿠이<br />샴푸
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/hair_04@3x.png" alt="" />
+                      <figcaption class="txt">리햅 <br />샴푸</figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/hair_05@3x.png" alt="" />
+                      <figcaption class="txt">빅<br />샴푸</figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/hair_06@3x.png" alt="" />
+                      <figcaption class="txt">
+                        아메리칸 크림<br />컨디셔너
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/hair_07@3x.png" alt="" />
+                      <figcaption class="txt">
+                        루츠<br />두피 트리트먼트
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/hair_08@3x.png" alt="" />
+                      <figcaption class="txt">
+                        수퍼 밀크<br />컨디셔닝 헤어 프라이머
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/hair_09@3x.png" alt="" />
+                      <figcaption class="txt">씨닉<br />샴푸 바</figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/hair_10@3x.png" alt="" />
+                      <figcaption class="txt">
+                        밸런스<br />헤어 모이스춰 라이저
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <span class="swiper-notification"></span>
+              </div>
+            </div>
+            <!-- // -->
+          </div>
+
+          <!-- 5페이스 -->
+          <div class="swiper-slide">
+            <div class="category_img">
+              <figure>
+                <img src="images/main_face@3x.png" alt="" />
+              </figure>
+              <div class="cate_explain">
+                <div><img src="images/qr_face.png" alt="qr code" /></div>
+                <p class="tit">모바일에서 페이스 제품을 구매해 보세요!</p>
+                <p class="detail">
+                  365일 챙겨드리는 스마트 샘플까지 <br />놓치지 마세요!
+                </p>
+              </div>
+            </div>
+            <!-- 상품이미지 -->
+            <div class="lush_pro">
+              <div class="title_area">
+                <h2 class="tit">페이스</h2>
+                <p class="description">
+                  신선한 재료로 만들어<br />믿을 수 있는 제품이에요.
+                </p>
+              </div>
+              <div class="swiper lush_pro_swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/face_01@3x.png" alt="" />
+                      <figcaption class="txt">
+                        마스크 오브 매그너민티<br />파워 마스크
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/face_02@3x.png" alt="" />
+                      <figcaption class="txt">
+                        코스메틱 워리어<br />프레쉬 페이셜 마스크
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/face_03@3x.png" alt="" />
+                      <figcaption class="txt">
+                        카타스트로피 코스메틱<br />프레쉬 페이셜 마스크
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/face_04@3x.png" alt="" />
+                      <figcaption class="txt">
+                        허벌리즘 <br />프레쉬 클렌저
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/face_05@3x.png" alt="" />
+                      <figcaption class="txt">
+                        뷰티슬립<br />페이스 엔 보디 마스크
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/face_06@3x.png" alt="" />
+                      <figcaption class="txt">챠콜 <br />페이셜 솝</figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/face_07@3x.png" alt="" />
+                      <figcaption class="txt">
+                        비비씨위드<br />프레쉬 페이셜 마스크
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/face_08@3x.png" alt="" />
+                      <figcaption class="txt">
+                        티 트리 워터<br />토너
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/face_09.png" alt="" />
+                      <figcaption class="txt">
+                        엔젤스 온 베어 스킨<br />프레쉬 클렌저
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/face_10@3x.png" alt="" />
+                      <figcaption class="txt">
+                        돈트 룩 앳미<br />프레쉬 페이셜 마스크
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <span class="swiper-notification"></span>
+              </div>
+            </div>
+            <!-- // -->
+          </div>
+
+          <!-- 6메이크업 -->
+          <div class="swiper-slide">
+            <div class="category_img">
+              <figure>
+                <img src="images/main_makeup@3x.png" alt="" />
+              </figure>
+              <div class="cate_explain">
+                <div><img src="images/qr_makeup.png" alt="qr code" /></div>
+                <p class="tit">모바일에서 메이크업 제품을 구매해 보세요!</p>
+                <p class="detail">
+                  365일 챙겨드리는 스마트 샘플까지 <br />놓치지 마세요!
+                </p>
+              </div>
+            </div>
+            <!-- 상품이미지 -->
+            <div class="lush_pro">
+              <div class="title_area">
+                <h2 class="tit">메이크업</h2>
+                <p class="description">
+                  다른 누구도 아닌,<br />가장 나다운 느낌 표현해 보세요.
+                </p>
+              </div>
+              <div class="swiper lush_pro_swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/makeup_01@3x.png" alt="" />
+                      <figcaption class="txt">
+                        필링 영거<br />스킨 틴트
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/makeup_02@3x.png" alt="" />
+                      <figcaption class="txt">
+                        이모셔널 브릴리언스<br />페이스 파우더
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/makeup_03@3x.png" alt="" />
+                      <figcaption class="txt">
+                        슬랙스틱 1C<br />고체 파운데이션
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/makeup_04@3x.png" alt="" />
+                      <figcaption class="txt">독립<br />아이라이너</figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/makeup_05@3x.png" alt="" />
+                      <figcaption class="txt">
+                        아이즈 라이트<br />마스카라
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/makeup_06@3x.png" alt="" />
+                      <figcaption class="txt">
+                        슬랙스틱 40N<br />고체 파운데이션
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/makeup_07@3x.png" alt="" />
+                      <figcaption class="txt">
+                        로스앤젤레스<br />립스틱
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/makeup_08@3x.png" alt="" />
+                      <figcaption class="txt">
+                        동기부여<br />아이라이너
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/makeup_09@3x.png" alt="" />
+                      <figcaption class="txt">
+                        겟 인 데어<br />브러쉬
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/makeup_10@3x.png" alt="" />
+                      <figcaption class="txt">
+                        프레쉬 페이스드<br />브러쉬
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <span class="swiper-notification"></span>
+              </div>
+            </div>
+            <!-- // -->
+          </div>
+
+          <!-- 7프래그런스 -->
+          <div class="swiper-slide">
+            <div class="category_img">
+              <figure>
+                <img src="images/main_fragrance@3x.png" alt="" />
+              </figure>
+              <div class="cate_explain">
+                <div>
+                  <img src="images/qr_fragrance.png" alt="qr code" />
+                </div>
+                <p class="tit">모바일에서 프래그런스 제품을 구매해 보세요!</p>
+                <p class="detail">
+                  365일 챙겨드리는 스마트 샘플까지 <br />놓치지 마세요!
+                </p>
+              </div>
+            </div>
+            <!-- 상품이미지 -->
+            <div class="lush_pro">
+              <div class="title_area">
+                <h2 class="tit">프래그런스</h2>
+                <p class="description">
+                  자연과 음악, 시가 주는 영감으로<br />빚어낸 특별한 향기
+                </p>
+              </div>
+              <div class="swiper lush_pro_swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/fragrance_01@3x.png" alt="" />
+                      <figcaption class="txt">
+                        더티<br />보디 스프레이
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/fragrance_02@3x.png" alt="" />
+                      <figcaption class="txt">
+                        트와일라잇<br />보디 스프레이
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/fragrance_03@3x.png" alt="" />
+                      <figcaption class="txt">
+                        데쓰 앤 디 케이<br />퍼퓸
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/fragrance_04@3x.png" alt="" />
+                      <figcaption class="txt">팬지<br />퍼퓸</figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/fragrance_05@3x.png" alt="" />
+                      <figcaption class="txt">정크<br />퍼퓸</figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/fragrance_06@3x.png" alt="" />
+                      <figcaption class="txt">
+                        로즈 잼<br />솔리드 퍼퓸
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/fragrance_07@3x.png" alt="" />
+                      <figcaption class="txt">
+                        바닐라리<br />솔리드 퍼퓸
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/fragrance_08@3x.png" alt="" />
+                      <figcaption class="txt">카마<br />워시 카드</figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/fragrance_09@3x.png" alt="" />
+                      <figcaption class="txt">쉐이드<br />워시 카드</figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/fragrance_10@3x.png" alt="" />
+                      <figcaption class="txt">슬리피<br />캔들</figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <span class="swiper-notification"></span>
+              </div>
+            </div>
+            <!-- // -->
+          </div>
+
+          <!-- 8기프트 -->
+          <div class="swiper-slide">
+            <div class="category_img">
+              <figure>
+                <img src="images/main_gift@3x.png" alt="" />
+              </figure>
+              <div class="cate_explain">
+                <div><img src="images/qr_gift.png" alt="qr code" /></div>
+                <p class="tit">모바일에서 기프트 제품을 구매해 보세요!</p>
+                <p class="detail">
+                  365일 챙겨드리는 스마트 샘플까지 <br />놓치지 마세요!
+                </p>
+              </div>
+            </div>
+            <!-- 상품이미지 -->
+            <div class="lush_pro">
+              <div class="title_area">
+                <h2 class="tit">기프트</h2>
+                <p class="description">
+                  환경을 배려한 선물의 감동은<br />긴 여운을 남길 거예요.
+                </p>
+              </div>
+              <div class="swiper lush_pro_swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/gift_01@3x.png" alt="" />
+                      <figcaption class="txt">
+                        트와일라잇<br />기프트
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/gift_02@3x.png" alt="" />
+                      <figcaption class="txt">슬리피<br />기프트</figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/gift_03@3x.png" alt="" />
+                      <figcaption class="txt">릴렉스<br />기프트</figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/gift_04@3x.png" alt="" />
+                      <figcaption class="txt">러블리<br />기프트</figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/gift_05@3x.png" alt="" />
+                      <figcaption class="txt">로즈<br />기프트</figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/gift_06@3x.png" alt="" />
+                      <figcaption class="txt">더티<br />기프트</figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/gift_07@3x.png" alt="" />
+                      <figcaption class="txt">
+                        프레쉬 애즈<br />기프트
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/gift_08@3x.png" alt="" />
+                      <figcaption class="txt">배쓰 아트<br />기프트</figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/gift_09@3x.png" alt="" />
+                      <figcaption class="txt">
+                        올더 베스트<br />기프트
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="pro_img hover_dimmed">
+                      <img src="images/gift_10@3x.png" alt="" />
+                      <figcaption class="txt">리프레쉬<br />기프트</figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <span class="swiper-notification"></span>
+              </div>
+            </div>
+            <!-- // -->
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </article>
+  </body>
+</html>

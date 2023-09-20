@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
+    <style>
+      .slide {
+        width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        height: 500px !important;
+      }
+      .slide li {
+        margin: 0 20px;
+      }
+      .simply-scroll-clip {
+        height: 500px !important;
+      }
+    </style>
+    <script src="jquery-3.6.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        var $slider = $(".slide ul");
+        var isPaused = false;
+
+        $slider.slick({
+          autoplay: true,
+          autoplaySpeed: 1000, // 초기 슬라이드 속도 (1초)
+        });
+
+        // 마우스 오버 시 느린 속도로 변경
+        $slider.on("mouseenter", function () {
+          if (!isPaused) {
+            $slider.slick("slickPause"); // 슬라이드 일시 중지
+            isPaused = true;
+          }
+        });
+
+        // 마우스 아웃 시 원래 속도로 변경
+        $slider.on("mouseleave", function () {
+          if (isPaused) {
+            $slider.slick("slickPlay"); // 슬라이드 다시 시작
+            isPaused = false;
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="slide">
+      <ul>
+        <li>
+          <img
+            src="http://logicbox.net/jquery/simplyscroll/assets/20080608_9N3H5GYL_tb.jpg"
+            width="1280"
+            height="200"
+            alt="Firehouse"
+          />
+        </li>
+        <li>
+          <img
+            src="http://logicbox.net/jquery/simplyscroll/assets/20080608_9N3H5GYL_tb.jpg"
+            width="1280"
+            height="400"
+            alt="Firehouse"
+          />
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

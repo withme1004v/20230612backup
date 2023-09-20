@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="jquery.simplyscroll.css" />
+    <style>
+      .slide {
+        width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        height: 500px !important;
+      }
+      .slide li {
+        margin: 0 20px;
+      }
+      .simply-scroll-clip {
+        height: 500px !important;
+      }
+    </style>
+    <script src="jquery-3.6.1.js"></script>
+    <script src="jquery.simplyscroll.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        $("#scroller").simplyScroll({
+          auto: true,
+          speed: 1,
+          pauseOnHover: true,
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="slide">
+      <ul id="scroller">
+        <li>
+          <img
+            src="http://logicbox.net/jquery/simplyscroll/assets/20080608_9N3H5GYL_tb.jpg"
+            width="1280"
+            height="200"
+            alt="Firehouse"
+          />
+        </li>
+        <li>
+          <img
+            src="http://logicbox.net/jquery/simplyscroll/assets/20080608_9N3H5GYL_tb.jpg"
+            width="1280"
+            height="400"
+            alt="Firehouse"
+          />
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

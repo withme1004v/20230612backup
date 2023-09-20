@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Auto-height sections size - fullPage.js</title>
+    <meta name="author" content="Matthew Howell" />
+    <meta
+      name="description"
+      content="fullPage - smaller sections inside fullpage.js."
+    />
+    <meta
+      name="keywords"
+      content="fullpage,jquery,auto,height,auto-height,smaller,size,dimensions,automatic"
+    />
+    <meta name="Resource-type" content="Document" />
+
+    <link rel="stylesheet" type="text/css" href="css/fullpage.css" />
+    <link rel="stylesheet" type="text/css" href="css/examples.css" />
+
+    <!--[if IE]>
+      <script type="text/javascript">
+        var console = { log: function () {} };
+      </script>
+    <![endif]-->
+
+    <style>
+      .footer {
+        padding: 50px 0;
+      }
+      .myContent {
+        height: 250px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://github.com/alvarotrigo/fullPage.js" id="githubLink"
+      ><img
+        style="position: fixed; z-index: 99; top: 0; right: 0; border: 0"
+        src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"
+        alt="Fork me on GitHub"
+    /></a>
+
+    <a
+      href="https://twitter.com/share"
+      class="twitter-share-button"
+      data-url="http://alvarotrigo.com/fullPage/"
+      data-text="Great plugin to create fullscreen scrolling websites: http://alvarotrigo.com/fullPage/"
+      >Tweet</a
+    >
+    <script>
+      !(function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0],
+          p = /^http:/.test(d.location) ? "http" : "https";
+        if (!d.getElementById(id)) {
+          js = d.createElement(s);
+          js.id = id;
+          js.src = p + "://platform.twitter.com/widgets.js";
+          fjs.parentNode.insertBefore(js, fjs);
+        }
+      })(document, "script", "twitter-wjs");
+    </script>
+
+    <ul id="menu">
+      <li data-menuanchor="anchor1"><a href="#anchor1">First slide</a></li>
+      <li data-menuanchor="anchor2"><a href="#anchor2">Second slide</a></li>
+      <li data-menuanchor="anchor3"><a href="#anchor3">Third slide</a></li>
+    </ul>
+
+    <div id="fullpage">
+      <div class="section" id="section0">
+        <h1>fullPage.js</h1>
+        <p>Auto-height sections</p>
+      </div>
+      <div class="section" id="section1">
+        <div class="intro">
+          <h1>Ideal for footers</h1>
+          <p>Or any other section rather than the 1st one</p>
+        </div>
+      </div>
+      <div class="section fp-auto-height" id="section2">
+        <div class="myContent">
+          <div class="intro footer">
+            <h1>My footer</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+              rutrum pellentesque turpis, id imperdiet leo posuere eget. Vivamus
+              fermentum ligula diam, interdum eleifend felis aliquet eget.
+              Integer non lorem vitae libero aliquam tincidunt. Fusce
+              sollicitudin mollis nisl ac volutpat. Fusce mollis, lacus eu
+              dictum pellentesque, ante ex mollis urna, et posuere mauris nulla
+              dictum turpis. Nam eleifend tellus sit amet faucibus mollis. Nulla
+              felis dolor, gravida eu faucibus quis, scelerisque eu ex. Praesent
+              turpis metus, accumsan nec urna vel, venenatis malesuada sem.
+              Vestibulum facilisis pretium ullamcorper. Aenean aliquam nulla
+              erat, vel placerat lacus vestibulum nec. Suspendisse dictum urna
+              at lacinia ornare. Nulla fringilla ultricies congue. Phasellus
+              pretium eget lectus at eleifend. Cras vitae erat non ante varius
+              mattis et sit amet eros. In sit amet gravida lectus, non
+              consectetur augue. Proin venenatis feugiat odio nec facilisis.
+              Praesent leo nisl, bibendum eget consectetur nec, consequat vitae
+              mauris. Fusce faucibus cursus dui sed eleifend. Praesent nec
+              fringilla nulla, vitae sagittis odio. Morbi dui diam, lacinia in
+              efficitur vitae, pulvinar vitae magna. Etiam mattis semper massa,
+              ut congue tortor mattis vitae. Proin aliquam ultrices tristique.
+              Maecenas volutpat malesuada posuere. Morbi magna arcu, consectetur
+              blandit elit ac, tristique venenatis sapien. Cras tellus dolor,
+              commodo nec nulla at, condimentum euismod diam. Maecenas tempus,
+              nisl vitae volutpat facilisis, ex massa molestie justo, ut
+              accumsan ipsum dui quis tellus. Nam facilisis felis in arcu
+              rutrum, a lacinia dui facilisis. Aenean non imperdiet neque. Nunc
+              pulvinar elementum leo sit amet volutpat. Mauris faucibus tortor
+              non lobortis sodales. Cras nec leo blandit, molestie urna eu,
+              aliquam tortor. Mauris congue lectus imperdiet scelerisque
+              facilisis. Maecenas feugiat et risus eget placerat. In porttitor
+              ante quis augue gravida, a luctus dui maximus. Lorem ipsum dolor
+              sit amet, consectetur adipiscing elit. Sed imperdiet justo et
+              mauris consectetur, at luctus felis sollicitudin. Mauris aliquam a
+              lorem eget porta. Phasellus non euismod velit, eu vehicula tellus.
+              Etiam ut mi auctor nisi cursus scelerisque quis vitae tortor. Sed
+              eu augue nec tortor condimentum tempor eu ut justo. Suspendisse
+              tempus, turpis sed sagittis laoreet, erat eros lobortis ex, non
+              tristique dui dui sed nulla. Nullam sollicitudin justo nisi, et
+              eleifend risus condimentum ut. Nulla eu vehicula lorem. Nam eros
+              justo, dignissim in nibh in, porttitor porttitor diam. Etiam
+              laoreet est id justo bibendum, at vehicula ipsum viverra.
+              Phasellus suscipit tempor neque, in maximus lorem ultrices sit
+              amet. Proin eget varius augue. Fusce eu gravida est. Pellentesque
+              habitant morbi tristique senectus et netus et malesuada fames ac
+              turpis egestas. Sed bibendum magna commodo, pretium elit viverra,
+              vehicula dui. Mauris ut sollicitudin ex, et consequat tortor.
+              Proin cursus nisi nec eros placerat, molestie mattis mauris
+              scelerisque. Etiam varius dignissim metus, vitae viverra odio.
+              Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+              posuere cubilia curae; In fringilla venenatis laoreet. Aliquam
+              eget tristique tortor. Integer eget dignissim lorem. In hac
+              habitasse platea dictumst. Suspendisse eleifend elit elit, eu
+              euismod mauris condimentum in. Vestibulum enim est, efficitur non
+              turpis eu, fermentum iaculis neque. Nam eget ultricies elit, at
+              dictum mi. Nullam sollicitudin nisl at dui pretium maximus.
+              Suspendisse fringilla tempus ipsum, scelerisque sodales turpis
+              vestibulum quis. Aenean volutpat dolor nisl, quis mollis magna
+              commodo sed. Nam fermentum justo id turpis varius hendrerit. In
+              vulputate mi sem, eget sollicitudin purus dapibus sit amet.
+              Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+              posuere cubilia curae; Cras sollicitudin diam ipsum, fringilla
+              dapibus libero porta eu. Maecenas gravida et libero nec laoreet.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+              vitae tortor eget magna dapibus placerat vitae nec turpis.
+              Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+              posuere cubilia curae; Pellentesque non sagittis augue, cursus
+              porttitor lacus. Nam tincidunt leo non libero faucibus interdum.
+              Fusce ullamcorper lobortis purus sit amet venenatis. Nullam ac
+              nisi sagittis, molestie libero ullamcorper, posuere ex. Aliquam
+              sagittis porta blandit. Mauris semper iaculis mi, ut ultricies
+              magna fringilla et. Quisque id sapien eros. Suspendisse potenti.
+              In accumsan orci bibendum, placerat orci sed, pellentesque magna.
+              Praesent porta ornare turpis, id ullamcorper odio pellentesque
+              vel. Fusce finibus, sem nec laoreet ultrices, erat diam convallis
+              mauris, nec placerat diam enim ac lorem. Phasellus at efficitur
+              dui. Phasellus faucibus vehicula odio in consequat. Phasellus
+              lobortis feugiat ex, in tempus orci mattis nec. Nam non magna ac
+              tellus ornare ultricies sed id nulla. Phasellus dolor neque,
+              placerat nec augue eu, fermentum iaculis purus. Quisque faucibus
+              ante in mi dapibus, eu rhoncus nulla auctor. Pellentesque et
+              ornare leo. Aliquam erat volutpat. Integer ornare ex eros, sed
+              vehicula tellus porta ac. Cras rhoncus, nisl vitae consectetur
+              tincidunt, ligula leo vehicula mi, in sollicitudin sapien orci at
+              mauris. Praesent et posuere magna. Aenean pharetra consectetur
+              lorem. Maecenas tincidunt enim vel urna tincidunt, eget placerat
+              ante varius. Fusce sit amet vehicula lacus. Quisque at tristique
+              enim. Proin sodales nunc id metus egestas elementum. Praesent
+              egestas velit dolor, nec mattis ligula fringilla eu. Donec tempor
+              metus ut arcu vulputate mollis. Duis commodo leo id risus
+              porttitor, vel faucibus risus eleifend. Duis ac magna vel nibh
+              aliquam efficitur. Quisque tristique nisl non mauris viverra, non
+              pellentesque nibh lacinia. Donec in purus lacus. Sed sollicitudin
+              id massa vitae accumsan. Mauris id finibus ligula. Nam porta nisl
+              ullamcorper, aliquet lacus eu, condimentum eros. Donec at ipsum
+              convallis, accumsan mauris a, vehicula mauris. Aliquam dapibus
+              lectus eu sem sollicitudin consequat. Nam lorem augue, iaculis
+              eget dapibus ac, auctor at ligula. Aenean molestie ante et lorem
+              lobortis, id dictum magna pretium. Proin accumsan risus ac nulla
+              pulvinar, at tempus mi pulvinar. Vivamus mattis orci eu facilisis
+              consectetur. Sed ut massa eget risus lobortis efficitur at ac
+              turpis. Cras egestas ipsum at est condimentum dignissim. Quisque
+              non malesuada lorem. Class aptent taciti sociosqu ad litora
+              torquent per conubia nostra, per inceptos himenaeos. Pellentesque
+              dictum suscipit vehicula. Vestibulum accumsan nunc id pulvinar
+              sollicitudin. In hac habitasse platea dictumst. Proin tincidunt
+              fermentum dolor eu volutpat. Etiam euismod dolor ac placerat
+              gravida. Nullam cursus posuere metus, et varius velit consectetur
+              vel. Orci varius natoque penatibus et magnis dis parturient
+              montes, nascetur ridiculus mus. Sed et aliquam nibh, vitae
+              tincidunt lorem. Vivamus quis scelerisque diam, et consectetur
+              augue. Duis sit amet ex vitae lorem mattis euismod. Nulla
+              hendrerit porttitor dolor ut facilisis. Nulla hendrerit velit at
+              urna cursus pulvinar. Nunc non odio tortor. Class aptent taciti
+              sociosqu ad litora torquent per conubia nostra, per inceptos
+              himenaeos. Cras ligula nulla, venenatis sed metus et, aliquet
+              sagittis ipsum. Vestibulum pharetra eu leo vitae posuere. Duis
+              tincidunt varius consequat. Integer quis mauris non risus tempor
+              accumsan a at ipsum. Proin feugiat arcu a odio venenatis pretium.
+              Vivamus a libero elit. Vivamus vitae est pellentesque risus
+              viverra tincidunt. Morbi dignissim tortor iaculis diam viverra
+              volutpat. Maecenas finibus mauris lorem, quis sodales urna
+              hendrerit eget. Nam enim felis, tincidunt sit amet dignissim et,
+              porttitor et purus. Phasellus quis elit porta, interdum dui at,
+              maximus ipsum. Maecenas ut tempor mauris, vel mattis lorem. Ut
+              ultrices dictum diam, eu dictum dolor malesuada at. Phasellus
+              euismod quam varius ullamcorper lobortis. In mi ipsum, eleifend
+              sit amet turpis at, volutpat viverra arcu. Praesent id ex
+              fermentum ex ullamcorper bibendum. Donec elementum neque sit amet
+              massa pulvinar, quis congue eros eleifend. Integer aliquam
+              ullamcorper aliquet. Morbi sagittis mollis dui, sed lobortis est
+              dignissim in. Fusce nec mi erat. Phasellus tristique urna libero.
+              Praesent ac mauris nulla. Integer tristique mollis dui, nec
+              tincidunt dolor lacinia sit amet. Quisque blandit rhoncus velit
+              posuere lacinia. Maecenas consectetur congue orci, quis euismod
+              metus elementum non. Donec massa nisl, pharetra quis magna ut,
+              venenatis lobortis orci. Pellentesque volutpat diam eu elit
+              molestie, non commodo nisl commodo. Orci varius natoque penatibus
+              et magnis dis parturient montes, nascetur ridiculus mus. Phasellus
+              fermentum orci lectus, ut tincidunt arcu efficitur eu. Suspendisse
+              ex tellus, rhoncus sed tristique et, tincidunt at risus. Proin
+              molestie consectetur vulputate. Etiam eget aliquet felis.
+              Suspendisse aliquam semper orci, id ornare nibh elementum et.
+              Vestibulum facilisis iaculis consequat. Integer a erat ut metus
+              imperdiet bibendum at lobortis tortor. Ut pharetra faucibus quam,
+              vitae mattis neque commodo sit amet. Etiam tincidunt dapibus felis
+              nec ullamcorper. Nulla dignissim tempor ipsum, a maximus quam
+              sollicitudin at. In sagittis elit et bibendum interdum. Vivamus
+              sapien lectus, rutrum nec urna vitae, venenatis lobortis purus.
+              Etiam efficitur blandit sollicitudin. Integer turpis orci,
+              imperdiet eget felis ut, euismod laoreet lacus. Proin vehicula
+              lacinia erat, ac pellentesque enim pharetra nec. Maecenas
+              malesuada sem a odio tristique malesuada. Nam auctor ante diam,
+              sit amet scelerisque nunc lobortis ut. Integer rhoncus et quam sit
+              amet euismod. Nunc et sodales urna. Duis ut risus viverra,
+              consectetur magna ut, egestas diam. Curabitur porttitor diam vitae
+              ex rhoncus, nec placerat mauris congue. Pellentesque habitant
+              morbi tristique senectus et netus et malesuada fames ac turpis
+              egestas. Integer tristique nulla vel sapien accumsan ornare. Sed
+              congue auctor leo, at tempus odio suscipit a. Fusce egestas nulla
+              eu arcu suscipit, placerat pulvinar justo ullamcorper. Fusce
+              sollicitudin nisl id aliquam pellentesque. Curabitur iaculis in
+              lacus non ultricies. Sed eu elit tincidunt tellus pretium
+              fringilla. Curabitur tortor sapien, vehicula quis elementum
+              sodales, convallis ut dolor. Ut enim est, lobortis at nunc eget,
+              varius lacinia mauris. Maecenas ultrices quis mauris eget laoreet.
+              Mauris gravida pulvinar est. Pellentesque congue tempus diam quis
+              ullamcorper. Pellentesque habitant morbi tristique senectus et
+              netus et malesuada fames ac turpis egestas. Maecenas eu sagittis
+              neque, non blandit erat. Phasellus aliquam nisi id turpis lacinia
+              cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Quisque et consectetur nibh, a scelerisque dolor. Etiam sit amet
+              ligula id mauris convallis ultrices a id diam. Integer malesuada
+              nulla leo, in aliquam elit venenatis sed. Aenean vitae magna eget
+              mi porta consequat. Nulla in enim ac mauris accumsan suscipit sed
+              nec nibh. Cras vel dapibus magna. Suspendisse semper rutrum
+              interdum. Cras interdum pharetra leo, sed malesuada quam posuere
+              sed. Phasellus sed luctus ex, eu dignissim turpis. Praesent ac
+              aliquam eros. Vivamus sit amet quam ut nisi aliquet tristique.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="infoMenu">
+      <ul>
+        <li>
+          <a href="https://alvarotrigo.com/fullPage/utils/wordpress.html"
+            >Wordpress theme</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://github.com/alvarotrigo/fullPage.js/archive/master.zip"
+            >Download</a
+          >
+        </li>
+        <li>
+          <a href="#" id="showExamples">Examples</a>
+          <div id="examplesList">
+            <div class="column">
+              <h3>Navigation</h3>
+              <ul>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/examples/scrollBar.html"
+                    >Scroll Bar Enabled</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/examples/normalScroll.html"
+                    >Normal scrolling</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/examples/continuous.html"
+                    >Continuous vertical</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/examples/noAnchor.html"
+                    >Without anchor links (same URL)</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/examples/navigationV.html"
+                    >Vertical navigation dots</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/examples/navigationH.html"
+                    >Horizontal navigation dots</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="column">
+              <h3>Design</h3>
+              <ul>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/examples/responsive.html"
+                    >Responsive</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/examples/backgrounds.html"
+                    >Full backgrounds</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/examples/fixedBackgrounds.html"
+                    >Fixed backgrounds</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/examples/videoBackground.html"
+                    >Full background videos</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/examples/autoHeight.html"
+                    >Auto-height sections</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/examples/gradientBackgrounds.html"
+                    >Gradient backgrounds</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/examples/scrolling.html"
+                    >Scrolling inside sections and slides</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/examples/fixedHeaders.html"
+                    >Adding fixed header and footer</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/examples/oneSection.html"
+                    >One single section</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="column">
+              <h3>Extensions</h3>
+              <ul>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/extensions/parallax.html"
+                    >Parallax</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/extensions/continuous-horizontal.html"
+                    >Continuous horizontal</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/extensions/interlocked-slides.html"
+                    >Interlocked Slides</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/extensions/reset-sliders.html"
+                    >Reset Sliders</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/extensions/responsive-slides.html"
+                    >Responsive Slides</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/extensions/scroll-horizontally.html"
+                    >Horizontal mouse wheel</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/extensions/fading-effect.html"
+                    >Fading Effect</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/extensions/offset-sections.html"
+                    >Offset Sections</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/extensions/drag-and-move.html"
+                    >Drag And Move</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/extensions/scrolloverflow-reset.html"
+                    >ScrollOverflow Reset</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="column">
+              <h3>Other</h3>
+              <ul>
+                <li>
+                  <a href="https://alvarotrigo.com/fullPage/examples/apple.html"
+                    >Animations on scrolling</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/examples/callbacks.html"
+                    >Callbacks</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/examples/autoplayVideoAndAudio.html"
+                    >Autoplay media</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/examples/methods.html"
+                    >Functions and methods</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/extensions/#navigation"
+                    >Extra navigations</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="https://github.com/alvarotrigo/fullPage.js#fullpagejs"
+            >Documentation</a
+          >
+        </li>
+        <li><a href="https://alvarotrigo.com/#contact-page">Contact</a></li>
+      </ul>
+
+      <!-- Facebook Pixel Code (Do not copy this!!)-->
+      <script>
+        !(function (f, b, e, v, n, t, s) {
+          if (f.fbq) return;
+          n = f.fbq = function () {
+            n.callMethod
+              ? n.callMethod.apply(n, arguments)
+              : n.queue.push(arguments);
+          };
+          if (!f._fbq) f._fbq = n;
+          n.push = n;
+          n.loaded = !0;
+          n.version = "2.0";
+          n.queue = [];
+          t = b.createElement(e);
+          t.async = !0;
+          t.src = v;
+          s = b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t, s);
+        })(
+          window,
+          document,
+          "script",
+          "https://connect.facebook.net/en_US/fbevents.js"
+        );
+        fbq("init", "1786065945027357"); // Insert your pixel ID here.
+        fbq("track", "PageView");
+      </script>
+      <noscript
+        ><img
+          height="1"
+          width="1"
+          style="display: none"
+          src="https://www.facebook.com/tr?id=1786065945027357&ev=PageView&noscript=1"
+      /></noscript>
+      <!-- DO NOT MODIFY -->
+      <!-- End Facebook Pixel Code -->
+
+      <!-- Google tag (gtag.js) GA4  (Do not copy this!!) -->
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-Q0MF57YDRL"
+      ></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+        gtag("config", "G-Q0MF57YDRL");
+
+        /* Adwords */
+        gtag("config", "AW-1012934304");
+      </script>
+      <!-- End Google Tag-->
+    </div>
+
+    <script type="text/javascript" src="js/fullpage.js"></script>
+    <script type="text/javascript" src="js/examples.js"></script>
+
+    <script type="text/javascript">
+      var myFullpage = new fullpage("#fullpage", {
+        verticalCentered: true,
+        anchors: ["anchor1", "anchor2", "anchor3"],
+        menu: "#menu",
+        sectionsColor: ["#1bbc9b", "#4BBFC3", "#7BAABE"],
+      });
+    </script>
+  </body>
+</html>

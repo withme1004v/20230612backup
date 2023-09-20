@@ -1,0 +1,222 @@
+<!-- 참고url lhttps://zzzmh.tistory.com/18?category=1063912 -->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .on {
+        overflow-y: visible !important;
+        height: auto !important;
+      }
+      #fullpage {
+        width: 100%;
+        height: 100%;
+      }
+
+      .section {
+        font-size: 3vw;
+        text-align: center;
+      }
+
+      .swiper-container {
+        width: 100%;
+        height: 100%;
+      }
+      .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+      }
+      .main {
+        height: 1000px;
+        background: #ccc;
+        overflow: visible;
+      }
+    </style>
+    <link rel="stylesheet" href="css/jquery.fullpage.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.css" />
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/scrolloverflow.js"></script>
+    <script src="js/jquery.fullpage.js"></script>
+
+    <script src="js/swiper-bundle.js"></script>
+  </head>
+  <body>
+    <div id="fullpage">
+      <div class="section sec1 active">
+        <h1>Section1</h1>
+      </div>
+      <div class="section sec2">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <h1>Section2</h1>
+              Slide 1
+            </div>
+            <div class="swiper-slide">
+              <h1>Section2</h1>
+              Slide 2
+            </div>
+            <div class="swiper-slide">
+              <h1>Section2</h1>
+              Slide 3
+            </div>
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <div class="section sec3">
+        <div class="swiper-container1">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <h1>Section3</h1>
+              Slide 1
+            </div>
+            <div class="swiper-slide">
+              <h1>Section3</h1>
+              Slide 2
+            </div>
+            <div class="swiper-slide">
+              <h1>Section3</h1>
+              Slide 3
+            </div>
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <div class="section sec4"><div class="main"></div></div>
+    </div>
+
+    <!-- <div class="main"></div> -->
+    <script>
+      $(document).ready(function () {
+        // fullpage
+        $("#fullpage").fullpage({
+          sectionsColor: ["#1bbc9b", "#4BBFC3", "#7BAABE"],
+          //   anchors: ["sec1", "sec2", "sec3"],
+          //menu: "#menu",
+          bigSectionsDestination: top,
+          normalScrollElements: ".main",
+          scrollOverflow: true,
+
+          //scrollBar: true,
+          onLeave: function (origin, destination, direction) {
+            $("#fullpage").on("scroll touchmove mousewheel", function (event) {
+              event.preventDefault();
+              event.stopPropagation();
+              return false;
+            });
+            swiper.mousewheel.disable();
+          },
+          afterLoad: function (anchorLink, index) {
+            $("#fullpage").off("scroll mousewheel");
+            if (!$(".fp-completely .swiper-wrapper").length > 0)
+              $("#fullpage").off("touchmove"); // 모바일분기
+            if (swiper) swiper.mousewheel.enable();
+            //document.getElementsByTagName("html")[0].classList.remove("on");
+
+            // 슬라이드 섹션을 벗어나면 휠풀어주기
+          },
+        });
+
+        // swiper
+        var length = $(".sec2 .swiper-slide").length;
+        var swiper = new Swiper(".swiper-container", {
+          slidesPerView: 1,
+          spaceBetween: 0,
+          freeMode: false,
+          speed: 1000,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          mousewheel: {
+            enabled: true,
+          },
+          on: {
+            slideChange: function () {
+              //현재 활성 슬라이드가 변경되면 이벤트가 시작됩니다.
+
+              var idx = this.activeIndex;
+              if (this.activeIndex != 0 && idx != length - 1)
+                $.fn.fullpage.setAllowScrolling(false);
+            },
+            slideChangeTransitionEnd: function () {
+              //다른 슬라이드(다음 또는 이전)에 애니메이션이 적용된 후 이벤트가 시작됩니다.
+              var idx = this.activeIndex; //현재 활성화된 슬라이드의 인덱스 번호
+              if (idx == 0 || idx == length - 1)
+                $.fn.fullpage.setAllowScrolling(true);
+            },
+            touchMove: function (e) {
+              var startY = e.touches.startY;
+              setTimeout(function () {
+                if (startY > e.touches.currentY) swiper.slideNext();
+                else swiper.slidePrev();
+              }, 100);
+            },
+          },
+        });
+
+        var length1 = $(".sec2 .swiper-slide").length;
+        var swiper = new Swiper(".swiper-container1", {
+          slidesPerView: 1,
+          spaceBetween: 0,
+          freeMode: false,
+          speed: 1000,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          mousewheel: {
+            enabled: true,
+            releaseOnEdges: true,
+            forceToAxis: false,
+          },
+          on: {
+            slideChange: function () {
+              //현재 활성 슬라이드가 변경되면 이벤트가 시작됩니다.
+              var idx = this.activeIndex;
+              if (this.activeIndex != 0 || idx != length1 - 1)
+                $.fn.fullpage.setAllowScrolling(false);
+              //if (idx == 0) $.fn.fullpage.setAllowScrolling(true);
+
+              // console.log('즉시 : ' + idx);
+            },
+            slideChangeTransitionEnd: function () {
+              //다른 슬라이드(다음 또는 이전)에 애니메이션이 적용된 후 이벤트가 시작됩니다.
+              var idx = this.activeIndex;
+              console.log(idx);
+              if (this.activeIndex != 0 || idx != length1 - 1)
+                $.fn.fullpage.setAllowScrolling(false);
+              if (idx == 0) $.fn.fullpage.setAllowScrolling(true);
+
+              if (idx == length1 - 1) {
+                // document.getElementsByTagName("html")[0].classList.add("on");
+              }
+            },
+            touchMove: function (e) {
+              var startY = e.touches.startY;
+              setTimeout(function () {
+                if (startY > e.touches.currentY) swiper.slideNext();
+                else swiper.slidePrev();
+              }, 100);
+            },
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

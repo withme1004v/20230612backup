@@ -1,0 +1,152 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.head {
+  width: 100%;
+  height: 100vh;
+  background: url(../images/visual_main.gif) center/cover fixed,
+    rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
+  position: relative;
+}
+.nav {
+  width: 100%;
+  height: 60px;
+  padding: 20px auto;
+  border-bottom: 1px solid #fff;
+}
+.head ul {
+  width: 960px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.head ul li a {
+  text-align: center;
+  line-height: 60px;
+  color: #fff;
+}
+.head ul > li a img {
+  width: 80px;
+  object-fit: cover;
+  vertical-align: middle;
+}
+
+.head ul li:hover a {
+  font-weight: 800;
+}
+
+.head .phrase {
+  position: absolute;
+  bottom: 100px;
+  left: 150px;
+}
+
+.head .phrase h1 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+.head .phrase img {
+  width: 200px;
+  height: 60px;
+  object-fit: contain;
+  border: 1px solid#fff;
+  margin-right: 15px;
+  box-sizing: border-box;
+}
+.head .phrase img:hover {
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+}
+
+.head > article.side_in {
+  height: 285px;
+  position: fixed;
+  right: 20px;
+  bottom: 150px;
+  display: flex;
+}
+.side_QR {
+  width: 180px;
+  height: 285px;
+  background: #fff;
+  text-align: center;
+  border-radius: 10px;
+  color: #333;
+  position: relative;
+  right: 20px;
+  display: none;
+}
+
+.QR_info {
+  width: 90%;
+  margin: 20px auto;
+}
+.QR_info p {
+  margin-top: 10px;
+}
+.QR_info span {
+  font-weight: 800;
+}
+.QR_info img {
+  margin-top: -10px;
+  width: 142px;
+  height: 142px;
+  object-fit: cover;
+}
+.side_QR::after {
+  position: absolute;
+  right: -10px;
+  top: 130px;
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-left: 10px solid#fff;
+  border-bottom: 10px solid transparent;
+}
+.Xbox img {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+}
+article .side_btn {
+  margin: 30px 0;
+  position: relative;
+  right: 0;
+}
+article .side_btn a {
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.8);
+  margin-bottom: 20px;
+  position: relative;
+}
+article .side_btn a:first-child {
+  background: yellow;
+}
+article .side_btn a img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+article .side_btn a:nth-child(2):hover img {
+}

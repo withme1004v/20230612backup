@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <title>Swiper with Progress</title>
+    <style>
+      .swiper-container {
+        width: 100%;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="swiper-container" id="mySwiper1">
+      <ul class="pics swiper-wrapper">
+        <li class="swiper-slide">Slide 1</li>
+        <li class="swiper-slide">Slide 2</li>
+        <li class="swiper-slide">Slide 3</li>
+      </ul>
+      <div class="progress-box">
+        <div class="swiper-pagination"></div>
+        <div class="autoplay-progress">
+          <svg viewBox="0 0 100 10">
+            <line x1="0" y1="0" x2="0" y2="10" id="progressLine" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper("#mySwiper1", {
+        direction: "horizontal",
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        on: {
+          slideChangeTransitionStart: function () {
+            updateProgress();
+          },
+        },
+      });
+
+      function updateProgress() {
+        const progressLine = document.getElementById("progressLine");
+        const progress = (100 / swiper.slides.length) * (swiper.realIndex + 1);
+        progressLine.setAttribute("x2", progress);
+      }
+    </script>
+  </body>
+</html>

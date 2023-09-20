@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      body {
+        font-family: "나눔 고딕", sans-serif;
+      }
+      header {
+        border-bottom: 1px solid #ccc;
+      }
+      .head {
+        width: 990px;
+        margin: 20px auto;
+        text-align: center;
+        /* background: #ccc; */
+        display: flex;
+        justify-content: flex-end;
+      }
+      .head .top {
+        width: calc(50% + 47.5px);
+        /* border: 1px solid #000; */
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+      .head .top ul {
+        display: flex;
+        height: 60%;
+        align-items: center;
+        /* border: 1px solid #000; */
+      }
+      .head .top ul li {
+        margin-left: 20px;
+      }
+      nav {
+        position: relative;
+      }
+      nav > ul {
+        width: 800px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        background: #fff;
+      }
+      nav > ul > li {
+        position: relative;
+      }
+      nav > ul > li > a {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        font-size: 18px;
+        line-height: 50px;
+      }
+      nav > ul > li:hover > a::after {
+        position: absolute;
+        left: 0;
+        bottom: 0px;
+        content: "";
+        width: 100%;
+        height: 2px;
+        background: #333;
+      }
+      nav > ul > li > ul {
+        position: absolute;
+        left: 0;
+        top: 51px;
+        z-index: 1;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.5s;
+        margin-top: 20px;
+      }
+      nav:hover li > ul {
+        height: 200px;
+      }
+      nav > ul > li > ul > li > a {
+        line-height: 40px;
+      }
+      nav > ul > li > ul > li a:hover {
+        text-decoration: underline;
+      }
+      nav ul.sub {
+        margin-left: 10px;
+      }
+      nav ul.sub li a {
+        line-height: 30px;
+      }
+      nav ul.sub li a::before {
+        content: url(images/gnb_3depth_bullet.png);
+        padding: 10px 10px 0 0;
+      }
+      nav .bg {
+        position: absolute;
+        height: 0px;
+        left: 0;
+        top: 51px;
+        width: 100%;
+        background: #fff;
+        transition: height 0.5s;
+      }
+      nav:hover .bg {
+        height: 200px;
+      }
+      .slide {
+        width: 1600px;
+        height: 520px;
+        margin: 0 auto;
+        animation: slide 4s infinite both;
+      }
+      @keyframes slide {
+        0% {
+          background: url(images/slide1.jpg);
+        }
+        40% {
+          background: url(images/slide2.jpg);
+        }
+        70% {
+          background: url(images/slide3.jpg);
+        }
+        100% {
+          background: url(images/slide4.jpg);
+        }
+      }
+      .item {
+        width: 1600px;
+        margin: 0 auto;
+        height: 425px;
+        background: url(images/item-bg.png) bottom repeat-x;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+        <div class="head">
+          <div class="top">
+            <div class="logo"><img src="images/logo.png" alt="logo" /></div>
+            <ul>
+              <li><a href="#">로그인</a></li>
+              <li><a href="#">구매하기</a></li>
+              <li><a href="#">매장찾기</a></li>
+              <li>
+                <a href="#"
+                  ><span class="material-symbols-outlined"> search </span></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <a href="#">해피바스 이야기</a>
+              <ul>
+                <li><a href="">브랜드 스토리</a></li>
+                <li><a href="">영상 갤러리</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">해피바스 선물</a>
+              <ul>
+                <li>
+                  <a href="">행복의 순간</a>
+                  <ul class="sub">
+                    <li><a href="">내추럴성분</a></li>
+                    <li><a href="">풍성한 향</a></li>
+                    <li><a href="">즐거운 경험</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">해피바스 뷰티톡</a>
+              <ul>
+                <li><a href="">피부고민X뷰티팁</a></li>
+                <li><a href="">자산화 원료</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">해피바스 제품</a>
+              <ul>
+                <li><a href="">유형별제품</a></li>
+                <li><a href="">고민별제품</a></li>
+                <li><a href="">전체제품보기</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="bg"></div>
+        </nav>
+      </header>
+      <div class="slide"></div>
+      <div class="item"></div>
+    </div>
+  </body>
+</html>

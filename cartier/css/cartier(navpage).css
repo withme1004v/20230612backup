@@ -1,0 +1,130 @@
+@charset "utf-8";
+@font-face {
+  font-family: "본명조";
+  src: url(../webfonts/SourceHanSerifK-Regular.otf) format("otf");
+}
+@font-face {
+  font-family: "BASKVILL";
+  src: url(../webfonts/BASKVILL.woff) format("woff");
+}
+@font-face {
+  font-family: Noto;
+  src: url(../webfonts/NotoSansKR-Medium.otf) format("otf");
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+body {
+  font-family: "BASKVILL", "본명조", sans-serif;
+  background: #1b1b1b;
+}
+nav {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/navbg01.png), url(../images/navbgtxt.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+nav img {
+  width: 182px;
+  height: 143px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 5px;
+}
+nav .navwrap {
+  position: absolute;
+  left: 25%;
+  width: 990px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+nav .navwrap .onedepth {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+nav .navwrap .onedepth > li {
+  padding: 10px 0;
+}
+nav .navwrap .onedepth > li span {
+  display: block;
+  color: #fff;
+  font-size: 30px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+nav .navwrap .onedepth > li span::before {
+  content: url(../images/navico01.png);
+  margin-right: 10px;
+}
+nav .navwrap .onedepth > li:hover span::before {
+  content: url(../images/navicohover01.png);
+}
+nav .navwrap .onedepth .lnb {
+  display: none;
+}
+nav .navwrap .onedepth li:hover .lnb {
+  display: block;
+}
+nav .navwrap .onedepth .twodepth {
+  display: flex;
+  justify-content: flex-start;
+}
+nav .navwrap .onedepth .twodepth li {
+  margin: 0 30px 15px 0;
+}
+nav .navwrap .onedepth .twodepth li a:hover {
+  text-decoration: underline;
+  text-decoration-color: #dd1d1c;
+  text-underline-offset: 8px;
+  text-decoration-thickness: 2px;
+}
+nav .navwrap .onedepth .threedepth {
+  display: flex;
+  justify-content: flex-start;
+}
+nav .navwrap .onedepth .threedepth li {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+nav .navwrap .onedepth .threedepth li a {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+nav .navwrap .onedepth .threedepth li:last-child img {
+  width: 18px;
+  height: 35px;
+  object-fit: cover;
+  margin-top: 55px;
+  margin-left: 10px;
+}
+nav .navwrap .onedepth > li > img {
+  width: 411px;
+  height: 822px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  position: absolute;
+  left: -480px;
+}
+nav .navwrap .onedepth > li:hover img {
+  opacity: 1;
+}

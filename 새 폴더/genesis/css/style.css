@@ -1,0 +1,570 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #ccc;
+}
+@font-face {
+  font-family: "GENESIS";
+  src: url(../webfonts/NotoSansKR-Light.woff) format("woff");
+}
+body {
+  font-family: "GENESIS", "맑은 고딕" sans-serif;
+}
+#wrap {
+  color: #fff;
+  background: #111111;
+  width: 100%;
+  padding-bottom: 150px;
+}
+header nav {
+  width: 100%;
+  background: #000;
+}
+header nav .top {
+  width: 1600px;
+  height: 70px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+header nav .top .left {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav .top .left img {
+  width: 130px;
+}
+header nav .top .right {
+  width: 17%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav .top .right i {
+  color: #fff;
+}
+
+header .banner {
+  width: 100%;
+  height: 900px;
+  background: url(../images/genesis_g90_1.jpg) center/ cover;
+}
+header .banner .txt {
+  width: 35%;
+  height: 900px;
+  position: relative;
+}
+header .banner .txt .top {
+  position: absolute;
+  right: 150px;
+  top: 50px;
+  color: #fff;
+  font-size: 24px;
+}
+header .banner .txt .top li:nth-child(2) {
+  font-size: 80px;
+  font-weight: lighter;
+  margin-bottom: 10px;
+}
+header .banner .txt .mid {
+  border-top: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  width: 300px;
+  height: 60px;
+  position: absolute;
+  left: 0;
+  top: 46%;
+}
+header .banner .txt .bottom {
+  position: absolute;
+  right: 50px;
+  bottom: 200px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+}
+header .banner .txt .bottom img {
+  width: 8px;
+  cursor: pointer;
+}
+header .banner .txt .bottom a {
+  color: #fff;
+  position: relative;
+}
+header .banner .txt .bottom a::after {
+  content: "";
+  width: 0;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  background: #fff;
+  transition: 0.5s;
+}
+header .banner .txt .bottom a:hover:after {
+  width: 100%;
+}
+header .model {
+  width: 100%;
+  height: 600px;
+  margin: 150px 0;
+}
+header .model .top {
+  width: 1200px;
+  margin: 0 auto;
+}
+header .model .top p {
+  margin-bottom: 20px;
+}
+header .model .top p:first-child {
+  font-size: 45px;
+}
+header .model .top p:nth-child(3) {
+  border-bottom: 1px solid #fff;
+  width: 300px;
+}
+header .model .bottom {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+header .model .bottom img {
+  width: 400px;
+}
+header .model .bottom .box {
+  margin: 50px 40px 0 0;
+  padding: 30px;
+  width: 400px;
+  height: 350px;
+  background: #151515;
+  display: flex;
+  flex-direction: column;
+  color: #ccc;
+  border: 1px solid transparent;
+}
+header .model .bottom .box:hover {
+  background: #252525;
+  transition: 1s;
+  border-color: #373636c3;
+}
+header .model .bottom .box li {
+  margin-bottom: 10px;
+}
+header .model .bottom .box li:first-child {
+  font-size: 30px;
+}
+header .model .bottom .box a {
+  margin-top: 30px;
+  border: 1px solid #fff;
+  color: #fff;
+  width: 400px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  transform: translateY(0);
+  transition: 1s;
+  position: relative;
+}
+header .model .bottom .box a::after {
+  content: "";
+  width: 0;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: width 0ms ease-in-out 0.75s, opacity 0.75s 0ms;
+  z-index: -1;
+}
+header .model .bottom .box a:hover:after {
+  width: 100%;
+  opacity: 1;
+  transition: width 0.25s ease-in-out, opacity 0ms;
+}
+header .model .bottom .box:hover a {
+  transform: translateY(-10px);
+}
+header .model .bottom .box a:hover {
+  color: #000;
+  transform-origin: left;
+}
+section .icon {
+  width: 1000px;
+  margin: 0px auto;
+  padding: 200px 0;
+}
+section .icon ul {
+  display: flex;
+  justify-content: space-between;
+}
+section .icon ul li {
+  text-align: center;
+}
+section .icon ul li p {
+  margin-top: 15px;
+}
+section .awards {
+  width: 100%;
+  height: 970px;
+  background: url(../images/genesis_awards1_dark.jpg) center/ cover;
+  background-repeat: no-repeat;
+}
+section .awards p {
+  width: 20%;
+  position: relative;
+  left: 350px;
+  top: 40px;
+  font-size: 40px;
+}
+section .awards .box {
+  width: 600px;
+  height: 700px;
+  margin: 70px auto;
+}
+section .awards .box .top img {
+  width: 600px;
+}
+section .awards .box .top {
+  width: 100%;
+  height: 50%;
+}
+section .awards .box .desc {
+  width: 100%;
+  height: 50%;
+  margin: 0 auto;
+  background: #111111;
+}
+section .awards .box .desc .bottom {
+  width: 90%;
+  height: 100%;
+  margin: 10px auto;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+section .awards .box .desc .bottom li {
+  margin-bottom: 20px;
+}
+section .awards .box .desc .bottom li:nth-child(2) {
+  font-size: 20px;
+}
+section .awards .box .desc .bottom li:nth-child(4) {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section .awards .box .desc .bottom a {
+  color: #fff;
+  position: relative;
+}
+section .awards .box .desc .bottom .txt img {
+  width: 8px;
+  cursor: pointer;
+}
+section .awards .box .desc .bottom a::after {
+  content: "";
+  width: 0;
+  height: 1px;
+}
+section .awards .box .desc .bottom a:hover:after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: 1s;
+}
+section .space {
+  width: 100%;
+  margin: 200px 0;
+  height: 500px;
+  display: flex;
+  justify-content: space-between;
+}
+section .space .left {
+  background: url(../images/genesis_space_dark.jpg) center / cover;
+  width: 49%;
+  height: 100%;
+}
+section .space ul {
+  width: 50%;
+  height: 200px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+section .space ul img {
+  width: 8px;
+  cursor: pointer;
+}
+section .space ul li:first-child {
+  font-size: 40px;
+}
+section .space ul li:nth-child(2) {
+  line-height: 25px;
+}
+section .space ul a {
+  color: #fff;
+  position: relative;
+}
+section .space ul a::after {
+  content: "";
+  width: 0%;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+}
+section .space ul a:hover::after {
+  width: 100%;
+  transition: 0.5s;
+}
+section .space .right {
+  background: url(../images/genesis_space_dark1.jpg) center / cover;
+  width: 49%;
+  height: 100%;
+}
+section .event {
+  background: url(../images/genesis-events.jpg) center/cover;
+  width: 100%;
+  height: 960px;
+}
+section .event ul {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  left: 140px;
+}
+section .event ul li {
+  position: relative;
+  margin-bottom: 40px;
+}
+section .event ul li:first-child {
+  font-size: 50px;
+}
+section .event ul li:nth-child(2) {
+  font-size: 24px;
+}
+section .event a {
+  position: relative;
+  margin-top: 10px;
+  display: block;
+  border: 1px solid #fff;
+  color: #fff;
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  z-index: 10;
+  box-sizing: border-box;
+}
+section .event li:last-child::before {
+  content: "";
+  width: 0;
+  height: 50px;
+  position: absolute;
+  left: 0;
+  top: 10px;
+  background: #fff;
+  transition: 0.5s;
+}
+section .event li:last-child:hover::before {
+  width: 200px;
+}
+section .event li:hover a {
+  color: #000;
+}
+section .insta {
+  width: 100%;
+  height: 1000px;
+  margin-top: 150px;
+}
+section .insta p > img {
+  width: 30px;
+}
+section .insta .txt {
+  margin-bottom: 50px;
+}
+section .insta .txt p {
+  text-align: center;
+  color: #000;
+}
+section .insta .txt p:nth-child(2) {
+  font-size: 50px;
+  font-weight: lighter;
+}
+section .insta .box {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: space-between;
+}
+section .insta .box ul {
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  position: relative;
+  box-sizing: border-box;
+  transition: 0.5s;
+  cursor: pointer;
+}
+section .insta .box ul p {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+section .insta .box ul:hover {
+  background-size: 120%;
+}
+section .insta .box > ul:before {
+  background: rgba(0, 0, 0, 0);
+  transition: 0.5s;
+}
+section .insta .box > ul:hover:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+section .insta .box ul li {
+  opacity: 0;
+}
+section .insta .box ul:hover li {
+  opacity: 1;
+}
+section .insta .box ul li {
+  margin: 0 30px 20px 30px;
+}
+section .insta .box ul li:first-child {
+  display: flex;
+}
+section .insta .box ul li:first-child img {
+  margin-right: 20px;
+}
+section .insta .box ul li:last-child {
+  margin-left: 80px;
+  height: 15px;
+  line-height: 15px;
+}
+section .insta .box ul li:last-child img {
+  width: 14px;
+  filter: brightness(100%);
+}
+section .insta .box ul li a {
+  display: inline-block;
+  color: #fff;
+  margin-right: 10px;
+  font-size: 20px;
+  position: relative;
+}
+section .insta .box ul li a::after {
+  content: "";
+  width: 0;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  transition: 0.5s;
+}
+section .insta .box ul li a:hover::after {
+  width: 100%;
+  transform-origin: left;
+}
+section .insta .box .insta1 {
+  background: url(../images/genesis_insta1.jpg) center / 100%;
+  width: 33%;
+  height: 100%;
+}
+section .insta .box .insta2 {
+  background: url(../images/genesis_insta2.jpg) center / 100%;
+  width: 33.33%;
+  height: 100%;
+}
+section .insta .box .insta3 {
+  background: url(../images/genesis_insta3.jpg) center / 100%;
+  width: 33%;
+  height: 100%;
+}
+section .insta .more {
+  width: 250px;
+  height: 50px;
+  margin: 80px auto;
+  display: flex;
+}
+section .insta .more a {
+  width: 250px;
+  height: 50px;
+  border: 1px solid #000;
+  line-height: 50px;
+  text-align: center;
+  color: #000;
+  position: relative;
+}
+section .insta .more a:hover {
+  color: #fff;
+}
+section .insta .more a::before {
+  content: "";
+  width: 0px;
+  height: 50px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #000;
+  opacity: 0;
+  transition: width 0ms ease-in-out 0.75s, opacity 0.75s 0ms;
+  z-index: -1;
+}
+section .insta .more a:hover::before {
+  width: 250px;
+  opacity: 1;
+  transition: width 0.25s ease-in-out, opacity 0ms;
+}
+section .contents {
+  width: 1600px;
+  margin: 0 auto;
+}
+section .contents img {
+  width: 500px;
+}
+section .contents p {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 30px;
+}
+section .contents .box {
+  display: flex;
+  justify-content: space-between;
+}

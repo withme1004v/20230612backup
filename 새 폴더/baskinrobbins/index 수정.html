@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      @font-face {
+        font-family: NanumBarunGothic, "나눔 바른", sans-serif;
+        src: url(webfonts/NanumBarunGothic.woff) format("woff"),
+          url(webfonts/NanumBarunGothicBold.woff) format("woff");
+      }
+      @font-face {
+        font-family: NanumGothic, "나눔 고딕", sans-serif;
+        src: url(webfonts/NanumGothic.woff) format("woff"),
+          url(webfonts/NanumGothicExtraBold.woff) format("woff");
+      }
+      body {
+        font-family: NanumBarunGothic, "나눔 고딕", sans-serif;
+      }
+      header .top_bg {
+        background: url(images/bg_header.gif);
+        border-top: 3px solid rgb(255, 124, 152);
+      }
+      header .top {
+        margin: 0 auto;
+        width: 1200px;
+        height: 135px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      header .top ul {
+        display: flex;
+        align-items: center;
+      }
+      header .top ul li {
+        margin-right: 10px;
+      }
+      header .top .right ul li {
+        margin-left: 15px;
+      }
+      header .top .right ul:last-child li {
+        margin-right: 0;
+      }
+      header .top .right ul li a {
+        font-size: 11px;
+      }
+      .menu-bar {
+        position: relative;
+        background-color:white;
+      }
+
+    .menu-bar > .menu-area {
+        width:1200px;
+        margin:0 auto;
+        display: flex;
+      }
+
+    .menu-bar > .menu-area > div {
+        height:46px;
+        line-height:46px;
+        display: flex;
+    }
+
+    .menu-bar > .menu-area > .cell > div > a {
+        padding: 0 23px;
+        display:block;
+        font-size:10.5px;
+        font-weight:bold;
+        letter-spacing:0.5px;
+    }
+
+    .menu-bar > .menu-area > .cell > div > a.login {
+        color:#FB9BB8;
+    }
+    .menu-bar > .menu-area > .cell-right > .wrap > div > a { 
+        font-size:13px;
+        font-weight:bold;
+        letter-spacing:0.5px;
+        padding:0 59px;
+    }
+
+    .menu-bar > .menu-area > .cell-right > .wrap > div:last-child > a {
+        padding-right:0;
+    }
+
+    /* 우측 메뉴 */
+    .menu-bar .cell-right .wrap > .cell {
+    position:relative;
+}
+
+.menu-bar .cell-right ul.sub {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    height: 0;
+    width:100%;
+    z-index: 1000;
+    font-size: 13.5px;
+    font-weight: 300;
+    text-align: center;
+    transition: height .5s ease;
+    transform:translateX(-50%);
+}
+
+.menu-bar .cell-right div.about ul {
+    padding-left:50px;
+}
+
+.menu-bar .cell-right:hover ul {
+    opacity:1;
+}
+.menu-bar .cell-right:hover ul.sub {
+    overflow: visible;
+}
+
+.menu-bar .cell-right div.cell > ul > li:first-child {
+    padding-top:40px;
+}
+
+.menu-bar .cell-right div.cell.flavor > ul > li:first-child {
+    padding-top:0;
+}
+
+.menu-bar .cell-right div.cell > ul > li {
+    height:38px;
+}
+
+.menu-bar .cell-right .bg {
+    overflow:hidden;
+    position:absolute;
+    top:100%;
+    left:0;
+    height:0;
+    z-index:999;
+    min-width:100%;
+    border-bottom:1px solid #693337;
+    transition:height .5s ease;
+    background-color:white;
+}
+
+.menu-bar .cell-right:hover .bg {
+    height:275px;
+    border-top:1px solid #693337;
+}
+
+.menu-bar .cell-right .bg > div {
+    background-image:url(https://www.baskinrobbins.co.kr/assets/images/common/img_happypoint_app.jpg);
+    width:1200px;
+    height:204px;
+    margin:0 auto;
+    background-position:0 65px;
+    background-repeat:no-repeat;
+    background-color:transparent;
+}
+
+.cell-right .sub > li {
+    color:#948780;
+}
+
+.cell-right .sub > li a:hover {
+    color:#ff75ac;
+}
+
+.cell-right .sub {
+    opacity:0;
+    visibility:hidden;
+    transition:opacity 0s, visibility 0s !important;
+}
+
+.cell-right:hover .sub {
+    visibility:visible;
+    opacity:1;
+    transition:opacity 1s .3s, visibility 1s .3s !important;
+}
+
+
+      .content {
+        padding: 0 0 130px;
+      }
+      .content > .month {
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 3px;
+      }
+      .content > .banner {
+        height: 697px;
+        display: flex;
+        justify-content: center;
+      }
+      .br-event {
+        width: 1200px;
+        height: 721px;
+        margin: 0 auto;
+      }
+      .br-event h3 {
+        padding: 100px 0 50px;
+        text-align: center;
+      }
+      .event-list > ul {
+        display: flex;
+        justify-content: space-between;
+      }
+      .event-list > ul > li {
+        width: 288px;
+        display: flex;
+        justify-content: center;
+      }
+      .event-list > ul > li > a {
+        width: 288px;
+        display: block;
+        text-align: start;
+      }
+      .event-list > ul > li > a > span {
+        display: block;
+      }
+      .event-list .type {
+        margin: 22px 0 8px;
+      }
+      .event-list .period {
+        margin: 11px 0;
+      }
+      .br-menu {
+        margin: 0 auto;
+        background: url(images/bg_menu.jpg) 50% 0 no-repeat;
+        height: 1157px;
+      }
+      .br-menu > h3 {
+        text-align: center;
+        padding-top: 78px;
+      }
+      .br-menu > .menu_list {
+        position: relative;
+        margin: 0 auto;
+        background: url(images/img_menu_list_230630.png) center no-repeat;
+        width: 1200px;
+        height: 1066px;
+      }
+      .br-menu > .menu_list > .icecream > a {
+        position: absolute;
+        width: 395px;
+        height: 302px;
+        top: 95px;
+        left: 316px;
+      }
+      .br-menu > .menu_list > .icecreamcake > a {
+        position: absolute;
+        width: 276px;
+        height: 472px;
+        top: 95px;
+        right: 172px;
+      }
+      .br-menu > .menu_list > .beverage > a {
+        position: absolute;
+        width: 230px;
+        height: 366px;
+        bottom: 263px;
+        left: 115px;
+      }
+      .br-menu > .menu_list > .coffee > a {
+        position: absolute;
+        width: 329px;
+        height: 292px;
+        bottom: 338px;
+        left: 384px;
+      }
+      .br-menu > .menu_list > .dessert > a {
+        position: absolute;
+        width: 329px;
+        height: 177px;
+        bottom: 122px;
+        left: 384px;
+      }
+      .br-menu > .menu_list > .gift > a {
+        position: absolute;
+        width: 276px;
+        height: 183px;
+        bottom: 278px;
+        right: 171px;
+      }
+      .stor_delivery {
+        display: flex;
+        width: 1200px;
+        height: 547px;
+        margin: 0 auto;
+      }
+      .stor_delivery h3.title {
+        width: 600px;
+        padding: 95px 0px 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .snsbox {
+        width: 1200px;
+        height: 145px;
+        margin: 0 auto;
+      }
+      .snsbox h3.title {
+        padding: 0px 0px 26px;
+        text-align: center;
+      }
+      .snsbox .sns ul {
+        display: flex;
+        justify-content: center;
+      }
+      .snsbox .sns ul li {
+        padding: 0 9px;
+      }
+      .inner_footer {
+        border-top: 1px solid rgb(247, 170, 42);
+      }
+      .policy {
+        width: 1200px;
+        height: 77px;
+        margin: 0 auto;
+      }
+      .policy ul {
+        display: flex;
+      }
+      .policy > ul > li {
+        height: 100%;
+        line-height: 77px;
+      }
+      .policy > ul > li > a {
+        letter-spacing: -2px;
+        font-size: 14px;
+      }
+      .privacy > a {
+        color: rgb(255, 124, 152);
+        font-weight: bold;
+      }
+      .brand_family {
+        height: 75px;
+        background: #f9f8f7;
+      }
+      .brand_family .inner_family {
+        width: 1200px;
+        margin: 0 auto;
+      }
+      .brand_family .inner {
+        display: flex;
+        width: 800px;
+        margin: 0 auto;
+        height: 75px;
+        justify-content: space-between;
+        padding-top: 20px;
+      }
+      .brand ul {
+        margin: 0 auto;
+        display: flex;
+        height: 54px;
+      }
+      .brand ul li img {
+        padding-right: 49px;
+      }
+      .brand ul .li_4 img {
+        padding-right: 9px;
+      }
+      .brand ul .li_5 img {
+        width: 31px;
+        height: 31px;
+        padding-right: 9px;
+      }
+      .brand ul .li_6 img {
+        padding-right: 0;
+      }
+      .familysite button {
+        display: flex;
+        width: 150px;
+        height: 32px;
+        color: #b1ab9f;
+        font-size: 11px;
+        padding: 0 0 0 11px;
+        line-height: 32px;
+        border: 1px solid #d1cecc;
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px 0px rgba(234, 233, 232, 0.8);
+        background: transparent url(images/family_size_off.png) no-repeat 100% 0;
+      }
+      .familysite ul {
+        display: none;
+      }
+      .info {
+        width: 1200px;
+        margin: 0 auto;
+        padding-top: 48px;
+        color: #635b56;
+        font-size: 11px;
+        text-align: center;
+      }
+      .info h1.logo {
+        padding-bottom: 35px;
+      }
+      .info .box_1 {
+        font-size: 11px;
+        display: flex;
+        justify-content: center;
+      }
+      .info .box_1 p {
+        padding-right: 15px;
+      }
+      .info .box_1 address {
+        font-style: normal;
+      }
+      .info .box_2 {
+        font-size: 11px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .info .box_2 p {
+        padding: 3px 15px 3px 0;
+      }
+      .info .copyright {
+        width: 1200px;
+        padding: 12px 0 0;
+        color: #b1adab;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+        <div class="top_bg">
+          <div class="top">
+            <ul>
+              <li>
+                <a href="#"><img src="images/icon_facebook.png" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/icon_twitter.png" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/icon_blog.png" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/icon_instgram.png" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/icon_youtube.png" alt="" /></a>
+              </li>
+            </ul>
+            <div class="logo">
+              <img src="images/logo_baskinrobbins.png" alt="" />
+            </div>
+            <div class="right">
+              <ul>
+                <li><a href="#">고객센터</a></li>
+                <li><a href="#">CONTACT US</a></li>
+                <li>
+                  <a href="#"><img src="images/icon_search.png" alt="" /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="menu-bar relative">
+            <div class="menu-area con row">
+                <div class="cell row">
+                    <div class="cell"><a class="login" href="#">LOGIN</a></div>
+                    <div class="cell"><a class="join" href="#">JOIN</a></div>
+                </div>
+                <div class="cell-right">
+                    <div class="wrap">
+                        <div class="cell flavor">
+                            <a href="#">FLAVOR OF THE MONTH</a>
+                            <ul class="sub photo">
+                                <li><a href="#"><img src="https://www.baskinrobbins.co.kr/assets/images/common/flavor/img_monthly_fom.png" alt=""></a></li>
+                            </ul>
+                        </div>
+                        <div class="cell menu">
+                            <a href="#">MENU</a>
+                            <ul class="sub">
+                                <li><a href="#">아이스크림</a></li>
+                                <li><a href="#">아이스크림케이크</a></li>
+                                <li><a href="#">음료</a></li>
+                                <li><a href="#">커피</a></li>
+                                <li><a href="#">디저트</a></li>
+                            </ul>
+                        </div>
+                        <div class="cell event">
+                            <a href="#">EVENT</a>
+                            <ul class="sub">
+                                <li><a href="#">진행중이벤트</a></li>
+                                <li><a href="#">당첨자발표</a></li>
+                            </ul>
+                        </div>
+                        <div class="cell store">
+                            <a href="#">STORE</a>
+                            <ul class="sub">
+                                <li><a href="#">매장찾기</a></li>
+                                <li><a href="#">고객센터</a></li>
+                            </ul>
+                        </div>
+                        <div class="cell about">
+                            <a href="#">ABOUT</a>
+                            <ul class="sub">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">보도자료</a></li>
+                                <li><a href="#">채용정보</a></li>
+                                <li><a href="#">점포개설문의</a></li>
+                                <li><a href="#">CONTACNT US</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bg">
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </header>
+      <article class="content">
+        <div class="month">
+          <div>
+            <a href="#"><img src="images/1749202352.png" alt="" /></a>
+          </div>
+        </div>
+        <div class="banner">
+          <div>
+            <a href="#"><img src="images/1743988763.png" alt="" /></a>
+          </div>
+        </div>
+        <section class="br-event">
+          <h3><img src="images/h_event.png" alt="" /></h3>
+          <div class="event-list">
+            <ul>
+              <li>
+                <a href="#">
+                  <img src="images/banner_delivery.png" alt="" />
+                  <span class="type"
+                    ><img src="images/stit_store.gif" alt=""
+                  /></span>
+                  <span class="title"
+                    >해피오더 딜리버리로 간편하게 주문하세요!</span
+                  >
+                  <span class="period">상시진행</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/banner_delivery_bm.png" alt="" />
+                  <span class="type"
+                    ><img src="images/stit_store.gif" alt=""
+                  /></span>
+                  <span class="title">배달의 민족에서 빠르게 주문하세요!</span>
+                  <span class="period">상시진행</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/banner_delivery_ygy.png" alt="" />
+                  <span class="type"
+                    ><img src="images/stit_store.gif" alt=""
+                  /></span>
+                  <span class="title">요기요에서 손쉽게 주문하세요!</span>
+                  <span class="period">상시진행</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/banner_delivery_kakao.png" alt="" />
+                  <span class="type"
+                    ><img src="images/stit_store.gif" alt=""
+                  /></span>
+                  <span class="title"
+                    >카카오톡 주문하기에서 편리하게 주문하세요!</span
+                  >
+                  <span class="period">상시진행</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="br-menu">
+          <h3 class="title"><img src="images/h_menu.png" alt="" /></h3>
+          <div class="menu_list">
+            <div class="icecream"><a href="#"></a></div>
+            <div class="icecreamcake"><a href="#"></a></div>
+            <div class="beverage"><a href="#"></a></div>
+            <div class="coffee"><a href="#"></a></div>
+            <div class="dessert"><a href="#"></a></div>
+            <div class="gift"><a href="#"></a></div>
+          </div>
+        </section>
+        <div class="stor_delivery">
+          <section class="store">
+            <h3 class="title">
+              <img src="images/h_store.png" alt="" />
+            </h3>
+            <div class="box">
+              <a href="#"><img src="images/img_store.jpg" alt="" /></a>
+            </div>
+          </section>
+          <section class="order">
+            <h3 class="title">
+              <img src="images/h_happyorder_delivery.png" alt="" />
+            </h3>
+            <div class="box">
+              <a href="#"
+                ><img src="images/img_happyorder_delivery.png" alt=""
+              /></a>
+            </div>
+          </section>
+        </div>
+        <section class="snsbox">
+          <h3 class="title">
+            <img src="images/h_sns.png" alt="" />
+          </h3>
+          <div class="sns">
+            <ul>
+              <li>
+                <a href="#"><img src="images/sns_facebook.png" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/sns_twitter.png" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/sns_blog.png" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/sns_instagram.png" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/sns_youtube.png" alt="" /></a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </article>
+      <footer>
+        <div class="inner_footer">
+          <div class="policy">
+            <ul>
+              <li style="width: 8%"><a href="#">점포개설문의</a></li>
+              <li style="width: 14.5%">
+                <a href="#">신규 직영점 입점 제의</a>
+              </li>
+              <li style="width: 7%"><a href="#">채용문의</a></li>
+              <li style="width: 8.5%"><a href="#">윤리신고센터</a></li>
+              <li style="width: 7%"><a href="#">이용약관</a></li>
+              <li class="privacy" style="width: 11%">
+                <a href="#">개인정보처리방침</a>
+              </li>
+              <li style="width: 17%">
+                <a href="#">영상정보처리기기운영관리방침</a>
+              </li>
+              <li style="width: 14%"><a href="#">안전보건 경영방침</a></li>
+              <li style="width: 13%"><a href="#">거래희망회사 사전등록</a></li>
+            </ul>
+          </div>
+          <div class="brand_family">
+            <div class="inner_family">
+              <div class="inner">
+                <div class="brand">
+                  <ul>
+                    <li class="li_1">
+                      <a href="#"
+                        ><img src="images/btn_happypoint.png" alt=""
+                      /></a>
+                    </li>
+                    <li class="li_2">
+                      <a href="#"
+                        ><img src="images/btn_happymarket.png" alt=""
+                      /></a>
+                    </li>
+                    <li class="li_3">
+                      <a href="#"
+                        ><img src="images/btn_spc_story.png" alt=""
+                      /></a>
+                    </li>
+                    <li class="li_4">
+                      <a href="#"><img src="images/btn_norton.gif" alt="" /></a>
+                    </li>
+                    <li class="li_5">
+                      <a href="#"><img src="images/btn_ccm_2.png" alt="" /></a>
+                    </li>
+                    <li class="li_6">
+                      <a href="#"><img src="images/btn_ksa.png" alt="" /></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="familysite">
+                  <button type="button">FAMILY SITE</button>
+                  <ul>
+                    <li><a href="#" target="_blank">배스킨스쿨</a></li>
+                    <li><a href="#" target="_blank">SPC그룹사이트</a></li>
+                    <li><a href="#" target="_blank">SPC MAGAZINE</a></li>
+                    <li><a href="#" target="_blank">BR코리아</a></li>
+                    <li><a href="#" target="_blank">해피포인트카드</a></li>
+                    <li><a href="#" target="_blank">파스쿠찌</a></li>
+                    <li><a href="#" target="_blank">삼립</a></li>
+                    <li><a href="#" target="_blank">파리바게뜨</a></li>
+                    <li><a href="#" target="_blank">던킨도너츠</a></li>
+                  </ul>
+                  <!-- <select name="family" id="family">
+                                    <option>FAMILY SITE</option>
+                                    <option value="배스킨스쿨"></option>
+                                    <option value="배스킨스쿨"></option>
+                                    <option value="배스킨스쿨"></option>
+                                    <option value="배스킨스쿨"></option>
+                                    <option value="배스킨스쿨"></option>
+                                    <option value="배스킨스쿨"></option>
+                                </select> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="info">
+            <h1 class="logo"><img src="images/footer_logo.png" alt="" /></h1>
+            <div class="box_1">
+              <p>사업자 등록번호 : 303-81-09535</p>
+              <p>비알코리아(주) 대표이사 이주연</p>
+              <address>
+                서울특별시 서초구 남부순환로 2620(양재동 11-149번지)
+              </address>
+            </div>
+            <div class="box_2">
+              <p>TEL : 080-555-3131</p>
+              <p>개인정보관리책임자 : 임혜순</p>
+              <p class="copyright">
+                Copyright ⓒ 2016 BRKOREA Company. All Rights Reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

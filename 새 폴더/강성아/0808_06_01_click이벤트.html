@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        position: relative;
+        left: 0;
+        transition: 0.5s;
+      }
+      .menu01 {
+        left: 500px;
+      }
+      p span {
+        display: block;
+        width: 35px;
+        height: 5px;
+        background: #000;
+        margin: 6px 0;
+        transition: transform 0.2s ease-in;
+      }
+      .bar1 {
+        transform: translate(0, 11px) rotate(45deg);
+      }
+      .bar2 {
+        opacity: 0;
+      }
+      .bar3 {
+        transform: translate(0, -11px) rotate(-45deg);
+      }
+      div {
+        position: fixed;
+        width: 500px;
+        height: 100%;
+        left: -500px;
+        top: 0;
+        background: rgba(0, 0, 0, 0.5);
+        transition: left 0.5s ease-in-out;
+      }
+      .box {
+        left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="menu">
+      <span id="one"></span>
+      <span id="two"></span>
+      <span id="three"></span>
+    </p>
+    <div id="side"></div>
+    <script>
+      document.getElementById("menu").onclick = function () {
+        this.classList.toggle("menu01");
+        document.getElementById("one").classList.toggle("bar1");
+        document.getElementById("two").classList.toggle("bar2");
+        document.getElementById("three").classList.toggle("bar3");
+        document.getElementById("side").classList.toggle("box");
+      };
+    </script>
+  </body>
+</html>

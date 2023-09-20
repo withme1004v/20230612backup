@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netmarble</title>
+    <link rel="stylesheet" href="css/Netmarble_index.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.css" />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/Netmarble.main.js"></script>
+    <script src="js/swiper-bundle.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="head">
+        <div class="head_top">
+          <h1 class="logo">
+            <a href="#"><img src="images/logo.png" alt="" /></a>
+          </h1>
+          <div class="menu">
+            <ul>
+              <li><a href="#">넷마블 인사이드</a></li>
+              <li><a href="#">게임</a></li>
+              <li><a href="#">콘텐츠</a></li>
+              <li><a href="#">사회공헌</a></li>
+              <li><a href="#">뉴스룸</a></li>
+              <li><a href="#">넷마블 TV</a></li>
+            </ul>
+          </div>
+          <div class="right">
+            <ul>
+              <li>
+                <a href="#"
+                  ><img src="images/btn_search_view_1440.png" alt=""
+                /></a>
+              </li>
+              <li><a href="#">KOR</a></li>
+              <li><a href="#">ENG</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="sub_head">
+        <div class="submenu">
+          <div class="lnb">
+            <ul>
+              <li>
+                <ul>
+                  <li><a href="#">퍼플&라이프</a></li>
+                  <li><a href="#">지타워 탐구생활</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#">게임 소식</a></li>
+                  <li><a href="#">게임 가이드</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#">펀&조이</a></li>
+                  <li><a href="#">이벤트</a></li>
+                  <li><a href="#">카드뉴스</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#">현장 스케치</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#">보도자료</a></li>
+                  <li><a href="#">ESG</a></li>
+                  <li><a href="#">신사업</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#">오리지널 영상</a></li>
+                  <li><a href="#">소설LIVE</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="visual">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="#"><img src="images/slide1.jpg" alt="" /></a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#"><img src="images/slide2.jpg" alt="" /></a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#"><img src="images/slide3.jpg" alt="" /></a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#"><img src="images/slide4.jpg" alt="" /></a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#"><img src="images/slide5.jpg" alt="" /></a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#"><img src="images/slide6.jpg" alt="" /></a>
+          </div>
+        </div>
+
+        <div class="btn">
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+      <div class="bg"></div>
+    </div>
+    <section>
+      <div class="area">
+        <div class="search">
+          <input
+            class="searchinput"
+            type="search"
+            value
+            autofocus
+            placeholder="검색어를 입력해 주세요."
+          />
+          <img id="search1" src="images/btn_search_main.png" alt="" />
+        </div>
+        <div class="keword">
+          <span>추천태그</span>
+          <span id="tag">#신의 탑: 새로운 세계</span>
+          <span id="tag">#세븐나이츠 키우기</span>
+          <span id="tag">#킹 아서: 레전드 라이즈</span>
+          <span id="tag">#그랜드크로스: 에이지오브타이탄</span>
+        </div>
+        <!-- <div class="netmarbleTV">
+          <h2>넷마블 TV</h2>
+          <div class="quik">
+            <a href=""
+              ><img src="images/youtube.png" alt="" /><span>바로가기</span></a
+            >
+          </div>
+        </div> -->
+        <div class="movie">
+          <div class="movie-main">
+            <iframe
+              id="sampleMovie"
+              width="780"
+              height="468"
+              src="https://www.youtube.com/embed/o7CqtrQJaqc"
+              title="[신의 탑: 새로운 세계] 캐릭터 소개 - 연 이화"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="movieList">
+            <div class="ListTitle">
+              <p>넷마블 TV</p>
+            </div>
+            <ul id="move">
+              <li>
+                <a href="#" data-url="o7CqtrQJaqc"
+                  ><div class="test" test-index="0">
+                    <img src="images/sddefault (4) copy.jpg" alt="" />
+                    <img src="images/click1.jpg" alt="" />
+                    <p>[신의탑:새로운세계] 캐릭터 소개 - 연 이화</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#" data-url="IOu1Dk3XbIo"
+                  ><div class="test" test-index="1">
+                    <img src="images/sddefault (1) copy.jpg" alt="" />
+                    <img src="images/click2.jpg" alt="" />
+                    <p>[세븐나이츠 키우기] 세키송 2023 편</p>
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" data-url="fBVBkZO_osU"
+                  ><div class="test" test-index="2">
+                    <img src="images/sddefault copy.jpg" alt="" />
+                    <img src="images/click3.jpg" alt="" />
+                    <p>[세븐나이츠 키우기] 세키 월드컵 편</p>
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" data-url="4qz44ZJIV3w"
+                  ><div class="test" test-index="3">
+                    <img src="images/sddefault (3) copy.jpg" alt="" />
+                    <img src="images/click4.jpg" alt="" />
+                    <p>
+                      [7대죄] 일곱 개의 대죄:Grand Croos X 진격의 거인 콜라보
+                      리턴즈!
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#" data-url="Wwxrg_bQWNE"
+                  ><div class="test" test-index="4">
+                    <img src="images/container6 copy.jpg" alt="" />
+                    <img src="images/click5.jpg" alt="" />
+                    <p>[세븐나이츠 키우기] 그랜드 오픈!</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#" data-url="gkEixz3iLGo"
+                  ><div class="test" test-index="5">
+                    <img src="images/sddefault (5) copy.jpg" alt="" />
+                    <img src="images/click6.jpg" alt="" />
+                    <p>
+                      [제2의나라] 킹덤마을 플레이 가이드 <br />
+                      영상
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#" data-url="gkEixz3iLGo"
+                  ><div class="test" test-index="6">
+                    <img src="images/Thumbnail (6) copy.jpg" alt="" />
+                    <img src="images/click7.jpg" alt="" />
+                    <p>
+                      [신의탑:새로운 세계] 8월 업데이트! <br />시아시아의 위험한
+                      바캉스
+                    </p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <article>
+      <div class="container">
+        <div class="top_title">
+          <h1>최신소식</h1>
+          <p>NEWS</p>
+        </div>
+        <div class="bord_wrap">
+          <div class="bord_list">
+            <div class="box">
+              <a href=""><img src="images/container0 (1).jpg" alt="" /></a>
+              <ul>
+                <li>
+                  <a href="#">뉴스룸</a>
+                  <a href="#">·보도자료</a>
+                  <a href="#">
+                    <p>
+                      넷마블 ‘그랜드크로스: 에이지오브타이탄’, 첫 <br />
+                      대규모 업데이트 실시
+                    </p>
+                  </a>
+                  <div class="date"><span>2023.09.08</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="bord_list">
+            <div class="box">
+              <a href="#"><img src="images/container0 (2).jpg" alt="" /></a>
+              <ul>
+                <li>
+                  <a href="#">뉴스룸</a>
+                  <a href="#">·보도자료</a>
+                  <a href="#">
+                    <p>
+                      넷마블 신작 방치형 RPG <세븐나이츠 키우기>, <br />
+                      국내 양대마켓 인기 1위 달성 기념 이벤트 실시
+                    </p>
+                  </a>
+                  <div class="date"><span>2023.09.08</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="bord_list">
+            <div class="box">
+              <a href="#"><img src="images/container1.jpg" alt="" /></a>
+              <ul>
+                <li>
+                  <a href="#">뉴스룸</a>
+                  <a href="#">·보도자료</a>
+                  <a href="#">
+                    <p>
+                      MARBLEX(마브렉스), 게임토크노믹스 개편 <br />
+                      및 신규 라인업 공개
+                    </p>
+                  </a>
+                  <div class="date"><span>2023.09.07</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="bord_list">
+            <div class="box">
+              <a href="#"><img src="images/container2.jpg" alt="" /></a>
+              <ul>
+                <li>
+                  <a href="#">뉴스룸</a>
+                  <a href="#">·보도자료</a>
+                  <a href="#">
+                    <p>
+                      넷마블문화재단, ‘2023 전국 장애학생 <br />
+                      e페스티벌’ 성료
+                    </p>
+                  </a>
+                  <div class="date"><span>2023.09.07</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="bord_wrap2">
+          <div class="bord_list">
+            <div class="box">
+              <a href="#"><img src="images/container3.png" alt="" /></a>
+              <ul>
+                <li>
+                  <a href="#">콘텐츠</a>
+                  <a href="#">·펀&조이</a>
+                  <a href="#">
+                    <p>
+                      [신입사원 남군키우기] 8. 일주일로 본 현대 <br />
+                      게이머의 진화!
+                    </p>
+                  </a>
+                  <div class="date"><span>2023.09.06 </span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="bord_list">
+            <div class="box">
+              <a href="#"><img src="images/container4.jpg" alt="" /></a>
+              <ul>
+                <li>
+                  <a href="#">콘텐츠</a>
+                  <a href="#">·카드뉴스</a>
+                  <a href="#">
+                    <p>'세븐나이츠 키우기' 매력 포인트 7가지 공개</p>
+                    <br /><br
+                  /></a>
+
+                  <div class="date"><span>2023.09.05</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="bord_list">
+            <div class="box">
+              <a href="#"><img src="images/container5.jpg" alt="" /></a>
+              <ul>
+                <li>
+                  <a href="#">뉴스룸</a>
+                  <a href="#">·보도자료</a>
+                  <a href="#">
+                    <p>
+                      넷마블문화재단, ‘2023 전국 장애학생 <br />
+                      e페스티벌’ 개최
+                    </p>
+                  </a>
+                  <div class="date"><span>2023.09.05</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="bord_list">
+            <div class="box">
+              <a href="#"><img src="images/slide1.jpg" alt="" /></a>
+              <ul>
+                <li>
+                  <a href="#">뉴스룸</a>
+                  <a href="#">·보도자료</a>
+                  <a href="#">
+                    <p>
+                      넷마블 모바일 방치형 RPG <세븐나이츠 키우기>, <br />
+                      오늘(6일) 글로벌 정식출시
+                    </p>
+                  </a>
+                  <div class="date"><span>2023.09.05</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="bord_wrap3">
+          <div class="bord_list">
+            <div class="box">
+              <a href="#"><img src="images/container7.jpg" alt="" /></a>
+              <ul>
+                <li>
+                  <a href="#">뉴스룸</a>
+                  <a href="#">·보도자료</a>
+                  <a href="#">
+                    <p>
+                      넷마블, 대학생 서포터즈 ‘마블챌린저’ 20기 <br />
+                      발대식 진행
+                    </p>
+                  </a>
+                  <div class="date"><span>2023.09.04</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="bord_list">
+            <div class="box">
+              <a href="#"><img src="images/container8.png" alt="" /></a>
+              <ul>
+                <li>
+                  <a href="#">뉴스룸</a>
+                  <a href="#">·보도자료</a>
+                  <a href="#">
+                    <p>
+                      넷마블, 하나금융그룹과 전략적 업무협약 체결 <br />
+                      <br />
+                    </p>
+                  </a>
+                  <div class="date"><span>2023.09.04</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="bord_list">
+            <div class="box">
+              <a href="#"><img src="images/container9.png" alt="" /></a>
+              <ul>
+                <li>
+                  <a href="#">컨텐츠</a>
+                  <a href="#">·펀&조이</a>
+                  <a href="#">
+                    <p>
+                      [스콜라의 게임찍먹] 킹 아서: 레전드 라이즈 <br />
+                      (2)
+                    </p>
+                  </a>
+                  <div class="date"><span>2023.09.01</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="bord_list">
+            <div class="box">
+              <a href="#"><img src="images/container10.jpg" alt="" /></a>
+              <ul>
+                <li>
+                  <a href="#">뉴스룸</a>
+                  <a href="#">·보도자료</a>
+                  <a href="#">
+                    <p>
+                      MARBLEX(마브렉스), ‘멀티체인 WARP’ <br />
+                      서비스 업데이트
+                    </p>
+                  </a>
+                  <div class="date"><span>2023.09.01</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="new">
+          <p>최신 기사 더보기</p>
+        </div>
+        <div class="bottom_title">
+          <h1>
+            소셜LIVE
+            <p>더보기 ></p>
+          </h1>
+        </div>
+        <div class="bord_wrap4">
+          <div class="bord_list">
+            <div class="box">
+              <a href="#"><img src="images/list1.jpg" alt="" /></a>
+              <ul>
+                <li>
+                  <a href="#">넷마블TV</a>
+                  <a href="#">·소설LIVE </a>
+                  <img id="out" src="images/ic-outlink.png" alt="" />
+                  <a href="#">
+                    <p>
+                      나만의 세븐나이츠 키우기 덱조합! <br />
+                      <br />
+                    </p>
+                  </a>
+                  <div class="date">
+                    <img src="images/ic-facebook.png" alt="" /><span
+                      >2023.09.07</span
+                    >
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="bord_list">
+            <div class="box">
+              <a href="#"><img src="images/list2.png" alt="" /></a>
+              <ul>
+                <li>
+                  <a href="#">넷마블TV</a>
+                  <a href="#">·소설LIVE </a>
+                  <img id="out" src="images/ic-outlink.png" alt="" />
+                  <a href="#">
+                    <p>
+                      세븐나이츠 키우기! 알아두면 유용한 매력 <br />포인트 7가지
+                      대공개!
+                    </p>
+                  </a>
+                  <div class="date">
+                    <img src="images/ic-facebook.png" alt="" /><span
+                      >2023.09.05</span
+                    >
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="bord_list">
+            <div class="box">
+              <a href="#"><img src="images/list3.jpg" alt="" /></a>
+              <ul>
+                <li>
+                  <a href="#">넷마블TV</a>
+                  <a href="#">·소설LIVE </a>
+                  <img id="out" src="images/ic-outlink.png" alt="" />
+                  <a href="#">
+                    <p>
+                      세븐나이츠 키우기 그랜드 오픈까지 D-1 !
+                      <br /><br />
+                    </p>
+                  </a>
+                  <div class="date">
+                    <img src="images/ic-instagram.png" alt="" /><span
+                      >2023.09.05</span
+                    >
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="bord_list">
+            <div class="box">
+              <a href="#"><img src="images/list4.png" alt="" /></a>
+              <ul>
+                <li>
+                  <a href="#">넷마블TV</a>
+                  <a href="#">·소설LIVE </a>
+                  <img id="out" src="images/ic-outlink.png" alt="" />
+                  <a href="#">
+                    <p>
+                      세븐나이츠 키우기 그랜드 오픈까지 D-2 !
+                      <br /><br />
+                    </p>
+                  </a>
+                  <div class="date">
+                    <img src="images/ic-instagram.png" alt="" /><span
+                      >2023.09.05</span
+                    >
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <div class="notice_bg">
+      <a href="#"><img src="images/footerslide.jpg" alt="" /></a>
+    </div>
+    <div class="newsletter">
+      <div class="letter">
+        <p>뉴스레터 구독</p>
+        <p>채널 넷마블의 최신 소식을 받아보세요.</p>
+        <a href="#">구독하기</a>
+      </div>
+      <div class="partner">
+        <p>파트너 크리에이터</p>
+        <p>함께 성장해나갈 많은 크리에이터 분들을 기다립니다.</p>
+        <a href="#">자세히 보기</a>
+      </div>
+      <div class="sns">
+        <ul>
+          <li>
+            <a href="#"
+              ><img src="images/페이스북.svg" alt="" />
+              <p>2.23m</p>
+              <p>Fans</p>
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="images/유투브.svg" alt="" />
+              <p>155K</p>
+              <p>Subseribers</p>
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="images/인스타그램.svg" alt="" />
+              <p>20K</p>
+              <p>Followers</p>
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              ><img id="marble" src="images/ico_character_off.gif" alt=""
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <footer>
+      <div class="footer_top">
+        <div class="footer_logo">
+          <a href="#"><img src="images/logo.png" alt="" /></a>
+        </div>
+        <div class="footer_link">
+          <ul>
+            <li><a href="#">넷마블 게임</a></li>
+            <li><a href="#">넷마블컴퍼니</a></li>
+            <li><a href="#">넷마블 채용</a></li>
+            <li><a href="#">넷마블문화재단</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer_bot">
+        <div class="getlist">
+          <ul>
+            <li><a href="#">채널 넷마블 소개</a></li>
+            <li><a href="#">운영정책</a></li>
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">넷마블 콘텐츠 크리에이터 가이드라인</a></li>
+          </ul>
+        </div>
+        <div class="copyright">
+          <p>Copyright © Netmarble Corp. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <a href="#" class="top"><img src="images/btn_top_1440.png" alt="" /></a>
+  </body>
+</html>

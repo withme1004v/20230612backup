@@ -1,0 +1,17 @@
+<svg viewBox="0 0 162 164" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M.187 81.099L80.302.984l80.115 80.115-80.115 80.116L.187 81.099z" fill="#201A17"/>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M86.819 156.579l-6.018-6.033-6.017 6.033L0 81.6 74.784 6.619l6.017 6.033 6.018-6.033L161.603 81.6l-74.784 74.979zM74.784 9.016L2.388 81.6l72.396 72.583 4.822-4.835L12.034 81.6l67.572-67.75-4.822-4.834zm5.563 5.577L14.422 81.6l66.379 66.55 66.38-66.55-66.834-67.007zm1.187-1.206L149.569 81.6l-67.573 67.748 4.823 4.835L159.215 81.6 86.819 8.016l-5.285 5.371zm-4.88-9.228L80.802 0l4.148 4.159-4.148 4.158-4.148-4.158zM84.95 159.04l-4.148 4.158-4.148-4.158 4.148-4.159 4.148 4.159z" fill="url(#button_svg__paint0_linear)"/>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M73.362 63.599c-1.414 0-2.56 1.126-2.56 2.515v30.171c0 1.389 1.146 2.514 2.56 2.514L98.5 83.096a2.196 2.196 0 001.102-1.897c0-.779-.419-1.5-1.102-1.896L73.362 63.599z" fill="url(#button_svg__paint1_linear)"/>
+      <defs>
+        <linearGradient id="button_svg__paint0_linear" x1="80.802" y1="0" x2="160.894" y2="97.204" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#FFF276"/>
+          <stop offset="0.63" stop-color="#FFE81E"/>
+          <stop offset="1" stop-color="#FEC60D"/>
+        </linearGradient>
+        <linearGradient id="button_svg__paint1_linear" x1="85.202" y1="63.599" x2="102.802" y2="81.248" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#FFF276"/>
+          <stop offset="0.63" stop-color="#FFE81E"/>
+          <stop offset="1" stop-color="#FEC60D"/>
+        </linearGradient>
+      </defs>
+    </svg>

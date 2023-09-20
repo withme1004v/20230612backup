@@ -1,0 +1,1163 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+@font-face {
+  font-family: Pretendard;
+  src: url(../webfonts/Pretendard-Regular.otf) format("opentype"); /* otf는 무조건 "opentype"으로 포맷 적어줘야함!!! otf아님! */
+}
+@font-face {
+  font-family: Agatho;
+  src: url(../webfonts/Agatho_Regular.otf) format("opentype");
+}
+body {
+  font-family: Pretendard;
+  overflow-x: hidden;
+}
+
+/* beige 배경색 */
+.beige {
+  position: static;
+  width: 100%;
+  max-width: 1920px;
+  background: #fbf9f6;
+}
+
+/* header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: 1920px;
+  height: 90px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 80px;
+  box-sizing: border-box;
+  z-index: 5;
+  transition: 0.5s;
+}
+.header_active {
+  box-shadow: 0 1px 15px 1px rgba(0, 0, 0, 0.1);
+}
+header ul {
+  display: flex;
+}
+header ul li {
+  margin-right: 30px;
+}
+header ul li:last-child {
+  margin-right: 0;
+}
+header .util_right ul li:nth-child(1) {
+  margin-top: 3px;
+}
+header .util_right ul li:nth-child(2) {
+  margin: 3px 70px 0 0;
+}
+header ul li a {
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  font-size: 14px;
+}
+header ul li a.util_active {
+  color: #222;
+}
+header ul li:first-child a:hover,
+header ul li:nth-child(2) a:hover {
+  opacity: 0.6;
+}
+header .logo {
+  margin-top: 20px;
+}
+
+/* menu */
+header ul #menu a span {
+  display: block;
+  width: 37px;
+  height: 2px;
+  background: #fff;
+  margin-bottom: 9px;
+  transition: transform 0.3s ease-in;
+}
+header ul #menu a span:last-child {
+  margin-bottom: 0;
+}
+header ul #menu a span.menu_active {
+  background: #000;
+}
+/* menu 버튼 움직임 스타일 */
+.bar1 {
+  /* height:2px + margin:9px = 11px; */
+  transform: translate(0, 11px) rotate(45deg);
+}
+.bar2 {
+  transform: scaleX(0) !important;
+  transform-origin: right;
+  transition: 0.1s !important;
+}
+.bar3 {
+  transform: translate(0, -11px) rotate(-45deg);
+}
+
+/* nav(전체 메뉴) */
+nav {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 0;
+  overflow: hidden; /* 아래 메뉴들 보여지는 거 숨기기위해 */
+  background: #122223;
+  z-index: 4;
+  transition: height 0.5s ease-out;
+}
+.nav_bg {
+  height: 100vh;
+}
+nav .nav_inner {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-top: 150px;
+}
+nav .nav_inner > ul {
+  display: flex;
+  justify-content: space-between;
+}
+nav .nav_inner > ul > li > a {
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  color: #d4b297;
+  font-size: 19px;
+  font-weight: 600;
+}
+nav .nav_inner > ul > li:hover > a:after {
+  position: absolute;
+  top: -2px;
+  right: -13px;
+  content: "";
+  width: 9px;
+  height: 9px;
+  background: #d4b297;
+  border-radius: 50%;
+}
+nav .nav_inner > ul > li > .sub_menu {
+  margin-top: 30px;
+}
+nav .nav_inner > ul > li > .sub_menu > li > a {
+  display: block;
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: -0.6px;
+  margin-bottom: 22px;
+}
+nav .nav_inner > ul > li > .sub_menu > li > a:hover {
+  color: #d4b297;
+}
+nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu {
+  margin-top: 10px;
+}
+nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li a {
+  display: block;
+  color: #999;
+  letter-spacing: -0.6px;
+  margin-bottom: 15px;
+}
+nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li a:hover {
+  text-decoration: underline;
+}
+nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
+  margin-bottom: 25px;
+}
+
+/* visual */
+.visual {
+  width: 100%;
+}
+.visual .pics li {
+  height: 880px;
+}
+.visual .pics li:first-child {
+  background: url(../images/visual01.png) center center no-repeat;
+}
+.visual .pics li:nth-child(2) {
+  background: url(../images/visual02.jpg) center center no-repeat;
+}
+.visual .pics li:nth-child(3) {
+  background: url(../images/visual03.jpg) center center no-repeat;
+}
+.visual .pics li:nth-child(4) {
+  background: url(../images/visual04.jpg) center center no-repeat;
+}
+#mySwiper1 {
+  position: static;
+}
+#btn_next {
+  width: 26px;
+  height: 6px;
+  right: 1619px;
+  top: 97%;
+  background: url(../images/slide_right_arrow.png) center center;
+  opacity: 0.5;
+  z-index: 3;
+}
+#btn_prev {
+  width: 26px;
+  height: 6px;
+  left: 150px;
+  top: 97%;
+  background: url(../images/slide_left_arrow.png) center center;
+  opacity: 0.5;
+  z-index: 3;
+}
+#btn_next:after,
+#btn_prev:after {
+  content: "";
+}
+#btn_next:hover,
+#btn_prev:hover {
+  opacity: 1;
+}
+#page {
+  left: 196px;
+  bottom: 38px;
+  width: 34px;
+  z-index: 3;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: #a1a1a1;
+}
+.visual .slogan {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Agatho;
+  font-size: 40px;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 2px;
+  z-index: 1;
+}
+
+/* control */
+.controller {
+  width: 100%;
+  padding-top: 20px;
+  box-sizing: border-box;
+}
+.control {
+  position: relative; /* reservation이 위에있어서 컨트롤 버튼이 hover가 안되서 포지션값 주고 z-index로 올려줌 */
+  width: 40%; /* 아래 구조를 오른쪽으로 보내기위해 전체 100%에서 해당 control의 width 40%만큼중에 오른쪽으로 보내기 위해 flex주고 end로 보냄  */
+  display: flex;
+  justify-content: flex-end;
+  margin: 30px 0;
+  z-index: 2;
+}
+.control .inner {
+  width: 80%;
+}
+.control .inner .control_btn {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+.control_btn ul {
+  display: flex;
+}
+.control_btn ul:nth-child(2) li a {
+  position: relative;
+}
+.control_btn ul:nth-child(2) li a {
+  font-size: 0;
+}
+.control_btn ul:nth-child(2) li a::after {
+  display: block;
+  content: url(../images/stop.svg);
+  position: absolute;
+  top: -16px;
+  left: -10px;
+  width: 7px;
+  height: 11px;
+  z-index: 30;
+}
+.control_btn ul:nth-child(2) li a.on::after {
+  content: url(../images/play.svg);
+}
+.progress-box {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 2px;
+  margin: 15px 0;
+  z-index: 11;
+}
+.autoplay-progress {
+  position: absolute;
+  top: 0px;
+}
+.autoplay-progress p {
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background: rgba(44, 44, 44, 0.678);
+  transition: 0s;
+}
+.autoplay-progress p.on {
+  width: 482px;
+  transition: 4s;
+}
+.autoplay-progress p {
+  left: 0;
+  top: -1px;
+}
+.autoplay-progress::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: 482px;
+  height: 1px;
+  background-color: #c5c5c5;
+}
+
+/* reservation */
+.reser_con {
+  width: 100%;
+  position: relative; /* 구조상 아래라 위로 보내야해서 포지션값 주고 top으로 올림 */
+  top: -150px;
+  display: flex; /* 아래 구조를 오른쪽으로 보내기위해 전체 100%에서 해당 reservation의 width 60%만큼중에 오른쪽으로 보내기 위해 flex주고 end로 보냄  */
+  justify-content: flex-end;
+  z-index: 1;
+}
+.reservation {
+  width: 60%;
+  height: 130px;
+  background: #fff;
+}
+.reservation .detail {
+  width: 100%;
+}
+.reservation .detail ul {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+}
+.reservation .detail ul li {
+  position: relative;
+}
+.reservation .detail ul li:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: "";
+  width: 1px;
+  height: 100%;
+  background: #dddddd;
+}
+.reservation .detail ul li:first-child {
+  width: 15%;
+  margin-left: 30px;
+}
+.reservation .detail ul li:nth-child(2) {
+  width: 30%;
+  margin-left: 30px;
+}
+.reservation .detail ul li:nth-child(3),
+.reservation .detail ul li:nth-child(4) {
+  width: 10%;
+}
+.reservation .detail ul li:nth-child(5) {
+  width: 15%;
+}
+.reservation .detail ul li:nth-child(6) {
+  width: 20%;
+}
+.reservation .detail ul li:nth-child(2) p {
+  letter-spacing: -1px;
+}
+.reservation .detail ul li:nth-child(3) p,
+.reservation .detail ul li:nth-child(4) p,
+.reservation .detail ul li:nth-child(5) p {
+  text-align: center;
+}
+.reservation .detail ul li:nth-child(5),
+.reservation .detail ul li:last-child {
+  background: none;
+}
+.reservation .detail ul li h4 {
+  font-size: 14px;
+  color: #9e9e9e;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.reservation .detail ul li .h4_center {
+  text-align: center;
+}
+.reservation .detail ul li p,
+.reservation .detail ul li p a {
+  font-size: 22px;
+  color: #333;
+}
+.reservation .detail .btn_search a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 130px;
+  font-family: Agatho;
+  font-size: 26px;
+  background: #2a4139;
+  color: #fff;
+  text-align: center;
+}
+
+/* [공통] title 스타일 */
+.title {
+  font-family: Agatho;
+  color: #222;
+  font-size: 55px;
+  font-weight: 400;
+}
+.title_box p {
+  color: #6b6b6b;
+  font-size: 18px;
+  letter-spacing: -1px;
+  font-weight: 200;
+}
+.agatho {
+  font-family: Agatho;
+  font-size: 35px !important;
+}
+
+/* YOUR REST */
+.rest {
+  width: 100%;
+  margin: 0 0 80px;
+  display: flex;
+  justify-content: space-between;
+}
+.rest .title_box {
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+}
+.rest .title_box .inner {
+  width: 80%;
+}
+.rest .title_box p {
+  width: 50%;
+  margin: 30px 0 50px;
+  line-height: 30px;
+  word-break: keep-all;
+}
+.rest .title_box ul {
+  display: flex;
+}
+.rest .title_box ul li a {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  color: #ca8e60;
+  font-size: 14px;
+  margin-right: 90px;
+}
+.rest .title_box ul li a:after {
+  position: absolute;
+  top: 6px;
+  content: "";
+  width: 24px;
+  height: 4px;
+  background: url(../images/room_list_arr.svg);
+  background-size: 100% 100%;
+  margin-left: 5px;
+  transition: margin 0.2s;
+}
+.rest .title_box ul li a:hover:after {
+  margin-left: 12px;
+}
+.rest .con {
+  width: 60%;
+  /* overflow: hidden; 오른쪽 사진영역 때문에 가로스크롤생겨서 넘친거 일단 숨김!!! */
+}
+#mySwiper2 {
+  position: relative !important;
+}
+#swiper-wrapper2 {
+  height: auto;
+}
+.rest .con > ul {
+  display: flex;
+}
+.rest .con > ul > li {
+  margin-right: 60px;
+}
+.rest .con .col .col_img {
+  position: relative;
+  width: 378px;
+  height: 275px;
+  overflow: hidden;
+}
+.rest .con .col .col_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: 0.5s;
+}
+.rest .con .col:hover .col_img img {
+  transform: scale(1.1);
+}
+.rest .con .col .col_img span {
+  position: absolute;
+  right: 15px;
+  bottom: 10px;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+}
+.rest .con .col .tag {
+  font-size: 15px;
+  color: #818181;
+  margin: 10px 0 25px;
+}
+.rest .con .col .txt {
+  width: 378px;
+  margin-top: 20px;
+  color: #818181;
+}
+.rest .con .col .txt h4 {
+  font-size: 30px;
+  color: #333;
+  font-weight: 200;
+}
+.rest .con .col .txt p:first-of-type {
+  font-size: 17px;
+  font-weight: 200;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  letter-spacing: -0.5px;
+  line-height: 28px;
+  margin: 10px 0;
+}
+.rest .con .col .txt p:nth-of-type(2) {
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+  color: #333;
+}
+.rest .con .col .txt p:nth-of-type(2) span {
+  font-size: 16px;
+}
+#btn_next1 {
+  width: 26px;
+  height: 6px;
+  right: 102px;
+  top: 91%;
+  background: url(../images/slide_right_arrow.png) center center;
+  opacity: 0.5;
+  z-index: 3;
+}
+#btn_prev1 {
+  width: 26px;
+  height: 6px;
+  left: 84%;
+  top: 91%;
+  background: url(../images/slide_left_arrow.png) center center;
+  opacity: 0.5;
+  z-index: 3;
+}
+#btn_next1:after,
+#btn_prev1:after {
+  content: "";
+}
+#btn_next1:hover,
+#btn_prev1:hover {
+  opacity: 1;
+}
+
+/* [공통] 컨텐츠 컨트롤 */
+.control_2 {
+  width: 100%;
+  max-width: 1034px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 60px 0 40px;
+}
+.control_2 ul {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.control_2 ul li {
+  margin-left: 30px;
+}
+/* [공동] 컨텐츠 컨트롤 pagination - YOUR REST & MAYFIELD WELLNESS */
+#mySwiper2 .swiper-pagination,
+#mySwiper3 .swiper-pagination {
+  display: flex;
+  justify-content: space-between;
+  position: static;
+  width: 1040px;
+  height: 1px;
+  background: #c5c5c5;
+  margin-top: 30px;
+}
+#mySwiper2 .swiper-pagination-bullet,
+#mySwiper3 .swiper-pagination-bullet {
+  display: block;
+  width: 173.333% !important;
+  height: 1px !important;
+  background: rgb(44, 44, 44);
+  border-radius: 0;
+  margin: 0 !important;
+}
+
+/* DINING EXPERIENCE */
+.dining {
+  width: 100%;
+  margin: 0 auto 50px;
+  text-align: center;
+  background: #fff;
+}
+.dining .view_all {
+  text-align: right;
+  padding: 60px 80px 20px 0;
+}
+.dining .view_all a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: #707070;
+}
+.dining .view_all a img {
+  vertical-align: middle;
+  margin-left: 5px;
+  transition: 0.3s;
+}
+.dining .view_all a:hover img {
+  transform: rotate(180deg);
+}
+.dining .title_box p {
+  margin: 10px 0;
+}
+.dining ul {
+  width: 100%;
+  display: flex;
+  margin: 80px 0 150px;
+}
+.dining ul li {
+  margin-right: 35px;
+}
+.dining ul li:first-child {
+  margin-top: 25px;
+}
+.dining ul li:nth-child(2) {
+  margin-top: 60px;
+}
+.dining ul li:nth-child(4) {
+  margin-top: 40px;
+}
+.dining ul li:nth-child(5) {
+  margin-top: 100px;
+}
+.dining ul li:nth-child(7) {
+  margin-top: 60px;
+}
+#popup {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 6;
+}
+#popup:target {
+  display: block;
+}
+#popup .pop {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 1380px;
+  background: #fff;
+  text-align: center;
+  padding: 70px 0 60px;
+  box-sizing: border-box;
+}
+#popup .pop .btn_close {
+  position: absolute;
+  right: 25px;
+  top: 20px;
+}
+#popup .pop .title_box p {
+  margin: 30px 0 50px;
+}
+#popup .pop .brand {
+  width: 100%;
+  max-width: 1580px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#popup .pop .brand li {
+  width: 238px;
+  height: 141px;
+  margin: 20px 60px 40px 0;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+#popup .pop .brand li:nth-child(4) {
+  margin-right: 0;
+}
+#popup .pop .brand li a {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#popup .pop .brand li:hover {
+  background: #d4b29718;
+  border-color: #d4b297;
+}
+#popup .pop .brand li a img {
+  transition: 0.3s;
+}
+#popup .pop .brand li a:hover img {
+  opacity: 0.1;
+}
+#popup .pop .brand li .info {
+  opacity: 0;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Montserrat", sans-serif;
+  color: #222;
+  line-height: 30px;
+}
+#popup .pop .brand li:hover .info {
+  opacity: 1;
+}
+#popup .pop .brand li .info p:first-child {
+  font-size: 20px;
+  letter-spacing: -1px;
+}
+
+/* [공통 스타일 컨텐츠] MAYFIELD WELLNESS & MEMBERSHIP */
+.con_same {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.con_same .pic {
+  width: 50%;
+  height: 876px;
+  background: url(../images/wellness00.png);
+  z-index: 1;
+}
+.con_same .con {
+  width: 50%;
+  background: #fbf9f6;
+}
+.con_same .con .col li a .col_img {
+  overflow: hidden;
+  width: 329px;
+  height: 319px;
+}
+.con_same .con .col li a .col_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: 0.5s;
+}
+.con_same .con .col li a:hover .col_img img {
+  transform: scale(1.1);
+}
+.con_same .con .col li a span {
+  display: block;
+  font-family: Agatho;
+  color: #222;
+  font-size: 35px;
+  font-weight: 400;
+  margin-top: 30px;
+}
+.con_same .con .col li a .des {
+  color: #6b6b6b;
+  font-size: 17px;
+  letter-spacing: -1px;
+  line-height: 25px;
+  font-weight: 200;
+  margin-top: 10px;
+}
+.con_same .con .control_2 {
+  width: 86%;
+  margin-bottom: 0;
+}
+
+/*  MAYFIELD WELLNESS */
+.wellness .con_same .con {
+  position: relative;
+  display: block !important;
+  padding: 100px 0 0 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+#mySwiper3 {
+  position: static !important;
+  margin-top: 70px;
+}
+#mySwiper3 li.swiper-slide {
+  width: 329px !important;
+}
+#mySwiper3 li:first-child.swiper-slide {
+  width: 329px !important;
+}
+#mySwiper3 li a {
+  display: block;
+  width: 100%;
+}
+#mySwiper3 li a .col_img {
+  width: 100%;
+  height: 319px;
+}
+#btn_next2 {
+  width: 26px;
+  height: 6px;
+  right: 65px;
+  top: 82%;
+  background: url(../images/slide_right_arrow.png) center center;
+  opacity: 0.5;
+  z-index: 3;
+}
+#btn_prev2 {
+  width: 26px;
+  height: 6px;
+  left: 84%;
+  top: 82%;
+  background: url(../images/slide_left_arrow.png) center center;
+  opacity: 0.5;
+  z-index: 3;
+}
+#btn_next2:after,
+#btn_prev2:after {
+  content: "";
+}
+#btn_next2:hover,
+#btn_prev2:hover {
+  opacity: 1;
+}
+.wellness .con_same .con .control_2 {
+  margin: 60px auto 40px;
+}
+
+/*  MAYFIELD MEMBERSHIP */
+.membership .con_same .pic {
+  background: url(../images/membership00.png);
+}
+.membership .con_same .con {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.membership .con_same .con .col {
+  width: 100%;
+  display: flex;
+  margin: 70px 0 0;
+  justify-content: center;
+}
+.membership .con_same .con .col li {
+  margin-left: 60px;
+}
+.membership .con_same .con .col li:first-child {
+  margin-left: 0;
+}
+
+/* 하단 풀이미지 banner */
+.banner {
+  width: 100%;
+  max-width: 1920px;
+  height: auto;
+}
+
+/* [공통] 흰색 타이틀 */
+.white {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 40px;
+  transition: 0.5s;
+}
+.white h2 {
+  color: #fff;
+  font-size: 40px;
+  transition: 1.5s;
+}
+.white p {
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 0;
+  margin-top: 10px;
+  transition: 1.5s;
+}
+
+/* [공통] 버튼 view more */
+.btn_more {
+  opacity: 0;
+  position: relative;
+  width: 200px;
+  height: 60px;
+  margin: 20px auto 0;
+}
+.btn_more p a {
+  display: inline-block;
+  color: #fff;
+  font-size: 18px;
+  width: 100%;
+  line-height: 60px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+}
+.btn_more .line {
+  position: absolute;
+  background: #fff;
+}
+.btn_more .line-top {
+  width: 100%;
+  height: 1px;
+  top: 10px;
+  left: 0;
+  transform-origin: top left;
+  transform: scaleX(0);
+  transition: transform 0.4s 0.3s;
+}
+.btn_more:hover .line-top {
+  transform: scaleX(1);
+  transition: transform 0.1s;
+}
+.btn_more .line-right {
+  width: 1px;
+  height: 100%;
+  top: 10px;
+  right: 0;
+  transform-origin: top right;
+  transform: scaleY(0);
+  transition: transform 0.3s 0.2s;
+}
+.btn_more:hover .line-right {
+  transform: scaleY(1);
+  transition: transform 0.2s 0.1s;
+}
+.btn_more .line-bottom {
+  width: 100%;
+  height: 1px;
+  bottom: -11px;
+  left: 0;
+  transform-origin: bottom right;
+  transform: scaleX(0);
+  transition: transform 0.2s 0.1s;
+}
+.btn_more:hover .line-bottom {
+  transform: scaleX(1);
+  transition: transform 0.3s 0.2s;
+}
+.btn_more .line-left {
+  width: 1px;
+  height: 100%;
+  top: 10px;
+  left: 0;
+  transform-origin: bottom left;
+  transform: scaleY(0);
+  transition: transform 0.1s;
+}
+.btn_more:hover .line-left {
+  transform: scaleY(1);
+  transition: transform 0.4s 0.3s;
+}
+
+/* [공통] 하단 풀이미지 banner img */
+.full {
+  width: 100%;
+  height: 240px;
+  text-align: center;
+  transition: height 1.3s;
+}
+.full:hover {
+  height: 670px;
+}
+.full:hover > .white {
+  padding-top: 0;
+}
+.full:hover > .white h2 {
+  font-size: 60px;
+}
+.full:hover > .white p {
+  font-size: 17px;
+}
+.full:hover > .white > .btn_more {
+  opacity: 1;
+}
+/* wedding */
+.wedding {
+  background: url(../images/full_img01.png);
+}
+
+/* story */
+.story {
+  background: url(../images/full_img02.png);
+}
+
+/* service */
+.service {
+  background: url(../images/full_img03.png);
+}
+
+/* footer */
+footer {
+  width: 100%;
+  background: #122223;
+}
+.foot {
+  width: 85%;
+  margin: 0 auto;
+  padding: 40px 0;
+  box-sizing: border-box;
+}
+.foot .foot_top {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.foot .foot_top ul {
+  display: flex;
+}
+.foot .foot_top ul li {
+  margin-right: 25px;
+}
+.foot .foot_top ul li a {
+  color: #e6e6e6;
+  font-size: 14px;
+  font-weight: 200;
+}
+.foot .foot_top ul li a:hover {
+  color: #d4b297;
+}
+.foot .foot_top p {
+  position: absolute;
+  right: 20px;
+}
+.foot .foot_top p a {
+  position: relative;
+  color: #e6e6e6;
+  font-size: 13px;
+  font-weight: 200;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.foot .foot_top p a:after {
+  content: url(../images/family_site_arr.png);
+  position: absolute;
+  top: 2px;
+  right: -20px;
+}
+.foot .foot_middle {
+  margin: 60px 0 40px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #707070;
+  padding-bottom: 40px;
+}
+.foot .foot_middle ul {
+  font-size: 14px;
+  color: #9f9f9f;
+  line-height: 25px;
+  font-weight: 200;
+}
+.foot .foot_middle p a {
+  position: relative;
+  display: inline-block;
+  width: 300px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #707070;
+  font-size: 14px;
+  color: #e6e6e6;
+}
+.foot .foot_middle p a:after {
+  position: absolute;
+  right: 0;
+  width: 15px;
+  height: 10px;
+  content: url(../images/footer_more_arr.png);
+}
+.foot_bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  color: #9f9f9f;
+  font-size: 14px;
+}
+.foot_bottom ul {
+  display: flex;
+  align-items: center;
+}
+.foot_bottom ul li a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  margin-left: 13px;
+}
+.foot_bottom ul li:first-child a {
+  background: url(../images/sns01.png);
+}
+.foot_bottom ul li:nth-child(2) a {
+  background: url(../images/sns02.png);
+}
+.foot_bottom ul li:nth-child(3) a {
+  background: url(../images/sns03.png);
+}
+.foot_bottom ul li:nth-child(4) a {
+  background: url(../images/sns04.png);
+}
+
+/* [공통] btn_top 상단 바로가기 버튼 */
+.btn_top {
+  display: inline-block;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 73px;
+  height: 73px;
+  background: url(../images/top.svg);
+  z-index: 1;
+  opacity: 0;
+  cursor: pointer;
+}

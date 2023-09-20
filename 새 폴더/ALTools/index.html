@@ -1,0 +1,2484 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+      @font-face {
+        font-family: Pretendard;
+        src: url(webfont/Pretendard-Regular.ttf) format(‘ttf’);
+      }
+      body {
+        font-family: "Pretendard-Regular", "AppleSDGothicNeoR", sans-serif;
+      }
+      header {
+        width: 1280px;
+        height: 80px;
+        margin: 0 auto;
+      }
+      header #head {
+        position: relative;
+        margin-top: 30px;
+      }
+      header #head .logo {
+        position: absolute;
+        top: 3px;
+        left: -250px;
+      }
+      header #head .depth1 {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        width: 50%;
+        transform: translateX(50%);
+        letter-spacing: -1px;
+      }
+      header #head .depth1 li {
+        position: relative;
+      }
+      header #head .depth1 > li > a {
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      header #head .depth1 > li:first-child > a:after,
+      header #head .depth1 > li:last-child > a:after {
+        position: absolute;
+        top: 6px;
+        right: 2px;
+        content: "";
+        background-image: url(images/blt_drop.png);
+        background-size: 10px 10px;
+        width: 10px;
+        height: 10px;
+      }
+      header #head .depth1 > li:last-child ul {
+        display: none;
+      }
+      header #head .depth1 .left {
+        margin-left: -25px;
+      }
+      header #head .depth1 .left .tool {
+        display: flex;
+        flex-direction: column;
+      }
+      header #head .depth1 .left .tool .sub1,
+      header #head .depth1 .left .tool .sub2,
+      header #head .depth1 .left .tool .sub3,
+      header #head .depth1 .left .sercurity .sub4 {
+        margin-top: 20px;
+      }
+      header #head .depth1 .left .tool .sub1 ul,
+      header #head .depth1 .left .tool .sub2 ul,
+      header #head .depth1 .left .tool .sub3 ul,
+      header #head .depth1 .left .sercurity .sub4 ul {
+        display: flex;
+      }
+      header #head .depth1 .left .tool .sub1 .txt,
+      header #head .depth1 .left .tool .sub2 .txt,
+      header #head .depth1 .left .tool .sub3 .txt,
+      header #head .depth1 .left .sercurity .sub4 .txt {
+        display: flex;
+        flex-direction: column;
+      }
+      header #head .depth1 .left .tool .sub1 .txt li p:first-child,
+      header #head .depth1 .left .tool .sub2 .txt li p:first-child,
+      header #head .depth1 .left .tool .sub3 .txt li p:first-child,
+      header #head .depth1 .left .sercurity .sub4 .txt li p:first-child {
+        display: flex;
+        flex-direction: left;
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      header #head .depth1 .left .tool .sub1 .txt li p:last-child,
+      header #head .depth1 .left .tool .sub2 .txt li p:last-child,
+      header #head .depth1 .left .tool .sub3 .txt li p:last-child,
+      header #head .depth1 .left .sercurity .sub4 .txt li p:last-child {
+        font-size: 12px;
+        color: #8b95a1;
+      }
+      header #head .depth1 .depth2 {
+        width: 800px;
+        padding: 24px 20px 20px;
+      }
+      header #head .depth1 .depth2 .top .left .tool .sub1 ul li img,
+      header #head .depth1 .depth2 .top .left .tool .sub2 ul li img,
+      header #head .depth1 .depth2 .top .left .tool .sub3 ul li img,
+      header #head .depth1 .depth2 .top .left .tool .sercurity .sub4 ul li img {
+        width: 40px;
+        height: 40px;
+        margin-left: 30px;
+        margin-right: 10px;
+      }
+      header #head .depth1 .center .contents {
+        display: flex;
+        flex-direction: column;
+      }
+      header #head .depth1 .center .contents .sub5,
+      header #head .depth1 .center .contents .sub6,
+      header #head .depth1 .center .contents .sub7,
+      header #head .depth1 .center .contents .sub8 {
+        margin-top: 20px;
+      }
+      header #head .depth1 .center .contents .sub5 ul,
+      header #head .depth1 .center .contents .sub6 ul,
+      header #head .depth1 .center .contents .sub7 ul,
+      header #head .depth1 .center .contents .sub8 ul {
+        display: flex;
+      }
+      header #head .depth1 .center .contents .sub5 .txt,
+      header #head .depth1 .center .contents .sub6 .txt,
+      header #head .depth1 .center .contents .sub7 .txt,
+      header #head .depth1 .center .contents .sub8 .txt {
+        display: flex;
+        flex-direction: column;
+      }
+      header #head .depth1 .center .contents .sub5 .txt li p:first-child,
+      header #head .depth1 .center .contents .sub6 .txt li p:first-child,
+      header #head .depth1 .center .contents .sub7 .txt li p:first-child,
+      header #head .depth1 .center .contents .sub8 .txt li p:first-child {
+        display: flex;
+        flex-direction: left;
+        margin-bottom: 5px;
+        font-size: 14px;
+        font-weight: bold;
+      }
+      header #head .depth1 .center .contents .sub5 .txt li p:last-child,
+      header #head .depth1 .center .contents .sub6 .txt li p:last-child,
+      header #head .depth1 .center .contents .sub7 .txt li p:last-child,
+      header #head .depth1 .center .contents .sub8 .txt li p:last-child {
+        font-size: 12px;
+        color: #8b95a1;
+      }
+      header #head .depth1 .depth2 .center .contents .sub5 ul li img,
+      header #head .depth1 .depth2 .center .contents .sub6 ul li img,
+      header #head .depth1 .depth2 .center .contents .sub7 ul li img,
+      header #head .depth1 .depth2 .center .contents .sub8 ul li img {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+      }
+      header #head .depth1 .center .contents .sub8 ul li img {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+      }
+      header #head .depth1 .right .mobile {
+        display: flex;
+        flex-direction: column;
+      }
+      header #head .depth1 .right .mobile .sub9,
+      header #head .depth1 .right .mobile .sub10,
+      header #head .depth1 .right .mobile .sub11,
+      header #head .depth1 .right .mobile .sub12 {
+        margin-top: 20px;
+      }
+      header #head .depth1 .right .mobile .sub9 ul,
+      header #head .depth1 .right .mobile .sub10 ul,
+      header #head .depth1 .right .mobile .sub11 ul,
+      header #head .depth1 .right .mobile .sub12 ul {
+        display: flex;
+      }
+      header #head .depth1 .right .mobile .sub9 .txt,
+      header #head .depth1 .right .mobile .sub10 .txt,
+      header #head .depth1 .right .mobile .sub11 .txt,
+      header #head .depth1 .right .mobile .sub12 .txt {
+        display: flex;
+        flex-direction: column;
+      }
+      header #head .depth1 .right .mobile .sub9 .txt li p:first-child,
+      header #head .depth1 .right .mobile .sub10 .txt li p:first-child,
+      header #head .depth1 .right .mobile .sub11 .txt li p:first-child,
+      header #head .depth1 .right .mobile .sub12 .txt li p:first-child {
+        display: flex;
+        flex-direction: left;
+        margin-bottom: 5px;
+        font-size: 14px;
+        font-weight: bold;
+      }
+      header #head .depth1 .right .mobile .sub9 .txt li p:last-child,
+      header #head .depth1 .right .mobile .sub10 .txt li p:last-child,
+      header #head .depth1 .right .mobile .sub11 .txt li p:last-child,
+      header #head .depth1 .right .mobile .sub12 .txt li p:last-child {
+        font-size: 12px;
+        color: #8b95a1;
+      }
+      header #head .depth1 .depth2 .right .mobile .sub9 ul li img,
+      header #head .depth1 .depth2 .right .mobile .sub10 ul li img,
+      header #head .depth1 .depth2 .right .mobile .sub11 ul li img,
+      header #head .depth1 .depth2 .right .mobile .sub12 ul li img {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+        border-radius: 10px;
+      }
+      header #head .depth1 .top {
+        display: flex;
+        justify-content: space-between;
+      }
+      header #head .depth1 .bot {
+        margin-top: 60px;
+      }
+      header #head .depth1 > li:first-child .depth2 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 999;
+      }
+      header #head .depth1 > li:first-child > a:hover ~ .depth2 {
+        display: block;
+        background-color: rgba(139, 149, 161, 0.1);
+      }
+      header #head .depth1 > li:first-child .depth2 .sub1:hover,
+      header #head .depth1 > li:first-child .depth2 .sub2:hover,
+      header #head .depth1 > li:first-child .depth2 .sub3:hover,
+      header #head .depth1 > li:first-child .depth2 .sub4:hover,
+      header #head .depth1 > li:first-child .depth2 .sub5:hover,
+      header #head .depth1 > li:first-child .depth2 .sub6:hover,
+      header #head .depth1 > li:first-child .depth2 .sub7:hover,
+      header #head .depth1 > li:first-child .depth2 .sub8:hover,
+      header #head .depth1 > li:first-child .depth2 .sub9:hover,
+      header #head .depth1 > li:first-child .depth2 .sub10:hover,
+      header #head .depth1 > li:first-child .depth2 .sub11:hover,
+      header #head .depth1 > li:first-child .depth2 .sub12:hover {
+        background-color: rgb(221, 220, 220);
+        border-radius: 5px;
+      }
+
+      header #head .depth1 > li:first-child:hover .depth2 {
+        background-color: hsla(0, 0%, 100%, 0.98);
+      }
+      header #head .depth1 > li:first-child .depth2 .tool h5,
+      header #head .depth1 > li:first-child .depth2 .tool .sercurity h5 {
+        margin-left: 30px;
+      }
+      header #head .depth1 > li:first-child .depth2 h5 {
+        display: flex;
+        font-size: 12px;
+        color: #8b95a1;
+      }
+      header #head .depth1 > li:first-child .depth2 .sercurity {
+        position: absolute;
+        top: 250px;
+      }
+      /* header #head .depth1 > li:first-child .depth2 .sercurity h5 {
+        position: absolute;
+        top: 30px;
+      } */
+      header #head .depth1 > li > a {
+        padding: 12px 16px;
+        border-radius: 5px;
+      }
+      header #head .depth1 > li a:hover {
+        background-color: rgba(139, 149, 161, 0.1);
+      }
+      header #head .depth1 > li:hover .depth2 {
+        position: absolute;
+        display: block;
+        height: 345px;
+        margin-top: 20px;
+      }
+      header #head .depth1 > li:first-child .depth2 {
+        padding: 20px;
+      }
+      header #head .depth1 > li:last-child:hover .depth2 {
+        display: block;
+        height: 80px;
+        background-color: hsla(0, 0%, 100%, 0.98);
+      }
+      header #head .depth1 > li:last-child .depth2 li {
+        margin-bottom: 20px;
+      }
+      header #head .depth1 > li:last-child .depth2 li a {
+        font-size: 14px;
+      }
+      header #head .depth1 > li:last-child .depth2 li:hover {
+        background-color: rgb(221, 220, 220);
+      }
+      header #head .head_r {
+        position: relative;
+      }
+      header #head .head_r ul {
+        position: absolute;
+        top: -25px;
+        right: -250px;
+        display: flex;
+        justify-content: right;
+      }
+      header #head .head_r ul li:first-child a img {
+        width: 150px;
+      }
+      header #head .head_r ul li:last-child {
+        margin-top: 5px;
+        margin-left: 4px;
+      }
+      header #head .head_r ul li:last-child a {
+        border: 1px solid #000;
+        border-radius: 8px;
+        padding: 8px 12px;
+        background-color: #000;
+        color: #fff;
+        font-size: 13px;
+        font-weight: bold;
+        letter-spacing: -0.5px;
+        transition: 0.2s;
+      }
+      header #head .head_r ul li:last-child a:hover {
+        background-color: #484848;
+        transition: 0.2s;
+      }
+      .slide {
+        position: relative;
+        width: 1800px;
+        height: 680px;
+        margin: 0 auto;
+        margin-top: -30px;
+        border-radius: 25px;
+        overflow: hidden;
+      }
+      .swiper {
+        position: relative;
+        width: 1800px;
+        height: 680px;
+        margin: 0 auto;
+      }
+      .swiper img {
+        width: 100%;
+        height: 680px;
+        object-fit: cover;
+      }
+      .slide > ul {
+        position: absolute;
+        top: 150px;
+        left: 330px;
+        height: 200px;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        opacity: 0;
+      }
+      .slide > ul > li > h2 {
+        font-size: 48px;
+        letter-spacing: -4px;
+      }
+      .slide > ul > li > p {
+        margin-top: 20px;
+        font-size: 16px;
+        letter-spacing: -1px;
+      }
+      .slide > ul > li:last-child {
+        margin-top: 60px;
+      }
+      .slide > ul > li:last-child > a {
+        border: 1px solid #fff;
+        border-radius: 8px;
+        background-color: #fff;
+        padding: 20px 36px;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: -1px;
+      }
+      .slide > ul > li:last-child > a:hover {
+        opacity: 80%;
+        transition: 0.5s;
+      }
+      .slide > ul.on {
+        opacity: 1;
+      }
+      #my.swiper .swiper-button-prev {
+        position: absolute;
+        top: 630px;
+        left: 350px;
+        background: url(images/prev.svg);
+        width: 32px;
+        height: 32px;
+      }
+      #my.swiper button {
+        background: url(images/pause.svg);
+        width: 32px;
+        height: 32px;
+      }
+      #my.swiper .swiper-button-next {
+        position: absolute;
+        top: 630px;
+        left: 500px;
+        background: url(images/next.svg);
+        width: 32px;
+        height: 32px;
+      }
+      .swiper .swiper-pagination {
+        position: absolute;
+        left: -470px;
+        margin: 40px 0px;
+        font-size: 12px;
+      }
+      #my .swiper-button-prev:after,
+      .swiper-rtl .swiper-button-next:after {
+        content: "";
+      }
+      #my .swiper-button-next:after,
+      .swiper-rtl .swiper-button-prev:after {
+        content: "";
+      }
+      .slide .btns button.play {
+        position: absolute;
+        top: 609px;
+        left: 460px;
+        background: url(images/play.svg);
+        width: 32px;
+        height: 32px;
+        z-index: 99;
+        border: none;
+        cursor: pointer;
+      }
+      .slide .btns button.stop {
+        position: absolute;
+        top: 609px;
+        left: 460px;
+        background: url(images/pause.svg);
+        width: 32px;
+        height: 32px;
+        z-index: 99;
+        border: none;
+        cursor: pointer;
+      }
+      .slide .btns button.stop::after {
+        background: url(images/play.svg);
+      }
+      section {
+        width: 1800px;
+        margin: 0 auto;
+      }
+      section .gnb .lnb {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+      }
+      section .gnb .lnb .snb1,
+      section .gnb .lnb .snb2,
+      section .gnb .lnb .snb3,
+      section .gnb .lnb .snb4,
+      section .gnb .lnb .snb5,
+      section .gnb .lnb .snb6,
+      section .gnb .lnb .snb7,
+      section .gnb .lnb .snb8 {
+        width: 154px;
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.08),
+          4px 12px 36px rgba(0, 0, 0, 0.09);
+        transition: 0.2s ease;
+      }
+      section .gnb .lnb .snb1:hover,
+      section .gnb .lnb .snb2:hover,
+      section .gnb .lnb .snb3:hover,
+      section .gnb .lnb .snb4:hover,
+      section .gnb .lnb .snb5:hover,
+      section .gnb .lnb .snb6:hover,
+      section .gnb .lnb .snb7:hover,
+      section .gnb .lnb .snb8:hover {
+        transform: translateY(-10px);
+        transition: 0.2s ease;
+      }
+      section .gnb .lnb .snb1 ul,
+      section .gnb .lnb .snb2 ul,
+      section .gnb .lnb .snb3 ul,
+      section .gnb .lnb .snb4 ul,
+      section .gnb .lnb .snb5 ul,
+      section .gnb .lnb .snb6 ul,
+      section .gnb .lnb .snb7 ul,
+      section .gnb .lnb .snb8 ul {
+        display: flex;
+      }
+      section .gnb .lnb .snb1 .txt,
+      section .gnb .lnb .snb2 .txt,
+      section .gnb .lnb .snb3 .txt,
+      section .gnb .lnb .snb4 .txt,
+      section .gnb .lnb .snb5 .txt,
+      section .gnb .lnb .snb6 .txt,
+      section .gnb .lnb .snb7 .txt,
+      section .gnb .lnb .snb8 .txt {
+        margin-left: 15px;
+      }
+      section .gnb .lnb .snb1 ul > li > img,
+      section .gnb .lnb .snb2 ul > li > img,
+      section .gnb .lnb .snb3 ul > li > img,
+      section .gnb .lnb .snb4 ul > li > img,
+      section .gnb .lnb .snb5 ul > li > img,
+      section .gnb .lnb .snb6 ul > li > img,
+      section .gnb .lnb .snb7 ul > li > img,
+      section .gnb .lnb .snb8 ul > li > img {
+        width: 44px;
+        height: 44px;
+      }
+      section .gnb .lnb .snb1 ul .txt h4,
+      section .gnb .lnb .snb2 ul .txt h4,
+      section .gnb .lnb .snb3 ul .txt h4,
+      section .gnb .lnb .snb4 ul .txt h4,
+      section .gnb .lnb .snb5 ul .txt h4,
+      section .gnb .lnb .snb6 ul .txt h4,
+      section .gnb .lnb .snb7 ul .txt h4,
+      section .gnb .lnb .snb8 ul .txt h4 {
+        position: relative;
+        font-size: 14px;
+        color: #000;
+        margin-top: -4px;
+        letter-spacing: -2px;
+      }
+      section .gnb .lnb .snb1 ul .txt h4:after,
+      section .gnb .lnb .snb2 ul .txt h4:after,
+      section .gnb .lnb .snb3 ul .txt h4:after,
+      section .gnb .lnb .snb4 ul .txt h4:after,
+      section .gnb .lnb .snb5 ul .txt h4:after,
+      section .gnb .lnb .snb6 ul .txt h4:after,
+      section .gnb .lnb .snb7 ul .txt h4:after,
+      section .gnb .lnb .snb8 ul .txt h4:after {
+        position: absolute;
+        top: -6px;
+        content: url(images/next.svg);
+      }
+
+      section .gnb .lnb .snb1 ul .txt p,
+      section .gnb .lnb .snb2 ul .txt p,
+      section .gnb .lnb .snb3 ul .txt p,
+      section .gnb .lnb .snb4 ul .txt p,
+      section .gnb .lnb .snb5 ul .txt p,
+      section .gnb .lnb .snb6 ul .txt p,
+      section .gnb .lnb .snb7 ul .txt p,
+      section .gnb .lnb .snb8 ul .txt p {
+        font-size: 11px;
+        color: #1a1a1a80;
+        margin-top: 4px;
+        letter-spacing: -1px;
+      }
+      section .ad_zero,
+      section .business {
+        position: relative;
+      }
+      section .ad_zero img {
+        width: 1800px;
+        height: 600px;
+        margin: 0 auto;
+        margin-top: 40px;
+        border-radius: 30px;
+        object-fit: cover;
+      }
+      section .business img {
+        width: 1800px;
+        height: 600px;
+        margin: 0 auto;
+        margin-top: -85px;
+        border-radius: 30px;
+        object-fit: cover;
+      }
+      section .ad_zero h3 {
+        display: block;
+        font-size: 40px;
+        line-height: 1.4;
+        letter-spacing: -3px;
+        text-align: center;
+        transform: translateY(-410px);
+      }
+      section .business h3 {
+        display: block;
+        font-size: 40px;
+        color: #fff;
+        line-height: 1.4;
+        letter-spacing: -4px;
+        text-align: center;
+        transform: translateY(-410px);
+      }
+      section .ad_zero a {
+        position: absolute;
+        top: 386px;
+        left: 777px;
+        border: 1px solid #000;
+        border-radius: 10px;
+        background-color: #000;
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: -1px;
+        padding: 20px 45px;
+        transition: 0.3s;
+      }
+      section .business a {
+        position: absolute;
+        top: 266px;
+        left: 770px;
+        border: 1px solid #000;
+        border-radius: 10px;
+        background-color: #fff;
+        color: #000;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: -2px;
+        padding: 20px 35px;
+        transition: 0.3s;
+      }
+      section .ad_zero a:hover {
+        background-color: #484848;
+        transition: 0.3s;
+      }
+      section .business a:hover {
+        background-color: hsla(0, 0%, 100%, 0.85);
+        transition: 0.3s;
+      }
+      section .ad_zero a:hover ~ svg {
+        color: #fff;
+      }
+      section .business a:hover ~ svg {
+        color: #000;
+      }
+      section .ad_zero svg {
+        fill: #fff;
+        position: absolute;
+        top: 413px;
+        left: 960px;
+        background: transparent;
+      }
+      section .business svg {
+        fill: #000;
+        position: absolute;
+        top: 292px;
+        left: 996px;
+        background: transparent;
+      }
+      section .ad_zero svg path {
+        color: #fff;
+      }
+      section .business svg path {
+        color: #000;
+      }
+      section .submenu h3 {
+        font-size: 36px;
+        letter-spacing: -4px;
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 90px;
+      }
+      section .submenu .gnb {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 1150px;
+        margin: 0 auto;
+      }
+      section .submenu .gnb .lnb1,
+      section .submenu .gnb .lnb2,
+      section .submenu .gnb .lnb3,
+      section .submenu .gnb .lnb4,
+      section .submenu .gnb .lnb5,
+      section .submenu .gnb .lnb6,
+      section .submenu .gnb .lnb7,
+      section .submenu .gnb .lnb8 {
+        height: 340px;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.08),
+          4px 12px 36px rgba(0, 0, 0, 0.09);
+        margin-top: 50px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        transition: 0.2s;
+      }
+      section .submenu .gnb .lnb1:hover,
+      section .submenu .gnb .lnb2:hover,
+      section .submenu .gnb .lnb3:hover,
+      section .submenu .gnb .lnb4:hover,
+      section .submenu .gnb .lnb5:hover,
+      section .submenu .gnb .lnb6:hover,
+      section .submenu .gnb .lnb7:hover,
+      section .submenu .gnb .lnb8:hover {
+        transform: translateY(-10px);
+        transition: 0.2s;
+      }
+      section .submenu .gnb .lnb1 a img,
+      section .submenu .gnb .lnb2 a img,
+      section .submenu .gnb .lnb3 a img,
+      section .submenu .gnb .lnb4 a img,
+      section .submenu .gnb .lnb5 a img,
+      section .submenu .gnb .lnb6 a img,
+      section .submenu .gnb .lnb7 a img,
+      section .submenu .gnb .lnb8 a img {
+        width: 265px;
+        height: 100px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+      }
+      section .submenu .gnb .lnb1 .txt,
+      section .submenu .gnb .lnb2 .txt,
+      section .submenu .gnb .lnb3 .txt,
+      section .submenu .gnb .lnb4 .txt,
+      section .submenu .gnb .lnb5 .txt,
+      section .submenu .gnb .lnb6 .txt,
+      section .submenu .gnb .lnb7 .txt,
+      section .submenu .gnb .lnb8 .txt {
+        position: relative;
+        height: 230px;
+      }
+      section .submenu .gnb .lnb1 .txt img,
+      section .submenu .gnb .lnb2 .txt img,
+      section .submenu .gnb .lnb3 .txt img,
+      section .submenu .gnb .lnb4 .txt img,
+      section .submenu .gnb .lnb5 .txt img,
+      section .submenu .gnb .lnb6 .txt img,
+      section .submenu .gnb .lnb7 .txt img,
+      section .submenu .gnb .lnb8 .txt img {
+        position: absolute;
+        top: -10px;
+        left: 20px;
+        width: 45px;
+        height: 45px;
+      }
+      section .submenu .gnb .lnb1 .txt h4 {
+        margin-top: 30px;
+        margin-left: 18px;
+        font-size: 20px;
+        letter-spacing: -2px;
+        line-height: -1px;
+      }
+      section .submenu .gnb .lnb2 .txt h4,
+      section .submenu .gnb .lnb3 .txt h4,
+      section .submenu .gnb .lnb4 .txt h4,
+      section .submenu .gnb .lnb5 .txt h4,
+      section .submenu .gnb .lnb6 .txt h4,
+      section .submenu .gnb .lnb7 .txt h4,
+      section .submenu .gnb .lnb8 .txt h4 {
+        margin-top: 30px;
+        margin-left: 74px;
+        font-size: 20px;
+        letter-spacing: -2px;
+        line-height: -1px;
+      }
+      section .submenu .gnb .lnb1 .txt p,
+      section .submenu .gnb .lnb2 .txt p,
+      section .submenu .gnb .lnb3 .txt p,
+      section .submenu .gnb .lnb4 .txt p,
+      section .submenu .gnb .lnb5 .txt p,
+      section .submenu .gnb .lnb6 .txt p,
+      section .submenu .gnb .lnb7 .txt p,
+      section .submenu .gnb .lnb8 .txt p {
+        margin-top: 30px;
+        margin-left: 20px;
+        font-size: 13px;
+        letter-spacing: -1px;
+        line-height: 1.5;
+      }
+      section .submenu .gnb .lnb1 .txt span,
+      section .submenu .gnb .lnb2 .txt span,
+      section .submenu .gnb .lnb3 .txt span,
+      section .submenu .gnb .lnb4 .txt span,
+      section .submenu .gnb .lnb5 .txt span,
+      section .submenu .gnb .lnb6 .txt span,
+      section .submenu .gnb .lnb7 .txt span,
+      section .submenu .gnb .lnb8 .txt span {
+        position: absolute;
+        top: 165px;
+        left: 175px;
+        font-size: 13px;
+        letter-spacing: -1px;
+        color: #08f;
+      }
+      section .submenu .gnb .lnb1 .txt svg,
+      section .submenu .gnb .lnb2 .txt svg,
+      section .submenu .gnb .lnb3 .txt svg,
+      section .submenu .gnb .lnb4 .txt svg,
+      section .submenu .gnb .lnb5 .txt svg,
+      section .submenu .gnb .lnb6 .txt svg,
+      section .submenu .gnb .lnb7 .txt svg,
+      section .submenu .gnb .lnb8 .txt svg {
+        position: absolute;
+        top: 160px;
+        left: 228px;
+      }
+      .slide2 {
+        width: 1800px;
+        height: 360px;
+        margin: 0 auto;
+        border-radius: 25px;
+        overflow: hidden;
+        margin-top: 150px;
+      }
+      .mySwiper1 {
+        position: relative;
+        width: 1800px;
+        height: 360px;
+        margin: 0 auto;
+      }
+      .mySwiper1 img {
+        width: 100%;
+        height: 360px;
+        object-fit: cover;
+      }
+      .mySwiper1 .swiper-button-prev {
+        position: absolute;
+        left: 45px;
+        background-color: #fff;
+        border-radius: 100%;
+        padding: 15px;
+        width: 18px;
+        height: 18px;
+      }
+      .mySwiper1 .swiper-button-prev:after {
+        position: absolute;
+        top: -5px;
+        left: 15px;
+        content: url(images/arrowprev.svg);
+        z-index: 888;
+      }
+      .mySwiper1 .swiper-button-next {
+        position: absolute;
+        right: 40px;
+        background-color: #fff;
+        border-radius: 100%;
+        padding: 15px;
+        width: 18px;
+        height: 18px;
+      }
+      .mySwiper1 .swiper-button-next:after {
+        position: absolute;
+        top: 9px;
+        left: 16px;
+        content: url(images/arrowprev.svg);
+        transform: rotate(180deg);
+        z-index: 999;
+      }
+      .mySwiper1 .swiper-pagination {
+        width: 50px;
+        position: absolute;
+        left: 437px;
+        color: #fff;
+        font-size: 15px;
+        letter-spacing: -1px;
+        font-weight: bold;
+        border-radius: 50px;
+        background-color: rgba(0, 0, 0, 0.1);
+        padding: 6px 0;
+      }
+      section .tip {
+        width: 1800px;
+        margin: 0 auto;
+      }
+      section .tip h4 {
+        margin-top: 160px;
+        margin-bottom: 90px;
+        font-size: 36px;
+        letter-spacing: -4px;
+        text-align: center;
+      }
+      section .tip .gnb {
+        display: flex;
+      }
+      section .tip .gnb .lnb1 {
+        position: relative;
+        background: url(images/zero.png);
+        background-position: 100% 100%;
+        background-size: cover;
+        width: 585px;
+        height: 748px;
+        border-radius: 25px;
+        transition: 0.2s;
+      }
+      section .tip .gnb .lnb1:hover {
+        transform: translateY(-10px);
+        transition: 0.2s;
+      }
+      section .tip .gnb .lnb1:hover svg {
+        transform: translateX(10px);
+        transition: 0.2s;
+      }
+      section .tip .gnb .lnb1 h3 {
+        position: absolute;
+        top: 80px;
+        left: 60px;
+        font-size: 32px;
+        letter-spacing: -3px;
+        line-height: 1.4;
+      }
+      section .tip .gnb .lnb1 p {
+        position: absolute;
+        top: 190px;
+        left: 62px;
+        font-size: 15px;
+        letter-spacing: -1px;
+        line-height: 1.5;
+      }
+      section .tip .gnb .lnb1 svg {
+        position: absolute;
+        top: 30px;
+        right: 35px;
+        transition: 0.2s;
+      }
+      section .tip .gnb .top {
+        display: flex;
+      }
+      section .tip .gnb .lnb2 {
+        position: relative;
+        background: url(images/pdf.png);
+        background-position: 100% 100%;
+        background-size: cover;
+        width: 585px;
+        height: 360px;
+        border-radius: 25px;
+        transition: 0.2s;
+      }
+      section .tip .gnb .lnb2:hover {
+        transform: translateY(-10px);
+        transition: 0.2s;
+      }
+      section .tip .gnb .lnb2:hover svg {
+        transform: translateX(10px);
+        transition: 0.2s;
+      }
+      section .tip .gnb .lnb2 h3 {
+        position: absolute;
+        top: 40px;
+        left: 35px;
+        font-size: 20px;
+        letter-spacing: -1.5px;
+        line-height: 1.4;
+      }
+      section .tip .gnb .lnb2 p {
+        position: absolute;
+        top: 85px;
+        left: 37px;
+        font-size: 15px;
+        letter-spacing: -1.4px;
+        line-height: 1.5;
+      }
+      section .tip .gnb .lnb2 svg {
+        position: absolute;
+        top: 30px;
+        right: 35px;
+        transition: 0.2s;
+      }
+      section .tip .gnb .lnb3 {
+        position: relative;
+        background: url(images/bg_gridBox.png);
+        background-position: 100% 100%;
+        background-size: cover;
+        width: 585px;
+        height: 360px;
+        border-radius: 25px;
+        transition: 0.2s;
+      }
+      section .tip .gnb .lnb3:hover {
+        transform: translateY(-10px);
+        transition: 0.2s;
+      }
+      section .tip .gnb .lnb3:hover svg {
+        transform: translateX(10px);
+        transition: 0.2s;
+      }
+      section .tip .gnb .lnb3 h3 {
+        position: absolute;
+        top: 40px;
+        left: 35px;
+        font-size: 20px;
+        letter-spacing: -1.5px;
+        line-height: 1.4;
+      }
+      section .tip .gnb .lnb3 p {
+        position: absolute;
+        top: 85px;
+        left: 37px;
+        font-size: 15px;
+        letter-spacing: -1.4px;
+        line-height: 1.5;
+      }
+      section .tip .gnb .lnb3 svg {
+        position: absolute;
+        top: 30px;
+        right: 35px;
+        transition: 0.2s;
+      }
+      section .tip .gnb .bot {
+        display: flex;
+      }
+      section .tip .gnb .lnb4 {
+        position: relative;
+        background: url(images/bg_filename.png);
+        background-position: 100% 100%;
+        background-size: cover;
+        width: 585px;
+        height: 360px;
+        border-radius: 25px;
+        transition: 0.2s;
+      }
+      section .tip .gnb .lnb4:hover {
+        transform: translateY(-10px);
+        transition: 0.2s;
+      }
+      section .tip .gnb .lnb4:hover svg {
+        transform: translateX(10px);
+        transition: 0.2s;
+      }
+      section .tip .gnb .lnb4 h3 {
+        position: absolute;
+        top: 40px;
+        left: 35px;
+        font-size: 20px;
+        letter-spacing: -1.5px;
+        line-height: 1.4;
+      }
+      section .tip .gnb .lnb4 p {
+        position: absolute;
+        top: 85px;
+        left: 37px;
+        font-size: 15px;
+        letter-spacing: -1.4px;
+        line-height: 1.5;
+      }
+      section .tip .gnb .lnb4 svg {
+        position: absolute;
+        top: 30px;
+        right: 35px;
+        transition: 0.2s;
+      }
+      section .tip .gnb .lnb5 {
+        position: relative;
+        background: url(images/bg_alsee.png);
+        background-position: 100% 100%;
+        background-size: cover;
+        width: 585px;
+        height: 360px;
+        border-radius: 25px;
+        transition: 0.2s;
+      }
+      section .tip .gnb .lnb5:hover {
+        transform: translateY(-10px);
+        transition: 0.2s;
+      }
+      section .tip .gnb .lnb5:hover svg {
+        transform: translateX(10px);
+        transition: 0.2s;
+      }
+      section .tip .gnb .lnb5 h3 {
+        position: absolute;
+        top: 40px;
+        left: 35px;
+        font-size: 20px;
+        letter-spacing: -1.5px;
+        line-height: 1.4;
+      }
+      section .tip .gnb .lnb5 p {
+        position: absolute;
+        top: 85px;
+        left: 37px;
+        font-size: 15px;
+        letter-spacing: -1.4px;
+        line-height: 1.5;
+      }
+      section .tip .gnb .lnb5 svg {
+        position: absolute;
+        top: 30px;
+        right: 35px;
+        transition: 0.2s;
+      }
+      section .tip .gnb .lnb2,
+      section .tip .gnb .lnb3,
+      section .tip .gnb .lnb4,
+      section .tip .gnb .lnb5 {
+        margin: 0 10px 27px 25px;
+      }
+      article .etc {
+        position: relative;
+        background: url(images/bg_news.f581bb70.png) 50% 50%/2560px auto
+          no-repeat;
+        width: 100%;
+        height: 340px;
+        margin-top: 120px;
+      }
+      article .etc .gnb {
+        position: absolute;
+      }
+      article .etc .gnb .lnb {
+        display: flex;
+        position: absolute;
+        top: 110px;
+        left: 395px;
+        column-gap: 20px;
+      }
+      article .etc .gnb .lnb .snb1,
+      article .etc .gnb .lnb .snb2,
+      article .etc .gnb .lnb .snb3 {
+        position: relative;
+        background-color: #fff;
+        width: 260px;
+        height: 140px;
+        border-radius: 15px;
+        padding: 0 40px 0 52px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      article .etc .gnb .lnb .snb1:hover,
+      article .etc .gnb .lnb .snb2:hover,
+      article .etc .gnb .lnb .snb3:hover {
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.08),
+          4px 12px 36px rgba(0, 0, 0, 0.09);
+        transition: 0.3s;
+      }
+      article .etc .gnb .lnb .snb1 img,
+      article .etc .gnb .lnb .snb2 img,
+      article .etc .gnb .lnb .snb3 img {
+        position: absolute;
+        top: 50px;
+        width: 40px;
+        height: 40px;
+      }
+      article .etc .gnb .lnb .snb1 h4,
+      article .etc .gnb .lnb .snb2 h4,
+      article .etc .gnb .lnb .snb3 h4 {
+        position: absolute;
+        top: 44px;
+        left: 120px;
+        font-size: 16px;
+        letter-spacing: -0.5px;
+        color: #4e5968;
+      }
+      article .etc .gnb .lnb .snb1 p,
+      article .etc .gnb .lnb .snb2 p,
+      article .etc .gnb .lnb .snb3 p {
+        position: absolute;
+        top: 70px;
+        left: 120px;
+        font-size: 16px;
+        letter-spacing: -1px;
+        font-weight: bold;
+      }
+      article .etc .gnb .lnb .snb1 p:after {
+        content: url(images/next.svg);
+        position: absolute;
+        top: -4px;
+        left: 155px;
+        width: 16px;
+        height: 16px;
+      }
+      article .etc .gnb .lnb .snb2 p:after {
+        content: url(images/next.svg);
+        position: absolute;
+        top: -4px;
+        left: 150px;
+        width: 16px;
+        height: 16px;
+      }
+      article .etc .gnb .lnb .snb3 p:after {
+        content: url(images/next.svg);
+        position: absolute;
+        top: -4px;
+        left: 165px;
+        width: 16px;
+        height: 16px;
+      }
+      footer {
+        width: 100%;
+      }
+      footer .info {
+      }
+      footer .info .top {
+        position: relative;
+        display: flex;
+        justify-content: left;
+        font-size: 13px;
+        font-weight: bold;
+        color: #8b95a1;
+        margin-top: 45px;
+        margin-left: 40px;
+        column-gap: 30px;
+      }
+      footer .info .top li {
+        letter-spacing: -1px;
+        padding: 8px 10px;
+        transition: 0.1s;
+      }
+      footer .info .top li:nth-child(1):hover,
+      footer .info .top li:nth-child(2):hover,
+      footer .info .top li:nth-child(3):hover,
+      footer .info .top li:nth-child(4):hover,
+      footer .info .top li:nth-child(5):hover,
+      footer .info .top li:nth-child(6):hover {
+        background-color: rgba(139, 149, 161, 0.1);
+        border-radius: 4px;
+      }
+      footer .info .top li:nth-child(3) {
+        color: #4e5968;
+      }
+      footer .info .top span {
+        display: inline-block;
+        position: absolute;
+        right: 50px;
+        font-size: 13px;
+        color: #8b95a1;
+        cursor: pointer;
+        padding: 6px 16px 6px 8px;
+        transition: 0.1s;
+      }
+      footer .info .top span:after {
+        display: inline-block;
+        position: absolute;
+        top: 9px;
+        left: 80px;
+        content: "";
+        background: url(images/plus.svg) no-repeat;
+        width: 12px;
+        height: 12px;
+        line-height: -2px;
+        cursor: pointer;
+      }
+      footer .info .top span:hover {
+        background-color: rgba(139, 149, 161, 0.1);
+        border-radius: 4px;
+      }
+      footer .info .bottom {
+        display: flex;
+        column-gap: 35px;
+        margin-top: 45px;
+        margin-left: 40px;
+      }
+      footer .info .bottom li {
+        position: relative;
+      }
+      footer .info .bottom li:first-child a {
+        display: block;
+        background: url(images/spr_logo_estsoft.722c4838.png) 0 0/64px auto
+          no-repeat;
+        width: 64px;
+        height: 18px;
+      }
+      footer .info .bottom li:first-child a:hover {
+        background-position-y: -18px;
+      }
+      footer .info .bottom li:nth-child(2) a {
+        position: absolute;
+        top: -5px;
+        display: block;
+        background: url(images/spr_footer_icon.e708fb81.png) 0 0/84px auto
+          no-repeat;
+        width: 28px;
+        height: 28px;
+      }
+      footer .info .bottom li:nth-child(3) a {
+        position: absolute;
+        top: -5px;
+        left: 10px;
+        display: block;
+        background: url(images/spr_footer_icon.e708fb81.png) 0 0/84px auto
+          no-repeat;
+        background-position-x: -28px;
+        width: 28px;
+        height: 28px;
+      }
+      footer .info .bottom li:last-child a {
+        position: absolute;
+        top: -5px;
+        left: 20px;
+        display: block;
+        background: url(images/spr_footer_icon.e708fb81.png) 0 0/84px auto
+          no-repeat;
+        background-position-x: -56px;
+        width: 28px;
+        height: 28px;
+      }
+      footer .info .bottom li:nth-child(2) a:hover,
+      footer .info .bottom li:nth-child(3) a:hover,
+      footer .info .bottom li:last-child a:hover {
+        background-position-y: -28px;
+      }
+
+      footer .country {
+        font-size: 13px;
+        letter-spacing: -0.4px;
+        color: #8b95a1;
+        margin-top: 20px;
+        margin-left: 40px;
+        margin-bottom: 30px;
+      }
+      footer .country ul li {
+        line-height: 1.8;
+      }
+      footer .country ul li a {
+        font-weight: lighter;
+        color: #08f;
+      }
+      footer .country ul li a:hover {
+        color: #0064d9;
+      }
+      /* .swiper .swiper-wrapper .swiper-slide {
+        position: relative;
+      }
+      .swiper .swiper-wrapper .swiper-slide img {
+        width: 90%;
+        height: 500px;
+        border-radius: 25px;
+      }
+      .swiper .swiper-wrapper .swiper-slide ul li:first-child h2 {
+        position: absolute;
+        top: 90px;
+        left: 250px;
+        font-size: 48px;
+      }
+      .swiper .swiper-wrapper .swiper-slide ul li:nth-child(2) p {
+        position: absolute;
+        top: 250px;
+        left: 250px;
+        font-size: 16px;
+      }
+      .swiper .swiper-wrapper .swiper-slide ul li:last-child a {
+        position: absolute;
+        top: 320px;
+        left: 250px;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        padding: 20px 30px;
+        background-color: #fff;
+        font-weight: bold;
+      } */
+    </style>
+  </head>
+  <body>
+    <header>
+      <div id="head">
+        <div class="logo">
+          <svg
+            width="73"
+            height="17"
+            viewBox="0 0 73 17"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M13.3509 16.5298H10.9523C10.7486 16.5298 10.5676 16.3556 10.5223 16.161L9.48143 12.0335H4.27682L3.2359 16.161C3.19065 16.3556 3.00962 16.5298 2.80596 16.5298H0.407317C0.18103 16.5298 0 16.3782 0 16.161C0 16.1383 0.0226287 16.0954 0.0226287 16.0524L3.73374 2.43215C4.27682 0.411404 5.90609 0.216797 6.87912 0.216797C7.85216 0.216797 9.48142 0.411404 10.0245 2.43215L13.7356 16.0524C13.7356 16.0954 13.7582 16.1383 13.7582 16.161C13.7582 16.3782 13.5772 16.5298 13.3509 16.5298ZM7.24118 3.10648C7.1733 2.84625 7.10541 2.758 6.87912 2.758C6.65284 2.758 6.58495 2.84399 6.51707 3.10648L4.8878 9.55792H8.87045L7.24118 3.10648Z"
+              fill="#1a1a1a"
+            ></path>
+            <path
+              d="M24.2809 16.3991C23.602 16.5508 21.6333 16.7024 20.434 16.7024C17.4923 16.7024 15.2068 15.942 15.2068 12.249V0.826073C15.2068 0.586208 15.4104 0.391602 15.6594 0.391602H17.8996C18.1485 0.391602 18.3522 0.586208 18.3522 0.826073V12.2513C18.3522 13.686 18.8048 14.1204 20.1172 14.1204H24.2809C24.5298 14.1204 24.7335 14.315 24.7335 14.5549V15.9443C24.7335 16.2475 24.6203 16.3358 24.2809 16.3991Z"
+              fill="#1a1a1a"
+            ></path>
+            <path
+              d="M34.5541 2.91018H30.5941V16.0959C30.5941 16.3358 30.3905 16.5304 30.1415 16.5304H27.9013C27.6524 16.5304 27.4487 16.3358 27.4487 16.0959V2.91018H23.4887C23.2398 2.91018 23.0361 2.75856 23.0361 2.5187V0.803444C23.0361 0.56358 23.2398 0.391602 23.4887 0.391602H34.5541C34.8031 0.391602 35.0067 0.565843 35.0067 0.803444V2.5187C35.0067 2.75856 34.8031 2.91018 34.5541 2.91018Z"
+              fill="#1a1a1a"
+            ></path>
+            <path
+              d="M39.3514 16.7042C35.7987 16.7042 33.9431 14.4006 33.9431 11.296V9.53546C33.9431 6.42854 35.7987 4.1272 39.3514 4.1272C42.9041 4.1272 44.7596 6.4308 44.7596 9.53546V11.296C44.7596 14.4006 42.9041 16.7042 39.3514 16.7042ZM41.7726 9.53546C41.7726 7.75458 40.9354 6.60278 39.3514 6.60278C37.7674 6.60278 36.9301 7.75458 36.9301 9.53546V11.296C36.9301 13.0768 37.7674 14.2286 39.3514 14.2286C40.9354 14.2286 41.7726 13.0768 41.7726 11.296V9.53546Z"
+              fill="#1a1a1a"
+            ></path>
+            <path
+              d="M51.6612 16.7042C48.1085 16.7042 46.2529 14.4006 46.2529 11.296V9.53546C46.2529 6.42854 48.1085 4.1272 51.6612 4.1272C55.2139 4.1272 57.0694 6.4308 57.0694 9.53546V11.296C57.0694 14.4006 55.2139 16.7042 51.6612 16.7042ZM54.0825 9.53546C54.0825 7.75458 53.2452 6.60278 51.6612 6.60278C50.0772 6.60278 49.2399 7.75458 49.2399 9.53546V11.296C49.2399 13.0768 50.0772 14.2286 51.6612 14.2286C53.2452 14.2286 54.0825 13.0768 54.0825 11.296V9.53546Z"
+              fill="#1a1a1a"
+            ></path>
+            <path
+              d="M61.6181 16.5303H59.5136C59.2647 16.5303 59.061 16.313 59.061 16.0732V0.434471C59.061 0.194607 59.2647 0 59.5136 0H61.6181C61.867 0 62.048 0.194607 62.048 0.434471V16.0754C62.048 16.313 61.867 16.5303 61.6181 16.5303Z"
+              fill="#1a1a1a"
+            ></path>
+            <path
+              d="M68.5646 16.7043C67.6821 16.7043 65.7812 16.5957 64.514 16.2698C64.2425 16.2042 64.0841 16.03 64.0841 15.7697V14.4663C64.0841 14.2921 64.2425 14.1178 64.4688 14.1178C64.514 14.1178 64.5367 14.1178 64.5593 14.1178C65.6455 14.2491 67.6821 14.3577 68.3609 14.3577C69.7639 14.3577 69.9676 13.9006 69.9676 13.3145C69.9676 12.9027 69.696 12.6402 68.9719 12.2057L65.8718 10.3818C64.763 9.73013 63.9709 8.64395 63.9709 7.38353C63.9709 5.21118 65.3966 4.125 68.2704 4.125C70.1033 4.125 71.1442 4.31961 72.2983 4.55947C72.5698 4.62509 72.7056 4.79934 72.7056 5.05957V6.31998C72.7056 6.58021 72.5699 6.73183 72.3436 6.73183C72.2983 6.73183 72.2757 6.73183 72.253 6.73183C71.6194 6.64584 69.8091 6.4716 68.5193 6.4716C67.4331 6.4716 66.9579 6.71146 66.9579 7.38353C66.9579 7.73201 67.2974 7.94925 67.8631 8.2751L70.8274 10.013C72.7283 11.1218 72.9998 12.208 72.9998 13.3145C72.9998 15.2063 71.5289 16.7043 68.5646 16.7043Z"
+              fill="#1a1a1a"
+            ></path>
+          </svg>
+        </div>
+        <ul class="depth1">
+          <li>
+            <a href="#">알툴즈 다운로드</a>
+            <div class="depth2">
+              <div class="top">
+                <div class="left">
+                  <div class="tool">
+                    <h5>Tool</h5>
+                    <div class="sub1">
+                      <ul>
+                        <li><img src="images/alzip.png" alt="" /></li>
+                        <ul class="txt">
+                          <li>
+                            <p>알집</p>
+                            <p>전국민 압축프로그램</p>
+                          </li>
+                        </ul>
+                      </ul>
+                    </div>
+                    <div class="sub2">
+                      <ul>
+                        <li><img src="images/alcap.png" alt="" /></li>
+                        <ul class="txt">
+                          <li>
+                            <p>알캡쳐</p>
+                            <p>쉽고 빠른 화면 캡쳐</p>
+                          </li>
+                        </ul>
+                      </ul>
+                    </div>
+                    <div class="sub3">
+                      <ul>
+                        <li><img src="images/aldrive.png" alt="" /></li>
+                        <ul class="txt">
+                          <li>
+                            <p>알드라이브</p>
+                            <p>편리한 파일 전송 클라이언트</p>
+                          </li>
+                        </ul>
+                      </ul>
+                    </div>
+                    <div class="sercurity">
+                      <h5>Sercurity</h5>
+                      <div class="sub4">
+                        <ul>
+                          <li><img src="images/alyak.png" alt="" /></li>
+                          <ul class="txt">
+                            <li>
+                              <p>알약</p>
+                              <p>전국민 백신 프로그램</p>
+                            </li>
+                          </ul>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="center">
+                  <div class="contents">
+                    <h5>Contents</h5>
+                    <div class="sub5">
+                      <ul>
+                        <li><img src="images/alsee.png" alt="" /></li>
+                        <ul class="txt">
+                          <li>
+                            <p>알씨</p>
+                            <p>이미지 뷰어/사진 편집 프로그램</p>
+                          </li>
+                        </ul>
+                      </ul>
+                    </div>
+                    <div class="sub6">
+                      <ul>
+                        <li><img src="images/alpdf.png" alt="" /></li>
+                        <ul class="txt">
+                          <li>
+                            <p>알PDF</p>
+                            <p>PDF 뷰어/리더, PDF 변환/편집</p>
+                          </li>
+                        </ul>
+                      </ul>
+                    </div>
+                    <div class="sub7">
+                      <ul>
+                        <li><img src="images/alsong.png" alt="" /></li>
+                        <ul class="txt">
+                          <li>
+                            <p>알송</p>
+                            <p>온라인 음악가사 플레이어</p>
+                          </li>
+                        </ul>
+                      </ul>
+                    </div>
+                    <div class="sub8">
+                      <ul>
+                        <li><img src="images/ale.png" alt="" /></li>
+                        <ul class="txt">
+                          <li>
+                            <p>앨런 Beta</p>
+                            <p>언제 어디서나 가장 가까운 AI</p>
+                          </li>
+                        </ul>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="right">
+                  <div class="mobile">
+                    <h5>Mobile</h5>
+                    <div class="sub9">
+                      <ul>
+                        <li><img src="images/alzm.png" alt="" /></li>
+                        <ul class="txt">
+                          <li>
+                            <p>알집 모바일</p>
+                            <p>압축 지원 파일 탐색 관리자</p>
+                          </li>
+                        </ul>
+                      </ul>
+                    </div>
+                    <div class="sub10">
+                      <ul>
+                        <li><img src="images/alsm.png" alt="" /></li>
+                        <ul class="txt">
+                          <li>
+                            <p>알송 모바일</p>
+                            <p>음악과 가사를 동시에</p>
+                          </li>
+                        </ul>
+                      </ul>
+                    </div>
+                    <div class="sub11">
+                      <ul>
+                        <li><img src="images/aym.png" alt="" /></li>
+                        <ul class="txt">
+                          <li>
+                            <p>알약M</p>
+                            <p>스마트폰의 모든 처방</p>
+                          </li>
+                        </ul>
+                      </ul>
+                    </div>
+                    <div class="sub12">
+                      <ul>
+                        <li><img src="images/picinc.png" alt="" /></li>
+                        <ul class="txt">
+                          <li>
+                            <p>피크닉</p>
+                            <p>맑은 하늘 필터 카메라</p>
+                          </li>
+                        </ul>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bot">
+                <a href="#"><img src="images/bot.png" alt="" /></a>
+              </div>
+            </div>
+          </li>
+          <li><a href="#">알툴즈 AD-ZERO</a></li>
+          <li><a href="#">비즈니스 구매</a></li>
+          <li>
+            <a href="#">고객센터</a>
+            <ul class="depth2">
+              <li><a href="#">자주하는 질문</a></li>
+              <li><a href="#">1:1 문의하기</a></li>
+              <li><a href="#">공지사항</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="head_r">
+          <ul>
+            <li>
+              <a href="#"><img src="images/aplus.png" alt="" /></a>
+            </li>
+            <li><a href="#">로그인</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="slide">
+      <div class="swiper mySwiper" id="my">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div>
+              <img src="images/img_mainSlide_1.98cc2793.png" alt="" />
+              <!-- <ul>
+                <li>
+                  <h2>
+                    알툴즈를 더 쉽게.<br />
+                    내 PC전용 매니저
+                  </h2>
+                </li>
+                <li>
+                  <p>
+                    다양한 알툴즈의 최신 꿀기능을 놓치지 않도록<br />
+                    알매니저가 알아서 관리할게요.
+                  </p>
+                </li>
+                <li><a href="#">알매니저 자세히보기 ></a></li>
+              </ul> -->
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="images/img_mainSlide_2.29a39dd2.png" alt="" />
+            <!-- <ul>
+              <li>
+                <h2>
+                  다양한 캡처는 기본,<br />
+                  간편한 편집까지
+                </h2>
+              </li>
+              <li>
+                <p>
+                  크롭,형광펜,모자이크 등 신규 편집 기능이 추가된<br />
+                  알캡처 3.0을 지금 바로 사용해보세요.
+                </p>
+              </li>
+              <li><a href="#">알캡처 자세히 보기 > ></a></li>
+            </ul> -->
+          </div>
+          <div class="swiper-slide">
+            <img src="images/img_mainSlide_3.fe8eba3d.png" alt="" />
+            <!-- <ul>
+              <li>
+                <h2>
+                  자유로운 편집과<br />
+                  문서 포맷 변환
+                </h2>
+              </li>
+              <li>
+                <p>
+                  제한이 많던 PDF 문서,<br />
+                  원하는 문서 형식 변환과 편집을 손쉽게!
+                </p>
+              </li>
+              <li><a href="#">알PDF 자세히 보기 ></a></li>
+            </ul> -->
+          </div>
+        </div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-scrollbar"></div>
+        <button></button>
+      </div>
+      <ul>
+        <li>
+          <h2>
+            알툴즈를 더 쉽게.<br />
+            내PC 전용 매니저
+          </h2>
+        </li>
+        <li>
+          <p>
+            다양한 알툴즈의 최신 꿀기능을 놓치지 않도록<br />
+            알매니저가 알아서 관리할게요.
+          </p>
+        </li>
+        <li><a href="#">알매니저 자세히보기 ></a></li>
+      </ul>
+      <ul>
+        <li>
+          <h2>
+            다양한 캡처는 기본,<br />
+            간편한 편집까지
+          </h2>
+        </li>
+        <li>
+          <p>
+            크롭,형광펜,모자이크 등 신규 편집 기능이 추가된<br />
+            알캡처 3.0을 지금 바로 사용해보세요.
+          </p>
+        </li>
+        <li><a href="#">알캡처 자세히보기 ></a></li>
+      </ul>
+      <ul>
+        <li>
+          <h2>
+            자유로운 편집과<br />
+            문서 포맷 변환
+          </h2>
+        </li>
+        <li>
+          <p>
+            제한이 많던 PDF 문서,<br />
+            원하는 문서 형식 변환과 편집을 손쉽게!
+          </p>
+        </li>
+        <li><a href="#">알PDF 자세히보기 ></a></li>
+      </ul>
+      <div class="btns">
+        <!-- <button class="play"></button> -->
+        <button class="stop"></button>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+      $(function () {
+        var swiper = new Swiper(".mySwiper", {
+          direction: "horizontal",
+          speed: 800,
+
+          autoplay: {
+            delay: 2500,
+          },
+          loop: true,
+          slidesPerView: 1,
+          spaceBetween: 0,
+          centeredSlides: true,
+          lazy: {
+            loadPrevNext: true,
+          },
+
+          pagination: {
+            el: ".swiper-pagination",
+            type: "fraction",
+
+            clickable: true,
+          },
+
+          navigation: {
+            prevEl: ".swiper-button-prev",
+            nextEl: ".swiper-button-next",
+          },
+
+          on: {
+            slideChange: function () {
+              $(".slide>ul").removeClass("on");
+              $(".slide>ul").eq(this.realIndex).addClass("on");
+            },
+          },
+        });
+      });
+    </script>
+    <section>
+      <div class="gnb">
+        <div class="lnb">
+          <div class="snb1">
+            <ul>
+              <li><img src="images/altoolpack.png" alt="" /></li>
+              <div class="txt">
+                <li><h4>알툴즈 통합팩</h4></li>
+                <li>
+                  <p>
+                    내 PC사용을<br />
+                    간편하고 편리하게
+                  </p>
+                </li>
+              </div>
+            </ul>
+          </div>
+          <div class="snb2">
+            <ul>
+              <li><img src="images/alzip.png" alt="" /></li>
+              <div class="txt">
+                <li><h4>알집</h4></li>
+                <li>
+                  <p>
+                    전국민 압축<br />
+                    프로그램
+                  </p>
+                </li>
+              </div>
+            </ul>
+          </div>
+          <div class="snb3">
+            <ul>
+              <li><img src="images/alyak.png" alt="" /></li>
+              <div class="txt">
+                <li><h4>알약</h4></li>
+                <li>
+                  <p>전국민<br />백신 프로그램</p>
+                </li>
+              </div>
+            </ul>
+          </div>
+          <div class="snb4">
+            <ul>
+              <li><img src="images/alsee.png" alt="" /></li>
+              <div class="txt">
+                <li><h4>알씨</h4></li>
+                <li>
+                  <p>
+                    이미지 뷰어,<br />
+                    사진 편집
+                  </p>
+                </li>
+              </div>
+            </ul>
+          </div>
+          <div class="snb5">
+            <ul>
+              <li><img src="images/alcap.png" alt="" /></li>
+              <div class="txt">
+                <li><h4>알캡처</h4></li>
+                <li>
+                  <p>쉽고 빠른 <br />화면 캡처</p>
+                </li>
+              </div>
+            </ul>
+          </div>
+          <div class="snb6">
+            <ul>
+              <li><img src="images/alpdf.png" alt="" /></li>
+              <div class="txt">
+                <li><h4>알PDF</h4></li>
+                <li>
+                  <p>PDF 뷰어/리더,<br />PDF 변환/편집</p>
+                </li>
+              </div>
+            </ul>
+          </div>
+          <div class="snb7">
+            <ul>
+              <li><img src="images/alsong.png" alt="" /></li>
+              <div class="txt">
+                <li><h4>알송</h4></li>
+                <li>
+                  <p>온라인 음악가사<br />플레이어</p>
+                </li>
+              </div>
+            </ul>
+          </div>
+          <div class="snb8">
+            <ul>
+              <li><img src="images/aldrive.png" alt="" /></li>
+              <div class="txt">
+                <li><h4>알드라이브</h4></li>
+                <li>
+                  <p>쉽고 편리한<br />파일전송</p>
+                </li>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="ad_zero">
+        <img src="images/adzero.png" alt="" />
+        <h3>
+          광고 없이 쾌적하게<br />
+          알툴즈의 구독서비스를 확인해 보세요.
+        </h3>
+        <a href="#">알툴즈 AD-ZERO</a>
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="1em"
+          viewBox="0 0 320 512"
+        >
+          <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+
+          <path
+            d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
+          />
+        </svg>
+      </div>
+    </section>
+    <section>
+      <div class="business">
+        <img src="images/business.png" alt="" />
+        <h3>
+          알툴즈 기업용, 알약 기업용 제품의<br />
+          라이선스를 확인하세요.
+        </h3>
+        <a href="#">비즈니스 구매 자세히보기</a>
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="1em"
+          viewBox="0 0 320 512"
+        >
+          <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+
+          <path
+            d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
+          />
+        </svg>
+      </div>
+    </section>
+    <section>
+      <div class="submenu">
+        <h3>빠르고 간편한 전국민 PC 필수품, 알툴즈</h3>
+        <div class="gnb">
+          <div class="lnb1">
+            <a href="#"
+              ><img src="images/img_product_altools.7a6ad43d.png" alt="" />
+              <div class="txt">
+                <h4>알툴즈 통합팩</h4>
+                <p>
+                  내 PC사용을 좀 더 간편하고 편리하게!<br />알툴즈 통합팩 한번의
+                  설치로 내 PC에 필요한<br />모든 것이 준비됩니다.
+                </p>
+                <span>자세히보기</span>
+                <svg
+                  width="30"
+                  height="30"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <mask
+                    id="mask0_9314_29235"
+                    style="mask-type: alpha"
+                    maskUnits="userSpaceOnUse"
+                    x="0"
+                    y="0"
+                    width="32"
+                    height="32"
+                  >
+                    <rect width="32" height="32" fill="#D9D9D9" />
+                  </mask>
+                  <g mask="url(#mask0_9314_29235)">
+                    <path
+                      d="M14.6667 20.6487L13.5 19.482L17.3333 15.6487L13.5 11.8153L14.6667 10.6487L19.6667 15.6487L14.6667 20.6487Z"
+                      fill="#08f"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </a>
+          </div>
+          <div class="lnb2">
+            <a href="#"
+              ><img src="images/img_product_alzip.1022eaef.png" alt="" />
+              <div class="txt">
+                <img src="images/alzip.png" alt="" />
+                <h4>알집</h4>
+                <p>
+                  다양한 압축파일 포맷 지원으로 파일 압축<br />하기와 압축풀기에
+                  뛰어난 무료 압축프로그램<br />입니다.
+                </p>
+                <span>자세히보기</span>
+                <svg
+                  width="30"
+                  height="30"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <mask
+                    id="mask0_9314_29235"
+                    style="mask-type: alpha"
+                    maskUnits="userSpaceOnUse"
+                    x="0"
+                    y="0"
+                    width="32"
+                    height="32"
+                  >
+                    <rect width="32" height="32" fill="#D9D9D9" />
+                  </mask>
+                  <g mask="url(#mask0_9314_29235)">
+                    <path
+                      d="M14.6667 20.6487L13.5 19.482L17.3333 15.6487L13.5 11.8153L14.6667 10.6487L19.6667 15.6487L14.6667 20.6487Z"
+                      fill="#08f"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </a>
+          </div>
+          <div class="lnb3">
+            <a href="#"
+              ><img src="images/img_product_alyac.097469b9.png" alt="" />
+              <div class="txt">
+                <img src="images/alyak.png" alt="" />
+                <h4>알약</h4>
+                <p>
+                  전국민 백신 프로그램 알약!<br />똑똑한 백신 프로그램 알약으로
+                  바이러스,<br />
+                  악성코드를 검사하고 제거해보세요.
+                </p>
+                <span>자세히보기</span>
+                <svg
+                  width="30"
+                  height="30"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <mask
+                    id="mask0_9314_29235"
+                    style="mask-type: alpha"
+                    maskUnits="userSpaceOnUse"
+                    x="0"
+                    y="0"
+                    width="32"
+                    height="32"
+                  >
+                    <rect width="32" height="32" fill="#D9D9D9" />
+                  </mask>
+                  <g mask="url(#mask0_9314_29235)">
+                    <path
+                      d="M14.6667 20.6487L13.5 19.482L17.3333 15.6487L13.5 11.8153L14.6667 10.6487L19.6667 15.6487L14.6667 20.6487Z"
+                      fill="#08f"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </a>
+          </div>
+          <div class="lnb4">
+            <a href="#"
+              ><img src="images/img_product_alsee.0593f383.png" alt="" />
+              <div class="txt">
+                <img src="images/alsee.png" alt="" />
+                <h4>알씨</h4>
+                <p>
+                  알씨는 사진 편집부터 동영상 만들기, 사진<br />포맷 변환,
+                  자동회전, 일괄편집, 사진 꾸미기<br />등 편리한 기능을 제공하는
+                  이미지 뷰어 <br />프로그램입니다.
+                </p>
+                <span>자세히보기</span>
+                <svg
+                  width="30"
+                  height="30"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <mask
+                    id="mask0_9314_29235"
+                    style="mask-type: alpha"
+                    maskUnits="userSpaceOnUse"
+                    x="0"
+                    y="0"
+                    width="32"
+                    height="32"
+                  >
+                    <rect width="32" height="32" fill="#D9D9D9" />
+                  </mask>
+                  <g mask="url(#mask0_9314_29235)">
+                    <path
+                      d="M14.6667 20.6487L13.5 19.482L17.3333 15.6487L13.5 11.8153L14.6667 10.6487L19.6667 15.6487L14.6667 20.6487Z"
+                      fill="#08f"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </a>
+          </div>
+          <div class="lnb5">
+            <a href="#"
+              ><img src="images/img_product_alcapture.947224ff.png" alt="" />
+              <div class="txt">
+                <img src="images/alcap.png" alt="" />
+                <h4>알캡처</h4>
+                <p>
+                  모니터 화면 안의 무엇이든 원하는 순간에 <br />보이는 그대로
+                  캡처해주는 화면 캡처 프로그램 <br />입니다.
+                </p>
+                <span>자세히보기</span>
+                <svg
+                  width="30"
+                  height="30"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <mask
+                    id="mask0_9314_29235"
+                    style="mask-type: alpha"
+                    maskUnits="userSpaceOnUse"
+                    x="0"
+                    y="0"
+                    width="32"
+                    height="32"
+                  >
+                    <rect width="32" height="32" fill="#D9D9D9" />
+                  </mask>
+                  <g mask="url(#mask0_9314_29235)">
+                    <path
+                      d="M14.6667 20.6487L13.5 19.482L17.3333 15.6487L13.5 11.8153L14.6667 10.6487L19.6667 15.6487L14.6667 20.6487Z"
+                      fill="#08f"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </a>
+          </div>
+          <div class="lnb6">
+            <a href="#"
+              ><img src="images/img_product_alpdf.800d73cd.png" alt="" />
+              <div class="txt">
+                <img src="images/alpdf.png" alt="" />
+                <h4>알PDF</h4>
+                <p>
+                  알PDF 뷰어는 PDF를 다양한 포맷으로 변환<br />할 수 있고, PDF
+                  합치기, PDF 용량 줄이기,<br />수정 등 PDF를 자유롭게 편집할 수
+                  있는<br />
+                  PDF 변환/편집 프로그랩입니다.
+                </p>
+                <span>자세히보기</span>
+                <svg
+                  width="30"
+                  height="30"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <mask
+                    id="mask0_9314_29235"
+                    style="mask-type: alpha"
+                    maskUnits="userSpaceOnUse"
+                    x="0"
+                    y="0"
+                    width="32"
+                    height="32"
+                  >
+                    <rect width="32" height="32" fill="#D9D9D9" />
+                  </mask>
+                  <g mask="url(#mask0_9314_29235)">
+                    <path
+                      d="M14.6667 20.6487L13.5 19.482L17.3333 15.6487L13.5 11.8153L14.6667 10.6487L19.6667 15.6487L14.6667 20.6487Z"
+                      fill="#08f"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </a>
+          </div>
+          <div class="lnb7">
+            <a href="#"
+              ><img src="images/img_product_alsong.11bb7a12.png" alt="" />
+              <div class="txt">
+                <img src="images/alsong.png" alt="" />
+                <h4>알송</h4>
+                <p>
+                  음악과 가사를 동시에 즐길 수 있는 알송은<br />실시간 싱크가사,
+                  어학기능을 제공하는 음악<br />
+                  플레이어입니다.
+                </p>
+                <span>자세히보기</span>
+                <svg
+                  width="30"
+                  height="30"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <mask
+                    id="mask0_9314_29235"
+                    style="mask-type: alpha"
+                    maskUnits="userSpaceOnUse"
+                    x="0"
+                    y="0"
+                    width="32"
+                    height="32"
+                  >
+                    <rect width="32" height="32" fill="#D9D9D9" />
+                  </mask>
+                  <g mask="url(#mask0_9314_29235)">
+                    <path
+                      d="M14.6667 20.6487L13.5 19.482L17.3333 15.6487L13.5 11.8153L14.6667 10.6487L19.6667 15.6487L14.6667 20.6487Z"
+                      fill="#08f"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </a>
+          </div>
+          <div class="lnb8">
+            <a href="#"
+              ><img src="images/img_product_aldrive.bf926542.png" alt="" />
+              <div class="txt">
+                <img src="images/aldrive.png" alt="" />
+                <h4>알드라이브</h4>
+                <p>
+                  클라이언트와 서버 간의 파일 송수신 기능 외<br />에, WebDAV 등
+                  다양한 프로토콜 파일 전송을<br />지원합니다.
+                </p>
+                <span>자세히보기</span>
+                <svg
+                  width="30"
+                  height="30"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <mask
+                    id="mask0_9314_29235"
+                    style="mask-type: alpha"
+                    maskUnits="userSpaceOnUse"
+                    x="0"
+                    y="0"
+                    width="32"
+                    height="32"
+                  >
+                    <rect width="32" height="32" fill="#D9D9D9" />
+                  </mask>
+                  <g mask="url(#mask0_9314_29235)">
+                    <path
+                      d="M14.6667 20.6487L13.5 19.482L17.3333 15.6487L13.5 11.8153L14.6667 10.6487L19.6667 15.6487L14.6667 20.6487Z"
+                      fill="#08f"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="slide2">
+      <div class="swiper mySwiper1" id="my2">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div>
+              <a href="#"><img src="images/bottomslide1.png" alt="" /></a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <a href="#"><img src="images/bottomslide2.png" alt="" /></a>
+          </div>
+          <div class="swiper-slide">
+            <a href=""><img src="images/bottomslide3.jpg" alt="" /></a>
+          </div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <div class="btns">
+        <button class="stop"></button>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+      $(function () {
+        var swiper1 = new Swiper(".mySwiper1", {
+          direction: "horizontal",
+          speed: 1200,
+
+          autoplay: {
+            delay: 2500,
+          },
+          loop: true,
+          slidesPerView: 1,
+          spaceBetween: 0,
+          centeredSlides: true,
+          lazy: {
+            loadPrevNext: true,
+          },
+
+          pagination: {
+            el: ".swiper-pagination",
+            type: "fraction",
+
+            clickable: true,
+          },
+
+          navigation: {
+            prevEl: ".swiper-button-prev",
+            nextEl: ".swiper-button-next",
+          },
+
+          on: {
+            slideChange: function () {
+              $(".slide2>ul").removeClass("on");
+              $(".slide2>ul").eq(this.realIndex).addClass("on");
+            },
+          },
+        });
+      });
+    </script>
+    <section>
+      <div class="tip">
+        <h4>더욱 다양하고 쾌적하게 활용하는 꿀팁</h4>
+        <div class="gnb">
+          <div class="lnb1">
+            <a href="#">
+              <h3>광고 없이,<br />제휴 설치 없이.</h3>
+              <p>쾌적한 PC환경을 제공하는 <br />광고 없는 알툴즈 AD-ZERO</p>
+            </a>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="30"
+              viewBox="0 0 512 512"
+            >
+              <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+              <style>
+                svg {
+                  fill: #000000;
+                }
+              </style>
+              <path
+                d="M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM281 385c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l71-71L136 280c-13.3 0-24-10.7-24-24s10.7-24 24-24l182.1 0-71-71c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L393 239c9.4 9.4 9.4 24.6 0 33.9L281 385z"
+              />
+            </svg>
+          </div>
+          <div class="nav">
+            <div class="top">
+              <div class="lnb2">
+                <a href="#">
+                  <h3>알PDF, 인쇄도 더 다양하게</h3>
+                  <p>알PDF로 문서 인쇄하는 방법</p>
+                </a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="30"
+                  viewBox="0 0 512 512"
+                >
+                  <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <style>
+                    svg {
+                      fill: #000000;
+                    }
+                  </style>
+                  <path
+                    d="M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM281 385c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l71-71L136 280c-13.3 0-24-10.7-24-24s10.7-24 24-24l182.1 0-71-71c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L393 239c9.4 9.4 9.4 24.6 0 33.9L281 385z"
+                  />
+                </svg>
+              </div>
+              <div class="lnb3">
+                <a href="#">
+                  <h3>알캡처, 스크롤 캡처 활용</h3>
+                  <p>웹사이트 페이지 전체를<br />한 번에 캡처하고 싶어요.</p>
+                </a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="30"
+                  viewBox="0 0 512 512"
+                >
+                  <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <style>
+                    svg {
+                      fill: #000000;
+                    }
+                  </style>
+                  <path
+                    d="M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM281 385c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l71-71L136 280c-13.3 0-24-10.7-24-24s10.7-24 24-24l182.1 0-71-71c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L393 239c9.4 9.4 9.4 24.6 0 33.9L281 385z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="bot">
+              <div class="lnb4">
+                <a href="#">
+                  <h3>알집, 압축파일 이름이 깨질 때</h3>
+                  <p>
+                    알집 모바일 유니코드 설정으로 <br />깨짐없이 압축 해제하는
+                    방법
+                  </p>
+                </a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="30"
+                  viewBox="0 0 512 512"
+                >
+                  <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <style>
+                    svg {
+                      fill: #000000;
+                    }
+                  </style>
+                  <path
+                    d="M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM281 385c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l71-71L136 280c-13.3 0-24-10.7-24-24s10.7-24 24-24l182.1 0-71-71c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L393 239c9.4 9.4 9.4 24.6 0 33.9L281 385z"
+                  />
+                </svg>
+              </div>
+              <div class="lnb5">
+                <a href="#">
+                  <h3>알씨, 급할 때는 집에서!</h3>
+                  <p>알씨를 활용하여<br />셀프로 증명사진 만들기</p>
+                </a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="30"
+                  viewBox="0 0 512 512"
+                >
+                  <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <style>
+                    svg {
+                      fill: #000000;
+                    }
+                  </style>
+                  <path
+                    d="M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM281 385c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l71-71L136 280c-13.3 0-24-10.7-24-24s10.7-24 24-24l182.1 0-71-71c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L393 239c9.4 9.4 9.4 24.6 0 33.9L281 385z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <article>
+      <div class="etc">
+        <div class="gnb">
+          <div class="lnb">
+            <div class="snb1">
+              <ul>
+                <li>
+                  <a href="#"
+                    ><img src="images/icon_blog.d455c7a6.png" alt="" />
+                    <li>
+                      <h4>더 많은 알툴즈 꿀팁은</h4>
+                    </li>
+                    <li>
+                      <p>알툴즈 블로그 바로가기</p>
+                    </li>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="snb2">
+              <ul>
+                <li>
+                  <a href="#"
+                    ><img src="images/icon_estsoft.1d5ce93a.png" alt="" />
+                    <li>
+                      <h4>가장 빠른 인공지능 소식은</h4>
+                    </li>
+                    <li>
+                      <p>이스트소프트 바로가기</p>
+                    </li>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="snb3">
+              <ul>
+                <li>
+                  <a href="#"
+                    ><img src="images/icon_estsecurity.9280af33.png" alt="" />
+                    <li>
+                      <h4>최신 보안 소식은</h4>
+                    </li>
+                    <li>
+                      <p>이스트시큐리티 바로가기</p>
+                    </li>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <footer>
+      <div class="info">
+        <ul class="top">
+          <li>회사소개</li>
+          <li>이용약관</li>
+          <li>개인정보처리방침</li>
+          <li>소프트웨어 사용권 계약서</li>
+          <li>제휴문의</li>
+          <li>이벤트</li>
+          <span>Family Site</span>
+        </ul>
+        <ul class="bottom">
+          <li>
+            <a href="#"></a>
+          </li>
+          <li>
+            <a href="#"></a>
+          </li>
+          <li>
+            <a href="#"></a>
+          </li>
+          <li>
+            <a href="#"></a>
+          </li>
+        </ul>
+      </div>
+      <div class="country">
+        <ul>
+          <li>
+            (주)이스트소프트 서울시 서초구 반포대로 3 이스트빌딩 (우)06711
+          </li>
+          <li>
+            대표이사 : 정상원&nbsp; 사업자등록번호 : 229-81-03214&nbsp;
+            통신판매업신고번호 : 2011-서울서초-1962&nbsp; TEL. 1544-8209&nbsp;
+            FAX. 02-882-1155&nbsp; E-mail.
+            <a href="mailto:altools@estsoft.com">altools@estsoft.com</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

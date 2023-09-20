@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <link rel="stylesheet" href="css/swiper-bundle.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      #mySwiper1 .swiper-pagination-bullet {
+        position: relative;
+        width: 50px;
+        height: 20px;
+        text-align: center;
+        line-height: 20px;
+        font-size: 12px;
+        color: #000;
+        opacity: 1;
+        margin: 0 !important;
+        background: transparent;
+      }
+      #mySwiper1 .swiper-pagination-bullet::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 5px;
+        height: 0;
+        background: transparent;
+        transition: 1s;
+      }
+      #mySwiper1 .swiper-pagination::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 5px;
+        height: 80px;
+        background: rgba(0, 0, 0, 0.2);
+      }
+      #mySwiper1 .swiper-pagination-bullet-active::before {
+        background: #f00;
+        height: 20px;
+      }
+      #mySwiper1 .swiper-pagination-bullet-active {
+        opacity: 1;
+        color: #f00;
+      }
+      footer {
+        height: 1000px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Swiper -->
+    <div class="swiper mySwiper1" id="mySwiper1">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide slide1">Slide 1</div>
+        <div class="swiper-slide slide2">Slide 2</div>
+        <div class="swiper-slide slide3">Slide 3</div>
+        <div class="swiper-slide slide4">Slide 4</div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <footer>페이지하단입니다.</footer>
+    <!-- Swiper JS -->
+    <script src="js/swiper-bundle.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var mySwiper = new Swiper("#mySwiper1", {
+          direction: "vertical",
+          mousewheel: true,
+          on: {
+            slideChangeTransitionEnd: function () {
+              var activeIndex = this.activeIndex;
+              var totalSlides = this.slides.length;
+
+              if (activeIndex === totalSlides - 1) {
+                // If it's the last slide, listen for mousewheel event to scroll to the footer
+                window.addEventListener("wheel", scrollFooter);
+              } else {
+                // Remove the mousewheel event listener when not on the last slide
+                window.removeEventListener("wheel", scrollFooter);
+              }
+            },
+          },
+        });
+
+        function scrollFooter(e) {
+          if (e.deltaY > 0) {
+            // Scrolling down
+            window.scrollTo(0, document.body.scrollHeight);
+            e.preventDefault(); // Prevent default scroll behavior
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

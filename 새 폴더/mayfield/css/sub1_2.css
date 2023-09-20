@@ -1,0 +1,401 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+@font-face {
+  font-family: Pretendard;
+  src: url(../webfonts/Pretendard-Regular.otf) format("opentype"); /* otf는 무조건 "opentype"으로 포맷 적어줘야함!!! otf아님! */
+}
+@font-face {
+  font-family: Agatho;
+  src: url(../webfonts/Agatho_Regular.otf) format("opentype");
+}
+@font-face {
+  font-family: NotoSerif;
+  src: url(../webfonts/NotoSerifKR-Regular.otf) format("opentype");
+}
+body {
+  font-family: Pretendard;
+  overflow-x: hidden;
+  /* overflow: hidden; */
+}
+
+/* header */
+header {
+  background: #fff;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.03);
+}
+header ul li a {
+  color: #222;
+}
+header .util_right ul li:nth-child(2) a {
+  color: #014d33;
+}
+
+/* menu */
+header ul #menu a span {
+  background: #000;
+}
+header ul #menu a .bar2_2 {
+  transform: scaleX(0.8);
+  transform-origin: right;
+  transition: 0.5s;
+}
+header ul #menu:hover a .bar2_2 {
+  transform: scaleX(1);
+}
+/* 서브 컨텐츠 */
+/* [공통] 타이틀 */
+.title_eng {
+  font-family: Agatho;
+  font-size: 48px;
+  color: #242424;
+}
+.i {
+  font-family: "Baskervville", serif !important;
+  font-size: 45px;
+}
+.title_kor {
+  font-family: NotoSerif;
+  color: #242424;
+  font-weight: 600;
+  font-size: 24px;
+}
+.des {
+  font-family: NotoSerif;
+  color: #242424;
+  font-size: 18px;
+  letter-spacing: -1px;
+  line-height: 35px;
+}
+
+#fullpage {
+  width: 100%;
+  height: 100%;
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+/* 1번째 섹션 (세로방향) 자연이 주는 영감에서 시작된 도심 속 호사 */
+.section1 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+}
+.section1 .forest {
+  position: absolute;
+  top: 30%;
+}
+.section1 .forest p {
+  position: absolute;
+}
+.section1 .forest p:first-child {
+  left: -1640px;
+}
+.section1 .forest p:nth-child(2) {
+  left: 960px;
+  top: 60px;
+}
+.section1 .text {
+  position: absolute;
+  top: 33%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.section1 .text .des {
+  font-size: 21px;
+  font-weight: 200;
+}
+.section1 .text .title_eng {
+  font-size: 52px;
+  margin-top: 30px;
+}
+.section1 .hotel {
+  position: absolute;
+  bottom: -45%;
+}
+
+/* circle */
+.circle {
+  position: fixed;
+  top: 150px;
+  left: 70px;
+  z-index: 1;
+}
+
+/* 2번째 섹션(가로방향~) A Garden */
+.horizon {
+  display: flex;
+}
+.section2 {
+  position: relative;
+  min-width: 100vw;
+  height: 100vh;
+}
+.section2 .text {
+  position: absolute;
+  top: 200px;
+  left: 200px;
+  z-index: 1;
+}
+.section2 .text .title_eng span {
+  font-size: 33px;
+}
+.section2 .map {
+  position: absolute;
+  left: 20%;
+  bottom: -15px;
+}
+
+/* 3번째 섹션(~가로방향~) 우리 꽃이 있는 언덕마루에서 */
+.section3 {
+  position: relative;
+  min-width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+.section3 .text1 {
+  position: absolute;
+  top: 50%;
+  left: 39%;
+  width: 50vw;
+  transform: translate(-50%, -50%);
+}
+.section3 .text1 .title_kor {
+  font-size: 27px;
+  margin-bottom: 30px;
+}
+.section3 .text1 .des {
+  font-size: 20px;
+}
+.section3 .pic {
+  position: absolute;
+  right: 0;
+  width: 50vw;
+  height: 100vh;
+  background: url(../images/story_a1.png) 54% top;
+}
+
+/* 3_2번째 섹션(~가로방향~) Tower of Pleasure ~ */
+.section3_2 .text2 {
+  position: absolute;
+  left: 25%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.section3_2 .text2 .title_eng {
+  color: #fff;
+}
+.section3_2 .pic {
+  width: 100vw;
+  background: url(../images/img_01.png) right 50%;
+}
+.section3_2 .text3 {
+  width: 50vw;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.section3_2 .text3 .title_kor {
+  color: #fff;
+  margin-bottom: 30px;
+}
+.section3_2 .text3 .des {
+  color: #fff;
+}
+
+/* 4번째 섹션(~가로방향~) Farm to Table */
+.section4 {
+  position: relative;
+  min-width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+.section4 .text {
+  width: 50vw;
+  position: absolute;
+  left: 17%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.section4 .text .title_eng {
+  color: #fff;
+}
+.section4 .pic {
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url(../images/img_02.png) left 50%;
+  transform: translate(0, 0);
+}
+.section4 .text1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 50vw;
+  transform: translateY(-50%);
+}
+.section4 .text1 .title_kor {
+  color: #fff;
+  margin-bottom: 30px;
+}
+.section4 .text1 .des {
+  color: #fff;
+}
+.section4 .text2 {
+  position: absolute;
+  left: 90px;
+  bottom: 50px;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 400;
+}
+.section4 .text2 p img {
+  width: 20px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+/* 5번째 섹션(~가로방향~) Heritage (텍스트+이미지 2개임!!!) */
+.section5 {
+  position: relative;
+  min-width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+.section5 .text {
+  width: 50vw;
+  position: absolute;
+  left: 0%;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+.section5 .text .title_eng {
+  margin-bottom: 30px;
+}
+.section5 .text .des {
+  font-size: 29px;
+}
+.section5 .pic {
+  position: absolute;
+  right: 0%;
+  top: 50%;
+  width: 50vw;
+  height: 100vh;
+  transform: translateY(-50%);
+  background: url(../images/sl_img_01.png) center center;
+}
+/* 겹쳐져있는 다음 내용 (인간문화재 ~) */
+.section5 .text1 {
+  width: 50vw;
+  position: absolute;
+  left: 12%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+}
+.section5 .pic2 {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 50vw;
+  height: 100vh;
+  transform: translateY(-50%);
+  background: url(../images/sl_img_02.png) 47% center;
+  opacity: 0;
+}
+/* 5_2번째 섹션(~가로방향~) 인간문화재 ~ */
+.section5_2 .text,
+.section5_2 .pic {
+  opacity: 0;
+}
+.section5_2 .text1,
+.section5_2 .pic2 {
+  opacity: 1;
+}
+
+/* 6번째 섹션(~가로방향~) Art Collection */
+.section6 {
+  position: relative;
+  min-width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+.section6 .text {
+  width: 50vw;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+.section6 .text1 {
+  position: absolute;
+  left: 55%;
+  top: 50%;
+  width: 50vw;
+  transform: translateY(-50%);
+}
+.section6 .text1 .title_kor {
+  margin-bottom: 30px;
+}
+/* .section6 .pic {
+  position: absolute;
+  left: 135%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.section6 .pic p img {
+  height: 70vh;
+}
+.section6 .con_logo {
+  position: absolute;
+  left: 320%;
+  top: 50%;
+  width: 25vw;
+  transform: translate(-50%, -50%);
+} */
+
+/* 6_2번째 섹션(~가로방향~) art 이미지 ~ */
+.section6_2 .pic {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.section6_2 .pic p img {
+  height: 70vh;
+}
+
+/* 6_3번째 섹션(~가로방향) logo 이미지  */
+.section6_3 .con_logo {
+  position: absolute;
+  left: 55%;
+  top: 50%;
+  width: 25vw;
+  transform: translate(-50%, -50%);
+}

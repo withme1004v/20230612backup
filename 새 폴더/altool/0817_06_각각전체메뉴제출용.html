@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+      body {
+        font-family: AppleSDGothicNeoR, Arial, sans-serif;
+      }
+      header {
+        width: 1280px;
+        height: 80px;
+
+        margin: 0 auto;
+      }
+      header #head {
+        position: relative;
+        margin-top: 30px;
+      }
+      header #head .logo {
+        position: absolute;
+        top: 3px;
+        left: -250px;
+      }
+      header #head .depth1 {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        width: 50%;
+        transform: translateX(50%);
+      }
+      header #head .depth1 li {
+        position: relative;
+      }
+      header #head .depth1 > li > a {
+        font-size: 16px;
+        font-weight: bold;
+      }
+      header #head .depth1 > li:first-child > a:after,
+      header #head .depth1 > li:last-child > a:after {
+        position: absolute;
+        top: 6px;
+        right: 2px;
+        content: "";
+        background-image: url(images/blt_drop.png);
+        background-size: 10px 10px;
+        width: 10px;
+        height: 10px;
+      }
+      header #head .depth1 > li:last-child ul {
+        display: none;
+      }
+      header #head .depth1 .left {
+        margin-left: -25px;
+      }
+      header #head .depth1 .left .tool {
+        display: flex;
+        flex-direction: column;
+      }
+      header #head .depth1 .left .tool .sub1,
+      header #head .depth1 .left .tool .sub2,
+      header #head .depth1 .left .tool .sub3,
+      header #head .depth1 .left .sercurity .sub4 {
+        margin-top: 20px;
+      }
+      header #head .depth1 .left .tool .sub1 ul,
+      header #head .depth1 .left .tool .sub2 ul,
+      header #head .depth1 .left .tool .sub3 ul,
+      header #head .depth1 .left .sercurity .sub4 ul {
+        display: flex;
+      }
+      header #head .depth1 .left .tool .sub1 .txt,
+      header #head .depth1 .left .tool .sub2 .txt,
+      header #head .depth1 .left .tool .sub3 .txt,
+      header #head .depth1 .left .sercurity .sub4 .txt {
+        display: flex;
+        flex-direction: column;
+      }
+      header #head .depth1 .left .tool .sub1 .txt li p:first-child,
+      header #head .depth1 .left .tool .sub2 .txt li p:first-child,
+      header #head .depth1 .left .tool .sub3 .txt li p:first-child,
+      header #head .depth1 .left .sercurity .sub4 .txt li p:first-child {
+        display: flex;
+        flex-direction: left;
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      header #head .depth1 .left .tool .sub1 .txt li p:last-child,
+      header #head .depth1 .left .tool .sub2 .txt li p:last-child,
+      header #head .depth1 .left .tool .sub3 .txt li p:last-child,
+      header #head .depth1 .left .sercurity .sub4 .txt li p:last-child {
+        font-size: 12px;
+        color: #8b95a1;
+      }
+      header #head .depth1 .depth2 .top .left .tool .sub1 ul li img,
+      header #head .depth1 .depth2 .top .left .tool .sub2 ul li img,
+      header #head .depth1 .depth2 .top .left .tool .sub3 ul li img,
+      header #head .depth1 .depth2 .top .left .tool .sercurity .sub4 ul li img {
+        width: 40px;
+        height: 40px;
+        margin-left: 30px;
+        margin-right: 10px;
+      }
+      header #head .depth1 .center .contents {
+        display: flex;
+        flex-direction: column;
+      }
+      header #head .depth1 .center .contents .sub5,
+      header #head .depth1 .center .contents .sub6,
+      header #head .depth1 .center .contents .sub7,
+      header #head .depth1 .center .contents .sub8 {
+        margin-top: 20px;
+      }
+      header #head .depth1 .center .contents .sub5 ul,
+      header #head .depth1 .center .contents .sub6 ul,
+      header #head .depth1 .center .contents .sub7 ul,
+      header #head .depth1 .center .contents .sub8 ul {
+        display: flex;
+      }
+      header #head .depth1 .center .contents .sub5 .txt,
+      header #head .depth1 .center .contents .sub6 .txt,
+      header #head .depth1 .center .contents .sub7 .txt,
+      header #head .depth1 .center .contents .sub8 .txt {
+        display: flex;
+        flex-direction: column;
+      }
+      header #head .depth1 .center .contents .sub5 .txt li p:first-child,
+      header #head .depth1 .center .contents .sub6 .txt li p:first-child,
+      header #head .depth1 .center .contents .sub7 .txt li p:first-child,
+      header #head .depth1 .center .contents .sub8 .txt li p:first-child {
+        display: flex;
+        flex-direction: left;
+        margin-bottom: 5px;
+        font-size: 14px;
+        font-weight: bold;
+      }
+      header #head .depth1 .center .contents .sub5 .txt li p:last-child,
+      header #head .depth1 .center .contents .sub6 .txt li p:last-child,
+      header #head .depth1 .center .contents .sub7 .txt li p:last-child,
+      header #head .depth1 .center .contents .sub8 .txt li p:last-child {
+        font-size: 12px;
+        color: #8b95a1;
+      }
+      header #head .depth1 .depth2 .center .contents .sub5 ul li img,
+      header #head .depth1 .depth2 .center .contents .sub6 ul li img,
+      header #head .depth1 .depth2 .center .contents .sub7 ul li img,
+      header #head .depth1 .depth2 .center .contents .sub8 ul li img {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+      }
+      header #head .depth1 .center .contents .sub8 ul li img {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+      }
+      header #head .depth1 .right .mobile {
+        display: flex;
+        flex-direction: column;
+      }
+      header #head .depth1 .right .mobile .sub9,
+      header #head .depth1 .right .mobile .sub10,
+      header #head .depth1 .right .mobile .sub11,
+      header #head .depth1 .right .mobile .sub12 {
+        margin-top: 20px;
+      }
+      header #head .depth1 .right .mobile .sub9 ul,
+      header #head .depth1 .right .mobile .sub10 ul,
+      header #head .depth1 .right .mobile .sub11 ul,
+      header #head .depth1 .right .mobile .sub12 ul {
+        display: flex;
+      }
+      header #head .depth1 .right .mobile .sub9 .txt,
+      header #head .depth1 .right .mobile .sub10 .txt,
+      header #head .depth1 .right .mobile .sub11 .txt,
+      header #head .depth1 .right .mobile .sub12 .txt {
+        display: flex;
+        flex-direction: column;
+      }
+      header #head .depth1 .right .mobile .sub9 .txt li p:first-child,
+      header #head .depth1 .right .mobile .sub10 .txt li p:first-child,
+      header #head .depth1 .right .mobile .sub11 .txt li p:first-child,
+      header #head .depth1 .right .mobile .sub12 .txt li p:first-child {
+        display: flex;
+        flex-direction: left;
+        margin-bottom: 5px;
+        font-size: 14px;
+        font-weight: bold;
+      }
+      header #head .depth1 .right .mobile .sub9 .txt li p:last-child,
+      header #head .depth1 .right .mobile .sub10 .txt li p:last-child,
+      header #head .depth1 .right .mobile .sub11 .txt li p:last-child,
+      header #head .depth1 .right .mobile .sub12 .txt li p:last-child {
+        font-size: 12px;
+        color: #8b95a1;
+      }
+      header #head .depth1 .depth2 .right .mobile .sub9 ul li img,
+      header #head .depth1 .depth2 .right .mobile .sub10 ul li img,
+      header #head .depth1 .depth2 .right .mobile .sub11 ul li img,
+      header #head .depth1 .depth2 .right .mobile .sub12 ul li img {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+        border-radius: 10px;
+      }
+      header #head .depth1 .top {
+        display: flex;
+        justify-content: space-between;
+      }
+      /*200줄 left,center,right 위치 조절*/
+      header #head .depth1 .bot {
+        margin-top: 60px;
+      }
+
+      header #head .depth1 > li:first-child .depth2 {
+        display: none;
+        position: fixed;
+      }
+      header #head .depth1 > li:first-child .depth2 .sub1:hover,
+      header #head .depth1 > li:first-child .depth2 .sub2:hover,
+      header #head .depth1 > li:first-child .depth2 .sub3:hover,
+      header #head .depth1 > li:first-child .depth2 .sub4:hover,
+      header #head .depth1 > li:first-child .depth2 .sub5:hover,
+      header #head .depth1 > li:first-child .depth2 .sub6:hover,
+      header #head .depth1 > li:first-child .depth2 .sub7:hover,
+      header #head .depth1 > li:first-child .depth2 .sub8:hover,
+      header #head .depth1 > li:first-child .depth2 .sub9:hover,
+      header #head .depth1 > li:first-child .depth2 .sub10:hover,
+      header #head .depth1 > li:first-child .depth2 .sub11:hover,
+      header #head .depth1 > li:first-child .depth2 .sub12:hover {
+        background-color: rgb(221, 220, 220);
+        border-radius: 5px;
+      }
+
+      header #head .depth1 > li:first-child:hover .depth2 {
+        background-color: hsla(0, 0%, 100%, 0.98);
+      }
+      header #head .depth1 > li:first-child .depth2 .tool h5,
+      header #head .depth1 > li:first-child .depth2 .tool .sercurity h5 {
+        margin-left: 30px;
+      }
+      header #head .depth1 > li:first-child .depth2 h5 {
+        display: flex;
+        font-size: 12px;
+        color: #8b95a1;
+      }
+      header #head .depth1 > li:first-child .depth2 .sercurity {
+        position: absolute;
+        top: 250px;
+      }
+      /* header #head .depth1 > li:first-child .depth2 .sercurity h5 {
+        position: absolute;
+        top: 30px;
+      } */
+      header #head .depth1 > li > a {
+        padding: 12px 16px;
+        border-radius: 5px;
+      }
+      header #head .depth1 > li a:hover {
+        background: #ccc;
+      }
+      header #head .depth1 > li:hover .depth2 {
+        position: absolute;
+        display: block;
+        height: 345px;
+        margin-top: 20px;
+        transition: 1s;
+      }
+      header #head .depth1 > li:first-child .depth2 {
+        padding: 20px;
+      }
+      header #head .depth1 > li:last-child:hover .depth2 {
+        display: block;
+        height: 80px;
+        background-color: hsla(0, 0%, 100%, 0.98);
+      }
+      header #head .depth1 > li:last-child .depth2 li {
+        margin-bottom: 20px;
+      }
+      header #head .depth1 > li:last-child .depth2 li a {
+        font-size: 14px;
+      }
+      header #head .depth1 > li:last-child .depth2 li:hover {
+        background-color: rgb(221, 220, 220);
+      }
+      header #head .head_r {
+        position: relative;
+      }
+      header #head .head_r ul {
+        position: absolute;
+        top: -25px;
+        right: -250px;
+        display: flex;
+        justify-content: right;
+      }
+      header #head .head_r ul li:first-child a img {
+        width: 150px;
+      }
+      header #head .head_r ul li:last-child {
+        margin-top: 5px;
+        margin-left: 25px;
+      }
+      header #head .head_r ul li:last-child a {
+        border: 1px solid #000;
+        border-radius: 8px;
+        padding: 10px 12px;
+        background-color: #000;
+        color: #fff;
+        font-size: 13px;
+      }
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+      .swiper .swiper-wrapper {
+        transition-timing-function: initial;
+      }
+      .swiper .swiper-wrapper .swiper-slide {
+        position: relative;
+      }
+      .swiper .swiper-wrapper .swiper-slide img {
+        width: 90%;
+        height: 500px;
+        border-radius: 25px;
+        transform: translateX(100px);
+      }
+      .swiper .swiper-wrapper .swiper-slide ul li:first-child h2 {
+        position: absolute;
+        top: 90px;
+        left: 250px;
+        font-size: 48px;
+      }
+      .swiper .swiper-wrapper .swiper-slide ul li:nth-child(2) p {
+        position: absolute;
+        top: 250px;
+        left: 250px;
+        font-size: 16px;
+      }
+      .swiper .swiper-wrapper .swiper-slide ul li:last-child a {
+        position: absolute;
+        top: 320px;
+        left: 250px;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        padding: 20px 30px;
+        background-color: #fff;
+        font-weight: bold;
+      }
+      .swiper .swiper-button-next,
+      .swiper .swiper-button-prev {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div id="head">
+        <div class="logo">
+          <svg
+            width="73"
+            height="17"
+            viewBox="0 0 73 17"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M13.3509 16.5298H10.9523C10.7486 16.5298 10.5676 16.3556 10.5223 16.161L9.48143 12.0335H4.27682L3.2359 16.161C3.19065 16.3556 3.00962 16.5298 2.80596 16.5298H0.407317C0.18103 16.5298 0 16.3782 0 16.161C0 16.1383 0.0226287 16.0954 0.0226287 16.0524L3.73374 2.43215C4.27682 0.411404 5.90609 0.216797 6.87912 0.216797C7.85216 0.216797 9.48142 0.411404 10.0245 2.43215L13.7356 16.0524C13.7356 16.0954 13.7582 16.1383 13.7582 16.161C13.7582 16.3782 13.5772 16.5298 13.3509 16.5298ZM7.24118 3.10648C7.1733 2.84625 7.10541 2.758 6.87912 2.758C6.65284 2.758 6.58495 2.84399 6.51707 3.10648L4.8878 9.55792H8.87045L7.24118 3.10648Z"
+              fill="#1a1a1a"
+            ></path>
+            <path
+              d="M24.2809 16.3991C23.602 16.5508 21.6333 16.7024 20.434 16.7024C17.4923 16.7024 15.2068 15.942 15.2068 12.249V0.826073C15.2068 0.586208 15.4104 0.391602 15.6594 0.391602H17.8996C18.1485 0.391602 18.3522 0.586208 18.3522 0.826073V12.2513C18.3522 13.686 18.8048 14.1204 20.1172 14.1204H24.2809C24.5298 14.1204 24.7335 14.315 24.7335 14.5549V15.9443C24.7335 16.2475 24.6203 16.3358 24.2809 16.3991Z"
+              fill="#1a1a1a"
+            ></path>
+            <path
+              d="M34.5541 2.91018H30.5941V16.0959C30.5941 16.3358 30.3905 16.5304 30.1415 16.5304H27.9013C27.6524 16.5304 27.4487 16.3358 27.4487 16.0959V2.91018H23.4887C23.2398 2.91018 23.0361 2.75856 23.0361 2.5187V0.803444C23.0361 0.56358 23.2398 0.391602 23.4887 0.391602H34.5541C34.8031 0.391602 35.0067 0.565843 35.0067 0.803444V2.5187C35.0067 2.75856 34.8031 2.91018 34.5541 2.91018Z"
+              fill="#1a1a1a"
+            ></path>
+            <path
+              d="M39.3514 16.7042C35.7987 16.7042 33.9431 14.4006 33.9431 11.296V9.53546C33.9431 6.42854 35.7987 4.1272 39.3514 4.1272C42.9041 4.1272 44.7596 6.4308 44.7596 9.53546V11.296C44.7596 14.4006 42.9041 16.7042 39.3514 16.7042ZM41.7726 9.53546C41.7726 7.75458 40.9354 6.60278 39.3514 6.60278C37.7674 6.60278 36.9301 7.75458 36.9301 9.53546V11.296C36.9301 13.0768 37.7674 14.2286 39.3514 14.2286C40.9354 14.2286 41.7726 13.0768 41.7726 11.296V9.53546Z"
+              fill="#1a1a1a"
+            ></path>
+            <path
+              d="M51.6612 16.7042C48.1085 16.7042 46.2529 14.4006 46.2529 11.296V9.53546C46.2529 6.42854 48.1085 4.1272 51.6612 4.1272C55.2139 4.1272 57.0694 6.4308 57.0694 9.53546V11.296C57.0694 14.4006 55.2139 16.7042 51.6612 16.7042ZM54.0825 9.53546C54.0825 7.75458 53.2452 6.60278 51.6612 6.60278C50.0772 6.60278 49.2399 7.75458 49.2399 9.53546V11.296C49.2399 13.0768 50.0772 14.2286 51.6612 14.2286C53.2452 14.2286 54.0825 13.0768 54.0825 11.296V9.53546Z"
+              fill="#1a1a1a"
+            ></path>
+            <path
+              d="M61.6181 16.5303H59.5136C59.2647 16.5303 59.061 16.313 59.061 16.0732V0.434471C59.061 0.194607 59.2647 0 59.5136 0H61.6181C61.867 0 62.048 0.194607 62.048 0.434471V16.0754C62.048 16.313 61.867 16.5303 61.6181 16.5303Z"
+              fill="#1a1a1a"
+            ></path>
+            <path
+              d="M68.5646 16.7043C67.6821 16.7043 65.7812 16.5957 64.514 16.2698C64.2425 16.2042 64.0841 16.03 64.0841 15.7697V14.4663C64.0841 14.2921 64.2425 14.1178 64.4688 14.1178C64.514 14.1178 64.5367 14.1178 64.5593 14.1178C65.6455 14.2491 67.6821 14.3577 68.3609 14.3577C69.7639 14.3577 69.9676 13.9006 69.9676 13.3145C69.9676 12.9027 69.696 12.6402 68.9719 12.2057L65.8718 10.3818C64.763 9.73013 63.9709 8.64395 63.9709 7.38353C63.9709 5.21118 65.3966 4.125 68.2704 4.125C70.1033 4.125 71.1442 4.31961 72.2983 4.55947C72.5698 4.62509 72.7056 4.79934 72.7056 5.05957V6.31998C72.7056 6.58021 72.5699 6.73183 72.3436 6.73183C72.2983 6.73183 72.2757 6.73183 72.253 6.73183C71.6194 6.64584 69.8091 6.4716 68.5193 6.4716C67.4331 6.4716 66.9579 6.71146 66.9579 7.38353C66.9579 7.73201 67.2974 7.94925 67.8631 8.2751L70.8274 10.013C72.7283 11.1218 72.9998 12.208 72.9998 13.3145C72.9998 15.2063 71.5289 16.7043 68.5646 16.7043Z"
+              fill="#1a1a1a"
+            ></path>
+          </svg>
+        </div>
+        <ul class="depth1">
+          <li>
+            <a href="#">알툴즈 다운로드</a>
+            <div class="depth2">
+              <div class="top">
+                <div class="left">
+                  <div class="tool">
+                    <h5>Tool</h5>
+                    <div class="sub1">
+                      <ul>
+                        <li><img src="images/alzip.png" alt="" /></li>
+                        <ul class="txt">
+                          <li>
+                            <p>알집</p>
+                            <p>전국민 압축프로그램</p>
+                          </li>
+                        </ul>
+                      </ul>
+                    </div>
+                    <div class="sub2">
+                      <ul>
+                        <li><img src="images/alcap.png" alt="" /></li>
+                        <ul class="txt">
+                          <li>
+                            <p>알캡쳐</p>
+                            <p>쉽고 빠른 화면 캡쳐</p>
+                          </li>
+                        </ul>
+                      </ul>
+                    </div>
+                    <div class="sub3">
+                      <ul>
+                        <li><img src="images/aldrive.png" alt="" /></li>
+                        <ul class="txt">
+                          <li>
+                            <p>알드라이브</p>
+                            <p>편리한 파일 전송 클라이언트</p>
+                          </li>
+                        </ul>
+                      </ul>
+                    </div>
+                    <div class="sercurity">
+                      <h5>Sercurity</h5>
+                      <div class="sub4">
+                        <ul>
+                          <li><img src="images/alyak.png" alt="" /></li>
+                          <ul class="txt">
+                            <li>
+                              <p>알약</p>
+                              <p>전국민 백신 프로그램</p>
+                            </li>
+                          </ul>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="center">
+                  <div class="contents">
+                    <h5>Contents</h5>
+                    <div class="sub5">
+                      <ul>
+                        <li><img src="images/alsee.png" alt="" /></li>
+                        <ul class="txt">
+                          <li>
+                            <p>알씨</p>
+                            <p>이미지 뷰어/사진 편집 프로그램</p>
+                          </li>
+                        </ul>
+                      </ul>
+                    </div>
+                    <div class="sub6">
+                      <ul>
+                        <li><img src="images/alpdf.png" alt="" /></li>
+                        <ul class="txt">
+                          <li>
+                            <p>알PDF</p>
+                            <p>PDF 뷰어/리더, PDF 변환/편집</p>
+                          </li>
+                        </ul>
+                      </ul>
+                    </div>
+                    <div class="sub7">
+                      <ul>
+                        <li><img src="images/alsong.png" alt="" /></li>
+                        <ul class="txt">
+                          <li>
+                            <p>알송</p>
+                            <p>온라인 음악가사 플레이어</p>
+                          </li>
+                        </ul>
+                      </ul>
+                    </div>
+                    <div class="sub8">
+                      <ul>
+                        <li><img src="images/ale.png" alt="" /></li>
+                        <ul class="txt">
+                          <li>
+                            <p>앨런 Beta</p>
+                            <p>언제 어디서나 가장 가까운 AI</p>
+                          </li>
+                        </ul>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="right">
+                  <div class="mobile">
+                    <h5>Mobile</h5>
+                    <div class="sub9">
+                      <ul>
+                        <li><img src="images/alzm.png" alt="" /></li>
+                        <ul class="txt">
+                          <li>
+                            <p>알집 모바일</p>
+                            <p>압축 지원 파일 탐색 관리자</p>
+                          </li>
+                        </ul>
+                      </ul>
+                    </div>
+                    <div class="sub10">
+                      <ul>
+                        <li><img src="images/alsm.png" alt="" /></li>
+                        <ul class="txt">
+                          <li>
+                            <p>알송 모바일</p>
+                            <p>음악과 가사를 동시에</p>
+                          </li>
+                        </ul>
+                      </ul>
+                    </div>
+                    <div class="sub11">
+                      <ul>
+                        <li><img src="images/aym.png" alt="" /></li>
+                        <ul class="txt">
+                          <li>
+                            <p>알약M</p>
+                            <p>스마트폰의 모든 처방</p>
+                          </li>
+                        </ul>
+                      </ul>
+                    </div>
+                    <div class="sub12">
+                      <ul>
+                        <li><img src="images/picinc.png" alt="" /></li>
+                        <ul class="txt">
+                          <li>
+                            <p>피크닉</p>
+                            <p>맑은 하늘 필터 카메라</p>
+                          </li>
+                        </ul>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bot">
+                <a href="#"><img src="images/bot.png" alt="" /></a>
+              </div>
+            </div>
+          </li>
+          <li><a href="#">알툴즈 AD-ZERO</a></li>
+          <li><a href="#">비즈니스 구매</a></li>
+          <li>
+            <a href="#">고객센터</a>
+            <ul class="depth2">
+              <li><a href="#">자주하는 질문</a></li>
+              <li><a href="#">1:1 문의하기</a></li>
+              <li><a href="#">공지사항</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="head_r">
+          <ul>
+            <li>
+              <a href="#"><img src="images/aplus.png" alt="" /></a>
+            </li>
+            <li><a href="#">로그인</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <div>
+            <img src="images/img_mainSlide_1.98cc2793.png" alt="" />
+            <ul>
+              <li>
+                <h2>
+                  알툴즈를 더 쉽게.<br />
+                  내 PC전용 매니저
+                </h2>
+              </li>
+              <li>
+                <p>
+                  다양한 알툴즈의 최신 꿀기능을 놓치지 않도록<br />
+                  알매니저가 알아서 관리할게요.
+                </p>
+              </li>
+              <li><a href="#">알매니저 자세히보기 ></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="images/img_mainSlide_2.29a39dd2.png" alt="" />
+          <ul>
+            <li>
+              <h2>
+                다양한 캡처는 기본,<br />
+                간편한 편집까지
+              </h2>
+            </li>
+            <li>
+              <p>
+                크롭,형광펜,모자이크 등 신규 편집 기능이 추가된<br />
+                알캡처 3.0을 지금 바로 사용해보세요.
+              </p>
+            </li>
+            <li><a href="#">알캡처 자세히 보기 > ></a></li>
+          </ul>
+        </div>
+        <div class="swiper-slide">
+          <img src="images/img_mainSlide_3.fe8eba3d.png" alt="" />
+          <ul>
+            <li>
+              <h2>
+                자유로운 편집과<br />
+                문서 포맷 변환
+              </h2>
+            </li>
+            <li>
+              <p>
+                제한이 많던 PDF 문서,<br />
+                원하는 문서 형식 변환과 편집을 손쉽게!
+              </p>
+            </li>
+            <li><a href="#">알PDF 자세히 보기 ></a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need scrollbar -->
+      <div class="swiper-scrollbar"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+      new Swiper(".swiper", {
+        direction: "horizontal", // 슬라이드 진행 방향, 기본값 horizontal(가로)
+
+        // autoplay: true 도 가능하지만 객체 데이터로 할당하면 추가적인 옵션 설정 가능
+
+        autoplay: {
+          // 자동재생 여부
+          delay: 4000, // 시작시간 설정
+        },
+        loop: true, // 반복재생 여부
+        slidesPerView: 1, // 한번에 보여줄 슬라이드 개수
+        spaceBetween: 2, // 슬라이드 사이 여백
+        centeredSlides: true, // 1번 슬라이드가 가운데 보이기
+        lazy: {
+          loadPrevNext: true, // 이전, 다음 이미지는 미리 로딩
+        },
+        // 페이저 버튼 사용자 설정
+        pagination: {
+          // 페이지 번호 요소 선택자
+          el: ".promotion .swiper-pagination",
+
+          // 사용자의 페이지 번호 요소 제어 가능 요소 (사용자가 단순히 시각적으로만 보는것 뿐만아니라 눌러서 제어할 수 있는지에 대한 여부)
+          clickable: true,
+        },
+
+        // nav 화살표 출력 시 추가
+        navigation: {
+          prevEl: ".swiper-prev",
+          nextEl: ".swiper-next",
+        },
+      });
+    </script>
+  </body>
+</html>

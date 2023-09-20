@@ -1,0 +1,353 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #555;
+}
+@font-face {
+  font-family: "omega";
+  src: url(../webfonts/NotoSansKR-Light.woff) format("woff");
+}
+html,
+body {
+  overflow-x: hidden;
+}
+body {
+  font-family: "omega", "맑은 고딕" sans-serif;
+}
+#wrap {
+  width: 100%;
+  color: #555;
+}
+.top {
+  width: 1730px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top .left > li:first-child {
+  position: relative;
+}
+input[type="checkbox"] {
+  display: none;
+}
+.bg {
+  background: #fff;
+  padding: 50px 0;
+}
+.top .left label {
+  cursor: pointer;
+}
+.top .left label span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #000;
+  margin: 6px 0;
+  transition: transform 0.3s ease-in;
+}
+.top .left label:hover span {
+  background: #c40d2e;
+}
+.top .left #menu:checked ~ .menu01 .bar1 {
+  transform: translate(0, 9px) rotate(45deg);
+}
+.top .left #menu:checked ~ .menu01 .bar2 {
+  opacity: 0;
+}
+.top .left #menu:checked ~ .menu01 .bar3 {
+  transform: translate(0, -9px) rotate(-45deg);
+}
+.top .left #check-btn {
+  display: none;
+}
+.top .left > li:first-child .box {
+  position: fixed;
+  left: -350px;
+  top: 120px;
+  background: #fff;
+  width: 350px;
+  height: calc(100% - 120px);
+  z-index: 10;
+  transition: 0.5s;
+}
+.top .left #menu:checked ~ .box {
+  left: 0;
+}
+.top .box .menubar {
+  margin: 80px auto;
+  width: 200px;
+}
+.top .box .menubar a {
+  width: 100%;
+}
+.top .box .menubar li a,
+.top .box .menubar li i {
+  font-size: 13px;
+  font-weight: bold;
+  display: inline-block;
+}
+.top .box .menubar1 {
+  margin-bottom: 60px;
+  position: relative;
+}
+.top .box .menubar1::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  background: #ddd;
+}
+.top .box .menubar1 li {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.top .box .menubar2 li {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.top .left li:hover > a,
+.top .left li:hover > i {
+  color: #c40d2e;
+}
+.top .left img {
+  width: 25px;
+}
+.top .left {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 33.33%;
+  height: 30px;
+}
+.top .left li {
+  font-size: 13px;
+  line-height: 10px;
+  position: relative;
+}
+.top .left .number {
+  margin: 0 40px;
+}
+.top .left > li:first-child {
+  display: flex;
+}
+.top .left li a {
+  display: block;
+  line-height: 20px;
+  height: 20px;
+}
+.top .left li:last-of-type:after {
+  content: "";
+  height: 0;
+}
+.top .left i,
+.top .right i {
+  font-size: 20px;
+}
+.top .right li {
+  margin-right: 15px;
+}
+.top .right li:hover a {
+  color: #c40d2e;
+}
+.top .center {
+  display: flex;
+  justify-content: center;
+  width: 33.33%;
+}
+.top .center img {
+  width: 100px;
+}
+.top .right {
+  width: 33.33%;
+  display: flex;
+  justify-content: end;
+}
+.top .right li {
+  margin-left: 10px;
+}
+.top .right img {
+  width: 30px;
+}
+nav .menu {
+  width: 100%;
+  height: 40px;
+}
+nav .menu ul {
+  width: 1610px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+}
+nav .menu ul li {
+  display: block;
+  line-height: 40px;
+  padding: 0 30px;
+  font-size: 14px;
+}
+nav .menu ul li:hover a {
+  color: #c40d2e;
+}
+nav .menu ul li a {
+  position: relative;
+}
+nav .submenu {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  left: 0;
+  top: 127px;
+  background: #fff;
+  transition: height 0.5s;
+  border-top: 1px solid #ccc;
+  overflow: hidden;
+  transition: height 0.5s;
+  z-index: 10;
+}
+nav .submenu .lnb {
+  width: 1200px;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0 auto;
+}
+nav .submenu .lnb img {
+  width: 130px;
+  margin-bottom: 20px;
+}
+nav .submenu .lnb ul {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 0 20px;
+}
+nav .submenu .lnb ul li {
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px;
+  cursor: pointer;
+}
+nav .submenu .lnb li:hover a {
+  color: #c40d2e;
+}
+nav .submenu .lnb .txt {
+  text-align: center;
+  padding: 30px 0;
+}
+nav .submenu .lnb .txt a {
+  position: relative;
+}
+nav .submenu .lnb .txt a:hover {
+  color: #c40d2e;
+}
+nav .submenu .lnb .txt a::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  background: #ccc;
+  transition: 0.5s;
+}
+nav .submenu .lnb .txt a::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  background: #c40d2e;
+  transition: 0.5s;
+  transform: scale(0);
+}
+nav .submenu .lnb .txt a:hover::after {
+  transform: scale(1);
+}
+
+.category {
+  width: 1300px;
+  margin: 0 auto;
+}
+.category p {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 40px;
+  letter-spacing: 10px;
+  color: #c40d2e;
+}
+.category ul {
+  width: 350px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+}
+.category ul li {
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+}
+.category ul li a {
+  font-size: 14px;
+}
+.category ul li:hover a {
+  color: #c40d2e;
+}
+.slide {
+  width: 1300px;
+  margin: 140px auto;
+}
+.slide ul {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+}
+.slide ul li {
+  margin: 0 10px;
+  /*  width: 16.66%; */
+}
+.slide ul li p {
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.slide ul li p:nth-child(4) {
+  margin-top: 10px;
+}
+.slide ul li a:last-child {
+  border: 1px solid #ccc;
+  margin: 20px auto;
+  width: 150px;
+  height: 40px;
+  display: block;
+  text-align: center;
+  line-height: 40px;
+  opacity: 0;
+  transition: 0.4s;
+}
+.slide ul li:hover a:last-child {
+  opacity: 1;
+}
+.slide ul li a:last-child:hover {
+  background: #c40d2e;
+  color: #fff;
+  border: 1px solid transparent;
+  transition: 0.5s;
+}

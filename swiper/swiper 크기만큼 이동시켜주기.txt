@@ -1,0 +1,63 @@
+https://lily-im.tistory.com/38-->swiper 크기만큼 이동시켜주기
+
+흐르는 롤링배너
+https://ctrlcccv.github.io/code/2023-07-23-flow-banner/
+
+https://ranidiant.tistory.com/entry/swiper-js-%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%B6%80%EB%93%9C%EB%9F%BD%EA%B2%8C-%ED%9D%90%EB%A5%B4%EB%8A%94-%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C-%EB%A7%8C%EB%93%A4%EA%B8%B0
+
+https://songsong.dev/entry/swiperjs-%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%8D%94-%EA%B8%B0%EB%B3%B8-%EC%82%AC%EC%9A%A9%EB%B2%95-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0
+
+
+https://chaeyoung2.tistory.com/74-->현재슬라이드제외opacity
+
+var sw = 0;
+$('.btn_pause').click(function(){
+    if(sw==0){
+        $('.btn_pause').addClass('on');
+        mySwiper.autoplay.stop();
+        sw = 1;
+    }else{
+        $('.btn_pause').removeClass('on');
+        mySwiper.autoplay.start();
+        sw = 0;
+    }
+});
+  $(".auto-start").on("click", function() {
+        // 기본 설정으로 autoplay 시작
+        console.log("autoplay start");
+        swiper.autoplay.start();
+    });
+
+    $(".auto-stop").on("click", function() {
+        console.log("autoplay stop");
+        swiper.autoplay.stop();
+    });
+
+
+   // swiper object
+        swiper.on('slideChangeTransitionEnd', function () {
+            var index = swiper.activeIndex;
+            var currentSlide = $(swiper.slides[index]);
+            var currentSlideType = currentSlide.data('slide-type');
+            var currentPlayer = currentSlide.find('video');
+
+            // incase user click next before video ended
+            if (videoPlayStatus === VIDEO_PLAYING_STATE.PLAYING) {
+                player.pause();
+            }
+
+            clearTimeout(timeout);
+            switch (currentSlideType) {
+                case 'img':
+                    runNext();
+                    break;
+                case 'vdo':
+                    currentPlayer[0].currentTime = 0;
+                    currentPlayer[0].play();
+                    // player.currentTime(0)
+                    // player.play()
+                    videoPlayStatus = VIDEO_PLAYING_STATE.PLAYING;
+                    break;
+                default:
+                    throw new Error('invalid slide type');
+            }

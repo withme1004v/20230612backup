@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="7" height="11" viewBox="0 0 7 11">
+  <g id="scroll" transform="translate(-1475 -1816)">
+    <g id="사각형_48" data-name="사각형 48" transform="translate(1475 1816)" fill="#fff" stroke="#c5c5c5" stroke-width="1">
+      <rect width="2" height="11" stroke="none"/>
+      <rect x="0.5" y="0.5" width="1" height="10" fill="none"/>
+    </g>
+    <g id="사각형_49" data-name="사각형 49" transform="translate(1480 1816)" fill="none" stroke="#c5c5c5" stroke-width="1">
+      <rect width="2" height="11" stroke="none"/>
+      <rect x="0.5" y="0.5" width="1" height="10" fill="none"/>
+    </g>
+  </g>
+</svg>

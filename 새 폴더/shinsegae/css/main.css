@@ -1,0 +1,1443 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+@font-face {
+  font-family: SDGothic;
+  src: url(../webfonts/AppleSDGothicNeoR.woff) format("woff");
+}
+body {
+  font-family: SDGothic;
+  overflow-x: hidden;
+}
+#wrap {
+  position: relative;
+  width: 100%;
+}
+
+/* top */
+.top {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-bottom: 1px solid #f0f0f0;
+}
+.top ul {
+  display: flex;
+}
+.top ul li {
+  margin-left: 8px;
+}
+.top ul li a {
+  font-size: 13px;
+  color: #888;
+}
+.top ul li:first-child a {
+  color: #222;
+  font-weight: 600;
+}
+.top ul li a:after {
+  content: "·";
+  margin-left: 5px;
+  font-weight: 600;
+}
+.top ul li:last-child a:after {
+  content: "";
+}
+.top ul:after {
+  content: "|";
+  color: #d1d1d1;
+  margin: 2px 0 0 18px;
+}
+.top p {
+  line-height: 43px;
+  margin-right: 80px;
+}
+.top p a {
+  color: #222;
+  font-size: 13px;
+}
+.top p a::before {
+  content: url(../images/gnb_ico_ssgcom.png);
+  margin: 0 5px 0 20px;
+  position: relative;
+  top: 1px;
+}
+
+/* header */
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 80px;
+  z-index: 15;
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* gnb */
+header .gnb {
+  width: 45%;
+}
+header .gnb ul {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+header .gnb ul li {
+  height: 70px;
+}
+header .gnb ul li a {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  line-height: 70px;
+  color: #444;
+}
+header .gnb ul li a:hover,
+header .gnb ul li a.on {
+  color: #f22c2d;
+}
+header .gnb ul li a:hover:after,
+header .gnb ul li a.active:after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #f22c2d;
+  z-index: 3;
+}
+header .login ul {
+  display: flex;
+}
+header .login ul li {
+  margin-left: 20px;
+}
+header .login ul li a {
+  color: #222;
+  font-size: 13px;
+}
+header .login ul li:first-child a::before {
+  content: url(../images/gnb_ico_login.png);
+  margin-right: 8px;
+}
+header .login ul li:first-child a:after {
+  content: "|";
+  color: #d1d1d1;
+  margin-left: 18px;
+}
+header .login ul li img {
+  position: relative;
+  top: 2px;
+  left: -2px;
+}
+
+/* 서브메뉴 lnb */
+.submenu {
+  position: absolute;
+  left: 0;
+  top: 71px;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  background: #fff;
+  z-index: 3;
+  transition: height 0.5s;
+}
+.active2 {
+  box-shadow: 0 3px 15px 1px rgba(0, 0, 0, 0.1);
+}
+.submenu .menu .lnb {
+  width: 850px;
+  margin: 0 auto;
+}
+.submenu .menu .lnb > ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 40px 0;
+}
+.submenu .menu .lnb > ul > li {
+  flex: 1 1 14.285%;
+  line-height: 35px;
+}
+.submenu .menu .lnb > ul > li > a {
+  color: #000;
+}
+.submenu .menu .lnb > ul > li > a:hover,
+.submenu .menu .lnb > ul > li > a.on {
+  text-decoration: underline;
+}
+.submenu .menu .lnb > ul > li .three_dept .indent {
+  opacity: 0;
+}
+.submenu .menu .lnb > ul > li .three_dept li a {
+  color: #555;
+  font-size: 14px;
+}
+.submenu .menu .lnb > ul > li .three_dept li a:hover {
+  color: #8b5508;
+}
+
+/* visual */
+.visual {
+  position: relative;
+}
+.visual .pics li {
+  height: 1080px;
+}
+.visual .pics li:first-child {
+  background: url(../images/visual01.jpg) no-repeat;
+}
+.visual .pics li:nth-child(2) {
+  background: url(../images/visual02.jpg) no-repeat;
+}
+.visual .pics li:nth-child(3) {
+  background: url(../images/visual03.jpg) no-repeat;
+}
+.slogan {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  letter-spacing: 1px;
+  z-index: 1;
+}
+.slogan .s_inner {
+  width: 30%;
+  height: 75%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.slogan .control_w ul {
+  display: flex;
+}
+.slogan .control_w ul li {
+  margin-right: 30px;
+}
+.slogan .control_w ul li a {
+  position: relative;
+  color: #fff;
+  font-size: 20px;
+}
+.slogan .control_w ul li:nth-child(2) a,
+.slogan .control_w ul li:nth-child(3) a {
+  color: rgba(255, 255, 255, 0.5);
+}
+.slogan .control_w ul li:first-child a::before {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: #fff;
+}
+.slogan .control_w ul li:first-child a::after {
+  display: none;
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.5);
+}
+.slogan .control_w ul li:nth-child(2) a::before {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: -2px;
+  width: 50px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.5);
+}
+.slogan .control_w ul li:nth-child(2) a::after {
+  display: none;
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: -2px;
+  width: 50px;
+  height: 2px;
+  background: #fff;
+}
+.slogan .control_w ul li:nth-child(3) a::before {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: -7px;
+  width: 50px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.5);
+}
+.slogan .control_w ul li:nth-child(3) a::after {
+  display: none;
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: -7px;
+  width: 50px;
+  height: 2px;
+  background: #fff;
+}
+.slogan .control_w ul li:last-child a {
+  font-size: 0;
+}
+/* .slogan .control_w ul li:last-child a::before {
+  content: url(../images/ico_kv_pause.png);
+  position: absolute;
+  bottom: -32px;
+  left: 10px;
+  width: 7px;
+  height: 10px;
+} */
+.slogan .control_w ul li:last-child a::after {
+  /* display: none; */
+  display: block;
+  content: url(../images/ico_kv_play.png);
+  position: absolute;
+  bottom: -32px;
+  left: 10px;
+  width: 7px;
+  height: 10px;
+  z-index: 30;
+  border: 1px solid #000;
+}
+.slogan .control_w ul li:last-child a.on::after {
+  content: url(../images/ico_kv_pause.png);
+}
+.swiper-scrollbar {
+  transform-origin: left;
+}
+.slogan .txt {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 80px;
+  color: #fff;
+}
+
+/* [공통] MORE 흰색 버튼 */
+.btn_more_w {
+  position: relative;
+  width: 100px;
+  height: 35px;
+  line-height: 35px;
+  margin: 0 0 100px 10px;
+}
+.btn_more_w a {
+  display: inline-block;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  transition: transform 0.1s;
+}
+.btn_more_w:hover a {
+  transform: translateY(-2px);
+}
+.btn_more_w .line {
+  position: absolute;
+  background: #fff;
+}
+.btn_more_w .line-bottom {
+  width: 86px;
+  height: 2px;
+  bottom: 0;
+  transform: scaleX(1);
+  transition: transform 0.6s 0.5s;
+}
+.btn_more_w:hover .line-bottom {
+  transform: scaleX(1.2);
+  transition: 0.1s;
+}
+.btn_more_w .line-right {
+  width: 2px;
+  height: 40px;
+  right: 4px;
+  bottom: 0;
+  transform: scaleY(0);
+  transform-origin: right bottom;
+  transition: transform 0.4s 0.3s;
+}
+.btn_more_w:hover .line-right {
+  transform: scaleY(1);
+  transition: transform 0.2s 0.1s;
+}
+.btn_more_w .line-top {
+  width: 104px;
+  height: 2px;
+  top: -5px;
+  left: -9px;
+  transform: scaleX(0);
+  transform-origin: right top;
+  transition: transform 0.3s 0.2s;
+}
+.btn_more_w:hover .line-top {
+  transform: scaleX(1);
+  transition: transform 0.3s 0.2s;
+}
+.btn_more_w .line-left {
+  width: 2px;
+  height: 40px;
+  left: -9px;
+  bottom: 0;
+  transform-origin: top left;
+  transform: scaleY(0);
+  transition: transform 0.2s 0.1s;
+}
+.btn_more_w:hover .line-left {
+  transform: scaleY(1);
+  transition: transform 0.4s 0.3s;
+}
+.slogan .scroll_info span {
+  position: relative;
+}
+.slogan .scroll_info span::before {
+  position: absolute;
+  left: 4px;
+  top: 10px;
+  content: "";
+  width: 1px;
+  height: 0;
+  background: #fff;
+  animation: scroll_info 1.5s infinite;
+}
+@keyframes scroll_info {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100px;
+  }
+}
+.slogan .scroll_info span::after {
+  position: absolute;
+  left: 0;
+  bottom: -111px;
+  content: "";
+  /* 아래 화살표 만드는 방법 */
+  width: 8px;
+  height: 8px;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  transform: rotate(140deg);
+}
+
+/* Shopping News & Event */
+.news {
+  width: 1280px;
+  margin: 120px auto;
+}
+.news .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.news .title .login_icon {
+  margin: 20px 0;
+}
+.news .title .txt .point_b {
+  color: #222;
+}
+.news .title .txt {
+  color: #666;
+}
+.underline a {
+  position: relative;
+  color: #8b714c;
+}
+.underline a:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #8b714c;
+  transform: scaleX(1);
+  transition: 0.3s;
+}
+.underline a:hover:after {
+  transform: scaleX(1.2);
+}
+.news .content ul {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0;
+}
+.news .content .col .pics {
+  width: 394px;
+  height: 197px;
+  overflow: hidden;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.2
+  ); /* 현재 이미지때문에 그 뒤에 background 컬러가 들어가있음 */
+}
+.news .content .col a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: 0.5s;
+}
+.news .content .col a:hover img {
+  transform: scale(1.1);
+  position: relative; /* 그래서 hover할때 이미지를 z-index로 뒤로 보내서 background 컬러가 나옴 z-index는 포지션값이 있어야하므로 relative줌 */
+  z-index: -1;
+}
+.news .content .col .txt {
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.news .content .col .txt p {
+  font-size: 15px;
+}
+.news .content .col .txt p:first-of-type {
+  color: #8b714c;
+}
+.news .content .col .txt p:nth-of-type(2) {
+  color: #222;
+  font-size: 19px;
+  line-height: 28px;
+}
+.news .content .col .txt p:nth-of-type(3) {
+  color: #888;
+}
+
+/* [공통] MORE 빨간색 버튼 */
+.btn_more {
+  position: relative;
+  width: 90px;
+  height: 35px;
+  line-height: 35px;
+  margin: 0 auto;
+  text-align: center;
+}
+.btn_more a {
+  display: inline-block;
+  color: #000;
+  font-weight: 600;
+  font-size: 15px;
+  transition: transform 0.1s;
+}
+.btn_more:hover a {
+  transform: translateY(-2px);
+}
+.btn_more .line {
+  position: absolute;
+  background: #f22c2d;
+}
+.btn_more .line-bottom {
+  width: 100%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  transform: scaleX(1);
+  transition: transform 0.6s 0.5s;
+}
+.btn_more:hover .line-bottom {
+  transform: scaleX(1.2);
+  transition: 0.5s;
+}
+.btn_more .line-right {
+  width: 2px;
+  height: 40px;
+  right: -9px;
+  bottom: 0;
+  transform: scaleY(0);
+  transform-origin: right bottom;
+  transition: transform 0.4s 0.3s;
+}
+.btn_more:hover .line-right {
+  transform: scaleY(1);
+  transition: transform 0.2s 0.1s;
+}
+.btn_more .line-top {
+  width: 105px;
+  height: 2px;
+  left: -8px;
+  top: -5px;
+  transform: scaleX(0);
+  transform-origin: right top;
+  transition: transform 0.3s 0.2s;
+}
+.btn_more:hover .line-top {
+  transform: scaleX(1);
+  transition: transform 0.3s 0.2s;
+}
+.btn_more .line-left {
+  width: 2px;
+  height: 40px;
+  left: -9px;
+  bottom: 0;
+  transform: scaleY(0);
+  transform-origin: left top;
+  transition: transform 0.2s 0.1s;
+}
+.btn_more:hover .line-left {
+  transform: scaleY(1);
+  transition: transform 0.4s 0.3s;
+}
+
+/* [공통] 컨텐츠 타이틀만 h2  */
+.title_same h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 60px;
+  color: #222;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* Shinsegae Now */
+.now {
+  width: 1280px;
+  margin: 200px auto;
+}
+.now .content ul {
+  display: flex;
+  justify-content: space-between;
+  margin: 70px 0;
+}
+.now .content ul li {
+  position: relative;
+  overflow: hidden; /* .txt가 hover할때 올라오면서 살짝 보이는 부분 넘치는거 가려주기위해! */
+}
+.now .content .col .txt {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  border-top: 2px solid #f22c2d;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: 0.3s;
+}
+.now .content .col:hover .txt {
+  opacity: 1;
+  height: 200px;
+}
+.now .content .col .txt p:first-child {
+  color: #bea36b;
+  font-size: 15px;
+}
+.now .content .col .txt p:first-child:after {
+  content: url(../images/ico_hotnew_link.png);
+  margin-left: 10px;
+}
+.now .content .col .txt p:nth-child(2) {
+  color: #fff;
+  font-size: 19px;
+  line-height: 28px;
+  margin: 10px 0;
+}
+.now .content .col .txt p:nth-child(3) {
+  position: relative;
+  color: #bbb;
+  font-size: 15px;
+}
+.now .content .col .txt p:nth-child(3):after {
+  position: absolute;
+  bottom: 1px;
+  content: url(../images/ico_hotnew_more.png);
+  margin-left: 7px;
+}
+.now .channer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.now .channer h4 a {
+  display: block;
+  padding-right: 20px;
+  color: #444;
+  font-size: 18px;
+  background: url(../images/ico_channel_off.png) right 40% no-repeat;
+}
+.now .channer h4 a:hover {
+  background: url(../images/ico_channel_on.png) right 40% no-repeat;
+}
+.now .channer p {
+  color: #666;
+  font-size: 15px;
+  margin: 10px 0;
+}
+.now .channer ul {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.now .channer ul li a {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin-left: 10px;
+}
+.now .channer ul li:first-child a {
+  background: url(../images/ico_post.png);
+  margin-left: 0;
+}
+.now .channer ul li:first-child a:hover {
+  background: url(../images/ico_post_on.png);
+}
+.now .channer ul li:nth-child(2) a {
+  background: url(../images/ico_facebook.png);
+}
+.now .channer ul li:nth-child(2) a:hover {
+  background: url(../images/ico_facebook_on.png);
+}
+.now .channer ul li:nth-child(3) a {
+  background: url(../images/ico_instagram.png);
+}
+.now .channer ul li:nth-child(3) a:hover {
+  background: url(../images/ico_instagram_on.png);
+}
+.now .channer ul li:nth-child(4) a {
+  background: url(../images/ico_youtube.png);
+}
+.now .channer ul li:nth-child(4) a:hover {
+  background: url(../images/ico_youtube_on.png);
+}
+.now .channer ul li:nth-child(5) a {
+  background: url(../images/ico_app.png);
+}
+.now .channer ul li:nth-child(5) a:hover {
+  background: url(../images/ico_app_on.png);
+}
+.now .channer ul li:nth-child(6) a {
+  background: url(../images/ico_kakao.png);
+}
+.now .channer ul li:nth-child(6) a:hover {
+  background: url(../images/ico_kakao_on.png);
+}
+.now .channer ul li:nth-child(7) a {
+  background: url(../images/ico_sbot.png);
+}
+.now .channer ul li:nth-child(7) a:hover {
+  background: url(../images/ico_sbot_on.png);
+}
+
+/* Art & Culture */
+.art {
+  margin: 150px 0;
+}
+.art .content {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  margin: 50px 0;
+  /* overflow: hidden; /* 오른쪽 사진영역 때문에 가로스크롤생겨서 넘친거 일단 숨김!!! */
+}
+.art .content .text {
+  position: relative;
+  width: 57%;
+  height: 470px;
+  z-index: 1;
+  overflow: hidden;
+}
+.art .content .text li {
+  width: 100%;
+  height: 100%;
+  /* background: #1f2a55; */
+}
+.art .content .text > li:first-child {
+  background: #1f2a55;
+}
+.art .content .text > li:nth-child(2) {
+  background: #88382d;
+}
+.art .content .text > li:nth-child(3) {
+  background: #61862c;
+}
+.art .content .text > li:nth-child(4) {
+  background: #666279;
+}
+.art .content .text > li:nth-child(5) {
+  background: #176667;
+}
+.art .content .text .box {
+  position: relative;
+  width: 45%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.art .content .text .box .txt {
+  margin-top: 100px;
+}
+.art .content .text .box .txt p:first-child {
+  color: #e0c799;
+  font-size: 18px;
+}
+.art .content .text .box .txt p:last-child {
+  font-family: "Cormorant Garamond", serif;
+  color: #fff;
+  font-size: 39px;
+  line-height: 50px;
+  letter-spacing: -1px;
+  margin-top: 20px;
+}
+.art .content .text .box .txt p:last-child span {
+  font-size: 39px;
+  letter-spacing: 0;
+}
+.art .content .text .box .more {
+  margin: 60px 0 0 10px;
+}
+.art .content .text .box .more .line-bottom {
+  width: 80px;
+}
+.art .content .text .box .more .line-right {
+  right: 10px;
+}
+.art .content .text .box .more .line-top {
+  width: 97px;
+}
+.art .content .text .box .control {
+  position: absolute;
+  right: -50px;
+  bottom: 55px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+/* [공통] 컨트롤 이전/다음 버튼 svg 부분 */
+.control ul {
+  display: flex;
+}
+.control ul li {
+  width: 50px;
+}
+.control ul li a {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+.control ul li a img {
+  vertical-align: middle;
+}
+.control ul li a svg {
+  position: absolute;
+  left: -6px;
+  top: -21px;
+  width: 50px;
+  height: 50px;
+  stroke-width: 1.5px;
+  stroke-dasharray: 125; /* 3.14*20*2= 125 / 3.14(파이)*(반지름*2=지름)... 선의 길이 */
+  stroke-dashoffset: 125; /* 어디서 부터 시작하는지  */
+  transform: rotate(200deg);
+  animation: cir02 0.4s forwards;
+}
+.control ul li:nth-child(2) a svg {
+  left: 2px;
+}
+.control ul li a svg:hover {
+  animation: cir01 0.4s forwards;
+}
+@keyframes cir01 {
+  0% {
+    stroke-dashoffset: 125;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes cir02 {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 125;
+  }
+}
+.art_pics_bg {
+  position: relative;
+  left: 40px;
+  top: -400px;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: flex-end;
+}
+.art_pics_bg #swiper1 {
+  width: 990px;
+  height: 500px;
+  overflow: hidden;
+}
+.art_pics_bg .art_pics .pics {
+  position: static !important;
+  width: 100%;
+  height: 500px;
+}
+.art_pics_bg .art_pics .pics .inner {
+  display: flex;
+  z-index: 1;
+}
+.art_pics_bg .art_pics .pics .inner li {
+  height: 480px;
+  margin-right: 40px;
+}
+#btn_next {
+  width: 30px;
+  height: 30px;
+  right: 1114px;
+  top: 60%;
+  background: url(../images/nextview_w.png) center center;
+  animation: cir02 0.4s forwards;
+}
+#btn_prev {
+  width: 30px;
+  height: 30px;
+  left: 700px;
+  top: 60%;
+  background: url(../images/preview_w.png) center center;
+  animation: cir02 0.4s forwards;
+}
+#btn_next::after,
+#btn_prev:after {
+  content: "";
+}
+.on {
+  animation: cir01 0.4s forwards !important;
+}
+#page {
+  width: 100px;
+  left: 573px;
+  bottom: 190px;
+  color: #fff;
+  font-size: 17px;
+  letter-spacing: 2px;
+}
+
+/* #Shinsegae Brand */
+.brand {
+  position: relative;
+  width: 1280px;
+  margin: 100px auto;
+}
+.brand .brand_logo {
+  position: relative;
+}
+.brand .brand_logo .pics {
+  margin: 40px auto;
+  display: flex;
+  justify-content: space-between;
+}
+.brand .brand_logo .pics li {
+  width: 390px;
+  height: 124px;
+}
+.brand .brand_logo .pics li:first-child {
+  background: url(../images/brand_logo01.png) center center no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+}
+.brand .brand_logo .pics li:nth-child(2) {
+  background: url(../images/brand_logo02.png) center center no-repeat;
+  background-size: cover;
+}
+.brand .brand_logo .pics li:nth-child(3) {
+  background: url(../images/brand_logo03.png) center center no-repeat;
+  background-size: cover;
+  opacity: 0.7;
+}
+.brand .brand_logo .control_2 {
+  position: absolute;
+  top: 38px;
+  left: 50%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.brand .brand_logo .control_2 li {
+  position: relative;
+}
+.brand .brand_logo .control_2 li:first-child {
+  left: -230px;
+}
+.brand .brand_logo .control_2 li:last-child {
+  right: -130%;
+}
+.brand .brand_logo .control_2 ul li a svg {
+  top: -2px;
+  left: -2px;
+}
+.brand .brand_logo .control_2 ul li:nth-child(2) a svg {
+  left: 0;
+}
+.brand .swiper {
+  position: static !important;
+}
+.brand .content {
+  width: 100%;
+  margin: 0 auto 70px;
+}
+.brand .content ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.brand .content ul li {
+  width: 33.333%;
+  background: rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+.brand .content ul li:nth-child(2) {
+  background: #fff;
+  border-top: 1px solid #e5e5e5;
+}
+.brand .content ul li:nth-child(2) .txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50%;
+  text-align: center;
+  margin-top: 100px;
+}
+.brand .content ul li:nth-child(2) .txt p:first-child {
+  font-size: 24px;
+  font-family: "Cormorant Garamond", serif;
+  color: #222;
+  font-weight: 400;
+}
+.brand .content ul li:nth-child(2) .txt p span {
+  font-size: 23px;
+  font-family: "Noto Serif KR", serif;
+}
+.brand .content ul li:nth-child(2) .txt p:nth-child(2) {
+  color: #666;
+  font-size: 15px;
+  line-height: 30px;
+}
+.brand .content ul li:nth-child(2) .txt p:nth-child(3) a {
+  display: inline-block;
+  font-size: 15px;
+}
+.brand .content ul li a {
+  display: block;
+  height: 100%;
+}
+.brand .content ul li a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 1s;
+  transform: scale(1);
+}
+.brand .content ul li a:hover img {
+  transform: scale(1.1);
+  position: relative;
+  z-index: -1;
+}
+.brand .content ul li a video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 1s;
+  transform: scale(1);
+}
+.brand .content ul li a:hover video {
+  transform: scale(1.1);
+  position: relative;
+  z-index: -1;
+}
+#btn_next2 {
+  top: 174px;
+  right: 420px;
+  background: url(../images/nextview_b.png) center center;
+  animation: cir02 0.4s forwards;
+}
+#btn_prev2 {
+  top: 174px;
+  left: 420px;
+  background: url(../images/preview_b.png) center center;
+  animation: cir02 0.4s forwards;
+}
+#btn_next2::after,
+#btn_prev2:after {
+  content: "";
+}
+#popup {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 15;
+}
+#popup:target {
+  display: block; /* popup display:none한것을 타겟 후에 보이도록 */
+}
+#popup .pop {
+  position: absolute;
+  width: 1020px;
+  height: 570px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#popup .pop .pop_inner {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+#popup .pop .pop_inner .pics img {
+  width: 570px;
+  height: 100%;
+}
+#popup .pop .pop_inner .box {
+  width: 570px;
+  height: 570px;
+  background: #fff;
+}
+#popup .pop .pop_inner .box .txt {
+  position: relative;
+}
+#popup .pop .pop_inner .box .txt ul {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 60px;
+  color: #222;
+  font-size: 15px;
+}
+#popup .pop .pop_inner .box .txt ul li:first-child {
+  font-size: 22px;
+}
+#popup .pop .pop_inner .box .txt ul li:nth-child(2) {
+  font-size: 13px;
+}
+#popup .pop .pop_inner .box .txt ul li:nth-child(3) {
+  border-bottom: 1px solid #ebebeb;
+}
+#popup .pop .pop_inner .box .txt ul li a {
+  color: #003468;
+  margin-right: 5px;
+}
+#popup .pop .pop_inner .box .txt p {
+  position: absolute;
+  top: -30px;
+  right: 25px;
+  z-index: 3;
+}
+.control_3 {
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+.control_3 li {
+  position: relative;
+}
+.control_3 li:first-child {
+  left: -70px;
+}
+.control_3 li:last-child {
+  right: -1000px;
+}
+.control_3 ul li a svg {
+  top: 0;
+}
+.control_3 ul li:first-child a svg {
+  left: 1px;
+}
+.control_3 ul li:nth-child(2) a svg {
+  left: -1px;
+}
+
+/* Magazine */
+.magazine {
+  width: 1280px;
+  margin: 0 auto 150px;
+}
+.magazine .content {
+  display: flex;
+  margin: 70px auto;
+}
+.magazine .content .video_wrap {
+  position: sticky;
+  top: 100px;
+  left: 0;
+  width: 30%;
+  height: 100%;
+}
+.magazine .content .video_wrap .video {
+  position: relative;
+  width: 363px;
+  height: 454px;
+  text-align: center;
+}
+.magazine .content .video_wrap .video ul {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  z-index: 1;
+}
+.magazine .content .video_wrap .video ul li {
+  margin-left: 10px;
+}
+.magazine .content .video_wrap .video video {
+  width: 100%;
+  height: 100%;
+}
+.magazine .content .video_wrap .video p:first-of-type {
+  margin: 20px 0;
+  font-size: 14px;
+  color: #666;
+}
+.magazine .content .video_wrap .video p:nth-of-type(2) {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 30px;
+  color: #222;
+}
+.magazine .content .pic_bg {
+  width: 70%;
+}
+.magazine .content .pic_bg .pics {
+  display: flex;
+  width: 100%;
+}
+.magazine .content .pic_bg .pics ul {
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #ebebeb;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.magazine .content .pic_bg .pics ul li {
+  margin-bottom: 60px;
+}
+.magazine .content .pic_bg .pics ul li:last-child {
+  margin-bottom: 0;
+  line-height: 26px;
+}
+.magazine .content .pic_bg .pics ul li a {
+  display: block;
+}
+.magazine .content .pic_bg .pics ul li a p:first-child {
+  overflow: hidden;
+  border: 1px solid #e5e5e5;
+  background: rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+.magazine .content .pic_bg .pics ul li a img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.07);
+  transition: transform 0.5s;
+}
+.magazine .content .pic_bg .pics ul li a:hover img {
+  transform: scale(1.15);
+  position: relative;
+  z-index: -1;
+}
+.magazine .content .pic_bg .pics ul li a p:nth-child(2) {
+  font-size: 18px;
+  color: #222;
+  margin: 20px 0 10px;
+}
+.magazine .content .pic_bg .pics ul li a:hover p:nth-child(2) {
+  text-decoration: underline;
+}
+.magazine .content .pic_bg .pics ul li a p:nth-child(3) {
+  font-size: 15px;
+  color: #666;
+}
+
+/* footer */
+footer {
+  background: #232323;
+  padding: 20px 30px;
+}
+footer .foot {
+  width: 1280px;
+  margin: 30px auto;
+}
+footer .foot .foot_top {
+  position: relative;
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid rgba(202, 200, 199, 0.1);
+}
+footer .foot .foot_top .menu_list > div {
+  margin-bottom: 20px;
+}
+footer .foot .foot_top .menu_list > div ul {
+  display: flex;
+  margin-left: 50px;
+}
+footer .foot .foot_top .menu_list > div ul li {
+  margin-right: 20px;
+}
+footer .foot .foot_top .menu_list > div ul li a {
+  font-size: 15px;
+  color: #949494;
+}
+footer .foot .foot_top .menu_list > div ul li a:hover {
+  color: #fff;
+}
+footer .foot .foot_top .menu_list > div:nth-child(2) ul li .point_r {
+  color: #f22c2d;
+  font-weight: bold;
+}
+footer .foot .foot_top .site_list {
+  position: absolute;
+  top: -20px;
+  right: 0;
+}
+footer .foot .foot_top .site_list > div {
+  margin-bottom: 20px;
+}
+footer .foot .foot_top .site_list .site {
+  margin: 0 0 20px 23px;
+}
+footer .foot .foot_top .site_list .site a {
+  position: relative;
+  display: inline-block;
+  width: 155px;
+  padding: 5px 0;
+  color: #949494;
+  font-size: 13px;
+  border-bottom: 1px solid #949494;
+}
+footer .foot .foot_top .site_list .site a:after {
+  content: url(../images/ico_arrowFamily.png);
+  position: absolute;
+  right: 0;
+}
+footer .foot .foot_top .site_list .sns ul {
+  display: flex;
+}
+footer .foot .foot_top .site_list .sns ul li a {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-left: 20px;
+}
+footer .foot .foot_top .site_list .sns ul li:first-child a {
+  background: url(../images/ico_snspost.png);
+}
+footer .foot .foot_top .site_list .sns ul li:nth-child(2) a {
+  background: url(../images/ico_snsFb.png);
+}
+footer .foot .foot_top .site_list .sns ul li:nth-child(3) a {
+  background: url(../images/ico_snsInsta.png);
+}
+footer .foot .foot_top .site_list .sns ul li:nth-child(4) a {
+  background: url(../images/ico_snsYoutube.png);
+}
+footer .foot .foot_top .site_list .sns ul li:nth-child(5) a {
+  background: url(../images/ico_snsSbot.png);
+}
+footer .foot .foot_top .site_list .sns ul li:first-child a:hover {
+  background: url(../images/ico_snspost_on.png);
+}
+footer .foot .foot_top .site_list .sns ul li:nth-child(2) a:hover {
+  background: url(../images/ico_snsFb_on.png);
+}
+footer .foot .foot_top .site_list .sns ul li:nth-child(3) a:hover {
+  background: url(../images/ico_snsInsta_on.png);
+}
+footer .foot .foot_top .site_list .sns ul li:nth-child(4) a:hover {
+  background: url(../images/ico_snsYoutube_on.png);
+}
+footer .foot .foot_top .site_list .sns ul li:nth-child(5) a:hover {
+  background: url(../images/ico_snsSbot_on.png);
+}
+footer .foot .foot_bottom {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  color: #8a8a8a;
+  font-size: 13px;
+  line-height: 22px;
+}
+footer .foot .foot_bottom p img {
+  opacity: 0.7;
+}
+
+/* s_bot */
+.s_bot a {
+  position: fixed;
+  right: 40px;
+  bottom: 170px;
+  width: 68px;
+  height: 68px;
+  background: url(../images/ico_sbot1.png) 0 0 no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+/* STORE INFO */
+.info {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 156px;
+  height: 150px;
+  background: #2d2d2d;
+  text-align: center;
+  z-index: 1;
+}
+.info a {
+  display: block;
+  padding-top: 40px;
+  box-sizing: border-box;
+}
+.info a p:first-child {
+  color: #fff;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.info a p:first-child:after {
+  content: url(../images/ico_gate_arrow_black.png);
+  position: absolute;
+  margin-left: 5px;
+}
+.info a p:last-child {
+  font-family: "Cormorant Garamond", serif;
+  color: #bea36b;
+  font-size: 13px;
+}

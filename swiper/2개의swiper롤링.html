@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/swiper-bundle.css" />
+
+    <style>
+      body {
+        background-color: #333;
+      }
+
+      .swiper {
+        margin-bottom: 20px;
+      }
+
+      .swiper-wrapper {
+        transition-timing-function: linear;
+      }
+
+      .swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        padding: 15px 0;
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      .swiper-slide:nth-child(odd) {
+        background-color: pink;
+      }
+
+      .swiper-slide:nth-child(even) {
+        background-color: #fff;
+      }
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/swiper-bundle.js"></script>
+  </head>
+  <body>
+    <div class="swiper mySwiper1" dir="ltr">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">1</div>
+        <div class="swiper-slide">2</div>
+        <div class="swiper-slide">3</div>
+        <div class="swiper-slide">4</div>
+        <div class="swiper-slide">5</div>
+        <div class="swiper-slide">6</div>
+        <div class="swiper-slide">7</div>
+        <div class="swiper-slide">8</div>
+        <div class="swiper-slide">9</div>
+        <div class="swiper-slide">10</div>
+      </div>
+    </div>
+    <div class="swiper mySwiper2" dir="rtl">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">1</div>
+        <div class="swiper-slide">2</div>
+        <div class="swiper-slide">3</div>
+        <div class="swiper-slide">4</div>
+        <div class="swiper-slide">5</div>
+        <div class="swiper-slide">6</div>
+        <div class="swiper-slide">7</div>
+        <div class="swiper-slide">8</div>
+        <div class="swiper-slide">9</div>
+        <div class="swiper-slide">10</div>
+      </div>
+    </div>
+    <script>
+      $(".swiper").each(function (index, element) {
+        var $this = $(this);
+        $this.addClass("swiepr-" + index);
+
+        var swiper = new Swiper(".swiepr-" + index, {
+          autoplay: {
+            delay: 0, //add
+            disableOnInteraction: false,
+          },
+          speed: 5000,
+          loop: true,
+          loopAdditionalSlides: 1,
+          slidesPerView: 5,
+        });
+      });
+      /* var swiper = new Swiper(".mySwiper1", {
+        autoplay: {
+          delay: 0, //add
+          disableOnInteraction: false,
+        },
+        speed: 5000,
+        loop: true,
+        loopAdditionalSlides: 1,
+        slidesPerView: 5,
+      });
+      var swiper = new Swiper(".mySwiper2", {
+        autoplay: {
+          delay: 0, //add
+          disableOnInteraction: false,
+        },
+        speed: 5000,
+        loop: true,
+        loopAdditionalSlides: 1,
+        slidesPerView: 5,
+      });*/
+    </script>
+  </body>
+</html>

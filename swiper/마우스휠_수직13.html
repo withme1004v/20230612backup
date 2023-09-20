@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <link rel="stylesheet" href="css/swiper-bundle.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-slide {
+        width: 100%;
+        height: 100%;
+        color: #f00;
+        background-size: cover;
+      }
+      .swiper-slide:first-child {
+        background-image: url(photo1.jpg);
+      }
+      .swiper-slide:nth-child(2) {
+        background-image: url(photo2.jpg);
+      }
+      .swiper-slide:nth-child(3) {
+        background-image: url(photo3.jpg);
+      }
+      .swiper-slide:nth-child(4) {
+        background-image: url(photo4.jpg);
+      }
+      .swiper-slide:nth-child(5) {
+        background-image: url(photo5.jpg);
+      }
+      .swiper-slide:nth-child(6) {
+        background-image: url(photo6.jpg);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="swiper mySwiper" id="slide">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+        <div class="swiper-slide">Slide 4</div>
+        <div class="swiper-slide">Slide 5</div>
+        <div class="swiper-slide">Slide 6</div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+
+    <script src="js/swiper-bundle.js"></script>
+    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>-->
+    <script>
+      const swiper = new Swiper(".mySwiper", {
+        direction: "horizontal", // 가로 스크롤 설정
+        slidesPerView: "1",
+        mousewheel: true,
+        loop: true,
+
+        oopAdditionalSlides: 1,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        }, // 마우스 휠 이벤트 활성화
+        // 추가 옵션 설정 및 이벤트 처리
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>

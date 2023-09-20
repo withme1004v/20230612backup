@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+
+    <script type="text/javascript" src="js/pawinhand_ui.js"></script>
+    <script src="js/pawinhand/ScrollMagic.min.js"></script>
+    <script src="js/pawinhand/TweenMax.min.js"></script>
+    <script src="js/pawinhand/pawinhand_layout.js"></script>
+    <link rel="canonical" href="https://pawinhand.kr" />
+    <link rel="alternate" href="https://m.pawinhand.kr" />
+
+    <title>포인핸드 - 사지 않고 입양하는 문화를 만듭니다.</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="body-main body-index pc">
+    <span itemscope="" itemtype="http://schema.org/Organization">
+      <link itemprop="url" href="http://pawinhand.kr/" />
+      <a
+        itemprop="sameAs"
+        href="https://www.instagram.com/pawinhand_official"
+      ></a>
+      <a itemprop="sameAs" href="https://smartstore.naver.com/pawinhand"></a>
+      <a itemprop="sameAs" href="https://blog.naver.com/pawinhand"></a>
+      <a itemprop="sameAs" href="https://www.facebook.com/pawinhand"></a>
+      <a itemprop="sameAs" href="https://twitter.com/PAWINHAND_"></a>
+    </span>
+
+    <div id="wrap" class="wrapper">
+      <div id="header_warp">
+        <div id="header">
+          <!-- 헤더 : 공통 -->
+          <header class="header">
+            <h1 class="logo">
+              <a href="/index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="223" height="61">
+                  <g class="logoEle" fill="#F29700" fill-rule="evenodd">
+                    <path
+                      d="M82.59 22.5H75v15.86h3.49v-6h4.1c2.61.04 5.61-1.17 5.61-4.86 0-3.69-3-5-5.61-5zm-.15 6.86h-3.95V25.5h4a2 2 0 012.13 1.94 1.998 1.998 0 01-2.18 1.919zm43.24-6.86h-3.54l-2.66 10.44h-.05l-3.29-10.44h-3.25l-3.32 10.18h-.04L107 22.5h-3.81l4.7 15.86h3.01l3.49-10.97h.04l3.5 10.97h3.11zm2.63 0h3.5v15.86h-3.5zm29.33 9.48h7.51v6.38h3.49V22.5h-3.49v6.39h-7.51V22.5h-3.5v15.86h3.5zm-10.65 1.12l-7.7-10.6h-3.84v15.87h3.5V27.78l7.7 10.59h3.83V22.5h-3.49zm30.07-10.6l-7 15.86h3.83l.89-2.34h7.35l.89 2.34h3.83L180 22.5h-2.94zm4 10.54H176l2.55-6.73 2.51 6.73zm-81.6 2.98l.88 2.34h3.83L97.23 22.5h-2.89l-6.95 15.86h3.83l.88-2.34h7.36zm-3.68-9.7l2.55 6.72h-5.1l2.55-6.72zm117.37-3.82h-5.45v15.87h5.45c4.19 0 9-1.93 9-7.93s-4.81-7.94-9-7.94zm.34 12.67h-2.3v-9.45h2.3c2.17 0 5.2 1.15 5.2 4.73 0 3.58-3.03 4.72-5.2 4.72zm-13.28 3.2h3.83V22.5h-3.49v10.6l-7.71-10.6h-3.83v15.87h3.49V27.78z"
+                      fill-rule="nonzero"
+                    ></path>
+                    <path
+                      d="M11.792 49.84c-.381-.843.972-2.39 2.313-3.184 1.745-1.035 3.682-2.04 5.533-3.016 1.852-.975 4.41-2.314 5.898-2.976 1.807-.803 3.225-.256 4.464.5.623.38.622 1.15 0 1.549-.994.638-3.808 2.256-6.445 3.575-2.636 1.319-5.536 2.704-7.778 3.617-2.243.913-3.64.689-3.985-.065m-4.256-4.684c-1.097-2.267 6.781-5.325 12.613-8.185 1.495-.734 4.018.071 4.397 1.132.368 1.03-2.037 2.063-3.558 2.786-1.5.712-6.318 2.995-8.7 4.01-1.971.842-4.186 1.428-4.752.257m6.175-10.93c2.549-1.059 4.396-.175 4.879.247.379.33 1.02 1.03-.877 1.896-5.016 2.29-10.365 5.06-11.33 3.36-.804-1.418 2.105-3.333 7.328-5.503m45.584-.013c-.461-.27-1.081-.105-1.84.496-.509.405-.982.789-1.435 1.158-1.834 1.488-3.412 2.77-6.076 4.31-4.02 2.322-9.751 4.697-13.708 6.319-1.222.499-2.861 1.28-4.76 2.185-2.255 1.075-4.81 2.291-7.331 3.353-2.246.944-3.336.727-3.61.21-.386-.736.19-1.669 1.338-2.392.884-.555 2.476-1.449 4.16-2.397 1.545-.869 11.781-6.677 11.845-6.716a16.995 16.995 0 003.246-2.584c.249-.252.5-.502.732-.77a14.268 14.268 0 001.55-2.171c.61-1.047 1.063-2.136 1.217-3.224.229-1.588-.199-3.106-1.268-4.512-2.032-2.67-8.382-5.29-10.947-6.025-2.563-.734-7.394-2.604-8.356-2.954-1.669-.607-2.75-1.623-3.064-2.924-.38-1.57-.023-2.476 3.112-1.692 4.477 1.12 14.332 3.097 19 5.25 6.635 3.057 7.384 2.395 9.573 1.706l.115-.037c2.758-.865 4.096-1.662 4.474-2.666.378-1.002-.219-2.106-1.04-3.442 0-.003-.003-.007-.005-.01A30.63 30.63 0 0028.991.02 30.547 30.547 0 004.226 14.27c-.017.026-1.628 2.566.064 4.243 0 0 2.485 2.958 18.015 3.748 1.076.06 2.129.119 3.133.183 2.192.142 4.063.382 5.938.85.941.265 1.86.554 2.746.869 3.366 1.197 6.205 2.74 7.586 4.554.446.586.707 1.178.825 1.783.021.107.047.215.058.323.028.289.032.58-.011.878-.041.285-.15.576-.244.867a2.034 2.034 0 00-.147-.498c-.825-1.596-2.216-2.63-2.656-2.658-.273-.017-.444.078-.565.285a.664.664 0 00.234.913c.018.011 1.66 1.011 2.168 2.511.153.495.192.86.18 1.18-.024.588-.287.98-.829 1.393-.014-.045-.04-.088-.054-.133a3.66 3.66 0 00-.653-1.16c-1.213-1.44-2.381-1.913-2.432-1.93a.669.669 0 00-.498 1.24c.01 0 .922.384 1.901 1.547.366.436.548.875.549 1.334-.015.053-.036.17-.07.31a2.419 2.419 0 01-.633 1.147c-.457.482-1.215.675-1.646.712-.012 0-.028.005-.039.006-1.175-2.334-2.688-2.728-2.872-2.765a.664.664 0 00-.78.51.672.672 0 00.5.795c.05.012 1.109.316 2 2.148.004.01.01.016.014.026-.02.077-.064.415-.557.642-.413.19-.842.28-1.288.31-1.136.075-2.42-.348-4.112-1.316-1.077-.616-2.15-1.342-3.287-2.108-2.047-1.382-4.365-2.948-7.184-4.157-3.616-1.552-5.83-1.426-9.043-1.187-3.213.24-6.358 1.02-9.478 1.812-.296.12-.538.31-.714.577-.554.834-.277 2.068-.266 2.112 1.337 7.099 5.193 13.52 10.854 18.08a30.572 30.572 0 0020.271 6.734c13.803-.495 25.593-10.218 28.667-23.624l.04-.124.005-.017.006-.034c.137-.833.18-2.495-.627-2.968"
+                    ></path>
+                  </g>
+                </svg>
+              </a>
+            </h1>
+            <div class="inner">
+              <p class="contactInfo">
+                Contact Us<strong>pawinhand@naver.com</strong>
+              </p>
+            </div>
+            <button type="button" class="btn-open-gnb">MENU</button>
+          </header>
+
+          <!-- 전체메뉴 : 공통 -->
+          <div
+            class="menuAnimationLayer open"
+            style="transform: matrix(1, 0, 0, 1, 0, 0)"
+          ></div>
+
+          <div
+            class="menuLayer"
+            style="
+              visibility: hidden;
+              opacity: 0;
+              display: none;
+              transform: matrix(1, 0, 0, 1, 0, -10);
+            "
+          >
+            <div class="inner">
+              <nav class="menu">
+                <ul>
+                  <li><a href="/service/about.html">포인핸드 소개</a></li>
+                  <li><a href="/service/activities.html">포인핸드 활동</a></li>
+                  <li>
+                    <a
+                      href="https://smartstore.naver.com/pawinhand"
+                      target="_blank"
+                      >포인핸드 스토어</a
+                    >
+                  </li>
+                  <li><a href="/service/statistics.html">유기동물 통계</a></li>
+                  <li><a href="/service/review.html">입양후기</a></li>
+                  <li><a href="/service/sponsorship.html">정기후원</a></li>
+                  <!--<li><a href="/board/list.php?&amp;bdId=notice">공지사항</a></li>-->
+                  <!--<li><a href="/board/list.php?&bdId=qna">Q&amp;A</a></li>메뉴숨김-->
+                </ul>
+              </nav>
+              <div class="links">
+                <a
+                  href="https://appsto.re/kr/oDrX8.i"
+                  target="_blank"
+                  title="애플 앱스토어"
+                  ><img
+                    src="https://cdn-pro-web-250-118.cdn-nhncommerce.com/pawinhand_godomall_com/data/skin/front/momentimg/pawinhand/ico-link-apple.png"
+                    alt="앱스토어"
+                /></a>
+                <a
+                  href="https://play.google.com/store/apps/details?id=lost.animal.main"
+                  target="_blank"
+                  title="구글 플레이스토어"
+                  ><img
+                    src="https://cdn-pro-web-250-118.cdn-nhncommerce.com/pawinhand_godomall_com/data/skin/front/momentimg/pawinhand/ico-link-playStore.png"
+                    alt="구글플레이스토어"
+                /></a>
+                <a
+                  href="https://www.instagram.com/pawinhand_official/?hl=ko"
+                  target="_blank"
+                  title="인스타그램"
+                  ><img
+                    src="https://cdn-pro-web-250-118.cdn-nhncommerce.com/pawinhand_godomall_com/data/skin/front/momentimg/pawinhand/ico-link-insta.png"
+                    alt="인스타그램"
+                /></a>
+              </div>
+              <footer class="footer">
+                <div class="contactInfo">
+                  <p>
+                    <img
+                      src="https://cdn-pro-web-250-118.cdn-nhncommerce.com/pawinhand_godomall_com/data/skin/front/momentimg/pawinhand/ico-contact-phone.png"
+                      alt=""
+                    />02-6956-6242
+                  </p>
+                  <p>
+                    <img
+                      src="https://cdn-pro-web-250-118.cdn-nhncommerce.com/pawinhand_godomall_com/data/skin/front/momentimg/pawinhand/ico-contact-email.png"
+                      alt=""
+                    />pawinhand@naver.com
+                  </p>
+                </div>
+                <!--<div class="link_terms">
+                                    <a href="/service/agreement.php">이용약관</a>
+                                    <a href="/service/private.php">개인정보취급방침</a>
+                                </div>-->
+                <p class="addr">
+                  주식회사 포인핸드 ㅣ 대표자 : 이환희 <br />사업자번호 :
+                  322-87-00895 ㅣ 사업장 주소 : 서울특별시 마포구 대흥로 67
+                  (정신빌딩) 401호
+                </p>
+                <div class="copyright">
+                  <p>
+                    ©포인핸드 제공/데이터 출처
+                    <strong>농림축산식품부</strong> ㅣ Website made by
+                    <a href="http://hummman.com/" target="_blank"
+                      >hummman.com</a
+                    >
+                  </p>
+                  <p>©Pawinhandteam all right reserved.</p>
+                </div>
+              </footer>
+              <button type="button" class="btn-close-gnb">
+                <img
+                  src="https://cdn-pro-web-250-118.cdn-nhncommerce.com/pawinhand_godomall_com/data/skin/front/momentimg/pawinhandimg-close-gnb.png"
+                  alt="닫기"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- //header -->
+      </div>
+      <!-- //header_warp -->
+
+      <div id="container">
+        <div id="contents">
+          <!-- 본문 시작 -->
+          <div class="sub_content">
+            <script
+              type="text/javascript"
+              src="/js/pawinhand/pawinhand_home.js"
+            ></script>
+            <script
+              type="text/javascript"
+              src="/js/pawinhand/owl.carousel.min.js"
+            ></script>
+
+            <div class="main">
+              <div class="mainContents">
+                <div class="page section01 active_scene">
+                  <div class="innerCont bgLayer">
+                    <div class="cover"></div>
+                    <div class="inner">
+                      <h2>Adopt Animals<br />Adopt Family</h2>
+                      <p>포인핸드는 사지 않고 입양하는 문화를 만듭니다.</p>
+                      <span class="scrollGuide"
+                        >Scroll Down
+                        <img src="img/pawinhand/ico-scrollDown2.png" alt=""
+                      /></span>
+                    </div>
+                  </div>
+                  <div class="innerCont maskLayer">
+                    <div class="inner">
+                      <h2>Adopt Animals<br />Adopt Family</h2>
+                      <p>포인핸드는 사지 않고 입양하는 문화를 만듭니다.</p>
+                      <span class="scrollGuide"
+                        >Scroll Down
+                        <img
+                          src="img/pawinhand/ico-scrollDown2_hover.png"
+                          alt=""
+                      /></span>
+                    </div>
+                  </div>
+                  <div class="hoverLayer"></div>
+                </div>
+
+                <div class="page section02">
+                  <div class="innerCont bgLayer">
+                    <div class="cover"></div>
+                    <div class="inner">
+                      <p>
+                        포인핸드를 통해<span
+                          ><strong class="aniCount">68,724</strong>마리의</span
+                        >유기동물이 가족을 찾았습니다.
+                      </p>
+                      <a href="/service/about.html" class="main-link"
+                        >포인핸드 소개</a
+                      >
+                      <span class="scrollGuide"
+                        ><img src="img/pawinhand/ico-scrollDown.png" alt=""
+                      /></span>
+                    </div>
+                  </div>
+                  <div class="innerCont maskLayer">
+                    <div class="inner">
+                      <p>
+                        포인핸드를 통해<span
+                          ><strong class="aniCount">68,724</strong>마리의</span
+                        >유기동물이 가족을 찾았습니다.
+                      </p>
+                      <a href="/service/about.html" class="main-link"
+                        >포인핸드 소개</a
+                      >
+                      <span class="scrollGuide"
+                        ><img
+                          src="img/pawinhand/ico-scrollDown_hover.png"
+                          alt=""
+                      /></span>
+                    </div>
+                  </div>
+                  <!-- <div class="hoverLayer"></div> -->
+                </div>
+
+                <div class="page section03">
+                  <div class="innerCont bgLayer">
+                    <div class="top">
+                      <p class="main-tit-txt">
+                        포인핸드에서는<br />어떤 일들을 하나요?
+                      </p>
+                      <a href="/service/activities.html" class="main-link"
+                        >전체 캠페인 보기</a
+                      >
+                    </div>
+                    <div class="campaigns">
+                      <div class="campaign01">
+                        <strong>유기동물<br />입양 플랫폼</strong>
+                      </div>
+                      <div class="campaign02">
+                        <strong>유기동물<br />건강검진 지원</strong>
+                      </div>
+                      <div class="campaign03">
+                        <strong>포인핸드<br />매거진</strong>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="innerCont maskLayer">
+                    <div class="top">
+                      <p class="main-tit-txt">
+                        포인핸드에서는<br />어떤 일들을 하나요?
+                      </p>
+                      <a href="/service/activities.html" class="main-link"
+                        >전체 캠페인 보기</a
+                      >
+                    </div>
+                    <div class="campaigns">
+                      <div class="campaign01">
+                        <strong>유기동물<br />입양 플랫폼</strong>
+                        <p>
+                          <span>전국 보호소의 유기동물을</span><br /><span
+                            >입양할 수 있는 플랫폼</span
+                          >
+                        </p>
+                      </div>
+                      <div class="campaign02">
+                        <strong>유기동물<br />건강검진 지원</strong>
+                        <p>
+                          <span>입양된 유기동물들의</span><br /><span
+                            >건강검진을 지원합니다</span
+                          >
+                        </p>
+                      </div>
+                      <div class="campaign03">
+                        <strong>포인핸드<br />매거진</strong>
+                        <p>
+                          <span>입양하는 문화를</span><br /><span
+                            >만드는 매거진</span
+                          >
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="page centerBox section04">
+                  <div class="innerCont bgLayer">
+                    <div class="inner">
+                      <p class="main-tit-txt">
+                        유기동물과 함께 나누는<br />포인핸드 스토어
+                      </p>
+                      <a
+                        href="https://smartstore.naver.com/pawinhand"
+                        class="main-link"
+                        target="_blank"
+                        >포인핸드 스토어</a
+                      >
+                      <div class="main-product-list">
+                        <div class="main-product-list">
+                          <ul>
+                            <li>
+                              <a
+                                href="https://smartstore.naver.com/pawinhand/products/7197877706"
+                              >
+                                <div class="thumbBox">
+                                  <img
+                                    src="http://d12l2mexpetzlh.cloudfront.net/images/goods/adopt_me_doll.jpg"
+                                    width="250"
+                                    alt="어답미 인형"
+                                    title="어답미 인형"
+                                    class="middle"
+                                  />
+                                  &nbsp;
+                                </div>
+                                <div class="desc">
+                                  <strong class="name">어답미 인형</strong>
+                                  <div>
+                                    <!--<span class="price cancel"><strong>31,000</strong>원</span>-->
+                                    <span class="price"
+                                      ><strong>31,000</strong>원</span
+                                    >
+                                  </div>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href="https://smartstore.naver.com/pawinhand/products/7058795362"
+                              >
+                                <div class="thumbBox">
+                                  <img
+                                    src="http://d12l2mexpetzlh.cloudfront.net/images/goods/rainbow_badge.jpg"
+                                    width="250"
+                                    alt="무지개다리 뱃지"
+                                    title="무지개다리 뱃지"
+                                    class="middle"
+                                  />
+                                  &nbsp;
+                                </div>
+                                <div class="desc">
+                                  <strong class="name">무지개다리 뱃지</strong>
+                                  <div>
+                                    <span class="price cancel"
+                                      ><strong>10,000</strong>원</span
+                                    >
+                                    <span class="price"
+                                      ><strong>7,000</strong>원</span
+                                    >
+                                  </div>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href="https://m.smartstore.naver.com/pawinhand/products/6687885388"
+                              >
+                                <div class="thumbBox">
+                                  <img
+                                    src="https://shop-phinf.pstatic.net/20220929_46/1664440770800Y7wHO_JPEG/65576554504863579_353292006.jpg"
+                                    width="250"
+                                    alt="믹스패밀리 리유저블컵"
+                                    title="믹스패밀리 리유저블컵"
+                                    class="middle"
+                                  />
+                                  &nbsp;
+                                </div>
+                                <div class="desc">
+                                  <strong class="name"
+                                    >믹스패밀리 리유저블컵</strong
+                                  >
+                                  <div>
+                                    <span class="price"
+                                      ><strong>18,000</strong>원</span
+                                    >
+                                  </div>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href="https://smartstore.naver.com/pawinhand/products/4754400118"
+                              >
+                                <div class="thumbBox">
+                                  <img
+                                    src="http://d12l2mexpetzlh.cloudfront.net/images/goods/magazine_subscribe.jpeg"
+                                    width="250"
+                                    alt="매거진 정기구독"
+                                    title="매거진 정기구독"
+                                    class="middle"
+                                  />
+                                  &nbsp;
+                                </div>
+                                <div class="desc">
+                                  <strong class="name">매거진 정기구독</strong>
+                                  <div>
+                                    <span class="price"
+                                      ><strong>36,000</strong>원</span
+                                    >
+                                  </div>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href="https://smartstore.naver.com/pawinhand/products/5734485957"
+                              >
+                                <div class="thumbBox">
+                                  <img
+                                    src="http://d12l2mexpetzlh.cloudfront.net/images/goods/logo_symbol_badge.jpg"
+                                    width="250"
+                                    alt="로고 뱃지"
+                                    title="로고 뱃지"
+                                    class="middle"
+                                  />
+                                  &nbsp;
+                                </div>
+                                <div class="desc">
+                                  <strong class="name">로고 뱃지</strong>
+                                  <div>
+                                    <span class="price cancel"
+                                      ><strong>10,000</strong>원</span
+                                    >
+                                    <span class="price"
+                                      ><strong>7,000</strong>원</span
+                                    >
+                                  </div>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href="https://smartstore.naver.com/pawinhand/products/5256665052"
+                              >
+                                <div class="thumbBox">
+                                  <img
+                                    src="http://d12l2mexpetzlh.cloudfront.net/images/goods/h_harness.jpg"
+                                    width="250"
+                                    alt="H형 하네스 가슴줄"
+                                    title="H형 하네스 가슴줄"
+                                    class="middle"
+                                  />
+                                  &nbsp;
+                                </div>
+                                <div class="desc">
+                                  <strong class="name"
+                                    >H형 하네스 가슴줄</strong
+                                  >
+                                  <div>
+                                    <span class="price cancel"
+                                      ><strong>10,000</strong>원</span
+                                    >
+                                    <span class="price"
+                                      ><strong>8,000</strong>원</span
+                                    >
+                                  </div>
+                                </div>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <p class="main-donation-info">
+                        누적후원 금액<span
+                          ><strong class="data-donation donCount">0</strong
+                          >원</span
+                        >
+                      </p>
+                    </div>
+                  </div>
+                  <div class="innerCont maskLayer">
+                    <div class="inner">
+                      <p class="main-tit-txt">
+                        유기동물과 함께 나누는<br />포인핸드 스토어
+                      </p>
+                      <a
+                        href="https://smartstore.naver.com/pawinhand"
+                        class="main-link"
+                        target="_blank"
+                        >포인핸드 스토어</a
+                      >
+                      <div class="main-product-list">
+                        <div class="main-product-list">
+                          <ul>
+                            <li>
+                              <a
+                                href="https://smartstore.naver.com/pawinhand/products/7197877706"
+                              >
+                                <div class="thumbBox">
+                                  <img
+                                    src="http://d12l2mexpetzlh.cloudfront.net/images/goods/adopt_me_doll.jpg"
+                                    width="250"
+                                    alt="어답미 인형"
+                                    title="어답미 인형"
+                                    class="middle"
+                                  />
+                                  &nbsp;
+                                </div>
+                                <div class="desc">
+                                  <strong class="name">어답미 인형</strong>
+                                  <div>
+                                    <!--<span class="price cancel"><strong>31,000</strong>원</span>-->
+                                    <span class="price"
+                                      ><strong>31,000</strong>원</span
+                                    >
+                                  </div>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href="https://smartstore.naver.com/pawinhand/products/7058795362"
+                              >
+                                <div class="thumbBox">
+                                  <img
+                                    src="http://d12l2mexpetzlh.cloudfront.net/images/goods/rainbow_badge.jpg"
+                                    width="250"
+                                    alt="무지개다리 뱃지"
+                                    title="무지개다리 뱃지"
+                                    class="middle"
+                                  />
+                                  &nbsp;
+                                </div>
+                                <div class="desc">
+                                  <strong class="name">무지개다리 뱃지</strong>
+                                  <div>
+                                    <span class="price cancel"
+                                      ><strong>10,000</strong>원</span
+                                    >
+                                    <span class="price"
+                                      ><strong>7,000</strong>원</span
+                                    >
+                                  </div>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href="https://m.smartstore.naver.com/pawinhand/products/6687885388"
+                              >
+                                <div class="thumbBox">
+                                  <img
+                                    src="https://shop-phinf.pstatic.net/20220929_46/1664440770800Y7wHO_JPEG/65576554504863579_353292006.jpg"
+                                    width="250"
+                                    alt="믹스패밀리 리유저블컵"
+                                    title="믹스패밀리 리유저블컵"
+                                    class="middle"
+                                  />
+                                  &nbsp;
+                                </div>
+                                <div class="desc">
+                                  <strong class="name"
+                                    >믹스패밀리 리유저블컵</strong
+                                  >
+                                  <div>
+                                    <span class="price"
+                                      ><strong>18,000</strong>원</span
+                                    >
+                                  </div>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href="https://smartstore.naver.com/pawinhand/products/4754400118"
+                              >
+                                <div class="thumbBox">
+                                  <img
+                                    src="http://d12l2mexpetzlh.cloudfront.net/images/goods/magazine_subscribe.jpeg"
+                                    width="250"
+                                    alt="매거진 정기구독"
+                                    title="매거진 정기구독"
+                                    class="middle"
+                                  />
+                                  &nbsp;
+                                </div>
+                                <div class="desc">
+                                  <strong class="name">매거진 정기구독</strong>
+                                  <div>
+                                    <span class="price"
+                                      ><strong>36,000</strong>원</span
+                                    >
+                                  </div>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href="https://smartstore.naver.com/pawinhand/products/5734485957"
+                              >
+                                <div class="thumbBox">
+                                  <img
+                                    src="http://d12l2mexpetzlh.cloudfront.net/images/goods/logo_symbol_badge.jpg"
+                                    width="250"
+                                    alt="로고 뱃지"
+                                    title="로고 뱃지"
+                                    class="middle"
+                                  />
+                                  &nbsp;
+                                </div>
+                                <div class="desc">
+                                  <strong class="name">로고 뱃지</strong>
+                                  <div>
+                                    <span class="price cancel"
+                                      ><strong>10,000</strong>원</span
+                                    >
+                                    <span class="price"
+                                      ><strong>7,000</strong>원</span
+                                    >
+                                  </div>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href="https://smartstore.naver.com/pawinhand/products/5256665052"
+                              >
+                                <div class="thumbBox">
+                                  <img
+                                    src="http://d12l2mexpetzlh.cloudfront.net/images/goods/h_harness.jpg"
+                                    width="250"
+                                    alt="H형 하네스 가슴줄"
+                                    title="H형 하네스 가슴줄"
+                                    class="middle"
+                                  />
+                                  &nbsp;
+                                </div>
+                                <div class="desc">
+                                  <strong class="name"
+                                    >H형 하네스 가슴줄</strong
+                                  >
+                                  <div>
+                                    <span class="price cancel"
+                                      ><strong>10,000</strong>원</span
+                                    >
+                                    <span class="price"
+                                      ><strong>8,000</strong>원</span
+                                    >
+                                  </div>
+                                </div>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <p class="main-donation-info">
+                        누적후원 금액<span
+                          ><strong class="data-donation1 donCount">0</strong
+                          >원</span
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="page centerBox section05">
+                  <div class="innerCont bgLayer">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="1600"
+                      height="73"
+                      viewBox="0 0 1600 73"
+                      class="bg_obj01"
+                    >
+                      <path
+                        fill="none"
+                        stroke="#FFF"
+                        stroke-width="2"
+                        d="M-210 107l143.247-71.616c89.866-44.93 195.644-44.93 285.51 0l.492.246c89.866 44.93 195.643 44.93 285.51 0l.492-.246c89.866-44.93 195.643-44.93 285.51 0l.492.246c89.866 44.93 195.643 44.93 285.51 0 90.144-45.066 196.276-44.921 286.296.393l1.89.954c90.02 45.314 196.152 45.46 286.296.393L1794-34"
+                      />
+                    </svg>
+                    <div class="inner">
+                      <p class="main-tit-txt">입양 후기를 만나보세요.</p>
+                      <a href="/service/review.html" class="main-link"
+                        >입양후기 보기</a
+                      >
+                      <ul
+                        class="main-postscript-list main_review_list01"
+                        id="review_list01"
+                      >
+                        <!--
+						<li>
+								<div class="thumbBox"><img src="img/pawinhand/review01.jpg" alt=""></div>
+								<div class="desc">
+									<strong>토리와 함께라서 행복해요</strong>
+									<p>토리를 입양한지 이제 한달이 조금 넘었습니다. 우연히 포인핸드 사이트를 알게되어…</p>
+								</div>
+						</li>
+						<li>
+								<div class="thumbBox"><img src="img/pawinhand/review02.jpg" alt=""></div>
+								<div class="desc">
+									<strong>시루시루</strong>
+									<p>벌써 시루랑 가족이 된지 55일째 되는날이에요!!말도 잘 듣고 할 줄 아는것도 많은 똑쟁이…</p>
+								</div>
+						</li>
+						<li>
+								<div class="thumbBox"><img src="img/pawinhand/review03.jpg" alt=""></div>
+								<div class="desc">
+									<strong>울집 막내동생 데려온지 2달째</strong>
+									<p>토리를 입양한지 이제 한달이 조금 넘었습니다. 우연히 포인핸드 사이트를 알게되어…</p>
+								</div>
+						</li>
+						<li>
+								<div class="thumbBox"><img src="img/pawinhand/review04.jpg" alt=""></div>
+								<div class="desc">
+									<strong>꾸꾸가 나의 가족이 된지 3달째</strong>
+									<p>안녕하세요! 우리 꾸꾸가 제 가족이 된지 벌써 3달이…</p>
+								</div>
+						</li>
+						-->
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="innerCont maskLayer">
+                    <div class="inner">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="1600"
+                        height="73"
+                        viewBox="0 0 1600 73"
+                        class="bg_obj01"
+                      >
+                        <path
+                          fill="none"
+                          stroke="#FFF"
+                          stroke-width="2"
+                          d="M-210 107l143.247-71.616c89.866-44.93 195.644-44.93 285.51 0l.492.246c89.866 44.93 195.643 44.93 285.51 0l.492-.246c89.866-44.93 195.643-44.93 285.51 0l.492.246c89.866 44.93 195.643 44.93 285.51 0 90.144-45.066 196.276-44.921 286.296.393l1.89.954c90.02 45.314 196.152 45.46 286.296.393L1794-34"
+                        />
+                      </svg>
+                      <p class="main-tit-txt">입양 후기를 만나보세요.</p>
+                      <a href="/service/review.html" class="main-link"
+                        >입양후기 보기</a
+                      >
+                      <ul
+                        class="main-postscript-list main_review_list02"
+                        id="review_list02"
+                      >
+                        <!--
+						<li>
+								<div class="thumbBox"><img src="img/pawinhand/review01.jpg" alt=""></div>
+								<div class="desc">
+									<strong>토리와 함께라서 행복해요</strong>
+									<p>토리를 입양한지 이제 한달이 조금 넘었습니다. 우연히 포인핸드 사이트를 알게되어…</p>
+								</div>
+						</li>
+						<li>
+								<div class="thumbBox"><img src="img/pawinhand/review02.jpg" alt=""></div>
+								<div class="desc">
+									<strong>시루시루</strong>
+									<p>벌써 시루랑 가족이 된지 55일째 되는날이에요!!말도 잘 듣고 할 줄 아는것도 많은 똑쟁이…</p>
+								</div>
+						</li>
+						<li>
+								<div class="thumbBox"><img src="img/pawinhand/review03.jpg" alt=""></div>
+								<div class="desc">
+									<strong>울집 막내동생 데려온지 2달째</strong>
+									<p>토리를 입양한지 이제 한달이 조금 넘었습니다. 우연히 포인핸드 사이트를 알게되어…</p>
+								</div>
+						</li>
+						<li>
+								<div class="thumbBox"><img src="img/pawinhand/review04.jpg" alt=""></div>
+								<div class="desc">
+									<strong>꾸꾸가 나의 가족이 된지 3달째</strong>
+									<p>안녕하세요! 우리 꾸꾸가 제 가족이 된지 벌써 3달이…</p>
+								</div>
+						</li>
+						-->
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="page centerBox section06">
+                  <div class="innerCont bgLayer">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="1600"
+                      height="73"
+                      viewBox="0 0 1600 73"
+                      class="bg_obj01"
+                    >
+                      <path
+                        fill="none"
+                        stroke="#FFF"
+                        stroke-width="2"
+                        d="M-210 107l143.247-71.616c89.866-44.93 195.644-44.93 285.51 0l.492.246c89.866 44.93 195.643 44.93 285.51 0l.492-.246c89.866-44.93 195.643-44.93 285.51 0l.492.246c89.866 44.93 195.643 44.93 285.51 0 90.144-45.066 196.276-44.921 286.296.393l1.89.954c90.02 45.314 196.152 45.46 286.296.393L1794-34"
+                      />
+                    </svg>
+                    <div class="inner">
+                      <p class="txt01">
+                        <a
+                          href="https://www.instagram.com/pawinhand_official/"
+                          target="_blank"
+                          ><img
+                            src="img/pawinhand/ico-main-insta.png"
+                            alt=""
+                          />pawinhand_official</a
+                        >
+                      </p>
+                      <p class="txt02">
+                        포인핸드 인스타그램에서 다양한 소식을 확인하세요.
+                      </p>
+                      <ul class="instaList">
+                        <li>
+                          <a
+                            href="https://www.instagram.com/pawinhand_official/"
+                            target="_blank"
+                            ><img src="img/pawinhand/review01.jpg" alt=""
+                          /></a>
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.instagram.com/pawinhand_official/"
+                            target="_blank"
+                            ><img src="img/pawinhand/review02.jpg" alt=""
+                          /></a>
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.instagram.com/pawinhand_official/"
+                            target="_blank"
+                            ><img src="img/pawinhand/review03.jpg" alt=""
+                          /></a>
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.instagram.com/pawinhand_official/"
+                            target="_blank"
+                            ><img src="img/pawinhand/review04.jpg" alt=""
+                          /></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="innerCont maskLayer">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="1600"
+                      height="73"
+                      viewBox="0 0 1600 73"
+                      class="bg_obj01"
+                    >
+                      <path
+                        fill="none"
+                        stroke="#FFF"
+                        stroke-width="2"
+                        d="M-210 107l143.247-71.616c89.866-44.93 195.644-44.93 285.51 0l.492.246c89.866 44.93 195.643 44.93 285.51 0l.492-.246c89.866-44.93 195.643-44.93 285.51 0l.492.246c89.866 44.93 195.643 44.93 285.51 0 90.144-45.066 196.276-44.921 286.296.393l1.89.954c90.02 45.314 196.152 45.46 286.296.393L1794-34"
+                      />
+                    </svg>
+                    <div class="inner">
+                      <p class="txt01">
+                        <a
+                          href="https://www.instagram.com/pawinhand_official/"
+                          target="_blank"
+                          ><img
+                            src="img/pawinhand/ico-main-insta.png"
+                            alt=""
+                          />pawinhand_official</a
+                        >
+                      </p>
+                      <p class="txt02">
+                        포인핸드 인스타그램에서 다양한 소식을 확인하세요.
+                      </p>
+                      <ul class="instaList">
+                        <li>
+                          <a
+                            href="https://www.instagram.com/pawinhand_official/"
+                            target="_blank"
+                            ><img src="img/pawinhand/review01.jpg" alt=""
+                          /></a>
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.instagram.com/pawinhand_official/"
+                            target="_blank"
+                            ><img src="img/pawinhand/review02.jpg" alt=""
+                          /></a>
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.instagram.com/pawinhand_official/"
+                            target="_blank"
+                            ><img src="img/pawinhand/review03.jpg" alt=""
+                          /></a>
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.instagram.com/pawinhand_official/"
+                            target="_blank"
+                            ><img src="img/pawinhand/review04.jpg" alt=""
+                          /></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 메인 bottom -->
+              <div class="main_bottom">
+                <ul class="pawinhandInfo">
+                  <li>
+                    <img src="img/pawinhand/ico-rescue.png" alt="" /> 오늘
+                    구조된 동물 <strong class="data-rescue">0</strong> 마리
+                  </li>
+                  <li>
+                    <img src="img/pawinhand/ico-adoption.png" alt="" /> 입양률
+                    <strong class="data-adoptaion">0</strong> %
+                  </li>
+                  <li>
+                    <img src="img/pawinhand/ico-euthanasia.png" alt="" />
+                    안락사율 <strong class="data-euthanasis">0</strong> %
+                  </li>
+                </ul>
+                <div class="app_download">
+                  <p>APP ON</p>
+                  <a
+                    href="https://appsto.re/kr/oDrX8.i"
+                    target="_blank"
+                    title="애플 앱스토어"
+                    ><img src="img/pawinhand/ico-link-apple.png" alt="앱스토어"
+                  /></a>
+                  <a
+                    href="https://play.google.com/store/apps/details?id=lost.animal.main"
+                    target="_blank"
+                    title="구글 플레이스토어"
+                    ><img
+                      src="img/pawinhand/ico-link-playStore.png"
+                      alt="구글플레이스토어"
+                  /></a>
+                </div>
+              </div>
+
+              <!-- goto top -->
+              <a href="#" class="main_gotoTop">TOP</a>
+
+              <!-- main scrollbar -->
+              <div class="mainScrollBar"><span class="thumb"></span></div>
+
+              <div class="page_cover"></div>
+            </div>
+            <!-- //메인 -->
+
+            <!-- loading -->
+            <div class="loading">
+              <div class="lds-dual-ring"></div>
+            </div>
+
+            <!-- 입양후기 팝업 -->
+            <div class="detailReview">
+              <div class="popupLoading"></div>
+              <div class="innerLayer">
+                <div class="owl-carousel"></div>
+                <div class="desc"></div>
+                <button type="button" class="close_reviewLayer">
+                  <img src="img/pawinhandimg-close-gnb.png" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- //contents -->
+        </div>
+        <!-- container -->
+      </div>
+    </div>
+    <script
+      type="text/javascript"
+      src="/js/pawinhand/animation.gsap.min.js"
+    ></script>
+    <span itemscope="" itemtype="https://schema.org/Organization">
+      <link itemprop="url" href="https://pawinhand.kr" />
+    </span>
+
+    <script>
+      try {
+        // Account ID 적용
+        if (!wcs_add) var wcs_add = {};
+        wcs_add["wa"] = "s_2e02bb8b096";
+
+        // 마일리지 White list가 있을 경우
+        wcs.mileageWhitelist = [
+          "pawinhand1.cafe24.com",
+          "www.pawinhand1.cafe24.com",
+          "m.pawinhand1.cafe24.com",
+          "pawinhandmall.com",
+          "www.pawinhandmall.com",
+          "m.pawinhandmall.com",
+          "pawinhand.kr",
+          "www.pawinhand.kr",
+          "m.pawinhand.kr",
+        ];
+
+        // 네이버 페이 White list가 있을 경우
+        wcs.checkoutWhitelist = [
+          "pawinhand1.cafe24.com",
+          "www.pawinhand1.cafe24.com",
+          "m.pawinhand1.cafe24.com",
+          "pawinhandmall.com",
+          "www.pawinhandmall.com",
+          "m.pawinhandmall.com",
+          "pawinhand.kr",
+          "www.pawinhand.kr",
+          "m.pawinhand.kr",
+        ];
+
+        // 레퍼러 (스크립트 인젠션 공격 대응 strip_tags) ECQAINT-15101
+        wcs.setReferer("");
+
+        // 유입 추적 함수 호출
+        wcs.inflow("pawinhand.kr");
+
+        // 로그수집
+        wcs_do();
+      } catch (e) {}
+    </script>
+
+    <!-- External Script Start -->
+
+    <!-- kmp -->
+    <!-- CMC3 script -->
+    <div id="kmp_common_top_script" style="display: none">
+      <script
+        type="text/javascript"
+        charset="UTF-8"
+        src="//t1.daumcdn.net/adfit/static/kp.js"
+      ></script>
+      <script type="text/javascript">
+        kakaoPixel("4581099611933983900").pageView();
+        kakaoPixel.setServiceOrigin("20001");
+      </script>
+    </div>
+    <!-- CMC3 script -->
+
+    <!-- External Script End -->
+
+    <script
+      type="text/javascript"
+      src="//developers.kakao.com/sdk/js/kakao.min.js"
+      charset="utf-8"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/ind-script/i18n.php?lang=ko_KR&domain=front&v=2308091003"
+      charset="utf-8"
+    ></script>
+
+    <script src="/ind-script/optimizer.php?filename=zVfJctswDL3buvY71LQznV4bp9vUmWbadHKGKMhGTBIslzjq1xeWfagzkS2JOfTiRcJ7BMEHECjXbLC8eOPLxoPBLftN6TFw8grL-1DSxXtb3IdX5Sm7RA7Uprz_ndC3h6-3xbvi9UgkPkb0FnQ4PCgU84YwlyV5PWkLBaqisZOhoAnCNLS8jeyfbNx5Xgn-6HhqiBhJDIxY2Viiuu5-3FFc3_65ggiFITuCR1MlKLyV3-dRwXmysRlAzyrt3PrE3izYRs9aoz-Pu9EpfHDu0lO9GuBPiqTPWzWeu0jNAmtBsJ1FdjNNFmcVWDvErz2FYmPYDrV-BCvpZEWbzmMcvkqHi2iclnN5HgTOlddckcbyxz_4vX8notKDM1wneRS25MYt2CSrdgHd2dVJxcL0ingowwknRKrlr332_Euh4U-rGepRIJMi7Nb9XgX0D32H0wN2rNuG9GDp1dhA0nEXgmDAx8tnVDe-ylUr6kD_R82tpYDYIBENuUwIgewql8VghHpXDnvVeMMuuSfnKk8KdmhPaBgsrI41vMVK82qUghbJe7SqLcOa3VyqqsIMvDr8mzdSbiHmevJSNMOq8zoaLTcFRcJw3nrhWxf5G7ajTghCa9X-czLOoKn66sQA-Hdfo1c2Tia4hLDBmM9wQmyDOW4OxXoqy4KTY5uzl2u5SGA1fR9X6DjQ9PXvKKyXFPIIFKeMEHhUmAH_0cE32EpZrTNZbjmCXmTtpsuP6bJEiw3lpsYS2gwfPnuopwvyQ4osRZdUR_NzzdvpuSG9BnW323SKdkkbPKR53sEeUWWlzJIeULr2Dds8lX2h3bDVvoBeD0y3UL0Iz1fp-rMi1JFdSedD-qtteHp91kAGKo0ZHjmIaxn7cP4gc7F0Yjw9s5a93X0P2E24n_b3-1w6ORqnr7AtFPSPtzvUx0N3ejz6dLOBvA7Kk4sj0b-kuSplVC5_OlTdlNnAqXv9WZKjAuTcYuB86zlF_ESPYvkX&type=js&k=a71ee08808b3fab33fc4e8359100c0896d442e7a&t=1687220294"></script>
+    <script type="text/javascript">
+      CAFE24.MOBILE_WEB = false;
+      var mobileWeb = CAFE24.MOBILE_WEB;
+      try {
+        var isUseLoginKeepingSubmit = false;
+        // isSeqNoKeyExpiretime
+        function isSeqNoKeyExpiretime(iExpiretime) {
+          var sDate = new Date();
+          var iNow = Math.floor(sDate.getTime() / 1000);
+          // 유효시간 확인
+          if (iExpiretime > iNow) {
+            return false;
+          }
+          return true;
+        }
+        function isUseLoginKeeping() {
+          // 디바이스 확인
+          if (EC_MOBILE_DEVICE === false) {
+            return;
+          }
+          // 로그인 여부
+          if (
+            sessionStorage.getItem("member_" + CAFE24.SDE_SHOP_NUM) !== null
+          ) {
+            return;
+          }
+          var sLoginKeepingInfo = localStorage.getItem(
+            "use_login_keeping_info"
+          );
+          var iSeqnoExpiretime;
+          var iSeqNoKey;
+          if (sLoginKeepingInfo == null) {
+            iSeqnoExpiretime = localStorage.getItem("seq_no_key_expiretime");
+            iSeqNoKey = localStorage.getItem("seq_no_key");
+            // 유효시간, key 값 확인
+            if (iSeqnoExpiretime === null || iSeqNoKey === null) {
+              return;
+            }
+          } else {
+            var oLoginKeepingInfo = JSON.parse(sLoginKeepingInfo);
+            iSeqNoKey = oLoginKeepingInfo.seq_no_key;
+            iSeqnoExpiretime = oLoginKeepingInfo.seq_no_key_expiretime;
+            if (isNaN(iSeqNoKey) === true || isNaN(iSeqnoExpiretime) === true) {
+              return;
+            }
+          }
+          if (isSeqNoKeyExpiretime(iSeqnoExpiretime) === false) {
+            return;
+          }
+          useLoginKeepingSubmit();
+        }
+        function findGetParamValue(paramKey) {
+          var result = null,
+            tmp = [];
+          location.search
+            .substr(1)
+            .split("&")
+            .forEach(function (item) {
+              tmp = item.split("=");
+              if (tmp[0] === paramKey) result = decodeURIComponent(tmp[1]);
+            });
+          return result;
+        }
+        function useLoginKeepingSubmit() {
+          var iSeqnoExpiretime;
+          var iSeqNoKey;
+          var sUseLoginKeepingIp;
+          var sLoginKeepingInfo = localStorage.getItem(
+            "use_login_keeping_info"
+          );
+          if (sLoginKeepingInfo == null) {
+            iSeqnoExpiretime = localStorage.getItem("seq_no_key_expiretime");
+            iSeqNoKey = localStorage.getItem("seq_no_key");
+          } else {
+            var oLoginKeepingInfo = JSON.parse(sLoginKeepingInfo);
+            iSeqNoKey = oLoginKeepingInfo.seq_no_key;
+            iSeqnoExpiretime = oLoginKeepingInfo.seq_no_key_expiretime;
+            sUseLoginKeepingIp = oLoginKeepingInfo.use_login_keeping_ip;
+          }
+          var oForm = document.createElement("form");
+          oForm.method = "post";
+          oForm.action = "/exec/front/member/LoginKeeping";
+          document.body.appendChild(oForm);
+          var oSeqNoObj = document.createElement("input");
+          oSeqNoObj.name = "seq_no_key";
+          oSeqNoObj.type = "hidden";
+          oSeqNoObj.value = iSeqNoKey;
+          oForm.appendChild(oSeqNoObj);
+          oSeqNoObj = document.createElement("input");
+          oSeqNoObj.name = "seq_no_key_expiretime";
+          oSeqNoObj.type = "hidden";
+          oSeqNoObj.value = iSeqnoExpiretime;
+          oForm.appendChild(oSeqNoObj);
+          var returnUrl = findGetParamValue("returnUrl");
+          if (returnUrl == "" || returnUrl == null) {
+            returnUrl = location.pathname + location.search;
+          }
+          oSeqNoObj = document.createElement("input");
+          oSeqNoObj.name = "returnUrl";
+          oSeqNoObj.type = "hidden";
+          oSeqNoObj.value = returnUrl;
+          oForm.appendChild(oSeqNoObj);
+          if (sUseLoginKeepingIp != undefined) {
+            oSeqNoObj = document.createElement("input");
+            oSeqNoObj.name = "use_login_keeping_ip";
+            oSeqNoObj.type = "hidden";
+            oSeqNoObj.value = sUseLoginKeepingIp;
+            oForm.appendChild(oSeqNoObj);
+          }
+          oForm.submit();
+          isUseLoginKeepingSubmit = true;
+        }
+        isUseLoginKeeping();
+      } catch (e) {}
+      var aPopupListData = {
+        aPopupList:
+          '[{"type":"L","child_type":"W","idx":10,"file":"\\\/popup\\\/popup_10.html","size":"560*590","position":"50*400","title":"\\uc720\\uae30\\ub3d9\\ubb3c \\uc785\\uc591\\uc774 \\ubb38\\ud654\\uac00 \\ub418\\ub294 \\uacf5\\uac04, \\ud3ec\\uc778\\ud578\\ub4dc \\uc785\\uc591\\ubb38\\ud654\\uc13c\\ud130","open":true}]',
+        aPopupCouponList: [],
+        sIsAuthGuidePopup: "",
+        sIsUpdateEventGuidePopup: "",
+        sIsLifetimeEventGuidePopup: "",
+        sPopupPage: "F",
+      };
+      var aLogData = {
+        log_server1: "eclog2-260.cafe24.com",
+        log_server2: "elg-db-svcm-199.cafe24.com",
+        mid: "pawinhand1",
+        stype: "e",
+        domain: "",
+        shop_no: "1",
+        lang: "ko_KR",
+        ver: 2,
+        hash: "a4a62f2a74ed8e318ff48553f66e8848",
+        ca: "cfa-js.cafe24.com\/cfa.js",
+        etc: "",
+        mobile_flag: "F",
+      };
+      var sMileageName = "적립금";
+      var sMileageUnit = "[:PRICE:]원";
+      var sDepositName = "예치금";
+      var sDepositUnit = "원";
+      CAFE24.SHOP_CURRENCY_INFO = {
+        1: {
+          aShopCurrencyInfo: {
+            currency_code: "KRW",
+            currency_no: "410",
+            currency_symbol: "\uffe6",
+            currency_name: "South Korean won",
+            currency_desc: "\uffe6 \uc6d0 (\ud55c\uad6d)",
+            decimal_place: 0,
+            round_method_type: "F",
+          },
+          aShopSubCurrencyInfo: null,
+          aBaseCurrencyInfo: {
+            currency_code: "KRW",
+            currency_no: "410",
+            currency_symbol: "\uffe6",
+            currency_name: "South Korean won",
+            currency_desc: "\uffe6 \uc6d0 (\ud55c\uad6d)",
+            decimal_place: 0,
+            round_method_type: "F",
+          },
+          fExchangeRate: 1,
+          fExchangeSubRate: null,
+          aFrontCurrencyFormat: { head: "", tail: "\uc6d0" },
+          aFrontSubCurrencyFormat: { head: "", tail: "" },
+        },
+      };
+      var SHOP_CURRENCY_INFO = CAFE24.SHOP_CURRENCY_INFO;
+      var EC_ASYNC_LIVELINKON_ID = "";
+      if (EC$("[async_section=before]").length > 0) {
+        EC$("[async_section=before]").addClass("displaynone");
+      }
+      CAFE24.APPSCRIPT_ASSIGN_DATA = CAFE24.APPSCRIPT_ASSIGN_DATA || [
+        {
+          src: "https://cax.channel.io/cafe24/plugins/f2c97246-c5d1-4b93-aa8b-8db1f6bf8350.js?vs=20211229170230.1&client_id=QKWiDNLcK9koJO0swpfnuE",
+        },
+        {
+          src: "https://app4you.cafe24.com/SmartPopup/tunnel/scriptTags?vs=20211102143318.1&client_id=AyPifbe9TEq8i4fmvfUgaZ",
+          integrity:
+            "sha384-j+WLOriOo0/sb+Ho5fn6lGPknv0cW+wMxOLlx8qpy01ShkkynynGNJQ53niqAdze",
+        },
+      ];
+      CAFE24.APPSCRIPT_SDK_DATA = CAFE24.APPSCRIPT_SDK_DATA || [
+        "application",
+        "order",
+        "store",
+        "supply",
+        "category",
+        "collection",
+        "customer",
+        "personal",
+        "privacy",
+        "product",
+        "promotion",
+      ];
+      var EC_APPSCRIPT_ASSIGN_DATA = CAFE24.getDeprecatedNamespace(
+        "EC_APPSCRIPT_ASSIGN_DATA"
+      );
+      var EC_APPSCRIPT_SDK_DATA = CAFE24.getDeprecatedNamespace(
+        "EC_APPSCRIPT_SDK_DATA"
+      );
+    </script>
+  </body>
+</html>

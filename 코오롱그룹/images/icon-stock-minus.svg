@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="10px" viewBox="0 0 12 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Triangle</title>
+    <g id="메인시안" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="FO-MAI-001-01" transform="translate(-1356.000000, -8391.000000)" fill="#80A3FC">
+            <g id="ETC" transform="translate(0.000000, 8132.000000)">
+                <g id="Stock" transform="translate(975.000000, 120.000000)">
+                    <g id="number" transform="translate(30.000000, 120.000000)">
+                        <path d="M358.727558,21.9615277 L362.245484,27.9922579 C362.802044,28.9463618 362.479772,30.1709972 361.525668,30.7275578 C361.219796,30.9059832 360.872035,31 360.517926,31 L353.482074,31 C352.377504,31 351.482074,30.1045695 351.482074,29 C351.482074,28.6458907 351.576091,28.2981301 351.754516,27.9922579 L355.272442,21.9615277 C355.829003,21.0074238 357.053638,20.6851513 358.007742,21.2417119 C358.305749,21.4155495 358.55372,21.6635204 358.727558,21.9615277 Z" id="Triangle" transform="translate(357.000000, 25.000000) scale(1, -1) translate(-357.000000, -25.000000) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

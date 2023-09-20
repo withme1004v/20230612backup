@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/fullpage.css" />
+    <script src="js/fullpage.extensions.min.js"></script>
+    <script src="js/fullpage.js"></script>
+    <style>
+      body {
+        margin: 0;
+        /* overflow: hidden; */
+      }
+
+      .page {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+      }
+
+      #page2 {
+        overflow-x: scroll;
+        height: 100vh;
+      }
+
+      #slider {
+        display: flex;
+        width: 300%;
+        height: 100%;
+      }
+
+      .slide {
+        flex: 1 1 33.33%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="fullpage">
+      <div class="section">Some section</div>
+      <div class="section">Some section</div>
+      <div class="section">Some section</div>
+      <div class="section">Some section</div>
+    </div>
+  </body>
+  <script>
+    new fullpage("#fullpage", {
+      //options here
+      autoScrolling: true,
+      scrollHorizontally: true,
+    });
+
+    //methods
+    fullpage_api.setAllowScrolling(false);
+    /*제이쿼리
+    $(document).ready(function() {
+	$('#fullpage').fullpage({
+		//options here
+		autoScrolling:true,
+		scrollHorizontally: true
+	});
+
+	//methods
+	$.fn.fullpage.setAllowScrolling(false);
+});*/
+  </script>
+</html>

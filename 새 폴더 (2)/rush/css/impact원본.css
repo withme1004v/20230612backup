@@ -1,0 +1,190 @@
+@charset "UTF-8";
+
+img {max-width:100%;}
+/* footer {margin-top:0;}
+section {padding-top:0 !important;} */
+
+.donation_area p, .donation_area div {line-height: 1.5em;}
+.campaign_inner { width:100%; max-width:1432px; min-width:1224px; margin:0 auto;}
+.full-width-image {position:relative;;display:flex;flex-direction: column;justify-content: flex-end;height:100vh;background-size:cover;background-position:50%;}
+
+.full-width-image.report {background-image:url("../images/impact-report/our-impact-report/or_1.jpg")}
+.full-width-image.giving {background-image:url("../images/impact-report/our-giving/og_1.jpg")}
+
+.full-width-image .title {position:relative;;z-index:2;padding-bottom:80px;}
+.full-width-image span {display:block;position:absolute;left:-30px;bottom:140px;transform:rotate(-90deg);letter-spacing: .3em;color:#fff}
+.full-width-image h1 {color:#fff;font-size:80px;line-height:1.10em;font-weight:700;margin-left:10%;}
+.full-width-image p {color:#fff;margin-top:25px;margin-left:10%;}
+.full-width-image::before { content: ""; display: block; background: linear-gradient(180deg,transparent,#000 95%); position: absolute; width: 100%; height: 60%; bottom: 0; left: 0;z-index:1;}
+
+.donation_area .swiper { padding-bottom:40px;}
+.donation_area .swiper-pagination { bottom:0;}
+.donation_area .inner > .list-page + .list-page, .donation_area .campaign_inner > .list-page, .donation_area .list-page + .is-map { margin-top:120px;}
+.donation_area .inner + .campaign_inner { margin-bottom:120px;}
+.list-page {display:flex;justify-content: space-between;}
+.list-page + .list-page {padding-top:0;}
+.list-page .explain,
+.list-page .list {width:50%;padding:0 10% 160px 10%}
+.list-page .charty-left {width:57.51633%;padding:0;}
+.list-page .charty-right {width:32.02614%;padding:0;}
+.swiper-container {padding-bottom:36px;}
+
+.list-page .explain p {word-break: keep-all;}
+.list-page .explain p:not(:last-of-type) {margin-bottom:25px;}
+.list-page .explain p.large-font {font-size:24px;}
+
+.list-page .list ul {border-top:1px solid #121212;margin-bottom:160px;}
+.list-page .list ul li {position:relative;border-bottom:1px solid #121212;}
+.list-page .list ul li a {display:block;;position:relative;padding:25px 80px 25px 0;font-weight:500;font-size:18px;}
+.list-page .list ul li a::after {content: "";display: block;position: absolute;right: 30px;width: 20px;height: 20px;background: url(https://weare.lush.com/img/right-arrow.svg) no-repeat 50%;background-size: cover;margin-left: auto;top: 50%;margin-top: -10px;transition: all .2s;}
+.list-page .list ul li:hover a::after {content: "";display: block;position: absolute;right: 0px;width: 20px;height: 20px;background: url(https://weare.lush.com/img/right-arrow.svg) no-repeat 50%;background-size: cover;margin-left: auto;top: 50%;margin-top: -10px;transition: all .2s;}
+
+.page {display:flex;justify-content: space-between;align-items: stretch;position:relative;}
+.header {display:block;position:relative;width:50%;background:#f3f3f3;}
+.header .header-inner {position:absolute;left:0;top:1px;width:100%;height:100vh;background:#f3f3f3;display:flex;justify-content: flex-end;flex-direction: column;z-index:2;}
+.header.fixed .header-inner {position:fixed;left:0;top:0;width:50%;}
+.header.after .header-inner {position:absolute;left:0;bottom:50px;top:auto;}
+.header-title {padding:0 0 80px 20%;}
+.header-title h1 {font-size:70px;line-height:1.15em;margin-top:35px;letter-spacing: -3px;}
+.header-title .date {display:block;position:absolute;left:-30px;bottom:140px;transform:rotate(-90deg);letter-spacing: .3em;}
+.header-title .portal-target {letter-spacing: 4px;}
+
+.contents {display:block;position:relative;width:50%;}
+.page-intro-image {display:block;width:100%;height:100vh;;margin-bottom:105px;}
+.cycle_area.contents_wrap {padding-top:0;}
+
+.page-intro-image.intro {background:url("../images/impact-report/go-circular/gc_1--6.jpg");background-size:cover;background-position:50%}
+.page-intro-image.buying {background:url("../images/impact-report/go-circular/gc_3.jpg");background-size:cover;background-position:50%;}
+.page-intro-image.store {background:url("../images/impact-report/go-circular/gc_7--8-1.jpg");background-size:cover;background-position:50%;}
+.page-intro-image.tech {background:url("../images/impact-report/go-circular/gc_11.jpg");background-size:cover;background-position:50%;}
+.page-intro-image.greenhub {background:url("../images/impact-report/go-circular/gc_5.jpg");background-size:cover;background-position:50%;}
+.page-intro-image.campaign {background:url("../images/impact-report/go-circular/gc_10-1--12--13-2.jpg");background-size:cover;background-position:50%;}
+.page-intro-image.giving {background:url("../images/impact-report/go-circular/gc_14.jpg");background-size:cover;background-position:50%;}
+.page-intro-image.community {background:url("../images/impact-report/go-circular/gc_15.jpg");background-size:cover;background-position:50%;}
+
+.donation_area .contents-inner {padding:0}
+.contents-inner {margin:0 auto;padding:0 19% 120px 19%;}
+.contents-inner.long-top {margin-top:500px;}
+.contents-inner p {word-break: keep-all; line-height:24px;}
+.contents-inner p:not(:last-of-type) {margin-bottom:30px;}
+.contents-inner p.large {font-size:24px;}
+.contents-inner p.large strong {line-height:36px;}
+.small-caps {display:block;margin-bottom:35px !important;letter-spacing: 0.23em;}
+
+ul.share {position:relative;margin-bottom:35px;}
+ul.share li {display: inline-block;padding: 0;margin: 0 6px 0 0;transition: all .2s;transition-delay: .4s;opacity: 0;}
+ul.share a.share-toggle {transform: rotate(90deg);transition: transform .3s ease-in-out;position: relative;z-index: 10;}
+ul.share.hover a.share-toggle {transform: rotate(0);}
+ul.share li.share-icon {z-index:10;position:relative;opacity:1;}
+ul.share.dark li a {width: 40px;height: 40px;border: 1px solid #fff;border-radius: 50%;display: block;position: relative;border-color:#121212;transition:all .2s}
+ul.share li a svg {position: absolute;top: 50%;left: 50%;transform: translate3d(-50%,-50%,0);max-width:100%;}
+ul.share li:nth-child(2), ul.share li:nth-child(3), ul.share li:nth-child(4), ul.share li:nth-child(5), ul.share li:nth-child(6) {position:absolute;left:0;opacity:0;}
+
+ul.share.hover li:nth-child(2) {position: absolute;left: 50px;opacity: 1;}
+ul.share.hover li:nth-child(3) {position: absolute;left: 100px;opacity: 1;}
+ul.share.hover li:nth-child(4) {position: absolute;left: 150px;opacity: 1;}
+
+.sr-only {position: absolute;width: 1px;height: 1px;padding: 0;margin: -1px;overflow: hidden;clip: rect(0,0,0,0);border: 0;}
+
+.percent-box {position:relative;margin:120px auto;}
+.percent-box.mt0 {margin-top:0;}
+.percent-box p {letter-spacing:.23em ;}
+.percent-box span:first-of-type {font-size:150px;font-weight:900;letter-spacing: -6px;line-height:170px;}
+.percent-box span:nth-of-type(2) {position:absolute;margin-left:10px;bottom:30px;font-size:60px;font-weight:700;letter-spacing: -6px;}
+
+.quotes {margin: 120px auto 0 auto;display:flex;justify-content: center;align-items:flex-start;}
+.quotes svg {width:64px;display:block;}
+.quotes p {width:calc(100% - 100px);margin-left:36px;font-size:24px;font-weight:700; line-height: 36px;}
+.quotes p span {font-weight:400;font-size:16px;margin-top:25px; line-height:24px; }
+
+.graph-wrap {display:block;margin:120px auto 220px auto;height:300px;position:relative;}
+.graph-wrap canvas {margin-left:-15%;max-width:700px;}
+.graph-wrap .graph-per {position:absolute;top:45%;left:40%;width:60%;}
+.graph-wrap .graph-per .counter {font-size:80px;font-weight:900;letter-spacing: -5px;;}
+.graph-wrap .graph-per .counter + span {font-size:30px;font-weight:700;letter-spacing: -5px;;}
+.graph-wrap .graph-per .graph-title {font-size:20px;font-weight:700;margin-bottom:15px;}
+.graph-wrap .graph-per ul li {display:flex;justify-content: space-between;max-width:300px;}
+.graph-wrap .graph-per ul li span {font-size:14px;}
+.graph-wrap .graph-per ul li span:last-of-type {padding-right:20px;position:relative;}
+.graph-wrap .graph-per ul li span::after {content:'';display:block;width:10px;height:10px;border-radius: 50%;position:absolute;right:0;top:7px;;}
+.graph-wrap .graph-per ul li:nth-of-type(1) span:last-of-type::after {background:rgba(41, 174, 85, 1)}
+.graph-wrap .graph-per ul li:nth-of-type(2) span:last-of-type::after {background:rgba(98, 195, 131, 1)}
+.graph-wrap .graph-per ul li:nth-of-type(3) span:last-of-type::after {background:rgba(155, 217, 177, 1)}
+.graph-wrap .graph-per ul li:nth-of-type(4) span:last-of-type::after {background:rgba(212, 239, 224, 1)}
+
+.full-image img {display:block;position:relative;width:100%;}
+.margin-b {margin-bottom:120px;}
+
+.naked-product li {display:block;margin-bottom:25px;}
+.naked-product li:last-of-type {margin-bottom:0px;}
+.naked-product li strong {text-decoration: underline;}
+
+ul.dot {display:block;margin-bottom:35px;}
+ul.dot li { position:relative; padding-left:20px; line-height:24px;}
+ul.dot li::before {content:'';display:block;width:5px;height:5px;background:#000;border-radius: 50%;position:absolute;left:5px;top:10px;;}
+
+.under-line,
+.under-line:hover {text-decoration: underline !important;}
+
+.link-to-video a {background:url("https://lush-goals-static-assets.storage.googleapis.com/wp-content/uploads/2020/06/05120715/ceridwens_cauldron_bath_oil_hero_image_2019_3-1024x910.jpg")}
+.link-to-video--image {display:block;position:relative;padding-bottom:53.59%;background-size:cover !important;}
+.link-to-video--image .play-button {position:absolute;top:50%;left:50%;transform:translate3d(-50%,-50%,0);}
+.caption {padding-right:5%;margin-top:16px;letter-spacing:1px;text-align: right; word-break: keep-all;}
+.text-right {text-align: right;}
+
+.slider {margin-bottom:170px;}
+.graph-caption {display:block;;text-align: center;margin-top:25px;font-size:18px;}
+
+.block-link {display:block;padding:64px 19%;background:#f6f6f6;position:relative;}
+.block-link h2 {font-size:18px;font-weight:400;}
+.block-link h3 {font-size:20px;margin-top:-10px;}
+iframe {border:0;}
+.block-link:before {content: "";display: block;position: absolute;bottom: 65px;left: 0;width: 100%;height: 35px;background-image: linear-gradient(hsla(0,0%,100%,0),#f6f6f6);}
+.full-width-image.charitable {background-image:url("../images/impact-report/charitable-impact/ci_1.jpg")}
+.full-width-image.refund {margin-bottom:120px; background-image:url("../images/impact-report/charitable-impact/ci_3.jpg")}
+.full-width-image.tailor {margin-bottom:120px; background-image:url("../images/impact-report/charitable-impact/ci_5.jpg")}
+
+.toggle-wrap {border-top:1px solid #000;margin-bottom:120px;}
+.toggle-wrap .toggle-hidden {display:none;padding:0 0 25px 0}
+.toggle-wrap .toggle-hidden a {text-decoration: underline;}
+.toggle-wrap li {display:block;border-bottom:1px solid #000;}
+.toggle-wrap li .toggle-btn {display:block;position:relative;padding:28px 50px 28px 0;font-size:18px;font-weight:700;}
+
+.toggle-wrap li .toggle-btn:after {content: "";display: block;position: absolute;top: 50%;transform: translateY(-50%);right: 20px;width: 20px;height: 20px;/* background-image: url("https://weare.lush.com/img/down-arrow.svg"); */background-position: 50%;background-size: 20px;background-repeat: no-repeat;}
+.toggle-wrap li .toggle-btn.on:after {content: "";display: block;position: absolute;top: 50%;transform: translateY(-50%);right: 20px;width: 20px;height: 20px;/* background-image: url("https://weare.lush.com/img/down-arrow.svg"); */background-position: 50%;background-size: 20px;background-repeat: no-repeat;
+transform: translateY(-50%) rotate(180deg);}
+
+.tooltip {display:block;position:absolute;right:50px;top:0;}
+.tooltip .v-portal {display:none;}
+.tooltip-button {border-radius: 0;border: 0;display: block;padding: 0;width: 30px;height: 30px;background-color: #ffe32e;border-radius: 50%;position: relative;top: 15px;margin-bottom: -15px;/* background-image: url(https://weare.lush.com/img/info-icon.svg); */background-position: 50%;background-repeat: no-repeat;margin-right: 0;margin-left: auto;
+}
+
+.info-content {display:flex;justify-content: flex-start;align-items: center;padding:0 50px 0 10%;background:#000;;position:fixed;left:0;bottom:-300px;width:100%;height:125px;}
+.info-text {color:#fff;display:block;}
+.info-content button {outline: none;width: 60px;height: 60px;border: 0;border-radius: 50%;background: #2e37ff;position: absolute;top: 0;right: 15%;transform: translateY(-50%);/* background-image: url(https://weare.lush.com/img/close.svg); */background-position: 50%;background-repeat: no-repeat;
+}
+.info-content button svg {display:block;margin:0 auto;}
+
+.no-event {pointer-events: none;cursor:normal;}
+.mb_30 {margin-bottom:30px;}
+
+.c-chart li {position:relative;display:flex;justify-content: space-between;align-items:center;height:45px;margin-bottom:8px;padding:0 8px;}
+.c-chart li span {display:block;line-height:45px;text-align: left;width:50%;}
+.c-chart li span:last-of-type {text-align: right;}
+.c-chart li .bar {display:block;position:absolute;left:0;top:0;height:100%;z-index:-1;}
+.c-chart li:first-of-type .bar {background:rgba(41, 174, 85, 1);}
+.c-chart li:nth-of-type(2) .bar {background:rgba(41, 174, 85, 0.9);}
+.c-chart li:nth-of-type(3) .bar {background:rgba(41, 174, 85, 0.8);}
+.c-chart li:nth-of-type(4) .bar {background:rgba(41, 174, 85, 0.7);}
+.c-chart li:nth-of-type(5) .bar {background:rgba(41, 174, 85, 0.6);}
+.c-chart li:nth-of-type(6) .bar {background:rgba(41, 174, 85, 0.55);}
+.c-chart li:nth-of-type(7) .bar {background:rgba(41, 174, 85, 0.5);}
+.c-chart li:nth-of-type(8) .bar {background:rgba(41, 174, 85, 0.45);}
+.c-chart li:nth-of-type(9) .bar {background:rgba(41, 174, 85, 0.4);}
+.c-chart li:nth-of-type(10) .bar {background:rgba(41, 174, 85, 0.35);}
+.c-chart li:nth-of-type(11) .bar {background:rgba(41, 174, 85, 0.3);}
+.c-chart li:nth-of-type(12) .bar {background:rgba(41, 174, 85, 0.25);}
+.c-chart li:nth-of-type(13) .bar {background:rgba(41, 174, 85, 0.2);}
+.c-chart li:nth-of-type(14) .bar {background:rgba(41, 174, 85, 0.15);}
+
+.cycle_swiper {padding-bottom:36px;}

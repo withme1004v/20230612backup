@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        /* overflow: hidden; */
+      }
+
+      .page {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+      }
+
+      #page2 {
+        overflow-x: scroll;
+        height: 100vh;
+      }
+
+      #slider {
+        display: flex;
+        width: 300%;
+        height: 100%;
+      }
+
+      .slide {
+        flex: 1 1 33.33%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page" id="page1">
+      <h1>Page 1</h1>
+    </div>
+    <div id="page2">
+      <div id="slider">
+        <div class="slide">Slide 1</div>
+        <div class="slide">Slide 2</div>
+        <div class="slide">Slide 3</div>
+      </div>
+    </div>
+    <div class="page" id="page1">
+      <h1>Page 1</h1>
+    </div>
+  </body>
+  <script>
+    const slider = document.getElementById("slider");
+    let isLastSlide = false;
+
+    slider.addEventListener("scroll", () => {
+      const maxScrollLeft = slider.scrollWidth - slider.clientWidth;
+      if (slider.scrollLeft >= maxScrollLeft && !isLastSlide) {
+        // 마지막 슬라이드일 경우
+        isLastSlide = true;
+        document.body.style.overflowY = "scroll"; // 아래로 스크롤 가능하도록 변경
+      }
+    });
+
+    const page1 = document.getElementById("page1");
+    const page2 = document.getElementById("page2");
+
+    let isPage1Visible = true;
+
+    window.addEventListener("wheel", (event) => {
+      if (isPage1Visible && event.deltaY > 0) {
+        // 1페이지에서 2페이지로 부드럽게 전환
+        page1.style.transform = "translateY(-100%)";
+        page2.style.transform = "translateY(-100%)";
+        setTimeout(() => {
+          isPage1Visible = false;
+        }, 1000);
+      }
+    });
+
+    // 가로 스크롤을 위한 가상 슬라이더 크기 설정
+    const virtualSliderWidth = slider.scrollWidth - slider.clientWidth;
+    slider.style.width = `${virtualSliderWidth}px`;
+  </script>
+</html>

@@ -1,0 +1,29 @@
+@charset "utf-8";
+section.main_top {
+  width: 100%;
+  margin: 100px auto;
+
+  text-align: center;
+}
+.main_top > p {
+  font-size: 18px;
+  padding: 10px 0;
+}
+.main_top > h2 {
+  font-size: 36px;
+  padding: 20px 0;
+}
+.main_app {
+  width: 1280px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-between;
+}
+.main_app > li {
+  width: 300px;
+}
+.main_app > li img {
+  width: 288px;
+  height: 288px;
+  object-fit: cover;
+}

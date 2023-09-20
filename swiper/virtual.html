@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/fullpage.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.css" />
+    <style>
+      .section {
+        height: 100vh;
+      }
+      .sec2 {
+        display: flex;
+        overflow: hidden;
+      }
+      .swiper-slide {
+        width: 100%;
+      }
+    </style>
+    <title>Fullpage + Swiper Virtual Example</title>
+  </head>
+  <body>
+    <div id="fullpage">
+      <div class="section sec1 active">
+        <h1>Section1</h1>
+      </div>
+      <div class="section sec2">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <!-- Swiper virtual slides will be appended here dynamically -->
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <div class="section sec3">
+        <div class="main">
+          <h1>Section3</h1>
+          <!-- Add your content for Section 3 here -->
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.fullpage.js"></script>
+    <script src="js/swiper-bundle.js"></script>
+    <script>
+      $(document).ready(function () {
+        new fullpage("#fullpage", {
+          sectionsColor: ["#f2f2f2", "#4BBFC3", "#7BAABE"],
+          scrollHorizontally: true,
+        });
+
+        var swiperSec2 = new Swiper(".swiper-container", {
+          direction: "horizontal",
+          slidesPerView: "auto",
+          spaceBetween: 20,
+          virtual: {
+            slides: [
+              // Add your virtual slides here
+              '<div class="swiper-slide"><h1>Section2</h1> Slide 1</div>',
+              '<div class="swiper-slide"><h1>Section2</h1> Slide 2</div>',
+              '<div class="swiper-slide"><h1>Section2</h1> Slide 3</div>',
+            ],
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

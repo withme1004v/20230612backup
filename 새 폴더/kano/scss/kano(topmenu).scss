@@ -1,0 +1,208 @@
+@font-face {
+  font-family: NanumGothic;
+  src: url(../webfonts/NanumGothic.otf);
+}
+body {
+  font-family: "Cairo", "Noto Sans KR", "NanumGothic", "돋움", Dotum, Arial,
+    sans-serif;
+  height: 10000px;
+}
+header {
+  width: 100%;
+  height: 144px;
+  position: relative;
+  z-index: 1;
+  .top_menu {
+    position: fixed;
+    width: 100%;
+    height: 144px;
+    transition: 0.3s;
+    .top_menu_wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+      height: 100%;
+      margin: 0 auto;
+
+      .top_logo {
+        height: 100%;
+        a {
+          position: relative;
+          display: block;
+          height: 100%;
+          img {
+            display: block;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+            &:last-child {
+              transition: 0.3s;
+              opacity: 0;
+            }
+            &.on {
+              opacity: 1;
+            }
+          }
+        }
+      }
+      .top_menu_gnb {
+        position: relative;
+        top: 0;
+        z-index: 1;
+        width: 40%;
+        height: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: 0.3s;
+        li {
+          width: 20%;
+          height: 100%;
+          a {
+            display: block;
+            line-height: 144px;
+            transition: 0.3s;
+            font-size: 18px;
+            font-weight: 700;
+            color: #fff;
+            text-transform: uppercase;
+          }
+        }
+      }
+      .top_menu_right {
+        position: relative;
+        right: 30px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .language {
+          margin-right: 30px;
+          li {
+            display: flex;
+            align-items: center;
+            > a {
+              text-transform: uppercase;
+              color: #fff;
+              text-align: center;
+              padding-right: 5px;
+              font-size: 13px;
+              font-weight: bold;
+            }
+            i {
+              color: #fff;
+            }
+            .language_con {
+              height: 0;
+              position: absolute;
+              top: 90px;
+              left: -5px;
+              overflow: hidden;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              transition: height 0.5s;
+              li {
+                margin-bottom: 5px;
+                a {
+                  display: block;
+                  padding: 5px 15px;
+                  background: #fff;
+                  color: #666;
+                  font-size: 13px;
+                  font-weight: normal;
+                  border: 1px solid #b0b0b0;
+                  border-radius: 50px;
+                }
+              }
+            }
+          }
+        }
+        .site_map_btn {
+          position: relative;
+          height: 100%;
+          cursor: pointer;
+          img {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            display: block;
+            &:last-child {
+              opacity: 0;
+            }
+            &.on {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+  .top_menu_lnb {
+    position: fixed;
+    top: 144px;
+    width: 100%;
+    transition: 0.3s;
+    opacity: 0;
+    z-index: -1;
+    > ul {
+      position: absolute;
+      top: -20px;
+      width: 36%;
+      margin-left: 570px;
+      > li {
+        display: flex;
+        ul {
+          width: 25%;
+          text-align: center;
+          li {
+            a {
+              text-transform: capitalize;
+              display: block;
+              margin: 15px 0;
+              color: #939393;
+              &:hover {
+                color: #bf1e2e;
+                font-weight: 800;
+              }
+            }
+          }
+        }
+      }
+    }
+    img {
+      position: absolute;
+      top: -144px;
+      z-index: -1;
+      opacity: 1;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .top_menu {
+    .top_menu_wrap {
+      width: 95%;
+      display: none;
+      border: 1px solid #000;
+      .top_logo {
+        height: 80px;
+        background: #fff;
+        a {
+          img {
+            width: 96px;
+            &:last-child {
+              display: none;
+            }
+          }
+        }
+      }
+      .top_menu_gnb {
+        visibility: hidden;
+      }
+    }
+  }
+}

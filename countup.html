@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="countUp.min.js"></script>
+    <style></style>
+  </head>
+  <body>
+    <span id="counter">0</span>
+    <script>
+      // 카운터를 시작할 엘리먼트를 선택합니다.
+      var counterElement = document.getElementById("counter");
+
+      // 옵션을 설정합니다.
+      var options = {
+        startVal: 0, // 시작 숫자
+        decimalPlaces: 0, // 소수점 이하 자릿수
+        duration: 2, // 애니메이션 지속 시간 (초)
+      };
+
+      // countUp.js를 초기화합니다.
+      var countUp = new CountUp(counterElement, 1000, options); // 끝 숫자는 1000으로 설정
+
+      // 카운터 애니메이션을 시작합니다.
+      if (!countUp.error) {
+        countUp.start();
+      } else {
+        //console.error(countUp.error);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+:root {
+  --mask-size: 50px;
+  --mask-x: -25px;
+  --mask-y: -25px;
+}
+clip-path: circle(var(--mask-size) at var(--mask-x) var(--mask-y));
+background-image: linear-gradient(241deg, #f77706, #f5c45a)
+color: #ffad25;
+
+Adopt Animals Adopt Family 
+포인핸드는 사지 않고 입양하는 문화를 만듭니다.

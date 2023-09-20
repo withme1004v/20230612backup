@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+      @font-face {
+        font-family: Pretendard;
+        src: url(webfont/Pretendard-Regular.ttf) format(‘ttf’);
+      }
+      body {
+        font-family: "Pretendard-Regular", "AppleSDGothicNeoR", sans-serif;
+        overflow-x: hidden;
+      }
+      header {
+        width: 1900px;
+        margin: 0 auto;
+      }
+      #head {
+        position: relative;
+        margin-top: 30px;
+      }
+      .logo {
+        position: absolute;
+        top: 3px;
+        left: 60px;
+      }
+      .depth1 {
+        width: 50%;
+        margin: 0 auto;
+        transform: translateX(20%);
+        position: relative;
+        display: flex;
+        column-gap: 20px;
+        letter-spacing: -1px;
+        z-index: 10;
+      }
+      .depth1 li {
+        position: relative;
+      }
+      .depth1 > li > a {
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      .depth1 > li:first-child > a:after,
+      .depth1 > li:last-child > a:after {
+        position: absolute;
+        top: 6px;
+        right: 2px;
+        content: "";
+        background-image: url(images/blt_drop.png);
+        background-size: 10px 10px;
+        width: 10px;
+        height: 10px;
+      }
+      .depth1 > li:last-child .depth2 {
+        display: block;
+      }
+      .depth1 .left {
+        margin-left: -25px;
+      }
+      .depth1 .left .tool {
+        display: flex;
+        flex-direction: column;
+      }
+      .depth1 .left .tool > div {
+        margin-top: 20px;
+      }
+      .depth1 .left .tool .sub ul {
+        display: flex;
+      }
+      .depth1 .left .tool .sub .txt {
+        display: flex;
+        flex-direction: column;
+      }
+      .depth1 .left .tool .sub .txt li p:first-child {
+        display: flex;
+        flex-direction: left;
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      .depth1 .left .tool .sub .txt li p:last-child {
+        font-size: 12px;
+        color: #8b95a1;
+      }
+      .depth1 .depth2 .left .tool > div img {
+        width: 40px;
+        height: 40px;
+        margin-left: 30px;
+        margin-right: 10px;
+      }
+      .depth1 .center .contents {
+        display: flex;
+        flex-direction: column;
+      }
+      .depth1 .center .contents .sub {
+        margin-top: 20px;
+      }
+      .depth1 .center .contents .sub ul {
+        display: flex;
+      }
+      .depth1 .center .contents .sub .txt {
+        display: flex;
+        flex-direction: column;
+      }
+      .depth1 .center .txt p:first-child {
+        display: flex;
+        flex-direction: left;
+        margin-bottom: 5px;
+        font-size: 14px;
+        font-weight: bold;
+      }
+      .depth1 .center .txt p:last-child {
+        font-size: 12px;
+        color: #8b95a1;
+      }
+      .depth1 .center .contents .sub img {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+        border-radius: 10px;
+      }
+      .depth1 .right .mobile {
+        display: flex;
+        flex-direction: column;
+      }
+      .depth1 .right .mobile .sub {
+        margin-top: 20px;
+      }
+      .depth1 .right .mobile .sub ul {
+        display: flex;
+      }
+      .depth1 .right .mobile .sub .txt {
+        display: flex;
+        flex-direction: column;
+      }
+      .depth1 .right .mobile .sub .txt p:first-child {
+        display: flex;
+        margin-bottom: 5px;
+        font-size: 14px;
+        font-weight: bold;
+      }
+      .depth1 .right .mobile .sub .txt p:last-child {
+        font-size: 12px;
+        color: #8b95a1;
+      }
+      .depth1 .depth2 .right .mobile .sub img {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+        border-radius: 10px;
+      }
+      .depth1 .top {
+        display: flex;
+        justify-content: space-between;
+      }
+      .depth1 .bot {
+        margin-top: 30px;
+        text-align: center;
+      }
+      .depth1 > li:first-child .depth2 {
+        display: none;
+        position: absolute;
+        top: 30px;
+        background-color: hsla(0, 0%, 100%, 0.98);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.25), 0 8px 20px rgba(0, 0, 0, 0.15);
+        border-radius: 5px;
+        width: 800px;
+        padding: 24px 20px 20px;
+      }
+      .depth1 > li:first-child:hover .depth2 {
+        display: block;
+      }
+      .depth1 > li:first-child .depth2 .sub:hover {
+        background-color: rgb(221, 220, 220);
+        border-radius: 5px;
+      }
+      .depth1 > li:first-child .depth2 .left h5 {
+        margin-left: 30px;
+      }
+      .depth1 > li:first-child .depth2 h5 {
+        display: flex;
+        font-size: 12px;
+        color: #8b95a1;
+      }
+      /* header #head .depth1 > li:first-child .depth2 .sercurity h5 {
+        position: absolute;
+        top: 30px;
+      } */
+      .depth1 > li > a {
+        padding: 12px 16px;
+        border-radius: 5px;
+      }
+      .depth1 > li a:hover {
+        background-color: rgba(139, 149, 161, 0.1);
+      }
+      .depth1 > li:last-child {
+        position: relative;
+      }
+      .depth1 > li:last-child .depth2 {
+        position: absolute;
+        display: none;
+        width: 90px;
+        height: 120px;
+        margin-top: 10px;
+      }
+      .depth1 > li:last-child:hover .depth2 {
+        display: block;
+        height: 120px;
+        padding: 14px 12px;
+        background-color: hsla(0, 0%, 100%, 0.98);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.25), 0 8px 20px rgba(0, 0, 0, 0.15);
+        border-radius: 5px;
+      }
+      .depth1 > li:last-child .depth2 li {
+        padding: 4px;
+        font-size: 14px;
+        margin-bottom: 10px;
+        line-height: 1.7;
+      }
+      .depth1 > li:last-child .depth2 li:hover {
+        padding: 4px;
+        background-color: rgba(139, 149, 161, 0.1);
+        border-radius: 5px;
+      }
+      .head_r {
+        position: relative;
+      }
+      .head_r ul {
+        position: absolute;
+        top: -25px;
+        left: 1770px;
+        display: flex;
+        justify-content: right;
+      }
+      .head_r ul li:first-child img {
+        position: absolute;
+        left: -200px;
+        width: 150px;
+      }
+      .head_r ul li:last-child {
+        margin-top: 5px;
+        margin-left: 4px;
+      }
+      .head_r ul li:last-child a {
+        border: 1px solid #000;
+        border-radius: 8px;
+        padding: 8px 12px;
+        background-color: #000;
+        color: #fff;
+        font-size: 13px;
+        font-weight: bold;
+        letter-spacing: -0.5px;
+        transition: 0.2s;
+      }
+      .head_r ul li:last-child a:hover {
+        background-color: #484848;
+        transition: 0.2s;
+      }
+      section {
+        width: 1900px;
+        margin: 0 auto;
+      }
+      section .top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 250px;
+        margin-top: 100px;
+      }
+      section .altoolpack {
+        display: flex;
+      }
+      section .altoolpack > img {
+        border: 1px solid #ddd;
+        border-radius: 20px;
+        padding: 32px;
+        margin-right: 40px;
+      }
+      section .altoolpack .detail h3 {
+        font-size: 40px;
+        letter-spacing: -3px;
+      }
+      section .altoolpack .detail h4 {
+        font-size: 20px;
+        letter-spacing: -2px;
+        margin-top: 15px;
+      }
+      section .button {
+        margin-top: 45px;
+      }
+      section .button ul {
+        display: flex;
+        position: relative;
+      }
+      section .button ul li:first-child a {
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: -1px;
+        border: 1px solid #000;
+        border-radius: 10px;
+        background: #000;
+        color: #fff;
+        padding: 20px 50px;
+        margin-right: 12px;
+        transition: 0.2s;
+      }
+      section .button ul li:first-child a:hover {
+        background-color: #484848;
+        transition: 0.2s;
+      }
+      section .button ul li:nth-child(2) svg {
+        position: absolute;
+        left: 115px;
+        top: 4px;
+      }
+      section .button ul li:nth-child(3) a {
+        font-size: 16px;
+        font-weight: 700;
+        border: 2px solid #000;
+        border-radius: 10px;
+        background: #fff;
+        color: #000;
+        padding: 20px 50px;
+        transition: 0.2s;
+      }
+      section .button ul li:nth-child(3) a:hover {
+        background-color: rgba(26, 26, 26, 0.1);
+        transition: 0.2s;
+      }
+      section .button ul li:nth-child(4) svg {
+        position: absolute;
+        left: 305px;
+        top: 4px;
+      }
+      section .button ul li:nth-child(5) img {
+        position: absolute;
+        top: -38px;
+        left: 195px;
+        width: 131px;
+        animation: button 1s forwards;
+      }
+      section .top .txt {
+        font-size: 14px;
+        line-height: 2;
+        letter-spacing: -0.5px;
+      }
+      section .top .txt ul li a {
+        color: #08f;
+      }
+      section .top .txt ul li a:hover {
+        color: #0064d9;
+      }
+      section .icon {
+        position: relative;
+        z-index: -1;
+      }
+      section .icon h4 {
+        position: absolute;
+        top: -10px;
+        left: 315px;
+        font-size: 18px;
+        letter-spacing: -1px;
+        margin-top: 90px;
+        margin-bottom: 20px;
+      }
+      section .icon ul {
+        position: absolute;
+        top: 120px;
+        left: 315px;
+        display: flex;
+        column-gap: 4px;
+        position: relative;
+      }
+      section .icon ul li {
+        border: 1px solid #ddd;
+        border-radius: 50px;
+        padding: 8px 15px;
+        font-size: 14px;
+        line-height: 1;
+        color: #333d4b;
+        transition: 0.1s;
+        cursor: pointer;
+      }
+      section .icon ul li:hover {
+        border: 1px solid #8b95a1;
+      }
+      section .icon ul li img {
+        width: 26px;
+        height: 26px;
+        vertical-align: middle;
+        margin-right: 3px;
+      }
+      section .icon ul li span {
+        line-height: 1;
+        letter-spacing: -1px;
+      }
+      section .icon ul li span:after {
+        display: inline-block;
+        content: "";
+        background: url(subimages/next.svg);
+        width: 6px;
+        height: 9px;
+        margin-left: 5px;
+      }
+      article {
+        width: 1900px;
+      }
+      article .bg1 {
+        display: flex;
+        position: relative;
+        background: linear-gradient(
+            0deg,
+            rgba(255, 80, 69, 0.5),
+            rgba(255, 80, 69, 0.5)
+          ),
+          linear-gradient(90deg, #ff7557 0%, #ff5995 100%), #1a1a1a;
+
+        height: 620px;
+        margin-top: 180px;
+      }
+      article .bg1 .txt {
+        position: absolute;
+        top: 200px;
+        left: 420px;
+        animation: bg 1s forwards;
+      }
+      article .bg1 .txt h3 {
+        font-size: 36px;
+        letter-spacing: -4px;
+        color: #fff;
+        margin-bottom: 30px;
+      }
+      article .bg1 .txt h4 {
+        font-size: 18px;
+        letter-spacing: -1.2px;
+        line-height: 1.5;
+        color: #fff;
+      }
+      article .bg1 img {
+        position: absolute;
+        top: 110px;
+        left: 920px;
+        width: 540px;
+        height: 400px;
+        object-fit: cover no-repeat;
+        animation: bg 1s forwards;
+      }
+      article .bg2 {
+        display: flex;
+        position: relative;
+        background: #f5f5f7;
+        height: 620px;
+      }
+      article .bg2 img {
+        position: absolute;
+        top: 110px;
+        left: 420px;
+        width: 540px;
+        height: 400px;
+        object-fit: cover no-repeat;
+        animation: bg 1s forwards;
+      }
+      article .bg2 .txt {
+        position: absolute;
+        top: 200px;
+        left: 1070px;
+        animation: bg 1s forwards;
+      }
+      article .bg2 .txt h3 {
+        font-size: 36px;
+        letter-spacing: -2px;
+        color: #000;
+        margin-bottom: 40px;
+      }
+      article .bg2 .txt h4 {
+        font-size: 18px;
+        letter-spacing: -1.2px;
+        line-height: 1.5;
+        color: rgba(26, 26, 26, 0.8);
+      }
+      @keyframes button {
+        0% {
+          transform: translateY(10px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      @keyframes bg {
+        0% {
+          transform: translateY(50px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      aside {
+        width: 1900px;
+        margin: 0 auto;
+      }
+      aside h3 {
+        font-size: 36px;
+        letter-spacing: -4px;
+        text-align: center;
+        margin-top: 160px;
+        margin-bottom: 90px;
+      }
+      aside .info {
+        width: 60%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 50px;
+      }
+      aside .info img {
+        width: 340px;
+        height: 195px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+      }
+      aside .info h4 {
+        font-size: 18px;
+        letter-spacing: -1px;
+        margin-bottom: 10px;
+      }
+      aside .info span {
+        display: inline-block;
+        font-size: 14px;
+        width: 340px;
+        margin-bottom: 100px;
+      }
+      aside .info .sub1 span {
+        margin-bottom: 70px;
+      }
+      aside .info .sub2 span {
+        margin-bottom: 170px;
+      }
+      footer {
+        width: 1900px;
+      }
+      footer .info .top {
+        position: relative;
+        display: flex;
+        justify-content: left;
+        font-size: 13px;
+        font-weight: bold;
+        color: #8b95a1;
+        margin-top: 45px;
+        margin-left: 40px;
+        column-gap: 30px;
+      }
+      footer .info .top li {
+        letter-spacing: -1px;
+        padding: 8px 10px;
+        transition: 0.1s;
+      }
+      footer .info .top li:hover {
+        background-color: rgba(139, 149, 161, 0.1);
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      footer .info .top li:nth-child(3) {
+        color: #4e5968;
+      }
+      footer .info .top span {
+        display: inline-block;
+        position: absolute;
+        right: 50px;
+        font-size: 13px;
+        color: #8b95a1;
+        cursor: pointer;
+        padding: 6px 16px 6px 8px;
+        transition: 0.1s;
+      }
+      footer .info .top span:after {
+        display: inline-block;
+        position: absolute;
+        top: 9px;
+        left: 80px;
+        content: "";
+        background: url(images/plus.svg) no-repeat;
+        width: 12px;
+        height: 12px;
+        line-height: -2px;
+        cursor: pointer;
+      }
+      footer .info .top span:hover {
+        background-color: rgba(139, 149, 161, 0.1);
+        border-radius: 4px;
+      }
+      footer .info .bottom {
+        display: flex;
+        column-gap: 35px;
+        margin-top: 45px;
+        margin-left: 40px;
+      }
+      footer .info .bottom li {
+        position: relative;
+      }
+      footer .info .bottom li:first-child a {
+        display: block;
+        background: url(images/spr_logo_estsoft.722c4838.png) 0 0/64px auto
+          no-repeat;
+        width: 64px;
+        height: 18px;
+      }
+      footer .info .bottom li:first-child a:hover {
+        background-position-y: -18px;
+      }
+      footer .info .bottom li:nth-child(2) a {
+        position: absolute;
+        top: -5px;
+        display: block;
+        background: url(images/spr_footer_icon.e708fb81.png) 0 0/84px auto
+          no-repeat;
+        width: 28px;
+        height: 28px;
+      }
+      footer .info .bottom li:nth-child(3) a {
+        position: absolute;
+        top: -5px;
+        left: 10px;
+        display: block;
+        background: url(images/spr_footer_icon.e708fb81.png) 0 0/84px auto
+          no-repeat;
+        background-position-x: -28px;
+        width: 28px;
+        height: 28px;
+      }
+      footer .info .bottom li:last-child a {
+        position: absolute;
+        top: -5px;
+        left: 20px;
+        display: block;
+        background: url(images/spr_footer_icon.e708fb81.png) 0 0/84px auto
+          no-repeat;
+        background-position-x: -56px;
+        width: 28px;
+        height: 28px;
+      }
+      footer .info .bottom .icon a:hover {
+        background-position-y: -28px;
+      }
+      footer .country {
+        font-size: 13px;
+        letter-spacing: -0.4px;
+        color: #8b95a1;
+        margin-top: 20px;
+        margin-left: 40px;
+        margin-bottom: 30px;
+      }
+      footer .country ul li {
+        line-height: 1.8;
+      }
+      footer .country ul li a {
+        font-weight: lighter;
+        color: #08f;
+      }
+      footer .country ul li a:hover {
+        color: #0064d9;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div id="head">
+        <div class="logo">
+          <svg
+            width="73"
+            height="17"
+            viewBox="0 0 73 17"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M13.3509 16.5298H10.9523C10.7486 16.5298 10.5676 16.3556 10.5223 16.161L9.48143 12.0335H4.27682L3.2359 16.161C3.19065 16.3556 3.00962 16.5298 2.80596 16.5298H0.407317C0.18103 16.5298 0 16.3782 0 16.161C0 16.1383 0.0226287 16.0954 0.0226287 16.0524L3.73374 2.43215C4.27682 0.411404 5.90609 0.216797 6.87912 0.216797C7.85216 0.216797 9.48142 0.411404 10.0245 2.43215L13.7356 16.0524C13.7356 16.0954 13.7582 16.1383 13.7582 16.161C13.7582 16.3782 13.5772 16.5298 13.3509 16.5298ZM7.24118 3.10648C7.1733 2.84625 7.10541 2.758 6.87912 2.758C6.65284 2.758 6.58495 2.84399 6.51707 3.10648L4.8878 9.55792H8.87045L7.24118 3.10648Z"
+              fill="#1a1a1a"
+            ></path>
+            <path
+              d="M24.2809 16.3991C23.602 16.5508 21.6333 16.7024 20.434 16.7024C17.4923 16.7024 15.2068 15.942 15.2068 12.249V0.826073C15.2068 0.586208 15.4104 0.391602 15.6594 0.391602H17.8996C18.1485 0.391602 18.3522 0.586208 18.3522 0.826073V12.2513C18.3522 13.686 18.8048 14.1204 20.1172 14.1204H24.2809C24.5298 14.1204 24.7335 14.315 24.7335 14.5549V15.9443C24.7335 16.2475 24.6203 16.3358 24.2809 16.3991Z"
+              fill="#1a1a1a"
+            ></path>
+            <path
+              d="M34.5541 2.91018H30.5941V16.0959C30.5941 16.3358 30.3905 16.5304 30.1415 16.5304H27.9013C27.6524 16.5304 27.4487 16.3358 27.4487 16.0959V2.91018H23.4887C23.2398 2.91018 23.0361 2.75856 23.0361 2.5187V0.803444C23.0361 0.56358 23.2398 0.391602 23.4887 0.391602H34.5541C34.8031 0.391602 35.0067 0.565843 35.0067 0.803444V2.5187C35.0067 2.75856 34.8031 2.91018 34.5541 2.91018Z"
+              fill="#1a1a1a"
+            ></path>
+            <path
+              d="M39.3514 16.7042C35.7987 16.7042 33.9431 14.4006 33.9431 11.296V9.53546C33.9431 6.42854 35.7987 4.1272 39.3514 4.1272C42.9041 4.1272 44.7596 6.4308 44.7596 9.53546V11.296C44.7596 14.4006 42.9041 16.7042 39.3514 16.7042ZM41.7726 9.53546C41.7726 7.75458 40.9354 6.60278 39.3514 6.60278C37.7674 6.60278 36.9301 7.75458 36.9301 9.53546V11.296C36.9301 13.0768 37.7674 14.2286 39.3514 14.2286C40.9354 14.2286 41.7726 13.0768 41.7726 11.296V9.53546Z"
+              fill="#1a1a1a"
+            ></path>
+            <path
+              d="M51.6612 16.7042C48.1085 16.7042 46.2529 14.4006 46.2529 11.296V9.53546C46.2529 6.42854 48.1085 4.1272 51.6612 4.1272C55.2139 4.1272 57.0694 6.4308 57.0694 9.53546V11.296C57.0694 14.4006 55.2139 16.7042 51.6612 16.7042ZM54.0825 9.53546C54.0825 7.75458 53.2452 6.60278 51.6612 6.60278C50.0772 6.60278 49.2399 7.75458 49.2399 9.53546V11.296C49.2399 13.0768 50.0772 14.2286 51.6612 14.2286C53.2452 14.2286 54.0825 13.0768 54.0825 11.296V9.53546Z"
+              fill="#1a1a1a"
+            ></path>
+            <path
+              d="M61.6181 16.5303H59.5136C59.2647 16.5303 59.061 16.313 59.061 16.0732V0.434471C59.061 0.194607 59.2647 0 59.5136 0H61.6181C61.867 0 62.048 0.194607 62.048 0.434471V16.0754C62.048 16.313 61.867 16.5303 61.6181 16.5303Z"
+              fill="#1a1a1a"
+            ></path>
+            <path
+              d="M68.5646 16.7043C67.6821 16.7043 65.7812 16.5957 64.514 16.2698C64.2425 16.2042 64.0841 16.03 64.0841 15.7697V14.4663C64.0841 14.2921 64.2425 14.1178 64.4688 14.1178C64.514 14.1178 64.5367 14.1178 64.5593 14.1178C65.6455 14.2491 67.6821 14.3577 68.3609 14.3577C69.7639 14.3577 69.9676 13.9006 69.9676 13.3145C69.9676 12.9027 69.696 12.6402 68.9719 12.2057L65.8718 10.3818C64.763 9.73013 63.9709 8.64395 63.9709 7.38353C63.9709 5.21118 65.3966 4.125 68.2704 4.125C70.1033 4.125 71.1442 4.31961 72.2983 4.55947C72.5698 4.62509 72.7056 4.79934 72.7056 5.05957V6.31998C72.7056 6.58021 72.5699 6.73183 72.3436 6.73183C72.2983 6.73183 72.2757 6.73183 72.253 6.73183C71.6194 6.64584 69.8091 6.4716 68.5193 6.4716C67.4331 6.4716 66.9579 6.71146 66.9579 7.38353C66.9579 7.73201 67.2974 7.94925 67.8631 8.2751L70.8274 10.013C72.7283 11.1218 72.9998 12.208 72.9998 13.3145C72.9998 15.2063 71.5289 16.7043 68.5646 16.7043Z"
+              fill="#1a1a1a"
+            ></path>
+          </svg>
+        </div>
+        <ul class="depth1">
+          <li>
+            <a href="#">알툴즈 다운로드</a>
+            <div class="depth2">
+              <div class="top">
+                <div class="left">
+                  <div class="tool">
+                    <h5>Tool</h5>
+                    <div class="sub">
+                      <ul>
+                        <li><img src="images/alzip.png" alt="" /></li>
+                        <ul class="txt">
+                          <li>
+                            <p>알집</p>
+                            <p>전국민 압축프로그램</p>
+                          </li>
+                        </ul>
+                      </ul>
+                    </div>
+                    <div class="sub">
+                      <ul>
+                        <li><img src="images/alcap.png" alt="" /></li>
+                        <ul class="txt">
+                          <li>
+                            <p>알캡쳐</p>
+                            <p>쉽고 빠른 화면 캡쳐</p>
+                          </li>
+                        </ul>
+                      </ul>
+                    </div>
+                    <div class="sub">
+                      <ul>
+                        <li><img src="images/aldrive.png" alt="" /></li>
+                        <ul class="txt">
+                          <li>
+                            <p>알드라이브</p>
+                            <p>편리한 파일 전송 클라이언트</p>
+                          </li>
+                        </ul>
+                      </ul>
+                    </div>
+                    <h5>Sercurity</h5>
+                    <div class="sub">
+                      <ul>
+                        <li><img src="images/alyak.png" alt="" /></li>
+                        <ul class="txt">
+                          <li>
+                            <p>알약</p>
+                            <p>전국민 백신 프로그램</p>
+                          </li>
+                        </ul>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="center">
+                  <div class="contents">
+                    <h5>Contents</h5>
+                    <div class="sub">
+                      <ul>
+                        <li><img src="images/alsee.png" alt="" /></li>
+                        <ul class="txt">
+                          <li>
+                            <p>알씨</p>
+                            <p>이미지 뷰어/사진 편집 프로그램</p>
+                          </li>
+                        </ul>
+                      </ul>
+                    </div>
+                    <div class="sub">
+                      <ul>
+                        <li><img src="images/alpdf.png" alt="" /></li>
+                        <ul class="txt">
+                          <li>
+                            <p>알PDF</p>
+                            <p>PDF 뷰어/리더, PDF 변환/편집</p>
+                          </li>
+                        </ul>
+                      </ul>
+                    </div>
+                    <div class="sub">
+                      <ul>
+                        <li><img src="images/alsong.png" alt="" /></li>
+                        <ul class="txt">
+                          <li>
+                            <p>알송</p>
+                            <p>온라인 음악가사 플레이어</p>
+                          </li>
+                        </ul>
+                      </ul>
+                    </div>
+                    <div class="sub">
+                      <ul>
+                        <li><img src="images/ale.png" alt="" /></li>
+                        <ul class="txt">
+                          <li>
+                            <p>앨런 Beta</p>
+                            <p>언제 어디서나 가장 가까운 AI</p>
+                          </li>
+                        </ul>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="right">
+                  <div class="mobile">
+                    <h5>Mobile</h5>
+                    <div class="sub">
+                      <ul>
+                        <li><img src="images/alzm.png" alt="" /></li>
+                        <ul class="txt">
+                          <li>
+                            <p>알집 모바일</p>
+                            <p>압축 지원 파일 탐색 관리자</p>
+                          </li>
+                        </ul>
+                      </ul>
+                    </div>
+                    <div class="sub">
+                      <ul>
+                        <li><img src="images/alsm.png" alt="" /></li>
+                        <ul class="txt">
+                          <li>
+                            <p>알송 모바일</p>
+                            <p>음악과 가사를 동시에</p>
+                          </li>
+                        </ul>
+                      </ul>
+                    </div>
+                    <div class="sub">
+                      <ul>
+                        <li><img src="images/aym.png" alt="" /></li>
+                        <ul class="txt">
+                          <li>
+                            <p>알약M</p>
+                            <p>스마트폰의 모든 처방</p>
+                          </li>
+                        </ul>
+                      </ul>
+                    </div>
+                    <div class="sub">
+                      <ul>
+                        <li><img src="images/picinc.png" alt="" /></li>
+                        <ul class="txt">
+                          <li>
+                            <p>피크닉</p>
+                            <p>맑은 하늘 필터 카메라</p>
+                          </li>
+                        </ul>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bot">
+                <a href="#"><img src="images/bot.png" alt="" /></a>
+              </div>
+            </div>
+          </li>
+          <li><a href="#">알툴즈 AD-ZERO</a></li>
+          <li><a href="#">비즈니스 구매</a></li>
+          <li>
+            <a href="#">고객센터</a>
+            <ul class="depth2">
+              <li><a href="#">자주하는 질문</a></li>
+              <li><a href="#">1:1 문의하기</a></li>
+              <li><a href="#">공지사항</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="head_r">
+          <ul>
+            <li>
+              <a href="#"><img src="images/aplus.png" alt="" /></a>
+            </li>
+            <li><a href="#">로그인</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section>
+      <div class="top">
+        <div class="altoolpack">
+          <img src="images/altoolpack.png" alt="altoolpack" />
+          <div class="detail">
+            <ul>
+              <li><h3>알툴즈 통합팩</h3></li>
+              <li><h4>알툴즈의 모든 제품이 하나의 통합 패키지로!</h4></li>
+              <div class="button">
+                <ul>
+                  <li><a href="#">다운로드</a></li>
+                  <li>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path
+                        d="M13.5 5.5L8.5 10.5L3.5 5.5"
+                        stroke="#fff"
+                        stroke-width="2"
+                      ></path>
+                      <path d="M8.5 10V0" stroke="#fff" stroke-width="2"></path>
+                      <path d="M2 14H15" stroke="#fff" stroke-width="2"></path>
+                    </svg>
+                  </li>
+                  <li>
+                    <a href="#">AD-ZERO</a>
+                  </li>
+                  <li>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path
+                        d="M6 3L11 8L6 13"
+                        stroke="#1a1a1a"
+                        stroke-width="2"
+                      ></path>
+                    </svg>
+                  </li>
+                  <li><img src="subimages/info.png" alt="" /></li>
+                </ul>
+              </div>
+            </ul>
+          </div>
+        </div>
+        <div class="txt">
+          <ul>
+            <li>권장 사양 : Win 11, 10, 8, 8.1, 7</li>
+            <li>파일 크기 : 1.23MB</li>
+            <li>최신 업데이트 일자 : 2021-10-15</li>
+            <li><a href="#">온라인 도움말</a></li>
+            <li><a href="#">자주하는 질문</a></li>
+            <li><a href="#">라이선스 안내</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="icon">
+        <h4>함께하면 좋은 알툴즈 바로가기</h4>
+        <ul>
+          <li>
+            <a href="#"
+              ><img src="images/alzip.png" alt="alzip" /><span>알집</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img src="images/alcap.png" alt="alcap" /><span>알캡처</span></a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/aldrive.png" alt="aldrive" /><span
+                >알드라이브</span
+              >
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="images/alyak.png" alt="alyak" /><span>알약</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img src="images/alsee.png" alt="alsee" /><span>알씨</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img src="images/alpdf.png" alt="alpdf" /><span>알PDF</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img src="images/alsong.png" alt="alsong" /><span>알송</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
+    <article>
+      <div class="bg1">
+        <div class="txt">
+          <h3>알툴즈 모든 제품을 <br />한 번에.</h3>
+          <h4>
+            알툴즈 통합팩 한 번의 설치로<br />내 PC에 필요한 모든 것이
+            준비됩니다.
+          </h4>
+        </div>
+        <img src="subimages/bg1.png" alt="" />
+      </div>
+      <div class="bg2">
+        <img src="subimages/bg2.png" alt="" />
+        <div class="txt">
+          <h3>
+            PC세팅에 최적화 된<br />
+            알툴즈 라인업
+          </h3>
+          <h4>공개용 : 알집, 알씨, 알약, 알PDF, 알캡처, 알송, 알드라이브</h4>
+        </div>
+      </div>
+    </article>
+    <aside>
+      <h3>알툴즈 통합팩의 주요 기능을 소개합니다.</h3>
+      <div class="info">
+        <div class="sub1">
+          <img src="subimages/sub1.png" alt="" />
+          <h4>대한민국 대표 유틸 소프트웨어</h4>
+          <span>
+            2,600만 사용자들이 선택한 전국민 필수 프로그램 알툴즈! 알툴즈로 내
+            PC를 좀 더 간편하고 편리하게 이용해보세요.
+          </span>
+        </div>
+        <div class="sub1">
+          <img src="subimages/sub2.png" alt="" />
+          <h4>한번의 설치로 모든 제품 사용</h4>
+          <span>
+            다양한 알툴즈 제품을 하나의 패키지로! 알툴즈 통합팩 한번의 설치로 내
+            PC에 필요한 모든 것이 준비됩니다.
+          </span>
+        </div>
+        <div class="sub1">
+          <img src="subimages/sub3.png" alt="" />
+          <h4>누구나 사용할 수 있는 쉬운 인터페이스</h4>
+          <span>
+            어렵고 복잡한 프로그램은 그만! 알툴즈는 이해하기 쉬운 화면
+            인터페이스로 구성하여 쉽고 간편한 사용성을 제공합니다.
+          </span>
+        </div>
+        <div class="sub2">
+          <img src="subimages/sub4.png" alt="" />
+          <h4>업무 효율을 높이는 편리한 도구</h4>
+          <span>
+            원클릭 압축 관리 프로그램 알집, 화면 캡처 도구 알캡처, 파일 전송
+            클라이언트 알드라이브 등 업무를 도와주는 다양한 도구들을 만나보세요.
+          </span>
+        </div>
+        <div class="sub2">
+          <img src="subimages/sub5.png" alt="" />
+          <h4>이미지, 문서, 음악까지 모든 파일 정리</h4>
+          <span>
+            이미지 뷰어 알씨, 문서 편집기 알PDF, 음악 플레이어 알송으로 내
+            PC에서 생성하는 모든 콘텐츠를 효과적으로 관리해보세요.
+          </span>
+        </div>
+        <div class="sub2">
+          <img src="subimages/sub6.png" alt="" />
+          <h4>백신으로 내 컴퓨터를 안전하게</h4>
+          <span>
+            전국민 백신 프로그램 알약! 똑똑한 백신 프로그램 알약으로 바이러스,
+            악성코드를 검사하고 제거해보세요.
+          </span>
+        </div>
+      </div>
+    </aside>
+    <footer>
+      <div class="info">
+        <ul class="top">
+          <li>회사소개</li>
+          <li>이용약관</li>
+          <li>개인정보처리방침</li>
+          <li>소프트웨어 사용권 계약서</li>
+          <li>제휴문의</li>
+          <li>이벤트</li>
+          <span>Family Site</span>
+        </ul>
+        <ul class="bottom">
+          <li>
+            <a href="#"></a>
+          </li>
+          <li class="icon">
+            <a href="#"></a>
+          </li>
+          <li class="icon">
+            <a href="#"></a>
+          </li>
+          <li class="icon">
+            <a href="#"></a>
+          </li>
+        </ul>
+      </div>
+      <div class="country">
+        <ul>
+          <li>
+            (주)이스트소프트 서울시 서초구 반포대로 3 이스트빌딩 (우)06711
+          </li>
+          <li>
+            대표이사 : 정상원&nbsp; 사업자등록번호 : 229-81-03214&nbsp;
+            통신판매업신고번호 : 2011-서울서초-1962&nbsp; TEL. 1544-8209&nbsp;
+            FAX. 02-882-1155&nbsp; E-mail.
+            <a href="mailto:altools@estsoft.com">altools@estsoft.com</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

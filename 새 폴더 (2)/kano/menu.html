@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/default.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <!-- <link rel="stylesheet" href="xeicon.css" /> -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+      @font-face {
+        font-family: "xeicon";
+        src: url("fonts/xeicon.eot");
+        src: url("fonts/xeicon.eotx") format("embedded-opentype"),
+          url("fonts/xeicon.woff2") format("woff2"),
+          url("fonts/xeicon.ttf") format("truetype"),
+          url("fonts/xeicon.woff") format("woff"),
+          url("fonts/xeicon.svg") format("svg");
+        font-weight: normal;
+        font-style: normal;
+      }
+      [class^="xi-"],
+      [class*=" xi-"] {
+        /* use !important to prevent issues with browser extensions that change fonts */
+        font-family: "xeicon" !important;
+        display: inline-block;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      .xi-angle-down-min:before {
+        content: "\e942";
+      }
+      .xi-instagram:before {
+        content: "\ebe9";
+      }
+      .xi-facebook:before {
+        content: "\ebd3";
+      }
+      .xi-youtube-play:before {
+        content: "\ec32";
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      body {
+        background: #ccc;
+        height: 2000px;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header" class="top-fixed-object">
+      <!-- .top-fixed가 붙는 object에 top-fixed-object 클래스 추가  -->
+      <div class="gnb-overlay-bg"></div>
+      <div id="headerInnerWrap">
+        <!-- ****************** 헤더상단 ********************** -->
+        <div id="headerInner" class="clearfix">
+          <h1 class="logo">
+            <a href=" ">
+              <em class="blind">메인으로</em>
+              <img src="images/logo.png" alt="카노" class="default" />
+              <img src="images/logo_color.png" alt="카노" class="color" />
+            </a>
+          </h1>
+          <div class="header-util-box">
+            <!-- 외국어선택 -->
+            <div
+              class="header-lang cm-drop-menu-box-JS"
+              data-drop-event="click"
+            >
+              <button class="lang-open-btn cm-drop-open-btn-JS">
+                <strong>KOR</strong
+                ><span class="arrow"><i class="xi-angle-down-min"></i></span>
+              </button>
+              <ul
+                id="headerLangList"
+                class="cm-drop-list-JS"
+                style="display: none"
+              >
+                <li><a href="#">ENG</a></li>
+                <li><a href="#">CHI</a></li>
+                <li><a href="#">JAP</a></li>
+              </ul>
+            </div>
+            <button
+              class="sitemap-line-btn sitemap-open-btn"
+              title="사이트맵 열기"
+              data-event="toggle"
+            >
+              <img
+                src="images/sitemap_icon.png"
+                alt="사이트맵 열기 아이콘"
+                class="white"
+              />
+              <img
+                src="images/sitemap_icon_active.png"
+                alt="사이트맵 열기 아이콘"
+                class="black"
+              />
+            </button>
+
+            <section
+              id="sitemapContent"
+              class="mCustomScrollbar _mCS_2 mCS_no_scrollbar"
+            >
+              <div
+                id="mCSB_2"
+                class="mCustomScrollBox mCS-dark mCSB_vertical mCSB_inside"
+                tabindex="0"
+                style="max-height: none"
+              >
+                <div
+                  id="mCSB_2_container"
+                  class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y"
+                  style="position: relative; top: 0; left: 0"
+                  dir="ltr"
+                >
+                  <article id="sitemapInnerCon">
+                    <div class="sitemap-wrapper">
+                      <div class="sitemap-wrapper-inner area-box">
+                        <article class="sitemap-box">
+                          <ul class="sitemap-list">
+                            <li>
+                              <h2><span>KANO</span></h2>
+                              <div class="sitemap-2dep">
+                                <ul class="">
+                                  <li>
+                                    <a href="#"><span>인사말</span></a>
+                                  </li>
+                                  <li>
+                                    <a href="#"><span>경영철학</span></a>
+                                  </li>
+                                  <li>
+                                    <a href="#"><span>회사연혁</span></a>
+                                  </li>
+                                  <li>
+                                    <a href="#"><span>조직도</span></a>
+                                  </li>
+                                  <li>
+                                    <a href="#"><span>수상/인증</span></a>
+                                  </li>
+                                  <li>
+                                    <a href="#"><span>채용</span></a>
+                                  </li>
+                                  <li>
+                                    <a href="#"><span>오시는길</span></a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </li>
+                            <li>
+                              <h2><span>BUSINESS</span></h2>
+                              <div class="sitemap-2dep">
+                                <ul class="">
+                                  <li>
+                                    <a href="#"><span>제품기획/마케팅</span></a>
+                                  </li>
+                                  <li>
+                                    <a href="#"><span>제품개발/제조</span></a>
+                                  </li>
+                                  <li>
+                                    <a href="#"
+                                      ><span>로컬 비즈니스 네트워크</span></a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a href="#"
+                                      ><span>글로벌 비즈니스 네트워크</span></a
+                                    >
+                                  </li>
+                                </ul>
+                              </div>
+                            </li>
+                            <li>
+                              <h2><span>BRAND</span></h2>
+                              <div class="sitemap-2dep">
+                                <ul class="">
+                                  <li>
+                                    <a href="#"><span>이지스토리</span></a>
+                                  </li>
+                                  <li>
+                                    <a href="#"><span>페슬러</span></a>
+                                  </li>
+                                  <li>
+                                    <a href="#"><span>홈케어</span></a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </li>
+                            <li>
+                              <h2><span>NEWS</span></h2>
+                              <div class="sitemap-2dep">
+                                <ul class="">
+                                  <li>
+                                    <a href="#"><span>News</span></a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </li>
+                            <li>
+                              <h2><span>CONTACT</span></h2>
+                              <div class="sitemap-2dep">
+                                <ul class="">
+                                  <li>
+                                    <a href="#"><span>Contact</span></a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </li>
+                          </ul>
+                          <ul class="clearfix sns-list">
+                            <li class="cur">
+                              <a href=""><i class="xi-instagram"></i></a>
+                            </li>
+                            <li>
+                              <a href=""><i class="xi-facebook"></i></a>
+                            </li>
+                            <li>
+                              <a href=""><i class="xi-youtube-play"></i></a>
+                            </li>
+                          </ul>
+                        </article>
+                        <article class="news-box">
+                          <div class="tit-box">
+                            <strong class="tit">News</strong>
+                            <div class="arrow-box">
+                              <button
+                                type="button"
+                                data-role="none"
+                                class="slick-prev slick-arrow"
+                                aria-label="Prev"
+                                role="button"
+                                style="display: inline-block"
+                              >
+                                <i class="xi-angle-left-min"></i></button
+                              ><button
+                                type="button"
+                                data-role="none"
+                                class="slick-next slick-arrow"
+                                aria-label="Next"
+                                role="button"
+                                style="display: inline-block"
+                              >
+                                <i class="xi-angle-right-min"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="con-box" role="toolbar">
+                            <ul
+                              class="sitemap-news-list slick-initialized slick-slider slick-dotted"
+                            >
+                              <div
+                                aria-live="polite"
+                                class="slick-list draggable"
+                              >
+                                <div
+                                  class="slick-track"
+                                  role="listbox"
+                                  style="opacity: 1; width: 2020px"
+                                >
+                                  <li
+                                    class="slick-slide"
+                                    data-slick-index="0"
+                                    aria-hidden="true"
+                                    tabindex="-1"
+                                    role="option"
+                                    aria-describedby="slick-slide00"
+                                    style="
+                                      width: 404px;
+                                      position: relative;
+                                      left: 0px;
+                                      top: 0px;
+                                      z-index: 1;
+                                      opacity: 0;
+                                      transition: opacity 1000ms ease 0s;
+                                    "
+                                  >
+                                    <a href="#" tabindex="-1">
+                                      <dl>
+                                        <dt>
+                                          <span class="img-wrap"
+                                            ><img
+                                              src="images/logo.png"
+                                              alt="[㈜카노, 기업과의 파트너십 체결로 국내외 유통판로 확대 위한 교두보 역할 주력] 이미지"
+                                              class="img-cover mCS_img_loaded"
+                                          /></span>
+                                        </dt>
+                                        <dd>
+                                          <strong class="tit"
+                                            >㈜카노, 기업과의 파트너십 체결로
+                                            국내외 유통판로 확대 위한 교두보
+                                            역할 주력</strong
+                                          >
+                                          <span class="date">2022-05-04</span>
+                                        </dd>
+                                      </dl>
+                                    </a>
+                                  </li>
+                                  <li
+                                    class="slick-slide"
+                                    data-slick-index="1"
+                                    aria-hidden="true"
+                                    tabindex="-1"
+                                    role="option"
+                                    aria-describedby="slick-slide01"
+                                    style="
+                                      width: 404px;
+                                      position: relative;
+                                      left: -404px;
+                                      top: 0px;
+                                      z-index: 1;
+                                      opacity: 0;
+                                      transition: opacity 1000ms ease 0s;
+                                    "
+                                  >
+                                    <a href="#" tabindex="-1">
+                                      <dl>
+                                        <dt>
+                                          <span class="img-wrap"
+                                            ><img
+                                              src="images/img_wrap2.jpg"
+                                              alt="이미지"
+                                              class="img-cover mCS_img_loaded"
+                                          /></span>
+                                        </dt>
+                                        <dd>
+                                          <strong class="tit"
+                                            >카노 인터내셔널 마쿠아케 펀딩
+                                            사업으로 글로벌 기업으로 도약.
+                                          </strong>
+                                          <span class="date">2022-03-22</span>
+                                        </dd>
+                                      </dl>
+                                    </a>
+                                  </li>
+                                  <li
+                                    class="slick-slide slick-current slick-active"
+                                    data-slick-index="2"
+                                    aria-hidden="false"
+                                    tabindex="-1"
+                                    role="option"
+                                    aria-describedby="slick-slide02"
+                                    style="
+                                      width: 404px;
+                                      position: relative;
+                                      left: -808px;
+                                      top: 0px;
+                                      z-index: 2;
+                                      opacity: 1;
+                                    "
+                                  >
+                                    <a href="#" tabindex="0">
+                                      <dl>
+                                        <dt>
+                                          <span class="img-wrap"
+                                            ><img
+                                              src="https://www.e-kano.com/data/bbsData/16445520909.jpg"
+                                              alt="[카노인터내셔날, 덩치 큰 이불 날씬하게 보관] 이미지"
+                                              class="img-cover mCS_img_loaded"
+                                          /></span>
+                                        </dt>
+                                        <dd>
+                                          <strong class="tit"
+                                            >카노인터내셔날, 덩치 큰 이불
+                                            날씬하게 보관</strong
+                                          >
+                                          <span class="date">2022-02-11</span>
+                                        </dd>
+                                      </dl>
+                                    </a>
+                                  </li>
+                                  <li
+                                    class="slick-slide"
+                                    data-slick-index="3"
+                                    aria-hidden="true"
+                                    tabindex="-1"
+                                    role="option"
+                                    aria-describedby="slick-slide03"
+                                    style="
+                                      width: 404px;
+                                      position: relative;
+                                      left: -1212px;
+                                      top: 0px;
+                                      z-index: 1;
+                                      opacity: 0;
+                                      transition: opacity 1000ms ease 0s;
+                                    "
+                                  >
+                                    <a
+                                      href="https://www.e-kano.com/kr/news/news.php?bgu=view&amp;idx=21"
+                                      tabindex="-1"
+                                    >
+                                      <dl>
+                                        <dt>
+                                          <span class="img-wrap"
+                                            ><img
+                                              src="https://www.e-kano.com/data/bbsData/16445520029.jpg"
+                                              alt="[[中企 마당] 카노인터내셔날 ‥ 이불등 진공 압축] 이미지"
+                                              class="img-cover mCS_img_loaded"
+                                          /></span>
+                                        </dt>
+                                        <dd>
+                                          <strong class="tit"
+                                            >[中企 마당] 카노인터내셔날 ‥ 이불등
+                                            진공 압축</strong
+                                          >
+                                          <span class="date">2022-02-11</span>
+                                        </dd>
+                                      </dl>
+                                    </a>
+                                  </li>
+                                  <li
+                                    class="slick-slide"
+                                    data-slick-index="4"
+                                    aria-hidden="true"
+                                    tabindex="-1"
+                                    role="option"
+                                    aria-describedby="slick-slide04"
+                                    style="
+                                      width: 404px;
+                                      position: relative;
+                                      left: -1616px;
+                                      top: 0px;
+                                      z-index: 1;
+                                      opacity: 0;
+                                      transition: opacity 1000ms ease 0s;
+                                    "
+                                  >
+                                    <a
+                                      href="https://www.e-kano.com/kr/news/news.php?bgu=view&amp;idx=20"
+                                      tabindex="-1"
+                                    >
+                                      <dl>
+                                        <dt>
+                                          <span class="img-wrap"
+                                            ><img
+                                              src="https://www.e-kano.com/data/bbsData/16445517959.jpg"
+                                              alt="[[2020 한국소비자만족지수 1위] 압축 팩 전문 브랜드, 카노이지백] 이미지"
+                                              class="img-cover mCS_img_loaded"
+                                          /></span>
+                                        </dt>
+                                        <dd>
+                                          <strong class="tit"
+                                            >[2020 한국소비자만족지수 1위] 압축
+                                            팩 전문 브랜드, 카노이지백</strong
+                                          >
+                                          <span class="date">2022-02-11</span>
+                                        </dd>
+                                      </dl>
+                                    </a>
+                                  </li>
+                                </div>
+                              </div>
+
+                              <ul
+                                class="slick-dots"
+                                style="display: block"
+                                role="tablist"
+                              >
+                                <li
+                                  class=""
+                                  aria-hidden="true"
+                                  role="presentation"
+                                  aria-selected="true"
+                                  aria-controls="navigation00"
+                                  id="slick-slide00"
+                                >
+                                  <button
+                                    type="button"
+                                    data-role="none"
+                                    role="button"
+                                    tabindex="0"
+                                  >
+                                    1
+                                  </button>
+                                </li>
+                                <li
+                                  aria-hidden="true"
+                                  role="presentation"
+                                  aria-selected="false"
+                                  aria-controls="navigation01"
+                                  id="slick-slide01"
+                                  class=""
+                                >
+                                  <button
+                                    type="button"
+                                    data-role="none"
+                                    role="button"
+                                    tabindex="0"
+                                  >
+                                    2
+                                  </button>
+                                </li>
+                                <li
+                                  aria-hidden="false"
+                                  role="presentation"
+                                  aria-selected="false"
+                                  aria-controls="navigation02"
+                                  id="slick-slide02"
+                                  class="slick-active"
+                                >
+                                  <button
+                                    type="button"
+                                    data-role="none"
+                                    role="button"
+                                    tabindex="0"
+                                  >
+                                    3
+                                  </button>
+                                </li>
+                                <li
+                                  aria-hidden="true"
+                                  role="presentation"
+                                  aria-selected="false"
+                                  aria-controls="navigation03"
+                                  id="slick-slide03"
+                                  class=""
+                                >
+                                  <button
+                                    type="button"
+                                    data-role="none"
+                                    role="button"
+                                    tabindex="0"
+                                  >
+                                    4
+                                  </button>
+                                </li>
+                                <li
+                                  aria-hidden="true"
+                                  role="presentation"
+                                  aria-selected="false"
+                                  aria-controls="navigation04"
+                                  id="slick-slide04"
+                                  class=""
+                                >
+                                  <button
+                                    type="button"
+                                    data-role="none"
+                                    role="button"
+                                    tabindex="0"
+                                  >
+                                    5
+                                  </button>
+                                </li>
+                              </ul>
+                            </ul>
+                          </div>
+                        </article>
+                      </div>
+                    </div>
+                  </article>
+                  <div class="sitemap-top-box">
+                    <div class="area-box">
+                      <div class="inner">
+                        <h1 class="sitemap-logo">
+                          <em class="blind">메인으로</em
+                          ><a href="/"
+                            ><img
+                              src="https://www.e-kano.com/images/common/logo_color.png"
+                              alt="카노"
+                              class="mCS_img_loaded"
+                          /></a>
+                        </h1>
+                        <div class="sitemap-top-unit">
+                          <!-- 언어 선택 리스트 -->
+                          <ul class="sitemap-lang">
+                            <li class="cur">
+                              <a href="">KOR</a>
+                            </li>
+                            <li>
+                              <a href="">ENG</a>
+                            </li>
+                            <li>
+                              <a href="">CHI</a>
+                            </li>
+                            <li>
+                              <a href="">JAP</a>
+                            </li>
+                          </ul>
+                          <!-- // -->
+                          <button class="sitemap-close-btn" title="닫기">
+                            <img
+                              src="images/sitemap_close_btn.png"
+                              alt="사이트맵 닫기"
+                              class="mCS_img_loaded"
+                            />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  id="mCSB_2_scrollbar_vertical"
+                  class="mCSB_scrollTools mCSB_2_scrollbar mCS-dark mCSB_scrollTools_vertical"
+                  style="display: none"
+                >
+                  <div class="mCSB_draggerContainer">
+                    <div
+                      id="mCSB_2_dragger_vertical"
+                      class="mCSB_dragger"
+                      style="
+                        position: absolute;
+                        min-height: 30px;
+                        height: 0px;
+                        top: 0px;
+                      "
+                    >
+                      <div
+                        class="mCSB_dragger_bar"
+                        style="line-height: 30px"
+                      ></div>
+                    </div>
+                    <div class="mCSB_draggerRail"></div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <script type="text/javascript">
+              $(document).ready(function () {
+                // 대메뉴복사 후 사이트맵 삽입
+                var $gnbList = $("#gnb > ul > li");
+                var gnbLength = $gnbList.length;
+                $(".sitemap-box .sns-list").before(
+                  "<ul class='sitemap-list'></ul>"
+                );
+
+                for (var i = 0; i < gnbLength; i++) {
+                  var gnbText = $gnbList.eq(i).children("a").text();
+                  var gnb2depList = $gnbList.eq(i).find(".gnb-2dep > ul").html()
+                    ? $gnbList.eq(i).find(".gnb-2dep > ul").html()
+                    : "";
+                  $(".sitemap-box > .sitemap-list").append(
+                    "<li><h2><span>" +
+                      gnbText +
+                      '</span></h2><div class="sitemap-2dep"><ul class="">' +
+                      gnb2depList +
+                      "</ul></div></li>"
+                  );
+                }
+
+                $(".sitemap-box > .sitemap-list > li > h2").on(
+                  "mouseenter focus",
+                  function () {
+                    if (!$(this).parents("li").hasClass("on")) {
+                      $(".sitemap-box > .sitemap-list > li").removeClass("on");
+                      $(this).parents("li").addClass("on");
+                      $(this).siblings(".sitemap-2dep").fadeIn();
+                    }
+                  }
+                );
+
+                $(".sitemap-box > .sitemap-list > li").on(
+                  "mouseleave focusout",
+                  sitemap_return
+                );
+                function sitemap_return() {
+                  $(".sitemap-box > .sitemap-list > li").removeClass("on");
+                  $(".sitemap-box > .sitemap-list > li")
+                    .find(".sitemap-2dep")
+                    .hide();
+                }
+              });
+            </script>
+          </div>
+        </div>
+        <!-- ****************** GNB ********************** -->
+        <!-- GNB PC  -->
+        <nav id="gnb" class="total-menu">
+          <h2 class="blind">주메뉴</h2>
+          <!-- 
+					- 전체메뉴 : class="total-menu"
+					- 각각메뉴 : class="each-menu" + <div id="gnbBg"></div> 삭제
+				-->
+          <div id="gnbBg"></div>
+          <ul class="clearfix area">
+            <li class="gnb1">
+              <a href="https://www.e-kano.com/kr/company/greeting.php">KANO</a>
+              <div class="gnb-2dep">
+                <ul>
+                  <li>
+                    <a href="https://www.e-kano.com/kr/company/greeting.php"
+                      ><span>인사말</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.e-kano.com/kr/company/management.php"
+                      ><span>경영철학</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.e-kano.com/kr/company/history.php"
+                      ><span>회사연혁</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.e-kano.com/kr/company/org.php"
+                      ><span>조직도</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.e-kano.com/kr/company/certification.php"
+                      ><span>수상/인증</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.e-kano.com/kr/company/recruit.php"
+                      ><span>채용</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.e-kano.com/kr/company/location.php"
+                      ><span>오시는길</span></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="gnb2">
+              <a href="https://www.e-kano.com/kr/business/maketing.php"
+                >BUSINESS</a
+              >
+              <div class="gnb-2dep">
+                <ul>
+                  <li>
+                    <a href="https://www.e-kano.com/kr/business/maketing.php"
+                      ><span>제품기획/마케팅</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.e-kano.com/kr/business/develop.php"
+                      ><span>제품개발/제조</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.e-kano.com/kr/business/local_network.php"
+                      ><span>로컬 비즈니스 네트워크</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.e-kano.com/kr/business/global_network.php"
+                      ><span>글로벌 비즈니스 네트워크</span></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="gnb3">
+              <a href="https://www.e-kano.com/kr/brand/brand.php">BRAND</a>
+              <div class="gnb-2dep">
+                <ul>
+                  <li>
+                    <a
+                      href="https://www.e-kano.com/kr/brand/brand.php#EASYSTORY"
+                      ><span>이지스토리</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.e-kano.com/kr/brand/brand.php#PETSTLER"
+                      ><span>페슬러</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.e-kano.com/kr/brand/brand.php#HOMECARE"
+                      ><span>홈케어</span></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="gnb4">
+              <a href="https://www.e-kano.com/kr/news/news.php">NEWS</a>
+              <div class="gnb-2dep">
+                <ul>
+                  <li>
+                    <a href="https://www.e-kano.com/kr/news/news.php"
+                      ><span>News</span></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="gnb5">
+              <a href="https://www.e-kano.com/kr/contact/contact.php"
+                >CONTACT</a
+              >
+              <div class="gnb-2dep">
+                <ul>
+                  <li>
+                    <a href="https://www.e-kano.com/kr/contact/contact.php"
+                      ><span>Contact</span></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- GNB Mobile -->
+      <button class="nav-open-btn open-btn" title="네비게이션 열기">
+        <span class="inner">
+          <img
+            src="images/sitemap_icon_active.png"
+            alt="사이트맵 열기 아이콘"
+            class="black"
+          />
+        </span>
+      </button>
+      <button class="nav-open-btn close-btn" title="네비게이션 열기">
+        <span class="line"></span>
+        <span class="line"></span>
+      </button>
+      <div class="gnb-overlay-bg-m"></div>
+      <nav id="gnbM" class="gnb-style-full">
+        <!-- 
+				기본스타일 : .gnb-style-basic
+				Full 스타일 : .gnb-style-full
+			-->
+        <h2 class="blind">주메뉴</h2>
+        <div class="gnb-navigation-wrapper">
+          <div
+            class="gnb-navigation-inner mCustomScrollbar _mCS_1 mCS_no_scrollbar"
+          >
+            <div
+              id="mCSB_1"
+              class="mCustomScrollBox mCS-dark mCSB_vertical mCSB_inside"
+              style="max-height: 0px"
+              tabindex="0"
+            >
+              <div
+                id="mCSB_1_container"
+                class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y"
+                style="position: relative; top: 0; left: 0"
+                dir="ltr"
+              >
+                <ul id="navigation" data-menu-clone="true">
+                  <li class="gnb1 has-2dep">
+                    <a href=" ">KANO</a>
+                    <div class="gnb-2dep">
+                      <ul>
+                        <li>
+                          <a href=" "><span>인사말</span></a>
+                        </li>
+                        <li>
+                          <a href=" "><span>경영철학</span></a>
+                        </li>
+                        <li>
+                          <a href=" "><span>회사연혁</span></a>
+                        </li>
+                        <li>
+                          <a href=" "><span>조직도</span></a>
+                        </li>
+                        <li>
+                          <a href=" "><span>수상/인증</span></a>
+                        </li>
+                        <li>
+                          <a href=" "><span>채용</span></a>
+                        </li>
+                        <li>
+                          <a href=" "><span>오시는길</span></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="gnb2 has-2dep">
+                    <a href=" ">BUSINESS</a>
+                    <div class="gnb-2dep">
+                      <ul>
+                        <li>
+                          <a href=" "><span>제품기획/마케팅</span></a>
+                        </li>
+                        <li>
+                          <a href=" "><span>제품개발/제조</span></a>
+                        </li>
+                        <li>
+                          <a href=" "><span>로컬 비즈니스 네트워크</span></a>
+                        </li>
+                        <li>
+                          <a href=" "><span>글로벌 비즈니스 네트워크</span></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="gnb3 has-2dep">
+                    <a href=" ">BRAND</a>
+                    <div class="gnb-2dep">
+                      <ul>
+                        <li>
+                          <a href=" "><span>이지스토리</span></a>
+                        </li>
+                        <li>
+                          <a href=" "><span>페슬러</span></a>
+                        </li>
+                        <li>
+                          <a href=" "><span>홈케어</span></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="gnb4 has-2dep">
+                    <a href=" ">NEWS</a>
+                    <div class="gnb-2dep">
+                      <ul>
+                        <li>
+                          <a href=" "><span>News</span></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="gnb5 has-2dep">
+                    <a href=" ">CONTACT</a>
+                    <div class="gnb-2dep">
+                      <ul>
+                        <li>
+                          <a href=" "><span>Contact</span></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+                <!-- PC메뉴 같을때 true / 같지않으면 false 후 메뉴삽입 -->
+              </div>
+              <div
+                id="mCSB_1_scrollbar_vertical"
+                class="mCSB_scrollTools mCSB_1_scrollbar mCS-dark mCSB_scrollTools_vertical"
+                style="display: none"
+              >
+                <div class="mCSB_draggerContainer">
+                  <div
+                    id="mCSB_1_dragger_vertical"
+                    class="mCSB_dragger"
+                    style="position: absolute; min-height: 30px; top: 0px"
+                  >
+                    <div
+                      class="mCSB_dragger_bar"
+                      style="line-height: 30px"
+                    ></div>
+                  </div>
+                  <div class="mCSB_draggerRail"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header-util-menu-box">
+            <!-- sns  리스트 -->
+            <ul class="clearfix sns-list">
+              <li class="cur">
+                <a href=""><i class="xi-instagram"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="xi-facebook"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="xi-youtube-play"></i></a>
+              </li>
+            </ul>
+            <!-- // -->
+            <!-- 언어 선택 리스트 -->
+            <ul class="clearfix lang-select">
+              <li class="cur"><a href=" ">KOR</a></li>
+              <li><a href=" ">ENG</a></li>
+              <li><a href=" ">CHI</a></li>
+              <li><a href=" ">JAP</a></li>
+            </ul>
+            <!-- // -->
+          </div>
+        </div>
+      </nav>
+    </header>
+  </body>
+</html>

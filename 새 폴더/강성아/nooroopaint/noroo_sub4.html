@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/head.css" />
+    <link rel="stylesheet" href="css/substyle4.css" />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
+    <title>NOOROO PAINT</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+        <div class="top">
+          <div class="topmenu">
+            <ul class="left">
+              <li>
+                <div class="logo">
+                  <a href="#"
+                    ><img src="images/nr_top_logo.png" alt="logo"
+                  /></a>
+                </div>
+              </li>
+            </ul>
+            <ul class="right">
+              <li>
+                <div class="search">
+                  <input
+                    type="search"
+                    placeholder="검색어를 입력하세요."
+                    onfocus="this.placeholder=''"
+                  /><a href="#"><img src="images/search.png" alt="검색" /></a>
+                </div>
+              </li>
+              <li><a href="#">로그인</a></li>
+              <li><a href="#">회원가입</a></li>
+              <li>
+                <select name="country" id="country">
+                  <option value="korean">Language</option>
+                  <option value="English">English</option>
+                  <option value="Chinese">Chinese</option>
+                  <option value="Japanese">Japanese</option>
+                </select>
+              </li>
+              <li>
+                <p id="menu">
+                  <span id="one"></span>
+                  <span id="two"></span>
+                  <span id="three"></span>
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <a href="#">기업정보</a>
+              <ul>
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#">CEO인사말</a></li>
+                <li><a href="#">연혁</a></li>
+                <li><a href="#">NOROO Way</a></li>
+                <li><a href="#">노루70년사</a></li>
+                <li><a href="#">CI</a></li>
+                <li><a href="#">계열사 및 관계사</a></li>
+                <li><a href="#">채용정보</a></li>
+                <li><a href="#">찾아오시는길</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">제품자료</a>
+              <ul>
+                <li>
+                  <a href="#">제품안내</a>
+                  <ul class="sub">
+                    <li><a href="#">통합자료</a></li>
+                    <li><a href="#">GHS-MSDS</a></li>
+                    <li><a href="#">인증서</a></li>
+                    <li><a href="#">친환경 제품</a></li>
+                    <li><a href="#">시험성적서</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">페인트 컬러찾기</a></li>
+                <li><a href="#">기술지원</a></li>
+                <li><a href="#">페인트가이드</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">미디어</a>
+              <ul>
+                <li><a href="#">NOOROO 뉴스</a></li>
+                <li><a href="#">NOOROO NOW</a></li>
+                <li><a href="#">홍보자료실</a></li>
+                <li><a href="#">노루그룹사보</a></li>
+                <li><a href="#">페인트잇수다</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">R&D</a>
+              <ul>
+                <li><a href="#">NSDS</a></li>
+                <li><a href="#">연구소</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">ESG경영</a>
+              <ul>
+                <li><a href="#">ESG개요</a></li>
+                <div class="esg">
+                  <li>
+                    <a href="#">환경<span>(Environment)</span></a>
+                  </li>
+                  <li>
+                    <a href="#">사회<span>(Social)</span> </a>
+                  </li>
+                  <li>
+                    <a href="#">지배구조<span>(Governance)</span></a>
+                  </li>
+                </div>
+                <li><a href="#">ESG자료실</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">투자정보</a>
+              <ul>
+                <li><a href="#">재무정보</a></li>
+                <li><a href="#">공시&행사</a></li>
+                <li><a href="#">주가정보</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">고객지원</a>
+              <ul>
+                <li><a href="#">대리점 안내</a></li>
+                <li><a href="#">지점/영업소 안내</a></li>
+                <li><a href="#">담당자 안내</a></li>
+                <li>
+                  <a href="#">색채지원</a>
+                  <ul class="sub">
+                    <li><a href="#">색채지원 소개</a></li>
+                    <li><a href="#">아파트 재도장</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Q&A</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="bg"></div>
+        </nav>
+      </header>
+      <div class="slide"></div>
+      <!--사이드메뉴-->
+      <div class="pagewrap">
+        <div class="page">
+          <div class="leftnav">
+            <p>R&D</p>
+            <div class="pline"></div>
+            <ul>
+              <li>
+                <a href="#">NSDS</a>
+                <ul>
+                  <li><a href="#">소개</a></li>
+                  <li>
+                    <a href="#">주요활동</a>
+                    <ul>
+                      <li><a href="#">- 컬러 트렌드 리서치</a></li>
+                      <li><a href="#">- 컬러 컨설팅</a></li>
+                      <li><a href="#">- 컬러 프로젝트</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">연구소</a>
+                <ul>
+                  <li><a href="#">소개</a></li>
+                  <li>
+                    <a href="#">연구개발분야</a>
+                    <ul>
+                      <li><a href="#">- 친환경/ESG</a></li>
+                      <li><a href="#">- 고기능성 제품</a></li>
+                      <li><a href="#">- 첨단소재</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">연구성과</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="pline end"></div>
+          </div>
+          <div class="right">
+            <div class="rightwrap">
+              <div>
+                <p>소개</p>
+                <p class="btn nsds"><a href="#">NSDS</a></p>
+                <p class="btn yearli"><a href="#">연혁</a></p>
+              </div>
+              <ul>
+                <li>
+                  <a href="#"
+                    ><img src="../nooroopaint/images/home_icon.png" alt=""
+                  /></a>
+                </li>
+                <li><a href="#">R&D</a></li>
+                <li><a href="#">NSDS</a></li>
+                <li><a href="#">소개</a></li>
+              </ul>
+            </div>
+            <div class="pline"></div>
+
+            <div class="tabitem">
+              <div id="tabcon">
+                <img src="images/lab_img_01.jpg" alt="" />
+                <h2>NSDS</h2>
+                <p>
+                  고객의 삶 전반에 미치는 컬러의 영향력과 중요성을 가장 잘 아는
+                  노루페인트는 1987년 국내 도료업계 최초로 색채연구팀을 발족한
+                  이래 자동차, 가전 등의 Industrial Color & Material Trend에서
+                  제품패키지, 브랜드 아이덴티티 등으로 사업 영역을 넓혀
+                  왔습니다. 노루페인트의 NSDS(노루서울디자인스튜디오)는 컬러
+                  트렌드 리서치와 컨설팅, 프로젝트를 수행하는 Creative Knowledge
+                  Group으로 국내외 역량 있는 크리에이터들과 네트워크를 구축하여
+                  고객의 니즈에 따라 새로운 감성적 가치와 창의적 영감을
+                  제공합니다.
+                </p>
+                <h3>컬러 트렌드 리서치</h3>
+                <p>
+                  NSDS는 사회 현상과 소비자의 욕구, 시장의 흐름에 대한 분석을
+                  토대로 매해 새로운 주제와 그에 따라 적용할 수 있는 컬러 및
+                  소재를 소개하며 업계와 학계에 최신의 컬러 가이드를 제공해오고
+                  있습니다. 컬러 가이드는 트렌드 북 ‘COVER ALL’로 발간, NCTS
+                  행사와 함께 공개됨으로써 디자이너, 마케팅, 기획 전문가 등에게
+                  성공적인 디자인 전략을 수립할 수 있는 솔루션이 되어주고
+                  있습니다.
+                </p>
+                <ul class="tit_list">
+                  <li>COVER ALL</li>
+                  <li>NCTS</li>
+                  <li>TREND Seminar</li>
+                </ul>
+                <h3>컬러 컨설팅</h3>
+                <p>
+                  건축, 공간, 제품, 자동차, 뷰티 등 산업 전반의 다양한 비즈니스
+                  분야에서 브랜드 전략, 디자인 기획, 라이프스타일 리서치와 같이
+                  기업이 필요한 최신 디자인 정보를 수집 분석하여 고객이 당면한
+                  문제 해결책을 제안하고 새로운 비즈니스 인사이트를 제공합니다.
+                </p>
+                <ul class="tit_list">
+                  <li>건축, 공간, 인테리어</li>
+                  <li>제품, 가전, 자동차 CMF</li>
+                  <li>전시 기획, 브랜드 커뮤니케이션</li>
+                </ul>
+                <h3>컬러 프로젝트</h3>
+                <p>
+                  NSDS는 특색 있는 전시와 컬러 콜라보레이션을 진행하여 공간과
+                  제품에 심미적 역할은 물론, 심리적 역할까지 해내는 컬러의 힘을
+                  보다 널리 알리고 있으며, 새로운 감성과 창조적 영감들을
+                  제공하는 재능 있는 글로벌 크리에이터들과 폭 넓은 네트워크를
+                  구축하고 있습니다.
+                </p>
+                <ul class="tit_list">
+                  <li>ESG & 사회 환원 활동</li>
+                  <li>국내외 문화예술 기관 및 예술가 후원</li>
+                  <li>브랜드 콜라보레이션</li>
+                </ul>
+                <h3>Contact Us</h3>
+                <p>
+                  문의: colorist@noroo.com<br />
+                  위치: 서울시 강남구 테헤란로 142 아크플레이스 B동 10층
+                </p>
+              </div>
+              <div id="tabcon2">
+                <div class="tabwrap">
+                  <div class="tabright">
+                    <li>
+                      <p class="ygroup">2010 ~ 2022</p>
+                      <p class="year">2022</p>
+                      <ul>
+                        <li>Cover All Vol. 6 《Better Option》 발간</li>
+                        <li>22-23 KG동부제철 PCM 트렌드 컬러 제안</li>
+                        <li>현대자동차 In-exterior 선행컬러 제안</li>
+                        <li>MDW2022 X LG OLED 전시지원 컨설팅</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="ygroup"></p>
+                      <p class="year">2021</p>
+                      <ul>
+                        <li>Cover All Vol. 5 《Overture》 발간</li>
+                        <li>
+                          21-22 KG동부제철 PCM 트렌드 컬러 제안 및 신제품 적용
+                        </li>
+                        <li>인천테크노파크 C.M.F 라이브러리 콘텐츠 개발</li>
+                        <li>컨설팅강남디자인위크 주제관 공간 컬러 제안</li>
+                        <li>한국디자인진흥원 2021-22 Trend Webinar</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="ygroup"></p>
+                      <p class="year">2020</p>
+                      <ul>
+                        <li>위니아전자 KLASSE POP Edition 2.0 컬러 컨설팅</li>
+                        <li>인천테크노파크 C.M.F 라이브러리 구축 컨설팅</li>
+                        <li>
+                          20-21' KG동부제철 PCM 트렌드컬러 제안 및 신제품 적용
+                        </li>
+                        <li>Lumir X NOROO 콜라보레이션 제품 컬러 컨설팅</li>
+                        <li>홈데코테이블페어 2020 전시공간 컬러 제안</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="ygroup"></p>
+                      <p class="year">2019</p>
+                      <ul>
+                        <li>NCTS 2020 개최</li>
+                        <li>COVER ALL Vol.04 "Narcissus" 발간</li>
+                        <li>MDW(밀라노디자인위크)2019 "TIDES" 전시 개최</li>
+                        <li>
+                          19-20' 동부인천스틸 건재,가전 PCM 트렌드 컬러제안
+                        </li>
+                        <li>
+                          19' VYVYD STUDIO 시즌별 컬러 컨설팅 및 신제품 적용
+                        </li>
+                        <li>
+                          19' 현대기아차 C.M.F 트렌드 세미나 & 선행 컬러제안
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="ygroup"></p>
+                      <p class="year">2018</p>
+                      <ul>
+                        <li>NCTS 2019 개최</li>
+                        <li>COVER ALL Vol.03 "Essence" 발간</li>
+                        <li>
+                          COVER ALL Vol.03 동경 Ginza6 츠타야서점 전시개최
+                          "Es-sense"
+                        </li>
+                        <li>BKKDW(방콕디자인위크)2018 초청강연</li>
+                        <li>2018 아시아(한중일)컬러포럼 세미나 초청강연</li>
+                        <li>
+                          한국디자인진흥원(KIDP) C.M.F Bank 코팅컬러 제안 및
+                          개발
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="ygroup"></p>
+                      <p class="year">2017</p>
+                      <ul>
+                        <li>
+                          NPCI 컬러컨설팅 수행 - 토모글라스, 동부인천스틸,
+                          CJ오쇼핑 SEP
+                        </li>
+                        <li>NPCI 컬러트렌드북 “COVER-ALL” vol.2 제작</li>
+                        <li>노루인터내셔널컬러트렌드쇼 NCTS 2018 / DDP</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="ygroup"></p>
+                      <p class="year">2016</p>
+                      <ul>
+                        <li>
+                          NPCI 컬러컨설팅 수행 - 토모글라스, 동부인천스틸,
+                          토니모리
+                        </li>
+                        <li>NPCI 컬러트렌드북 “COVER-ALL” 런칭</li>
+                        <li>노루인터내셔널컬러트렌드쇼 NCTS 2017 / DDP</li>
+                      </ul>
+                    </li>
+                    <li></li>
+                    <li>
+                      <p class="ygroup"></p>
+                      <p class="year">2015</p>
+                      <ul>
+                        <li>NPCI 컬러아카데미 운영</li>
+                        <li>건축색채디자인 컬러가이드북 제작</li>
+                        <li>일본 컬러웍스 B2C 비즈니스 교류</li>
+                        <li>노루인터내셔널컬러트렌드쇼 NCTS 2016 / DDP</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="ygroup"></p>
+                      <p class="year">2013</p>
+                      <ul>
+                        <li>
+                          2014 International NOROO Color Trend Show (삼성동
+                          코엑스)
+                        </li>
+                        <li>NPCI(노루페인트색채연구소) 을지로사옥 4층 개소</li>
+                        <li>PANTONE 컬러하우징 실내공간 추천 컬러&배색 개발</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="ygroup"></p>
+                      <p class="year">2012</p>
+                      <ul>
+                        <li>
+                          2013 International NOROO Color Trend Show (삼성동
+                          인터컨티넨탈호텔)
+                        </li>
+                        <li>
+                          2013 모바일 트렌드컬러 개발 제안(삼성전자, LG전자)
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="ygroup"></p>
+                      <p class="year">2011</p>
+                      <ul>
+                        <li>
+                          2011 한국색채대상 "PANTONE & NOROO Premium Paints"
+                          수상
+                        </li>
+                        <li>
+                          PANTONE VIEW home interior 2012 컬러 트렌드 발표회
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="ygroup"></p>
+                      <p class="year">2010</p>
+                      <ul>
+                        <li>
+                          컬러, 디자인, 감성 트렌드를 중심으로 한 C.M.F (Color
+                          Material Finshing) 디자인 정보 제안
+                        </li>
+                        <li>
+                          2011 트렌드 컬러를 반영한 LED조명 코팅용 컬러북 개발
+                        </li>
+                        <li>
+                          "뽀로로 페인트 용" 어린이 전용공간 추천 배색 개발
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="ygroup">2000 ~ 2010</p>
+                      <p class="year">2009</p>
+                      <ul>
+                        <li>
+                          한국색채학회 기술발표 "2008 국내아파트 적용컬러와
+                          트랜드 현황" (한국색채학회 봄학술대회)
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="ygroup"></p>
+                      <p class="year">2008</p>
+                      <ul>
+                        <li>
+                          포스코건설 APT "더샵" 공용부위 컬러&특화마감재 개발
+                          (포스코건설)
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="ygroup"></p>
+                      <p class="year">2006</p>
+                      <ul>
+                        <li>
+                          건축용 용도별 감성칼라 연구개발 (홍익대학교
+                          색채디자인연구소, 노루페인트 공동개발)
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="ygroup"></p>
+                      <p class="year">2004</p>
+                      <ul>
+                        <li>
+                          "국가이미지개선을위한 환경색채개발" 참여 (산업자원부
+                          디자인기반기술 개발사업)
+                        </li>
+                        <li>
+                          미래 칼라트랜드 예측 연구사례 발표 (아시아 태평양
+                          유행색 연구회, 이대색채연구소 주최)
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="ygroup"></p>
+                      <p class="year">2003</p>
+                      <ul>
+                        <li>
+                          어린이 시설 환경색채 연구 및 "키즈칼라" 색상개발
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="ygroup"></p>
+                      <p class="year">2001</p>
+                      <ul>
+                        <li>
+                          분임조 발표대회 "대통령상 금상 수상" (한국표준협회)
+                        </li>
+                        <li>
+                          "대한민국디자인경영대상우수상수상" (한국능률협회)
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="ygroup"></p>
+                      <p class="year">2000</p>
+                      <ul>
+                        <li>
+                          페인트협동조합 F-판 칼라북 색상개발 참여
+                          (한국페인트협동조합)
+                        </li>
+                        <li>
+                          21세기 건축환경 색채트랜드(주제: Low Tech Color and
+                          Futureism) 연구 및 칼라북 제작
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="ygroup">1999 ~ 1987</p>
+                      <p class="year">1997</p>
+                      <ul>
+                        <li>주거건축 환경색채 사례 발표 "아파트 색채디자인"</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="ygroup"></p>
+                      <p class="year">1996</p>
+                      <ul>
+                        <li>병원 및 학교시설 색채환경 연구발표</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="ygroup"></p>
+                      <p class="year">1995</p>
+                      <ul>
+                        <li>Color Trend "한국인의 숨결 발표"</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="ygroup"></p>
+                      <p class="year">1987</p>
+                      <ul>
+                        <li>자동차, 가전 컬러트렌드 세미나</li>
+                      </ul>
+                    </li>
+                  </div>
+                  <div class="bline"></div>
+                </div>
+              </div>
+              <div id="tabcon">
+                <img src="images/lab_img_01.jpg" alt="" />
+                <h2>NSDS</h2>
+                <p>
+                  고객의 삶 전반에 미치는 컬러의 영향력과 중요성을 가장 잘 아는
+                  노루페인트는 1987년 국내 도료업계 최초로 색채연구팀을 발족한
+                  이래 자동차, 가전 등의 Industrial Color & Material Trend에서
+                  제품패키지, 브랜드 아이덴티티 등으로 사업 영역을 넓혀
+                  왔습니다. 노루페인트의 NSDS(노루서울디자인스튜디오)는 컬러
+                  트렌드 리서치와 컨설팅, 프로젝트를 수행하는 Creative Knowledge
+                  Group으로 국내외 역량 있는 크리에이터들과 네트워크를 구축하여
+                  고객의 니즈에 따라 새로운 감성적 가치와 창의적 영감을
+                  제공합니다.
+                </p>
+                <h3>컬러 트렌드 리서치</h3>
+                <p>
+                  NSDS는 사회 현상과 소비자의 욕구, 시장의 흐름에 대한 분석을
+                  토대로 매해 새로운 주제와 그에 따라 적용할 수 있는 컬러 및
+                  소재를 소개하며 업계와 학계에 최신의 컬러 가이드를 제공해오고
+                  있습니다. 컬러 가이드는 트렌드 북 ‘COVER ALL’로 발간, NCTS
+                  행사와 함께 공개됨으로써 디자이너, 마케팅, 기획 전문가 등에게
+                  성공적인 디자인 전략을 수립할 수 있는 솔루션이 되어주고
+                  있습니다.
+                </p>
+                <ul class="tit_list">
+                  <li>COVER ALL</li>
+                  <li>NCTS</li>
+                  <li>TREND Seminar</li>
+                </ul>
+                <h3>컬러 컨설팅</h3>
+                <p>
+                  건축, 공간, 제품, 자동차, 뷰티 등 산업 전반의 다양한 비즈니스
+                  분야에서 브랜드 전략, 디자인 기획, 라이프스타일 리서치와 같이
+                  기업이 필요한 최신 디자인 정보를 수집 분석하여 고객이 당면한
+                  문제 해결책을 제안하고 새로운 비즈니스 인사이트를 제공합니다.
+                </p>
+                <ul class="tit_list">
+                  <li>건축, 공간, 인테리어</li>
+                  <li>제품, 가전, 자동차 CMF</li>
+                  <li>전시 기획, 브랜드 커뮤니케이션</li>
+                </ul>
+                <h3>컬러 프로젝트</h3>
+                <p>
+                  NSDS는 특색 있는 전시와 컬러 콜라보레이션을 진행하여 공간과
+                  제품에 심미적 역할은 물론, 심리적 역할까지 해내는 컬러의 힘을
+                  보다 널리 알리고 있으며, 새로운 감성과 창조적 영감들을
+                  제공하는 재능 있는 글로벌 크리에이터들과 폭 넓은 네트워크를
+                  구축하고 있습니다.
+                </p>
+                <ul class="tit_list">
+                  <li>ESG & 사회 환원 활동</li>
+                  <li>국내외 문화예술 기관 및 예술가 후원</li>
+                  <li>브랜드 콜라보레이션</li>
+                </ul>
+                <h3>Contact Us</h3>
+                <p>
+                  문의: colorist@noroo.com<br />
+                  위치: 서울시 강남구 테헤란로 142 아크플레이스 B동 10층
+                </p>
+              </div>
+            </div>
+          </div>
+          <!--right-->
+        </div>
+      </div>
+      <!--pagewrap-->
+      <footer>
+        <div class="foot">
+          <div class="footer_top">
+            <ul class="left">
+              <li><a href="#">NOROO BROCHURE</a></li>
+              <li><a href="#">개인정보취급방침</a></li>
+              <li><a href="#">이메일무단수집거부</a></li>
+              <li><a href="#">오시는 길</a></li>
+            </ul>
+            <ul class="right">
+              <li>
+                <a href="#"
+                  ><img
+                    src="../nooroopaint/images/footer_icon_youtube.png"
+                    alt=""
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="../nooroopaint/images/footer_icon_blog.png" alt=""
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img
+                    src="../nooroopaint/images/footer_icon_insta.png"
+                    alt=""
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img
+                    src="../nooroopaint/images/footer_icon_facebook.png"
+                    alt=""
+                /></a>
+              </li>
+              <li><a href="#">family Site</a></li>
+            </ul>
+          </div>
+          <div class="footer_info">
+            <div class="footer_infoleft">
+              <img src="../nooroopaint/images/footer_logo.png" alt="" />
+              <ul>
+                <li>
+                  <p>
+                    (13977) 경기도 안양시 만안구 박달로 351 / 대표이사 조성국 /
+                    사업자등록번호 : 123-86-06034
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    대표전화 031-467-6114 / 소비자 상담실 080-944-7777(수신자
+                    부담)
+                  </p>
+                </li>
+                <li>
+                  Copyright (c) NOROO Paint & Coatings Co., Ltd. All Rights
+                  Reserved.
+                </li>
+              </ul>
+            </div>
+            <div class="footer_inforight">
+              <img
+                src="../nooroopaint/images/footer_and_award_icon.png"
+                alt=""
+              />
+              <img src="../nooroopaint/images/footer_mark_app.png" alt="" />
+              <img src="../nooroopaint/images/footer_mark_tax.png" alt="" />
+              <img src="../nooroopaint/images/footer_mark_sb.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

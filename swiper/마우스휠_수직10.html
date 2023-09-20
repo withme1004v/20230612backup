@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <link rel="stylesheet" href="css/swiper-bundle.css" />
+
+    <!-- Demo styles -->
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      header,
+      footer {
+        height: 500px;
+        background: #000;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header></header>
+    <header></header>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <footer></footer>
+
+    <script src="js/swiper-bundle.js"></script>
+    <script>
+      // Initialize Swiper
+      var swiper = new Swiper(".mySwiper", {
+        direction: "horizontal",
+        mousewheel: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        // Add other Swiper options as needed
+      });
+
+      // Add mousewheel event listener to swiper container
+      var swiperContainer = document.querySelector(".mySwiper");
+      swiperContainer.addEventListener("wheel", function (event) {
+        event.preventDefault();
+        var delta = event.wheelDelta || -event.deltaY || -event.detail;
+        var scrollAmount = 100; // Adjust this value as needed
+
+        if (delta > 0) {
+          // If scrolling up (mousewheel is going up)
+          if (swiper.isBeginning) {
+            // If the swiper is at the first slide, go to the last slide
+            swiper.slideTo(swiper.slides.length - 1);
+          } else {
+            swiper.slidePrev();
+            mousewheel: false;
+          }
+        } else {
+          // If scrolling down (mousewheel is going down)
+          if (swiper.isEnd) {
+            // If the swiper is at the last slide, go to the first slide
+            swiper.slideTo(0);
+          } else {
+            swiper.slideNext();
+            mousewheel: false;
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,106 @@
+<!-- 참고url lhttps://zzzmh.tistory.com/18?category=1063912 -->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .swiper-container {
+        width: 100%;
+        height: 100%;
+      }
+      .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+      }
+      .main {
+        height: 1000px;
+        background: #ccc;
+        overflow: visible;
+      }
+    </style>
+    <link rel="stylesheet" href="css/jquery.fullpage.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.css" />
+  </head>
+  <body>
+    <div id="fullpage">
+      <div class="section sec1 active">
+        <h1>Section1</h1>
+      </div>
+      <div class="section sec2">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <h1>Section2</h1>
+              Slide 1
+            </div>
+            <div class="swiper-slide">
+              <h1>Section2</h1>
+              Slide 2
+            </div>
+            <div class="swiper-slide">
+              <h1>Section2</h1>
+              Slide 3
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+
+      <div class="section sec3">
+        <div class="main"></div>
+      </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/scrolloverflow.js"></script>
+    <script src="js/swiper-bundle.js"></script>
+    <script src="js/jquery.fullpage.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#fullpage").fullpage({
+          scrollingSpeed: 1000,
+          sectionsColor: ["#f2f2f2", "#4BBFC3", "#7BAABE"],
+          onLeave: function (origin, destination, direction) {
+            $("#fullpage").on("scroll touchmove mousewheel", function (event) {
+              event.preventDefault();
+              event.stopPropagation();
+              return false;
+            });
+            swiper.mousewheel.disable();
+          },
+          afterLoad: function (anchorLink, index) {
+            $("#fullpage").off("scroll mousewheel");
+            if (!$(".fp-completely .swiper-wrapper").length > 0)
+              $("#fullpage").off("touchmove"); // 모바일분기
+            if (swiper) swiper.mousewheel.enable();
+            if ($(".sec2").hasClass("active"))
+              $.fn.fullpage.setAllowScrolling(false); // 슬라이드 섹션을 벗어나면 휠풀어주기
+          },
+        });
+        var swiper = new Swiper(".swiper-container", {
+          direction: "horizontal",
+          slidesPerView: "1",
+          spaceBetween: 0,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          mousewheel: {
+            releaseOnEdges: true,
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

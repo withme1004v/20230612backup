@@ -1,0 +1,130 @@
+@charset "UTF-8";
+.information4 {
+  width: 100%;
+  background: #463e3a;
+  position: relative;
+}
+.cookie_video {
+  width: 1280px;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+
+.cookie_mv {
+  width: 1280px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.cookie_mv li {
+  width: 380px;
+  text-align: center;
+  margin: 30px 0;
+}
+.cookie_mv li a {
+  display: block;
+}
+.cookie_mv li div {
+  width: 100%;
+  height: 215px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #fff3cd;
+  box-sizing: border-box;
+}
+.cookie_mv li div img:first-child {
+  width: 100%;
+  object-fit: cover;
+  object-position: 0 -35px;
+  opacity: 0.8;
+}
+.cookie_mv li div img:nth-child(2) {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 35px;
+  object-fit: contain;
+}
+.cookie_mv li p {
+  font-size: 24px;
+  color: #fff;
+  font-weight: 800;
+  text-align: left;
+  margin: 20px auto;
+}
+.example {
+  width: 240px;
+  height: 120px;
+  margin: 0 auto;
+  background: url(../images/example2.svg) center/cover no-repeat;
+  position: relative;
+  text-align: center;
+}
+.example img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+.example::after {
+  content: "";
+  width: 64px;
+  height: 120px;
+  position: absolute;
+  left: -64px;
+  top: 0;
+  background: url(../images/example1.svg) center/cover no-repeat;
+}
+
+.example::before {
+  content: "";
+  width: 64px;
+  height: 120px;
+  position: absolute;
+  right: -64px;
+  top: 0;
+  background: url(../images/example1.svg) center/cover no-repeat;
+  transform: scaleX(-1);
+}
+
+.example > span {
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 120px;
+  color: #362310;
+}
+
+.Music_video {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 15;
+  display: block;
+}
+/* .Music_video ul {
+  width: 1070px;
+  margin: 0 auto;
+} */
+
+.cookie_vd {
+  position: absolute;
+  border: 1px solid #ffe81e;
+  box-sizing: border-box;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.cookie_vd img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  position: absolute;
+  right: 0;
+  top: -70px;
+  cursor: pointer;
+}

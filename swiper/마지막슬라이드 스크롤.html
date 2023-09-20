@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <style>
+      .swiper-container {
+        width: 100%;
+        height: 100vh; /* Set the height of the swiper container */
+        overflow: hidden; /* Hide overflow to prevent double scrollbar */
+      }
+      .swiper-slide {
+        text-align: center;
+        font-size: 30px;
+        background: #ccc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%; /* Set the height of individual slides */
+      }
+      .foot {
+        height: 1000px;
+        background-color: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+        <!-- Add more slides as needed -->
+      </div>
+    </div>
+    <div class="foot"></div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var swiper = new Swiper(".swiper-container", {
+          direction: "vertical", // Set swiper direction to vertical
+          mousewheel: true, // Enable mousewheel navigation
+        });
+
+        swiper.on("reachEnd", function () {
+          // 마지막 슬라이드에 도달했을 때의 코드
+          swiper.mousewheel.disable(); // Disable Swiper's mousewheel handling
+          document
+            .querySelector(".foot")
+            .addEventListener("wheel", handleFootScroll, { passive: false });
+        });
+
+        swiper.on("reachBeginning", function () {
+          // 처음 슬라이드에 도달했을 때의 코드
+          swiper.mousewheel.enable(); // Re-enable Swiper's mousewheel handling
+          document
+            .querySelector(".foot")
+            .removeEventListener("wheel", handleFootScroll);
+        });
+
+        function handleFootScroll(event) {
+          // .foot 엘리먼트에서의 마우스 휠 이벤트를 가로채지 않고 허용
+        }
+      });
+    </script>
+  </body>
+</html>

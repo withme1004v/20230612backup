@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/swiper-bundle.css" />
+    <script src="js/swiper-bundle.js"></script>
+  </head>
+  <body>
+    <div class="swiper-container">
+      <div class="swiper-wrapper" virtual="true">
+        <div class="swiper-slide"><img src="photo1.jpg" alt="" /></div>
+        <div class="swiper-slide"><img src="photo2.jpg" alt="" /></div>
+        <div class="swiper-slide"><img src="photo3.jpg" alt="" /></div>
+        <!-- 필요한 만큼 슬라이드를 추가할 수 있습니다. -->
+      </div>
+    </div>
+    <script>
+      const swiperEl = document.querySelector("swiper-container");
+
+      // swiper parameters
+      const swiperParams = {
+        virtual: {
+          // virtual slides
+          slides: ["Slide 1", "Slide 2", "Slide 3"],
+        },
+      };
+
+      // assign all parameters to Swiper element
+      Object.assign(swiperEl, swiperParams);
+
+      // and now initialize it
+      swiperEl.initialize();
+    </script>
+  </body>
+</html>

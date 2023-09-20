@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>No Anchor Links - fullPage.js</title>
+    <meta name="author" content="Alvaro Trigo Lopez" />
+    <meta name="description" content="fullPage.js with no anchor links." />
+    <meta name="keywords" content="fullpage,jquery,anchor,links,inside,demo" />
+    <meta name="Resource-type" content="Document" />
+
+    <link rel="stylesheet" type="text/css" href="../fullpage.css" />
+    <link rel="stylesheet" type="text/css" href="examples.css" />
+
+    <!--[if IE]>
+      <script type="text/javascript">
+        var console = { log: function () {} };
+      </script>
+    <![endif]-->
+  </head>
+  <body>
+    <a href="https://github.com/alvarotrigo/fullPage.js" id="githubLink"
+      ><img
+        style="position: fixed; z-index: 99; top: 0; right: 0; border: 0"
+        src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"
+        alt="Fork me on GitHub"
+    /></a>
+
+    <a
+      href="https://twitter.com/share"
+      class="twitter-share-button"
+      data-url="http://alvarotrigo.com/fullPage/"
+      data-text="Great plugin to create fullscreen scrolling websites: http://alvarotrigo.com/fullPage/"
+      >Tweet</a
+    >
+    <script>
+      !(function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0],
+          p = /^http:/.test(d.location) ? "http" : "https";
+        if (!d.getElementById(id)) {
+          js = d.createElement(s);
+          js.id = id;
+          js.src = p + "://platform.twitter.com/widgets.js";
+          fjs.parentNode.insertBefore(js, fjs);
+        }
+      })(document, "script", "twitter-wjs");
+    </script>
+
+    <div id="fullpage">
+      <div class="section" id="section0">
+        <h1>fullPage.js</h1>
+        <p>No Anchor Links in the URL (#)</p>
+      </div>
+      <div class="section" id="section1">
+        <div class="intro">
+          <h1>Keeping it Simple</h1>
+          <p>
+            Sections won't contain anchor links.<br />
+            It's more simple to configure but a bit more restrictive.
+          </p>
+        </div>
+      </div>
+      <div class="section" id="section2">
+        <div class="intro">
+          <h1>URL without /#</h1>
+          <p>But back button won't work!</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="infoMenu">
+      <ul>
+        <li>
+          <a href="https://alvarotrigo.com/fullPage/utils/wordpress.html"
+            >Wordpress theme</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://github.com/alvarotrigo/fullPage.js/archive/master.zip"
+            >Download</a
+          >
+        </li>
+        <li>
+          <a href="#" id="showExamples">Examples</a>
+          <div id="examplesList">
+            <div class="column">
+              <h3>Navigation</h3>
+              <ul>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/examples/scrollBar.html"
+                    >Scroll Bar Enabled</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/examples/normalScroll.html"
+                    >Normal scrolling</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/examples/continuous.html"
+                    >Continuous vertical</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/examples/noAnchor.html"
+                    >Without anchor links (same URL)</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/examples/navigationV.html"
+                    >Vertical navigation dots</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/examples/navigationH.html"
+                    >Horizontal navigation dots</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="column">
+              <h3>Design</h3>
+              <ul>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/examples/responsive.html"
+                    >Responsive</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/examples/backgrounds.html"
+                    >Full backgrounds</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/examples/fixedBackgrounds.html"
+                    >Fixed backgrounds</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/examples/videoBackground.html"
+                    >Full background videos</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/examples/autoHeight.html"
+                    >Auto-height sections</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/examples/gradientBackgrounds.html"
+                    >Gradient backgrounds</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/examples/scrolling.html"
+                    >Scrolling inside sections and slides</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/examples/fixedHeaders.html"
+                    >Adding fixed header and footer</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/examples/oneSection.html"
+                    >One single section</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="column">
+              <h3>Extensions</h3>
+              <ul>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/extensions/parallax.html"
+                    >Parallax</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/extensions/continuous-horizontal.html"
+                    >Continuous horizontal</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/extensions/interlocked-slides.html"
+                    >Interlocked Slides</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/extensions/reset-sliders.html"
+                    >Reset Sliders</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/extensions/responsive-slides.html"
+                    >Responsive Slides</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/extensions/scroll-horizontally.html"
+                    >Horizontal mouse wheel</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/extensions/fading-effect.html"
+                    >Fading Effect</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/extensions/offset-sections.html"
+                    >Offset Sections</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/extensions/drag-and-move.html"
+                    >Drag And Move</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/extensions/scrolloverflow-reset.html"
+                    >ScrollOverflow Reset</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="column">
+              <h3>Other</h3>
+              <ul>
+                <li>
+                  <a href="https://alvarotrigo.com/fullPage/examples/apple.html"
+                    >Animations on scrolling</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/examples/callbacks.html"
+                    >Callbacks</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/examples/autoplayVideoAndAudio.html"
+                    >Autoplay media</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/examples/methods.html"
+                    >Functions and methods</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://alvarotrigo.com/fullPage/extensions/#navigation"
+                    >Extra navigations</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="https://github.com/alvarotrigo/fullPage.js#fullpagejs"
+            >Documentation</a
+          >
+        </li>
+        <li><a href="https://alvarotrigo.com/#contact-page">Contact</a></li>
+      </ul>
+
+      <!-- Facebook Pixel Code (Do not copy this!!)-->
+      <script>
+        !(function (f, b, e, v, n, t, s) {
+          if (f.fbq) return;
+          n = f.fbq = function () {
+            n.callMethod
+              ? n.callMethod.apply(n, arguments)
+              : n.queue.push(arguments);
+          };
+          if (!f._fbq) f._fbq = n;
+          n.push = n;
+          n.loaded = !0;
+          n.version = "2.0";
+          n.queue = [];
+          t = b.createElement(e);
+          t.async = !0;
+          t.src = v;
+          s = b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t, s);
+        })(
+          window,
+          document,
+          "script",
+          "https://connect.facebook.net/en_US/fbevents.js"
+        );
+        fbq("init", "1786065945027357"); // Insert your pixel ID here.
+        fbq("track", "PageView");
+      </script>
+      <noscript
+        ><img
+          height="1"
+          width="1"
+          style="display: none"
+          src="https://www.facebook.com/tr?id=1786065945027357&ev=PageView&noscript=1"
+      /></noscript>
+      <!-- DO NOT MODIFY -->
+      <!-- End Facebook Pixel Code -->
+
+      <!-- Google tag (gtag.js) GA4  (Do not copy this!!) -->
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-Q0MF57YDRL"
+      ></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+        gtag("config", "G-Q0MF57YDRL");
+
+        /* Adwords */
+        gtag("config", "AW-1012934304");
+      </script>
+      <!-- End Google Tag-->
+    </div>
+
+    <script type="text/javascript" src="../fullpage.js"></script>
+    <script type="text/javascript" src="examples.js"></script>
+    <script type="text/javascript">
+      var myFullpage = new fullpage("#fullpage", {
+        sectionsColor: ["#1bbc9b", "#4BBFC3", "#7BAABE"],
+      });
+    </script>
+  </body>
+</html>

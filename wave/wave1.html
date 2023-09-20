@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .motion-box {
+        width: 100%;
+        height: 560px;
+        position: relative;
+        border: 1px solid #000;
+      }
+
+      .sea-wave {
+        height: 100%;
+        width: 100%;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-position: 5% top;
+        animation-name: sea-wave;
+        /* animation-duration: 25s; */
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      .sea-wave.wave1 {
+        background-image: url(wave1.svg);
+        animation-duration: 15s;
+      }
+
+      @keyframes sea-wave {
+        0% {
+          background-position: calc(50% - 15%) top;
+        }
+        50% {
+          background-position: calc(50% + 15%) 50px;
+        }
+        100% {
+          background-position: calc(50% - 15%) top;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="motion-box">
+      <div class="sea-wave wave1"></div>
+      <!-- <div class="sea-wave wave2"></div> -->
+    </div>
+  </body>
+</html>

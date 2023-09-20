@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+.information3 {
+  width: 100%;
+  background: url(../images/gameStoryBackground.webp);
+}
+.cookie_story {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+.stroy_info p {
+  font-size: 18px;
+  color: #c4a893;
+  text-align: center;
+  line-height: 25px;
+  margin: 30px auto;
+}
+
+.story_img {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+.story_img_acter {
+  position: relative;
+  width: 1280px;
+  margin: 0 auto;
+  animation: acterMove 5s linear infinite both;
+}
+@keyframes acterMove {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.story_img_acter img:first-child {
+  position: absolute;
+  left: 10%;
+  bottom: 100px;
+  transform: translate(-10%, -100px);
+}
+
+.story_img_acter img:nth-child(2) {
+  position: absolute;
+  left: 30%;
+  bottom: 50px;
+  transform: translate(-30%, -50px);
+}
+.story_img_acter img:nth-child(3) {
+  position: absolute;
+  left: 75%;
+  bottom: 65px;
+  transform: translate(-75%, -65px);
+}
+
+.story_img_acter img:nth-child(4) {
+  position: absolute;
+  left: 50%;
+  bottom: 50px;
+  transform: translate(-50%, -50px);
+}
+.story_img_acter img:last-child {
+  position: absolute;
+  left: 95%;
+  bottom: 250px;
+  transform: translate(-95%, -250px);
+}
+.story_bg1 {
+  width: 100%;
+}
+.story_bg1 img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.story_bg2 {
+  width: 100%;
+  position: absolute;
+  bottom: -4px;
+}
+.story_bg2 img {
+  width: 100%;
+  object-fit: cover;
+}

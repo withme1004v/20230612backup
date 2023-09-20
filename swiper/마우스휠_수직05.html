@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="css/swiper-bundle.css" />
+
+    <!-- Demo styles -->
+    <style>
+      /* Customize the styles as needed */
+      .swiper-container {
+        width: 100%;
+        height: 100vh; /* Set the height of the swiper container to fill the viewport */
+        overflow: hidden; /* Hide overflow to prevent horizontal scrollbar */
+      }
+
+      .swiper-slide {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .vertical-content {
+        /* Styles for content in vertical slide (slide 1) */
+      }
+
+      /* Style for horizontal slide (slide 2) */
+      .horizontal-slide {
+        display: flex;
+        overflow-x: auto;
+        overflow-y: hidden;
+      }
+
+      /* Style for the horizontal swiper container (nested inside slide 2) */
+      .swiper-container-horizontal {
+        width: 100%;
+      }
+
+      /* Style for horizontal swiper slides (nested inside slide 2) */
+      .swiper-slide {
+        width: 100%;
+      }
+
+      /* Additional styling for your horizontal content if needed */
+    </style>
+  </head>
+
+  <body>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 - Vertical scroll -->
+        <div class="swiper-slide vertical-slide">
+          <div class="vertical-content">
+            Vertical content for slide 1 goes here
+          </div>
+        </div>
+
+        <!-- Slide 2 - Horizontal scroll -->
+        <div class="swiper-slide horizontal-slide">
+          <div class="swiper-container-horizontal">
+            <div class="swiper-wrapper">
+              <!-- Subslide 1 - Content for horizontal slide -->
+              <div class="swiper-slide">
+                Horizontal content for subslide 1 goes here
+              </div>
+
+              <!-- Subslide 2 - Content for horizontal slide -->
+              <div class="swiper-slide">
+                Horizontal content for subslide 2 goes here
+              </div>
+              <!-- Add more subslides as needed -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="js/swiper-bundle.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      // Swiper initialization and configuration
+      var mySwiper = new Swiper(".swiper-container", {
+        direction: "vertical", // Enable vertical scrolling for the swiper container
+        mousewheel: true, // Enable mousewheel control for scrolling
+      });
+
+      // Add custom event listener to handle the change of direction on slide change
+      mySwiper.on("slideChangeTransitionEnd", function () {
+        if (mySwiper.activeIndex === 0) {
+          // Page 1 - Enable vertical scrolling
+          mySwiper.setDirection("vertical");
+        } else if (mySwiper.activeIndex === 1) {
+          // Page 2 - Enable horizontal scrolling
+          mySwiper.setDirection("horizontal");
+        }
+      });
+    </script>
+  </body>
+</html>

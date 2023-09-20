@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="css/swiper-bundle.css" />
+    <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/swiper-bundle.js"></script>
+    <title>Louvre</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+        <div class="h_top">
+          <div class="left">
+            <ul>
+              <li>
+                <a href="#">
+                  <svg
+                    viewBox="0 0 32 32"
+                    width="1em"
+                    height="1em"
+                    focusable="false"
+                    aria-hidden="true"
+                    class="Menu_MenuToggle_icon SvgRWrapper"
+                  >
+                    <path
+                      d="M20.5 9a5.5 5.5 0 0 1 4.4 8.8l4.63 4.67-1.06 1.06-4.63-4.66A5.5 5.5 0 1 1 20.5 9zM16 21v1.5H2V21h14zm4.5-10.5a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm-7.94 5V17H2v-1.5h10.56zM14.2 10v1.5H2V10h12.19z"
+                    ></path>
+                  </svg>
+                  <span>Menu</span>
+                </a>
+              </li>
+              <li><a href="#">English</a></li>
+            </ul>
+          </div>
+          <div class="logo">
+            <a href="#">
+              <img src="images/logo.jpg" alt="logo" />
+            </a>
+          </div>
+          <div class="right">
+            <ul>
+              <li>
+                <a href="#"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    width="1em"
+                    height="1em"
+                    focusable="false"
+                    aria-hidden="true"
+                    class="SvgRWrapper"
+                  >
+                    <path
+                      d="M11.57 2c-1.78 0-3.2 1.28-3.2 2.86V7H5.14a.71.71 0 0 0-.72.64L3 21.21a.72.72 0 0 0 .72.79h15.71a.71.71 0 0 0 .72-.79L18.72 7.64A.71.71 0 0 0 18 7h-3.22V4.86c0-1.58-1.43-2.86-3.21-2.86zM9.8 4.86c0-.8.8-1.43 1.78-1.43 1 0 1.8.64 1.8 1.43V7h-3.6V4.86zm7.57 3.57 1.28 12.14H4.51L5.79 8.43h2.57v1.43a.71.71 0 1 0 1.43 0V8.43h3.57v1.43a.71.71 0 1 0 1.43 0V8.43h2.57z"
+                    ></path>
+                  </svg>
+                  E-Shop
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg
+                    viewBox="0 0 16 16"
+                    width="1em"
+                    height="1em"
+                    focusable="false"
+                    aria-hidden="true"
+                    class="SvgRWrapper"
+                  >
+                    <path
+                      d="M9.13.5a.9.9 0 0 1 1.28 0l1.17 1.18c.2.2.3.5.25.79a1.48 1.48 0 0 0 1.7 1.7c.3-.04.59.05.79.25l1.17 1.17a.9.9 0 0 1 0 1.28L6.87 15.5a.9.9 0 0 1-1.28 0L.51 10.41a.9.9 0 0 1 0-1.28zm.64.78L1.28 9.77l4.95 4.95 8.49-8.49-1.1-1.1c-.74.15-1.52-.1-2.08-.67s-.82-1.34-.7-2.14L9.77 1.28zm.53 5.13c.1-.1.25-.1.35 0l.35.35c.1.1.1.26 0 .36l-4.59 4.6a.27.27 0 0 1-.36 0l-.35-.36a.25.25 0 0 1 0-.36l4.6-4.59zm-2.24-.59c.1-.1.26-.1.35 0l.36.35c.1.1.1.26 0 .36L5 10.3c-.1.1-.26.1-.36 0l-.35-.35a.25.25 0 0 1 0-.36l3.77-3.77z"
+                    ></path>
+                  </svg>
+                  Ticket office
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="h_bottom">
+          <ul>
+            <li><a href="#">VISIT</a></li>
+            <li><a href="#">FIND OUT</a></li>
+            <li><a href="#">NOW</a></li>
+          </ul>
+        </div>
+      </header>
+      <div class="visual">
+        <video autoplay muted loop id="myVideo">
+          <source src="images/visual.mp4" type="video/mp4" />
+        </video>
+        <div class="slogan">
+          <span>ESCAPE TO THE LOUVRE</span>
+          <p>
+            <a href="#">
+              <svg
+                viewBox="0 0 16 16"
+                width="1em"
+                height="1em"
+                focusable="false"
+                aria-hidden="true"
+                class="SvgRWrapper"
+              >
+                <path
+                  d="M9.13.5a.9.9 0 0 1 1.28 0l1.17 1.18c.2.2.3.5.25.79a1.48 1.48 0 0 0 1.7 1.7c.3-.04.59.05.79.25l1.17 1.17a.9.9 0 0 1 0 1.28L6.87 15.5a.9.9 0 0 1-1.28 0L.51 10.41a.9.9 0 0 1 0-1.28zm.64.78L1.28 9.77l4.95 4.95 8.49-8.49-1.1-1.1c-.74.15-1.52-.1-2.08-.67s-.82-1.34-.7-2.14L9.77 1.28zm.53 5.13c.1-.1.25-.1.35 0l.35.35c.1.1.1.26 0 .36l-4.59 4.6a.27.27 0 0 1-.36 0l-.35-.36a.25.25 0 0 1 0-.36l4.6-4.59zm-2.24-.59c.1-.1.26-.1.35 0l.36.35c.1.1.1.26 0 .36L5 10.3c-.1.1-.26.1-.36 0l-.35-.35a.25.25 0 0 1 0-.36l3.77-3.77z"
+                ></path>
+              </svg>
+              Book a ticket
+            </a>
+          </p>
+        </div>
+        <div class="info">
+          <ul>
+            <li>
+              <span></span>
+              The museum is open today from 9am to 18pm
+            </li>
+            <li>
+              <a href="#"
+                >See the days of access to the collections
+                <svg
+                  viewBox="0 0 20 20"
+                  width="1em"
+                  height="1em"
+                  focusable="false"
+                  aria-hidden="true"
+                  class="SvgRWrapper"
+                >
+                  <path
+                    d="m11.8 3-1 1 5.4 5.5H1v1.4h15.2l-5.4 5.5 1 1 7.2-7.2z"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <p class="play"><a href="#" id="pauseButton"></a></p>
+        </div>
+      </div>
+      <section>
+        <div class="news">
+          <h2 class="title">IN THE NEWS</h2>
+          <div class="swiper mySwiper" id="mySwiper1">
+            <div class="swiper-wrapper" id="swiper-wrapper1">
+              <div class="swiper-slide">
+                <a href="#">
+                  <div class="con">
+                    <p class="img">
+                      <img src="images/news01.jpg" alt="news01" />
+                    </p>
+                    <div class="text">
+                      <h5>EXHIBITION</h5>
+                      <h3>NAPLES TO PARIS</h3>
+                      <ul>
+                        <li>
+                          The Louvre invites the Capodimonte Museum. From June
+                          7, 2023 to January 8, 2024.
+                        </li>
+                        <li>
+                          <svg
+                            viewBox="0 0 20 20"
+                            width="1em"
+                            height="1em"
+                            focusable="false"
+                            aria-hidden="true"
+                            class="SvgRWrapper"
+                          >
+                            <path
+                              d="m11.8 3-1 1 5.4 5.5H1v1.4h15.2l-5.4 5.5 1 1 7.2-7.2z"
+                            ></path>
+                          </svg>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <div class="con">
+                    <p class="img">
+                      <img src="images/news02.jpg" alt="news02" />
+                    </p>
+                    <div class="text">
+                      <h5>GUIDED TOURS</h5>
+                      <h3>Welcome to the Louvre</h3>
+                      <ul>
+                        <li></li>
+                        <li>
+                          <svg
+                            viewBox="0 0 20 20"
+                            width="1em"
+                            height="1em"
+                            focusable="false"
+                            aria-hidden="true"
+                            class="SvgRWrapper"
+                          >
+                            <path
+                              d="m11.8 3-1 1 5.4 5.5H1v1.4h15.2l-5.4 5.5 1 1 7.2-7.2z"
+                            ></path>
+                          </svg>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <div class="con">
+                    <p class="img">
+                      <img src="images/news03.jpg" alt="news03" />
+                    </p>
+                    <div class="text">
+                      <h5>GUIDED TOURS</h5>
+                      <h3>THE LOUVRE’S MASTERPIECES</h3>
+                      <ul>
+                        <li>
+                          What exactly is a masterpiece? Follow this trail to
+                          find out!
+                        </li>
+                        <li>
+                          <svg
+                            viewBox="0 0 20 20"
+                            width="1em"
+                            height="1em"
+                            focusable="false"
+                            aria-hidden="true"
+                            class="SvgRWrapper"
+                          >
+                            <path
+                              d="m11.8 3-1 1 5.4 5.5H1v1.4h15.2l-5.4 5.5 1 1 7.2-7.2z"
+                            ></path>
+                          </svg>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <div class="con">
+                    <p class="img">
+                      <img src="images/news04.jpg" alt="news04" />
+                    </p>
+                    <div class="text">
+                      <h5>EVENT</h5>
+                      <h3>
+                        The restoration of the Arc de Triomphe du Carrousel
+                      </h3>
+                      <ul>
+                        <li>
+                          Discover how the statues of Grande Armée soldiers are
+                          brought back to life using new technologies, 3D
+                          modelling and the expertise of the sculptors!
+                        </li>
+                        <li>
+                          <svg
+                            viewBox="0 0 20 20"
+                            width="1em"
+                            height="1em"
+                            focusable="false"
+                            aria-hidden="true"
+                            class="SvgRWrapper"
+                          >
+                            <path
+                              d="m11.8 3-1 1 5.4 5.5H1v1.4h15.2l-5.4 5.5 1 1 7.2-7.2z"
+                            ></path>
+                          </svg>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <div class="con">
+                    <p class="img">
+                      <img src="images/news05.jpg" alt="news05" />
+                    </p>
+                    <div class="text">
+                      <h5>EVENT</h5>
+                      <h3>Reopening of the Campana Gallery</h3>
+                      <ul>
+                        <li>Between tradition and innovation</li>
+                        <li>
+                          <svg
+                            viewBox="0 0 20 20"
+                            width="1em"
+                            height="1em"
+                            focusable="false"
+                            aria-hidden="true"
+                            class="SvgRWrapper"
+                          >
+                            <path
+                              d="m11.8 3-1 1 5.4 5.5H1v1.4h15.2l-5.4 5.5 1 1 7.2-7.2z"
+                            ></path>
+                          </svg>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="control">
+              <div class="swiper-button-prev" id="btn_prev"></div>
+              <div class="swiper-pagination" id="pagination"></div>
+              <div class="swiper-button-next" id="btn_next"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="js/swiper-bundle.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      AOS.init({});
+    </script>
+  </body>
+</html>

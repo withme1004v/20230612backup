@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      @font-face {
+        font-family: NanumBarunGothic, "나눔 바른", sans-serif;
+        src: url(webfonts/NanumBarunGothic.woff) format("woff"),
+          url(webfonts/NanumBarunGothicBold.woff) format("woff");
+      }
+      @font-face {
+        font-family: NanumGothic, "나눔 고딕", sans-serif;
+        src: url(webfonts/NanumGothic.woff) format("woff"),
+          url(webfonts/NanumGothicExtraBold.woff) format("woff");
+      }
+      body {
+        font-family: NanumBarunGothic, "나눔 고딕", sans-serif;
+        color: #483834;
+        line-height: 1.5;
+        letter-spacing: -0.05em;
+      }
+      header .top_bg {
+        background: url(images/bg_header.gif);
+        border-top: 3px solid rgb(255, 124, 152);
+      }
+      header .top {
+        margin: 0 auto;
+        width: 1200px;
+        height: 135px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      header .top ul {
+        display: flex;
+        align-items: center;
+      }
+      header .top ul li {
+        margin-right: 10px;
+      }
+      header .top .right ul li {
+        margin-left: 15px;
+      }
+      header .top .right ul:last-child li {
+        margin-right: 0;
+      }
+      header .top .right ul li a {
+        font-size: 11px;
+      }
+      header .topmenu {
+        position: relative;
+        border-top: 1px solid rgb(226, 217, 214);
+        box-sizing: border-box;
+      }
+      header .topmenu .menu {
+        margin: 0 auto;
+        width: 1200px;
+        height: 46px;
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+      }
+      header .topmenu .menu a {
+        font-size: 13px;
+        font-weight: 900;
+        color: #483834;
+      }
+      header .topmenu .menu .member ul li:first-child a {
+        color: rgb(255, 124, 152);
+      }
+      header .topmenu .menu .member ul li:nth-child(2) a {
+        color: #848484;
+      }
+      /* 메뉴 시작 */
+      .menu .member {
+        width: 131px;
+      }
+      .menu .member > ul {
+        display: flex;
+        height: 100%;
+        align-items: center;
+      }
+      .menu .member > ul > li {
+        padding-right: 40px;
+      }
+      .menu #gnb {
+        width: 982px;
+      }
+      .menu #gnb > ul {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .menu #gnb > ul > li {
+        position: relative;
+        width: 150px;
+        height: 100%;
+      }
+      .menu #gnb > ul > li > a {
+        line-height: 46px;
+      }
+      .menu #gnb > ul > li:first-of-type {
+        width: 200px;
+      }
+      .menu #gnb > ul > li > ul {
+        position: absolute;
+        width: 100%;
+        height: 0px;
+        top: 47px;
+        left: 0;
+        overflow: hidden;
+        transition: height 0.4s;
+        z-index: 1;
+      }
+      .menu #gnb > ul > li > ul > li:first-child {
+        padding-top: 40px;
+      }
+      .menu #gnb > ul > li > ul.month-ice > li {
+        padding-top: 0px;
+        opacity: 0;
+        transition: 0.8s 0.3s;
+      }
+      .menu #gnb:hover > ul > li > ul.month-ice > li {
+        opacity: 1;
+      }
+      .menu #gnb > ul > li > ul > li {
+        padding: 10px 0px 0 0;
+      }
+      #gnb > .bg {
+        position: absolute;
+        height: 0px;
+        width: 100%;
+        left: 0px;
+        top: 46px;
+        background: #fff;
+        transition: height 0.5s;
+        border-bottom: 1px solid rgb(105, 51, 55);
+      }
+      #gnb:hover > ul > li > ul {
+        height: 269px;
+      }
+      #gnb:hover > .bg {
+        background: #fff;
+        height: 269px;
+        border-top: 1px solid rgb(105, 51, 55);
+      }
+      #gnb > .bg > div {
+        background: url(images/img_happypoint_app.jpg) no-repeat;
+        width: 1200px;
+        height: 0px;
+        margin: 0 auto;
+        overflow: hidden;
+        background-position: 0 65px;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        transition: height 0.5s;
+      }
+      #gnb:hover > .bg > div {
+        height: 259px;
+      }
+      #gnb > ul > li > ul > li > a {
+        color: #7b7b7b;
+      }
+      #gnb > ul > li > ul > li > a:hover {
+        color: rgb(255, 124, 152);
+      }
+      .page_header {
+        display: flex;
+        justify-content: center;
+      }
+
+      .content {
+        margin: 0 auto;
+        padding-bottom: 330px;
+      }
+      .content .inner_content .list_product {
+        width: 1200px;
+        margin: 0 auto;
+      }
+      .list_product .line_title {
+        width: 1200px;
+        padding: 105px 0 25px;
+        display: flex;
+        justify-content: center;
+      }
+      .list_product .line_title::before {
+        content: url(images/icon_title_1.png);
+        padding-right: 10px;
+      }
+      .list_product .line_title::after {
+        content: url(images/icon_title_2.png);
+        padding-left: 10px;
+      }
+      .list_product .list {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        border-left: 1px solid #ebebeb;
+        border-top: 1px solid #ebebeb;
+      }
+      .list_product .list .item {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        border-right: 1px solid #ebebeb;
+        border-bottom: 1px solid #ebebeb;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        box-sizing: border-box;
+      }
+      .list_product .list figcaption {
+        width: 298px;
+        text-align: center;
+        font-size: 18px;
+        padding-top: 30px;
+      }
+      .list_product .list .item img {
+        position: absolute;
+        left: 60px;
+        bottom: 8px;
+        width: 180px;
+        height: 180px;
+      }
+      .list .item .hashtag_buy ul {
+        display: flex;
+        justify-content: center;
+      }
+      .list .item .hashtag_buy ul li {
+        padding-right: 5px;
+      }
+      .list .item .hashtag_buy ul li a {
+        font-size: 13px;
+        color: #9d9d9d;
+      }
+      .list .item .buy {
+        text-align: center;
+        padding-top: 7px;
+      }
+      .list .item .buy a {
+        display: inline-block;
+        line-height: 21px;
+        width: 58px;
+        height: 21px;
+        font-size: 11px;
+        background: #d3c1ab;
+        border-radius: 25px;
+        color: #fff;
+      }
+      nav.pagination {
+        width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+      }
+      nav.pagination ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 25px;
+      }
+      nav.pagination ul li a {
+        display: block;
+        width: 45px;
+        height: 45px;
+        margin: 0 7px;
+        line-height: 46px;
+        border-radius: 23px;
+        border: 1px solid #e4dbd7;
+        text-align: center;
+        font-size: 12px;
+      }
+      nav.pagination ul li:nth-child(2) a {
+        background: #f56f98;
+        border: 1px solid #f56f98;
+        color: #fff;
+        font-weight: bold;
+      }
+      nav.pagination ul li.bu_prev {
+        background: url(images/ico_p_prev.gif) no-repeat 50% 50%;
+      }
+      nav.pagination ul li.bu_next {
+        background: url(images/ico_p_next.gif) no-repeat 50% 50%;
+      }
+
+      .inner_footer {
+        border-top: 1px solid rgb(247, 170, 42);
+      }
+      .policy {
+        width: 1200px;
+        height: 77px;
+        margin: 0 auto;
+      }
+      .policy ul {
+        display: flex;
+      }
+      .policy > ul > li {
+        height: 100%;
+        line-height: 77px;
+      }
+      .policy > ul > li > a {
+        letter-spacing: -2px;
+        font-size: 14px;
+      }
+      .privacy > a {
+        color: rgb(255, 124, 152);
+        font-weight: bold;
+      }
+      .brand_family {
+        height: 75px;
+        background: #f9f8f7;
+      }
+      .brand_family .inner_family {
+        width: 1200px;
+        margin: 0 auto;
+      }
+      .brand_family .inner {
+        display: flex;
+        width: 800px;
+        margin: 0 auto;
+        height: 75px;
+        justify-content: space-between;
+        padding-top: 20px;
+      }
+      .brand ul {
+        margin: 0 auto;
+        display: flex;
+        height: 54px;
+      }
+      .brand ul li img {
+        padding-right: 49px;
+      }
+      .brand ul .li_4 img {
+        padding-right: 9px;
+      }
+      .brand ul .li_5 img {
+        width: 31px;
+        height: 31px;
+        padding-right: 9px;
+      }
+      .brand ul .li_6 img {
+        padding-right: 0;
+      }
+      .familysite button {
+        display: flex;
+        width: 150px;
+        height: 32px;
+        color: #b1ab9f;
+        font-size: 11px;
+        padding: 0 0 0 11px;
+        line-height: 32px;
+        border: 1px solid #d1cecc;
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px 0px rgba(234, 233, 232, 0.8);
+        background: transparent url(images/family_size_off.png) no-repeat 100% 0;
+      }
+      .familysite ul {
+        display: none;
+      }
+      .info {
+        width: 1200px;
+        margin: 0 auto;
+        padding-top: 48px;
+        color: #635b56;
+        font-size: 11px;
+        text-align: center;
+      }
+      .info h1.logo {
+        padding-bottom: 35px;
+      }
+      .info .box_1 {
+        font-size: 11px;
+        display: flex;
+        justify-content: center;
+      }
+      .info .box_1 p {
+        padding-right: 15px;
+      }
+      .info .box_1 address {
+        font-style: normal;
+      }
+      .info .box_2 {
+        font-size: 11px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .info .box_2 p {
+        padding: 3px 15px 3px 0;
+      }
+      .info .copyright {
+        width: 1200px;
+        padding: 12px 0 0;
+        color: #b1adab;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+        <div class="top_bg">
+          <div class="top">
+            <ul>
+              <li>
+                <a href="#"><img src="images/icon_facebook.png" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/icon_twitter.png" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/icon_blog.png" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/icon_instgram.png" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/icon_youtube.png" alt="" /></a>
+              </li>
+            </ul>
+            <div class="logo">
+              <a href="index.html"
+                ><img src="images/logo_baskinrobbins.png" alt=""
+              /></a>
+            </div>
+            <div class="right">
+              <ul>
+                <li><a href="#">고객센터</a></li>
+                <li><a href="#">CONTACT US</a></li>
+                <li>
+                  <a href="#"><img src="images/icon_search.png" alt="" /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="topmenu">
+          <div class="menu">
+            <nav class="member">
+              <ul>
+                <li><a href="#">LOGIN</a></li>
+                <li><a href="#">JOIN</a></li>
+              </ul>
+            </nav>
+            <nav id="gnb">
+              <ul>
+                <li>
+                  <a href="flavor_of_the_month.html">FLAVOR OF THE MONTH</a>
+                  <ul class="month-ice">
+                    <li>
+                      <a href="flavor_of_the_month.html"
+                        ><img src="images/img_monthly_fom_230731.png" alt=""
+                      /></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="menu.html">MENU</a>
+                  <ul>
+                    <li><a href="sub_icecream.html">아이스크림</a></li>
+                    <li>
+                      <a href="sub_icecreamcake.html">아이스크림케이크</a>
+                    </li>
+                    <li><a href="#">음료</a></li>
+                    <li><a href="#">커피</a></li>
+                    <li><a href="#">디저트</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">영양 성분 및 알레르기</a>
+                  <ul>
+                    <li><a href="#">아이스크림</a></li>
+                    <li><a href="#">음료</a></li>
+                    <li><a href="#">커피</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">EVENT</a>
+                  <ul>
+                    <li><a href="#">진행중이벤트</a></li>
+                    <li><a href="#">당첨자발표</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">STOR</a>
+                  <ul>
+                    <li><a href="#">매장찾기</a></li>
+                    <li><a href="#">고객센터</a></li>
+                    <li><a href="#">단체주문</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">ABOUT</a>
+                  <ul>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">보도자료</a></li>
+                    <li><a href="#">채용정보</a></li>
+                    <li><a href="#">점포개설문의</a></li>
+                    <li><a href="#">CONTACTUS</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="bg">
+                <div></div>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <div class="page_header">
+          <p><img src="images/bg_icecreamcake_menu.gif" alt="" /></p>
+        </div>
+      </header>
+      <div class="content">
+        <div class="inner_content">
+          <section class="list_product">
+            <h3 class="line_title top">
+              <span><img src="images/h_title_B.png" alt="" /></span>
+            </h3>
+            <ul class="list">
+              <li class="item">
+                <a href="#" class="prouct ice">
+                  <figure>
+                    <figcaption>
+                      <span>노티드 스마일 크림 버니</span>
+                    </figcaption>
+                    <span class="img"
+                      ><img src="images/1751850550.png" alt=""
+                    /></span>
+                  </figure>
+                </a>
+                <div class="hashtag_buy">
+                  <ul>
+                    <li><a href="#">#크림버니</a></li>
+                    <li><a href="#">#이달의케이크</a></li>
+                  </ul>
+                </div>
+                <div class="buy"><a href="#" target="_blank">구매</a></div>
+              </li>
+              <li class="item">
+                <a href="#" class="prouct ice">
+                  <figure>
+                    <figcaption>
+                      <span>핑크 퐁당 라이언</span>
+                    </figcaption>
+                    <span class="img"
+                      ><img src="images/1744012966.png" alt=""
+                    /></span>
+                  </figure>
+                </a>
+                <div class="hashtag_buy">
+                  <ul>
+                    <li><a href="#">#베리베리스트로베리</a></li>
+                    <li><a href="#">#초콜릿</a></li>
+                  </ul>
+                </div>
+                <div class="buy"><a href="#" target="_blank">구매</a></div>
+              </li>
+              <li class="item">
+                <a href="#" class="prouct ice">
+                  <figure>
+                    <figcaption>
+                      <span>핑크 라춘 인 원더랜드</span>
+                    </figcaption>
+                    <span class="img"
+                      ><img src="images/1744012641.png" alt=""
+                    /></span>
+                  </figure>
+                </a>
+                <div class="hashtag_buy">
+                  <ul>
+                    <li><a href="#">#베리베리스트로베리</a></li>
+                    <li><a href="#">#초콜릿</a></li>
+                  </ul>
+                </div>
+                <div class="buy"><a href="#" target="_blank">구매</a></div>
+              </li>
+              <li class="item">
+                <a href="#" class="prouct ice">
+                  <figure>
+                    <figcaption>
+                      <span>라이언의 서핑 타임</span>
+                    </figcaption>
+                    <span class="img"
+                      ><img src="images/1744011985.png" alt=""
+                    /></span>
+                  </figure>
+                </a>
+                <div class="hashtag_buy">
+                  <ul>
+                    <li><a href="#">#라이언의서핑타임</a></li>
+                    <li><a href="#">#뉴욕치즈케이크</a></li>
+                  </ul>
+                </div>
+                <div class="buy"><a href="#" target="_blank">구매</a></div>
+              </li>
+
+              <li class="item">
+                <a href="#" class="prouct ice">
+                  <figure>
+                    <figcaption>
+                      <span>리얼 초코 27 큐브</span>
+                    </figcaption>
+                    <span class="img"
+                      ><img src="images/1736225449.png" alt=""
+                    /></span>
+                  </figure>
+                </a>
+                <div class="hashtag_buy">
+                  <ul>
+                    <li><a href="#">#리얼초코</a></li>
+                    <li><a href="#">#27큐브</a></li>
+                  </ul>
+                </div>
+                <div class="buy"><a href="#" target="_blank">구매</a></div>
+              </li>
+              <li class="item">
+                <a href="#" class="prouct ice">
+                  <figure>
+                    <figcaption>
+                      <span>꼭꼭 숨어라! 미니</span>
+                    </figcaption>
+                    <span class="img"
+                      ><img src="images/1736225242.png" alt=""
+                    /></span>
+                  </figure>
+                </a>
+                <div class="hashtag_buy">
+                  <ul>
+                    <li><a href="#">#미키마우스</a></li>
+                    <li><a href="#">#초콜릿</a></li>
+                  </ul>
+                </div>
+                <div class="buy"><a href="#" target="_blank">구매</a></div>
+              </li>
+              <li class="item">
+                <a href="#" class="prouct ice">
+                  <figure>
+                    <figcaption>
+                      <span>꼭꼭 숨어라!미키</span>
+                    </figcaption>
+                    <span class="img"
+                      ><img src="images/1736225137.png" alt=""
+                    /></span>
+                  </figure>
+                </a>
+                <div class="hashtag_buy">
+                  <ul>
+                    <li><a href="#">#미니마우스</a></li>
+                    <li><a href="#">#초콜릿</a></li>
+                  </ul>
+                </div>
+                <div class="buy"><a href="#" target="_blank">구매</a></div>
+              </li>
+              <li class="item">
+                <a href="#" class="prouct ice">
+                  <figure>
+                    <figcaption>
+                      <span>핑크 하트 드롭</span>
+                    </figcaption>
+                    <span class="img"
+                      ><img src="images/1680831137.png" alt=""
+                    /></span>
+                  </figure>
+                </a>
+                <div class="hashtag_buy">
+                  <ul>
+                    <li><a href="#">#베리베리스트로베리</a></li>
+                    <li><a href="#">#체리쥬빌레</a></li>
+                  </ul>
+                </div>
+                <div class="buy"><a href="#" target="_blank">구매</a></div>
+              </li>
+              <li class="item">
+                <a href="#" class="prouct ice">
+                  <figure>
+                    <figcaption>
+                      <span>미니 베리 타르트</span>
+                    </figcaption>
+                    <span class="img"
+                      ><img src="images/1749176226.png" alt=""
+                    /></span>
+                  </figure>
+                </a>
+                <div class="hashtag_buy">
+                  <ul>
+                    <li><a href="#">#스트로베리</a></li>
+                    <li><a href="#">#타르트</a></li>
+                  </ul>
+                </div>
+                <div class="buy"><a href="#" target="_blank">구매</a></div>
+              </li>
+              <li class="item">
+                <a href="#" class="prouct ice">
+                  <figure>
+                    <figcaption>
+                      <span>헬로키티의 핑크 드레스</span>
+                    </figcaption>
+                    <span class="img"
+                      ><img src="images/1746507423.png" alt=""
+                    /></span>
+                  </figure>
+                </a>
+                <div class="hashtag_buy">
+                  <ul>
+                    <li><a href="#">#헬로키티</a></li>
+                  </ul>
+                </div>
+                <div class="buy"><a href="#" target="_blank">구매</a></div>
+              </li>
+              <li class="item">
+                <a href="#" class="prouct ice">
+                  <figure>
+                    <figcaption>
+                      <span>라이언의 썸머 어드벤처</span>
+                    </figcaption>
+                    <span class="img"
+                      ><img src="images/1746499595.png" alt=""
+                    /></span>
+                  </figure>
+                </a>
+                <div class="hashtag_buy">
+                  <ul>
+                    <li><a href="#">#이달의케이크</a></li>
+                  </ul>
+                </div>
+                <div class="buy"><a href="#" target="_blank">구매</a></div>
+              </li>
+              <li class="item">
+                <a href="#" class="prouct ice">
+                  <figure>
+                    <figcaption>
+                      <span>초코 퐁당 브라운 베어</span>
+                    </figcaption>
+                    <span class="img"
+                      ><img src="images/1730868006.png" alt=""
+                    /></span>
+                  </figure>
+                </a>
+                <div class="hashtag_buy">
+                  <ul>
+                    <li><a href="#">#브라운베어</a></li>
+                    <li><a href="#">#초코케이크</a></li>
+                  </ul>
+                </div>
+                <div class="buy"><a href="#" target="_blank">구매</a></div>
+              </li>
+              <li class="item">
+                <a href="#" class="prouct ice">
+                  <figure>
+                    <figcaption>
+                      <span>딥-한 카라멜 치즈 케이크</span>
+                    </figcaption>
+                    <span class="img"
+                      ><img src="images/1749088864.png" alt=""
+                    /></span>
+                  </figure>
+                </a>
+                <div class="hashtag_buy">
+                  <ul>
+                    <li><a href="#">#이달의케이크</a></li>
+                    <li><a href="#">#카라멜치즈케이크</a></li>
+                  </ul>
+                </div>
+                <div class="buy"><a href="#" target="_blank">구매</a></div>
+              </li>
+              <li class="item">
+                <a href="#" class="prouct ice">
+                  <figure>
+                    <figcaption>
+                      <span>수줍은 웰시코기의 숨바꼭질</span>
+                    </figcaption>
+                    <span class="img"
+                      ><img src="images/1696474034.png" alt=""
+                    /></span>
+                  </figure>
+                </a>
+                <div class="hashtag_buy">
+                  <ul>
+                    <li><a href="#">#웰시코기모양케이크</a></li>
+                    <li><a href="#">#수줍은케이크</a></li>
+                  </ul>
+                </div>
+                <div class="buy"><a href="#" target="_blank">구매</a></div>
+              </li>
+              <li class="item">
+                <a href="#" class="prouct ice">
+                  <figure>
+                    <figcaption>
+                      <span>베이비 애플 타르트</span>
+                    </figcaption>
+                    <span class="img"
+                      ><img src="images/1733289795.png" alt=""
+                    /></span>
+                  </figure>
+                </a>
+                <div class="hashtag_buy">
+                  <ul>
+                    <li><a href="#">#애플샤베트</a></li>
+                    <li><a href="#">#애플타르트</a></li>
+                  </ul>
+                </div>
+                <div class="buy"><a href="#" target="_blank">구매</a></div>
+              </li>
+              <li class="item">
+                <a href="#" class="prouct ice">
+                  <figure>
+                    <figcaption>
+                      <span>베이비 피치 타르트</span>
+                    </figcaption>
+                    <span class="img"
+                      ><img src="images/1699080638.png" alt=""
+                    /></span>
+                  </figure>
+                </a>
+                <div class="hashtag_buy">
+                  <ul>
+                    <li><a href="#">#베이비피치타르트</a></li>
+                    <li><a href="#">#피치요거트</a></li>
+                  </ul>
+                </div>
+                <div class="buy"><a href="#" target="_blank">구매</a></div>
+              </li>
+              <li class="item">
+                <a href="#" class="prouct ice">
+                  <figure>
+                    <figcaption>
+                      <span>베이비 멜론 타르트</span>
+                    </figcaption>
+                    <span class="img"
+                      ><img src="images/1699080603.png" alt=""
+                    /></span>
+                  </figure>
+                </a>
+                <div class="hashtag_buy">
+                  <ul>
+                    <li><a href="#">#베이비멜론타르트</a></li>
+                    <li><a href="#">#멜론화이트</a></li>
+                  </ul>
+                </div>
+                <div class="buy"><a href="#" target="_blank">구매</a></div>
+              </li>
+              <li class="item">
+                <a href="#" class="prouct ice">
+                  <figure>
+                    <figcaption>
+                      <span>나눠먹는 큐브 와츄원</span>
+                    </figcaption>
+                    <span class="img"
+                      ><img src="images/1670829045.png" alt=""
+                    /></span>
+                  </figure>
+                </a>
+                <div class="hashtag_buy">
+                  <ul>
+                    <li><a href="#">#나눠먹는큐브와츄원</a></li>
+                    <li><a href="#">#이상한나라의솜사탕</a></li>
+                  </ul>
+                </div>
+                <div class="buy"><a href="#" target="_blank">구매</a></div>
+              </li>
+              <li class="item">
+                <a href="#" class="prouct ice">
+                  <figure>
+                    <figcaption>
+                      <span>우주에서 온 엄마는 외계인</span>
+                    </figcaption>
+                    <span class="img"
+                      ><img src="images/1641651734.png" alt=""
+                    /></span>
+                  </figure>
+                </a>
+                <div class="hashtag_buy">
+                  <ul>
+                    <li><a href="#">#엄마는외계인</a></li>
+                    <li><a href="#">#트리플초콜릿</a></li>
+                  </ul>
+                </div>
+                <div class="buy"><a href="#" target="_blank">구매</a></div>
+              </li>
+              <li class="item">
+                <a href="#" class="prouct ice">
+                  <figure>
+                    <figcaption>
+                      <span>해피 버스데이 케이크</span>
+                    </figcaption>
+                    <span class="img"
+                      ><img src="images/1725354169.jpg" alt=""
+                    /></span>
+                  </figure>
+                </a>
+                <div class="hashtag_buy">
+                  <ul>
+                    <li><a href="#">#엄마는외계인</a></li>
+                    <li><a href="#">#베리베리스트로베리</a></li>
+                  </ul>
+                </div>
+                <div class="buy"><a href="#" target="_blank">구매</a></div>
+              </li>
+            </ul>
+          </section>
+        </div>
+        <nav class="pagination">
+          <ul>
+            <li class="bu_prev">
+              <a href="#"></a>
+            </li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li class="bu_next">
+              <a href="#"></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <footer>
+        <div class="inner_footer">
+          <div class="policy">
+            <ul>
+              <li style="width: 8%"><a href="#">점포개설문의</a></li>
+              <li style="width: 14.5%">
+                <a href="#">신규 직영점 입점 제의</a>
+              </li>
+              <li style="width: 7%"><a href="#">채용문의</a></li>
+              <li style="width: 8.5%"><a href="#">윤리신고센터</a></li>
+              <li style="width: 7%"><a href="#">이용약관</a></li>
+              <li class="privacy" style="width: 11%">
+                <a href="#">개인정보처리방침</a>
+              </li>
+              <li style="width: 17%">
+                <a href="#">영상정보처리기기운영관리방침</a>
+              </li>
+              <li style="width: 14%"><a href="#">안전보건 경영방침</a></li>
+              <li style="width: 13%"><a href="#">거래희망회사 사전등록</a></li>
+            </ul>
+          </div>
+          <div class="brand_family">
+            <div class="inner_family">
+              <div class="inner">
+                <div class="brand">
+                  <ul>
+                    <li class="li_1">
+                      <a href="#"
+                        ><img src="images/btn_happypoint.png" alt=""
+                      /></a>
+                    </li>
+                    <li class="li_2">
+                      <a href="#"
+                        ><img src="images/btn_happymarket.png" alt=""
+                      /></a>
+                    </li>
+                    <li class="li_3">
+                      <a href="#"
+                        ><img src="images/btn_spc_story.png" alt=""
+                      /></a>
+                    </li>
+                    <li class="li_4">
+                      <a href="#"><img src="images/btn_norton.gif" alt="" /></a>
+                    </li>
+                    <li class="li_5">
+                      <a href="#"><img src="images/btn_ccm_2.png" alt="" /></a>
+                    </li>
+                    <li class="li_6">
+                      <a href="#"><img src="images/btn_ksa.png" alt="" /></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="familysite">
+                  <button type="button">FAMILY SITE</button>
+                  <ul>
+                    <li><a href="#" target="_blank">배스킨스쿨</a></li>
+                    <li><a href="#" target="_blank">SPC그룹사이트</a></li>
+                    <li><a href="#" target="_blank">SPC MAGAZINE</a></li>
+                    <li><a href="#" target="_blank">BR코리아</a></li>
+                    <li><a href="#" target="_blank">해피포인트카드</a></li>
+                    <li><a href="#" target="_blank">파스쿠찌</a></li>
+                    <li><a href="#" target="_blank">삼립</a></li>
+                    <li><a href="#" target="_blank">파리바게뜨</a></li>
+                    <li><a href="#" target="_blank">던킨도너츠</a></li>
+                  </ul>
+                  <!-- <select name="family" id="family">
+                                    <option>FAMILY SITE</option>
+                                    <option value="배스킨스쿨"></option>
+                                    <option value="배스킨스쿨"></option>
+                                    <option value="배스킨스쿨"></option>
+                                    <option value="배스킨스쿨"></option>
+                                    <option value="배스킨스쿨"></option>
+                                    <option value="배스킨스쿨"></option>
+                                </select> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="info">
+            <h1 class="logo"><img src="images/footer_logo.png" alt="" /></h1>
+            <div class="box_1">
+              <p>사업자 등록번호 : 303-81-09535</p>
+              <p>비알코리아(주) 대표이사 이주연</p>
+              <address>
+                서울특별시 서초구 남부순환로 2620(양재동 11-149번지)
+              </address>
+            </div>
+            <div class="box_2">
+              <p>TEL : 080-555-3131</p>
+              <p>개인정보관리책임자 : 임혜순</p>
+              <p class="copyright">
+                Copyright ⓒ 2016 BRKOREA Company. All Rights Reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

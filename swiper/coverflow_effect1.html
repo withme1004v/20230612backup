@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/swiper-bundle.css" />
+    <script src="js/swiper-bundle.js"></script>
+    <style>
+      .swiper-slide {
+        /* width: 500px !important; */
+      }
+      .swiper-3d .swiper-slide-shadow-left,
+      .swiper-3d .swiper-slide-shadow-right {
+        background: rgba(255, 255, 255, 0.5) !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="photo1.jpg" alt="" /></div>
+        <div class="swiper-slide"><img src="photo2.jpg" alt="" /></div>
+        <div class="swiper-slide"><img src="photo3.jpg" alt="" /></div>
+        <div class="swiper-slide"><img src="photo1.jpg" alt="" /></div>
+        <div class="swiper-slide"><img src="photo2.jpg" alt="" /></div>
+        <div class="swiper-slide"><img src="photo3.jpg" alt="" /></div>
+        <!-- 필요한 만큼 슬라이드를 추가할 수 있습니다. -->
+      </div>
+    </div>
+    <script>
+      var mySwiper = new Swiper(".swiper-container", {
+        effect: "coverflow", // Coverflow Effect를 사용합니다.
+        loop: true,
+        grabCursor: true, // 마우스 커서를 포착 모양으로 변경합니다.
+        centeredSlides: true, // 중앙 슬라이드를 가운데 정렬합니다.
+        slidesPerView: 3, // 자동으로 슬라이드 수를 계산합니다.
+        coverflowEffect: {
+          rotate: 0, // 슬라이드 회전 각도를 설정합니다.
+          stretch: 100, // 슬라이드 사이의 간격을 설정합니다.
+          depth: 100, // 슬라이드 간의 Z 축 깊이를 설정합니다.
+          modifier: 0.5, // 슬라이드 간의 크기 및 위치를 조절합니다.
+          slideShadows: true, // 슬라이드 그림자를 표시합니다.
+        },
+        pagination: {
+          el: ".swiper-pagination", // 페이지네이션을 표시할 요소 선택자를 설정합니다.
+        },
+      });
+    </script>
+  </body>
+</html>

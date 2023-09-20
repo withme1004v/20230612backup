@@ -1,0 +1,59 @@
+korean language pack
+html tag wrapper
+prettier--관리>설정>default검색
+editor-->Default fomatter
+Live server
+
+dothome.co.kr
+파일질라다운로드
+
+
+
+ko.wordpress.org
+닷홈 호스팅후
+ip 차단해제1:1문의
+문의내용 글쓰기
+문의내용: 기술지원
+분류:호스팅
+서비스상품선택 도메인선택 
+제목 ip주소차단해제
+내용에 ip 주소 입력
+
+cmd
+ipconfig
+
+/wp-login.php-->로그인페이지
+
+글추가
+오른쪽 설정 특성이미지설정
+
+페이지추가-->블로그(blog)
+페이지편집 설정 템플릿-->기본템플릿 목록의 Blog선택
+페이지빠른편집-->슬러그 영문이름
+
+문의주세요 페이지검사 id선택자 찾기
+footer 수정
+general options
+
+로그인페이지
+Change wp-admin login 플러그인설치
+설정>고유주소
+Change wp-admin login
+Login URL	http://withyou1004h.dothome.co.kr/ login
+
+문의하세요~2단계인증되어있으면 메일 오지않는다
+wp-login.php
+<div id="login">
+		<!-- <h1><a href="<?php echo esc_url( $login_header_url ); ?>"><?php echo $login_header_text; ?></a></h1> -->
+	<?php
+수정 워드프레스 로고 없어진다
+
+
+
+
+
+
+
+ftp-simple
+
+

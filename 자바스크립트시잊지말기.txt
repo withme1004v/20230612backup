@@ -1,0 +1,5 @@
+date()메소드는 new Date()로 사용
+let now = Date()안됨
+인라인방식으로 onclick할때
+문서로드로는 클릭이벤트안됨
+꼭 x.onclick으로 해야함

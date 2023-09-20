@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="images/ilogo.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <title>SELECTO COFFEE</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+        <div class="top">
+          <div class="logo"><img src="images/logo.png" alt="logo" /></div>
+          <nav>
+            <div class="topmenu">
+              <ul class="gnb">
+                <li>
+                  <a href="index2.html">메&emsp;&emsp;뉴</a>
+                  <ul class="lnb">
+                    <li><a href="index2.html">Signature</a></li>
+                    <li><a href="index2.html">Coffee</a></li>
+                    <li><a href="index2.html">Beverage</a></li>
+                    <li><a href="index2.html">Deli&Dessert</a></li>
+                    <li><a href="index2.html">MD 상품</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">매장안내</a>
+                  <ul class="lnb">
+                    <li><a href="#">매장찾기</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">브랜드이야기</a>
+                  <ul class="lnb">
+                    <li><a href="#">브랜드 스토리 </a></li>
+                    <li><a href="#">Histroy </a></li>
+                    <li><a href="#">경쟁력</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">WHAT'S NEW</a>
+                  <ul class="lnb">
+                    <li><a href="#"> 새로운 소식 </a></li>
+                    <li><a href="#">보도자료 </a></li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="bg"></div>
+            </div>
+          </nav>
+          <ul class="sns">
+            <li>
+              <a href="#"><img src="images/h-link-naver.png" alt="sns" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/h-link-youtube.png" alt="sns" /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="images/h-link-instagram.png" alt="sns"
+              /></a>
+            </li>
+            <li>
+              <div class="search">
+                <div class="btn">
+                  <span class="material-symbols-outlined"> search </span>
+                </div>
+                <input
+                  type="search"
+                  placeholder="검색어를 입력해주세요"
+                  onfocus="this.placeholder=''"
+                />
+              </div>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <div class="slideShow">
+        <ul class="slide">
+          <li><img src="images/banner01.png" alt="banner" /></li>
+          <li><img src="images/banner02.png" alt="banner" /></li>
+          <li><img src="images/banner03.png" alt="banner" /></li>
+          <li><img src="images/banner04.png" alt="banner" /></li>
+          <li><img src="images/banner05.png" alt="banner" /></li>
+        </ul>
+        <ul class="btn">
+          <li id="prev"></li>
+          <li id="next"></li>
+        </ul>
+      </div>
+      <div class="count">
+        <div class="banner">
+          <div class="pop_meun">
+            <ul>
+              <li><a href="#">main</a></li>
+              <li><a href="#">menu</a></li>
+              <li>
+                <a href="#">new&events</a>
+              </li>
+              <li><a href="#">창업문의</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="main">
+          <div class="left">
+            <input type="radio" name="product" id="product1" checked />
+            <input type="radio" name="product" id="product2" />
+            <input type="radio" name="product" id="product3" />
+            <input type="radio" name="product" id="product4" />
+            <div class="main_visual">
+              <ul class="visual">
+                <li>
+                  <img src="images/c-signature-bg-1.jpg" alt="signature" />
+                </li>
+                <li>
+                  <img src="images/c-beverage-bg-1.jpg" alt="beverage" />
+                </li>
+                <li>
+                  <img src="images/c-coffee-bg.png" alt="coffee" />
+                </li>
+                <li>
+                  <img src="images/c-cookie-bg.png" alt="cookie" />
+                </li>
+              </ul>
+              <div class="probtn">
+                <h1>selecto menu</h1>
+                <ul>
+                  <li>signature</li>
+                  <li>beverage</li>
+                  <li>coffee</li>
+                  <li>cookie</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="center">
+            <ul>
+              <li><img src="images/c-signature-item-00.png" alt="item" /></li>
+              <li><img src="images/c-beverage-item-00.png" alt="item" /></li>
+              <li><img src="images/c-coffee-item-00.png" alt="item" /></li>
+              <li><img src="images/c-cookie-item-00.png" alt="item" /></li>
+            </ul>
+          </div>
+          <div class="right">
+            <div class="right_inner">
+              <ul>
+                <li><h1>signature</h1></li>
+                <li>
+                  <p>
+                    셀렉토 감성과 재미를 듬뿍 담아 낸, 셀렉토에서<br />
+                    맛볼 수 있는 시그니처 음료
+                  </p>
+                </li>
+                <li>
+                  <ul class="item">
+                    <li>
+                      <img src="images/c-signature-item-01.png" alt="item" />
+                    </li>
+                    <li>
+                      <img src="images/c-signature-item-02-1.png" alt="item" />
+                    </li>
+                    <li>
+                      <img src="images/c-signature-item-03-1.png" alt="item" />
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <span>추천 토핑류</span>
+                  <ul class="topping">
+                    <li>
+                      <!-- <img src="images/c-topping-01.png" alt="topping" /> -->
+                      <p>시럽 바닐라빈</p>
+                    </li>
+                    <li>
+                      <!-- <img src="images/c-topping-02.png" alt="topping" /> -->
+                      <p>시럽 카라멜</p>
+                    </li>
+                    <li>
+                      <!-- <img src="images/c-topping-03.png" alt="topping" /> -->
+                      <p>우유 오트밀</p>
+                    </li>
+                    <li>
+                      <img src="images/c-topping-04.png" alt="topping" />
+                      <p>크림 흑임자</p>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <!--시그니처-->
+              <ul>
+                <!--beverage-->
+                <li><h1>beverage</h1></li>
+                <li>
+                  <p>
+                    고객의 라이프 스타일에 맞춰 더욱 다양하게<br />
+                    즐길 수 있는 셀렉토의 음료 라인업!
+                  </p>
+                </li>
+                <li>
+                  <ul class="item">
+                    <li>
+                      <img src="images/c-beverage-item-01.png" alt="item" />
+                    </li>
+                    <li>
+                      <img src="images/c-beverage-item-02.png" alt="item" />
+                    </li>
+                    <li>
+                      <img src="images/c-beverage-item-03.png" alt="item" />
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <span>추천 토핑류</span>
+                  <ul class="topping">
+                    <li>
+                      <img src="images/c-topping-02.png" alt="topping" />
+                      <p>시럽 카라멜</p>
+                    </li>
+                    <li>
+                      <img src="images/c-topping-03.png" alt="topping" />
+                      <p>우유 오트밀</p>
+                    </li>
+                    <li>
+                      <img src="images/c-topping-04.png" alt="topping" />
+                      <p>크림 흑임자</p>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <ul>
+                <!--coffee-->
+                <li><h1>coffee</h1></li>
+                <li>
+                  <p>
+                    셀렉토는 품질 좋은 원두를 선별해, 최적의 로스팅 포인트로<br />
+                    더욱 섬세하게 균형잡힌 풍미의 커피를 고객에게 선사합니다.
+                  </p>
+                </li>
+                <li>
+                  <ul class="item">
+                    <li>
+                      <img src="images/c-coffee-item-01.png" alt="item" />
+                    </li>
+                    <li>
+                      <img src="images/c-coffee-item-02.png" alt="item" />
+                    </li>
+                    <li>
+                      <img src="images/c-coffee-item-03.png" alt="item" />
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <span>추천 토핑류</span>
+                  <ul class="topping">
+                    <li>
+                      <img src="images/c-topping-03.png" alt="topping" />
+                      <p>우유 오트밀</p>
+                    </li>
+                    <li>
+                      <img src="images/c-topping-04.png" alt="topping" />
+                      <p>크림 흑임자</p>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <ul>
+                <li><h1>cookie</h1></li>
+                <li>
+                  <p>남녀노소, 어디서나 맛있게! 셀렉토 시그니처 수제 쿠키</p>
+                </li>
+                <li>
+                  <ul class="item">
+                    <li>
+                      <img src="images/c-cookie-item-01.png" alt="item" />
+                    </li>
+                    <li>
+                      <img src="images/c-cookie-item-02.png" alt="item" />
+                    </li>
+                    <li>
+                      <img src="images/c-cookie-item-03.png" alt="item" />
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <span>추천 토핑류</span>
+                  <ul class="topping">
+                    <li>
+                      <img src="images/c-topping-01.png" alt="topping" />
+                      <p>시럽 바닐라빈</p>
+                    </li>
+                    <li>
+                      <img src="images/c-topping-02.png" alt="topping" />
+                      <p>시럽 카라멜</p>
+                    </li>
+                    <li>
+                      <img src="images/c-topping-03.png" alt="topping" />
+                      <p>우유 오트밀</p>
+                    </li>
+                    <li>
+                      <img src="images/c-topping-04.png" alt="topping" />
+                      <p>크림 흑임자</p>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="board">
+          <h1>NEWS& EVENTS</h1>
+          <div class="news">
+            <div class="notice">
+              <ul>
+                <li>
+                  <a href="#"><img src="images/board3.jpg" alt="board" /></a>
+                </li>
+                <li>
+                  <a href="#">
+                    <h2>EVENT</h2>
+                    <p>
+                      [제작지원] ENA 드라마 '남남' 제작지원<br />
+                      2023/07/17 ~ 2023/08/22
+                    </p>
+                  </a>
+                </li>
+              </ul>
+              <div class="arrow">
+                <a href="#">
+                  <span class="material-symbols-outlined">
+                    arrow_right_alt
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="notice">
+              <ul>
+                <li>
+                  <a href="#"><img src="images/board2.jpg" alt="board" /></a>
+                </li>
+                <li>
+                  <a href="#">
+                    <h2>EVENT</h2>
+                    <p>
+                      [NEW MENU] WATERMELON SLUSH<br />
+                      2023/07/10 ~ 2023/08/31
+                    </p>
+                  </a>
+                </li>
+              </ul>
+              <div class="arrow">
+                <a href="#">
+                  <span class="material-symbols-outlined">
+                    arrow_right_alt
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="notice">
+              <ul>
+                <li>
+                  <a href="#"
+                    ><img src="images/board1.png" alt="board" center
+                  /></a>
+                </li>
+                <li>
+                  <a href="#">
+                    <h2>EVENT</h2>
+                    <p>
+                      [NEW MENU] Chill out, SUMMER VIBES<br />
+                      2023/05/22 ~ 2023/08/31
+                    </p>
+                  </a>
+                </li>
+              </ul>
+              <div class="arrow">
+                <a href="#">
+                  <span class="material-symbols-outlined">
+                    arrow_right_alt
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="venture">
+          <ul>
+            <li>
+              <div class="rect_box">
+                <div class="counsel">
+                  <a href="#"
+                    ><img src="images/c-compet-list3.png" alt="compet"
+                  /></a>
+                  <svg><rect x="5" y="5" /></svg>
+                </div>
+              </div>
+              <span>창업안내</span>
+            </li>
+            <li>
+              <div class="rect_box">
+                <div class="counsel">
+                  <a href="#"
+                    ><img src="images/c-compet-list6.png" alt="compet"
+                  /></a>
+                  <svg><rect x="5" y="5" /></svg>
+                </div>
+              </div>
+              <span>개설문의</span>
+            </li>
+            <li>
+              <div class="rect_box">
+                <div class="counsel">
+                  <a href="#"
+                    ><img src="images/c-compet-list9.png" alt="compet"
+                  /></a>
+                  <svg><rect x="5" y="5" /></svg>
+                </div>
+              </div>
+              <span>상담신청</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <footer>
+        <div class="foot">
+          <div class="foot_top">
+            <a href="#"><img src="images/logo.png" alt="logo" /></a>
+          </div>
+          <div class="foot_center">
+            <ul>
+              <li>
+                <a href="#"><img src="images/h-link-naver.png" alt="sns" /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="images/h-link-youtube.png" alt="sns"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="images/h-link-instagram.png" alt="sns"
+                /></a>
+              </li>
+            </ul>
+          </div>
+          <div class="foot_bottom">
+            <p>
+              개인정보취급방침<br />
+              <span
+                >도로명주소 : 서울시 구로구 디지털로26길 61 에이스하이엔드타워
+                2차 1402호</span
+              ><br />
+              대표이사 : 황규연 사업자등록번호 : 109-81-99153 전화 : 1600-5649
+              팩스 : 02-6340-1701
+            </p>
+          </div>
+          <div class="last_btn">
+            <div class="btn_position">
+              <a href="#">
+                <p>top</p>
+                <div class="bg_arrow">
+                  <img src="images/arrow_top.png" alt="arrow" />
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="js/side.js"></script>
+  </body>
+</html>

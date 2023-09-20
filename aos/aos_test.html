@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aos_test.html</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="css/style01.css">
+</head>
+<body>
+  <section>
+    <div
+    data-aos="fade-right"
+    data-aos-delay="500"
+    data-aos-duration="1000"
+    class="test">test1</div>
+    <div data-aos="fade-left">
+      <img src="mobile-phone.png" alt="">
+    </div>
+  </section>
+  <section>
+    <div data-aos="slide-down" class="test">test3</div>
+    <div 
+    data-aos="slide-up" 
+    data-aos-offset="500" class="test">test4</div>
+  </section>
+  <section>
+    <div data-aos="zoom-in" data-aos-duration="1000" class="test">test5</div>
+    <div data-aos="zoom-out" class="test">test6</div>
+  </section>
+  <!-- 
+    data-aos="fade-up" //애메이션효과
+    data-aos-offset="200" 
+    //애니메이션 시작될 scroll위치(화면아래에서부터의 거리)
+    data-aos-delay="50" //지연효과
+    data-aos-duration="1000" //재생시간
+    data-aos-easing="ease-in-out" //움직임효과
+  -->
+
+  <!-- AOS script -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      .main {
+        width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .main div.left {
+        width: 888px;
+      }
+      .main div.right {
+        width: 276px;
+      }
+      .main div img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .main div.left > ul {
+        margin-bottom: 30px;
+      }
+      .main div.left > ul > li {
+        position: relative;
+      }
+      .main div.left .col1 {
+        height: 582px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .main div.left .desc {
+        position: absolute;
+        width: 70%;
+        left: 0;
+        bottom: 0;
+        padding: 0 20px 20px;
+        color: #fff;
+        word-break: keep-all;
+      }
+      .main div.left .col1 .desc {
+        width: 76%;
+      }
+      .main div.left .col1 .desc p:first-child {
+        font-size: 14px;
+      }
+      .main div.left .col1 .desc p:nth-child(2) {
+        font-size: 28px;
+      }
+      .main ul li {
+        border-radius: 14px;
+        overflow: hidden;
+      }
+      .main .col1 ul {
+        height: 582px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .main .col1 > li:first-child {
+        width: 582px;
+      }
+      .main .col1 > li:nth-child(2) {
+        width: 276px;
+      }
+      .main .col1 > li:nth-child(2) li:nth-child(2) {
+        background: #0078c3;
+      }
+      .main .col1 li:nth-child(2) li {
+        height: 276px;
+      }
+      .main .col3,
+      .main .col4 {
+        display: flex;
+        height: 276px;
+        justify-content: space-between;
+      }
+      .main .col3 li {
+        width: 276px;
+      }
+      .main .col4 li:first-child {
+        width: 276px;
+      }
+      .main .col4 li:last-child {
+        width: 582px;
+      }
+      .main .right div {
+        width: 276px;
+        height: 400px;
+        color: #fff;
+        border-radius: 14px;
+        background-color: #0078c3;
+        padding: 30px 20px;
+        box-sizing: border-box;
+        margin-top: 30px;
+        background-size: 90%;
+        background-position: 450% 110%;
+        background-repeat: no-repeat;
+      }
+      .main .right div:first-child {
+        margin-top: 0;
+        background-image: url(images/icon-main-quick-esg-bg.png);
+      }
+      .main .right div:nth-child(2) {
+        background-image: url(images/icon-main-quick-recruit-bg.png);
+      }
+      .main .right div:nth-child(4) {
+        background-image: url(images/icon-main-quick-main-biz-bg.png);
+      }
+      .main .right div.info {
+        background-color: #fff;
+        border: 2px solid #f7f7f7;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- https://www.kolon.com/kr/main -->
+    <div class="main">
+      <div class="left">
+        <ul class="col1">
+          <li>
+            <img src="images/img01.jpg" alt="" />
+            <div class="desc">
+              <p>코오롱모빌리티그룹</p>
+              <p>BMW본부, 신설자회사 '코오롱모터스'로 출범</p>
+              <p>#사업</p>
+            </div>
+          </li>
+          <li>
+            <ul>
+              <li><img src="images/img02.jpg" alt="" /></li>
+              <li><img src="images/img03.jpg" alt="" /></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="col2">
+          <li><img src="images/img04.jpg" alt="" /></li>
+        </ul>
+        <ul class="col3">
+          <li><img src="images/img05.jpg" alt="" /></li>
+          <li><img src="images/img06.jpg" alt="" /></li>
+          <li><img src="images/img07.png" alt="" /></li>
+        </ul>
+        <ul class="col4">
+          <li><img src="images/img08.jpg" alt="" /></li>
+          <li><img src="images/img09.jpg" alt="" /></li>
+        </ul>
+      </div>
+      <div class="right">
+        <div></div>
+        <div></div>
+        <div class="info"></div>
+        <div></div>
+      </div>
+    </div>
+  </body>
+</html>
